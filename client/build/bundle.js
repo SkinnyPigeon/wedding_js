@@ -78,12 +78,13 @@
 	  getComments: function() {
 	    var request = new XMLHttpRequest();
 	    request.open( 'GET', this.url );
-	    request.setRequestHeader( "Content-type", "application/json" );
-	    request.withCredentials = true;
+	    // request.setRequestHeader( "Content-type", "application/json" );
+	    // request.withCredentials = true;
 	    request.onload = () => {
 	      if( request.status === 200 ) {
-	        var jamamojis = JSON.parse( request.responseText );
-	        this.pickJamamoji( jamamojis );
+	        var comments = JSON.parse( request.responseText );
+	        this.comments = comments;
+	        console.log( comments );
 	      }
 	    }
 	    request.send( null );
