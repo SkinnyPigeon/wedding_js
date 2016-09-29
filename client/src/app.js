@@ -1,4 +1,4 @@
-var CommentsView = require( './models/CommentsView' );
+var EnglishCommentsView = require( './views/EnglishCommentsView' );
 
 window.onload = function() {
   main();
@@ -9,5 +9,5 @@ var main = function() {
 }
 
 var displayComments = function() {
-  var view = new CommentsView();
+  var view = new EnglishCommentsView();
 }
