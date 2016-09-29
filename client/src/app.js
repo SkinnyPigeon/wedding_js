@@ -10,5 +10,4 @@ var main = function() {
 
 var displayComments = function() {
   var view = new CommentsView();
-  view.display();
 }
