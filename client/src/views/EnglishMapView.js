@@ -21,7 +21,7 @@ EnglishMapView.prototype = {
     });
 
     var palacioAlicanteInfo = new google.maps.InfoWindow({
-      content: "http://www.hotelpalaciotudemir.com/en"
+      content: "<a href='http://www.hotelpalaciotudemir.com/en' target='_blank'>Hotel Palacio</a>"
     });
 
     palacioAlicante.addListener( 'click', function() {
@@ -37,7 +37,7 @@ EnglishMapView.prototype = {
     });
 
     var losPalaciosInfo = new google.maps.InfoWindow({
-      content: "https://goo.gl/0OhSGS"
+      content: "<a href='https://goo.gl/0OhSGS' target='_blank'>Los Palacios</a>"
     });
 
     losPalacios.addListener( 'click', function() {
@@ -53,7 +53,7 @@ EnglishMapView.prototype = {
     });
 
     var laLagunaInfo = new google.maps.InfoWindow({
-      content: "http://www.hotellalaguna.com/en/"
+      content: "<a href='http://www.hotellalaguna.com/en' target='_blank'>La Laguna</a>"
     });
 
     laLaguna.addListener( 'click', function() {
