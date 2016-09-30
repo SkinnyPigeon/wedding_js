@@ -1,6 +1,6 @@
 var EnglishMapView = function() {
   this.center = { lat: 38.0881009, lng: -0.7291746 };
-  this.map = new google.maps.Map(document.getElementById('map'), {
+  this.map = new google.maps.Map( document.getElementById( 'map' ), {
     center: this.center,
     zoom: 10
   })

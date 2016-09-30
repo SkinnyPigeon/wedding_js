@@ -171,7 +171,7 @@
 
 	var EnglishMapView = function() {
 	  this.center = { lat: 38.0881009, lng: -0.7291746 };
-	  this.map = new google.maps.Map(document.getElementById('map'), {
+	  this.map = new google.maps.Map( document.getElementById( 'map' ), {
 	    center: this.center,
 	    zoom: 10
 	  })
@@ -258,17 +258,37 @@
 	
 	    var home = document.createElement( 'li' );
 	    home.innerText = "Home";
+	    home.onclick = function() {
+	      this.displayHome();
+	    }.bind( this );
 	
 	    var map = document.createElement( 'li' );
 	    map.innerText = "Map"
 	    map.onclick = function() {
 	      this.displayMap();
-	    }
+	    }.bind( this );
+	
+	    navSpace.appendChild( home );
+	    navSpace.appendChild( map );
+	  },
+	
+	  displayHome: function() {
+	    this.clear();
 	  },
 	
 	  displayMap: function() {
+	    this.clear();
+	    var mapSpace = document.getElementById( 'map' );
+	    mapSpace.style.display = "block";
 	    var view = new EnglishMapView();
-	  }
+	  },
+	
+	  clear: function() {
+	    var mapSpace = document.getElementById( 'map' );
+	    mapSpace.style.display = "none";
+	    var commentSpace = document.getElementById( 'comment-space' );
+	    commentSpace.style.display = "none";
+	  },
 	
 	}
 	
