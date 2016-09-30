@@ -1,5 +1,5 @@
 var EnglishMapView = function() {
-  this.center = { lat: 38.0881009, lng: -0.7291746 };
+  this.center = { lat: 38.1976052, lng: -0.6143937 };
   this.map = new google.maps.Map( document.getElementById( 'map' ), {
     center: this.center,
     zoom: 10
@@ -17,6 +17,7 @@ EnglishMapView.prototype = {
     var palacioAlicante = new google.maps.Marker({
       position: { lat: 38.3960059, lng: -0.5277508 },
       map: this.map,
+      animation: google.maps.Animation.DROP,
       title: 'Palacio de Tudemir'
     });
 
@@ -33,6 +34,7 @@ EnglishMapView.prototype = {
     var losPalacios = new google.maps.Marker({
       position: { lat: 38.0881009, lng: -0.7291746 },
       map: this.map,
+      animation: google.maps.Animation.DROP,
       title: 'Los Palacios'
     });
 
@@ -49,6 +51,7 @@ EnglishMapView.prototype = {
     var laLaguna = new google.maps.Marker({
       position: { lat: 38.0494904, lng: -0.7132986 },
       map: this.map,
+      animation: google.maps.Animation.DROP,
       title: 'Hotel La Laguna'
     });
 

@@ -45,7 +45,8 @@ SpanishCommentsView.prototype = {
 
     var comment = document.createElement( 'input' );
     comment.type = 'input';
-    comment.placeholder = 'Agregue su comentario por favor';
+    comment.placeholder = 'Agregue su comentario por favor...';
+    comment.setAttribute('size',comment.getAttribute('placeholder').length);
     comment.id = 'comment';
 
     var button = document.createElement( 'button' );
