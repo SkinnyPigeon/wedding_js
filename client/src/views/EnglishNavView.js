@@ -104,5 +104,4 @@ EnglishNavView.prototype = {
   },
 
 }
-
 module.exports = EnglishNavView;

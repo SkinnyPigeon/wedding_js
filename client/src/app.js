@@ -3,6 +3,8 @@ var EnglishHomeView = require( './views/EnglishHomeView' );
 var SpanishHomeView = require( './views/SpanishHomeView' );
 var SpanishNavView = require( './views/SpanishNavView' );
 
+var NavView = require( './views/NavView' )
+
 window.onload = function() {
   main();
 }
@@ -13,8 +15,9 @@ var main = function() {
 }
 
 var displayNav = function() {
-  var view = new EnglishNavView();
+  // var navView = new EnglishNavView();
   // var view = new SpanishNavView();
+  var view = new NavView();
 }
 
 var displayHome = function() {
