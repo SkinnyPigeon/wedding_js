@@ -1,3 +1,4 @@
+var EnglishNavView = require( './views/EnglishNavView' );
 var EnglishCommentsView = require( './views/EnglishCommentsView' );
 var EnglishMapView = require( './views/EnglishMapView' );
 
@@ -6,8 +7,13 @@ window.onload = function() {
 }
 
 var main = function() {
-  // displayComments();
+  displayNav();
+  displayComments();
   displayMap();
+}
+
+var displayNav = function() {
+  var view = new EnglishNavView();
 }
 
 var displayComments = function() {

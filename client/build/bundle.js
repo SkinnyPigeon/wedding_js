@@ -44,6 +44,7 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
+	var EnglishNavView = __webpack_require__( !(function webpackMissingModule() { var e = new Error("Cannot find module \"./views/EnglishNavView\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()) );
 	var EnglishCommentsView = __webpack_require__( 2 );
 	var EnglishMapView = __webpack_require__( 3 );
 	
@@ -52,8 +53,13 @@
 	}
 	
 	var main = function() {
-	  // displayComments();
+	  displayNav();
+	  displayComments();
 	  displayMap();
+	}
+	
+	var displayNav = function() {
+	  var view = new EnglishNavView();
 	}
 	
 	var displayComments = function() {
