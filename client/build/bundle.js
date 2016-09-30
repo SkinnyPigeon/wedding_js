@@ -44,11 +44,7 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var EnglishNavView = __webpack_require__( 4 );
 	var EnglishHomeView = __webpack_require__( 5 );
-	var SpanishHomeView = __webpack_require__( 6 );
-	var SpanishNavView = __webpack_require__( 7 );
-	
 	var NavView = __webpack_require__( 10 )
 	
 	window.onload = function() {
@@ -61,15 +57,11 @@
 	}
 	
 	var displayNav = function() {
-	  // var navView = new EnglishNavView();
-	  // var view = new SpanishNavView();
 	  var view = new NavView();
 	}
 	
 	var displayHome = function() {
 	  var view = new EnglishHomeView();
-	  // var view = new SpanishHomeView();
-	
 	}
 
 /***/ },
@@ -108,7 +100,6 @@
 	      if( request.status === 200 ) {
 	        var comments = JSON.parse( request.responseText );
 	        this.comments = comments;
-	        console.log( this.comments );
 	        this.display();
 	      }
 	    }
@@ -139,10 +130,8 @@
 	      var request = new XMLHttpRequest()
 	      request.open( 'POST', this.url )
 	      request.setRequestHeader("Content-Type", "application/json")
-	      console.log( this.url );
 	      request.onload = () => {
 	        this.getComments();
-	        console.log( "Added" );
 	      }
 	      var data = {
 	        comment: {
@@ -150,7 +139,6 @@
 	          comment_text: comment.value
 	        }
 	      }
-	      console.log( data );
 	      request.send( JSON.stringify( data ));
 	    }.bind( this )
 	  },
@@ -245,118 +233,7 @@
 
 
 /***/ },
-/* 4 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var EnglishHomeView = __webpack_require__( 5 );
-	var EnglishMapView = __webpack_require__( 3 );
-	var EnglishCommentsView = __webpack_require__( 2 );
-	
-	var SpanishNavView = __webpack_require__( 7 );
-	var SpanishHomeView = __webpack_require__( 6 );
-	
-	function EnglishNavView() {
-	  this.display();
-	}
-	
-	EnglishNavView.prototype = {
-	
-	  display: function() {
-	    var navSpace = document.getElementById( 'nav-space' );
-	    var navList = document.createElement( 'ul' );
-	    navList.id = 'nav';
-	
-	    var home = document.createElement( 'li' );
-	    home.innerText = "Home";
-	    home.onclick = function() {
-	      this.displayHome();
-	    }.bind( this );
-	
-	    var map = document.createElement( 'li' );
-	    map.innerText = "Map"
-	    map.onclick = function() {
-	      this.displayMap();
-	    }.bind( this );
-	
-	    var comments = document.createElement( 'li' );
-	    comments.innerText = "Comments";
-	    comments.onclick = function() {
-	      this.displayComments();
-	    }.bind( this );
-	
-	    var flag = document.createElement( 'li' );
-	    flag.innerHTML = "<img src='./css/image/spain.png' >";
-	    flag.onclick = function() {
-	      this.changeToSpanish();
-	    }.bind( this );
-	
-	    navSpace.appendChild( map );
-	    navSpace.appendChild( comments );
-	    navSpace.appendChild( home );
-	    navSpace.appendChild( flag );
-	
-	  },
-	
-	  displayHome: function() {
-	    this.clear();
-	    var homeSpace = document.getElementById( 'home-space' );
-	    homeSpace.style.display = "block";
-	    var view = new EnglishHomeView();
-	  },
-	
-	  displayMap: function() {
-	    this.clear();
-	    var mapSpace = document.getElementById( 'map' );
-	    mapSpace.style.display = "block";
-	    var view = new EnglishMapView();
-	  },
-	
-	  displayComments: function() {
-	    this.clear();
-	    var commentSpace = document.getElementById( 'comment-space' );
-	    commentSpace.style.display = "block";
-	    var view = new EnglishCommentsView();
-	  },
-	
-	  changeToSpanish: function() {
-	    this.changeLanguage();
-	    var navView = new SpanishNavView();
-	    var homeView = new SpanishHomeView();
-	  },
-	
-	  clear: function() {
-	    var navSpace = document.getElementById( 'nav-space' );
-	    navSpace.innerText = "";
-	    this.display();
-	
-	    var homeSpace = document.getElementById( 'home-space' );
-	    homeSpace.style.display = "none";
-	
-	    var mapSpace = document.getElementById( 'map' );
-	    mapSpace.style.display = "none";
-	
-	    var commentSpace = document.getElementById( 'comment-space' );
-	    commentSpace.style.display = "none";
-	  },
-	
-	  changeLanguage: function() {
-	    var navSpace = document.getElementById( 'nav-space' );
-	    navSpace.innerText = "";
-	
-	    var homeSpace = document.getElementById( 'home-space' );
-	    homeSpace.style.display = "block";
-	
-	    var mapSpace = document.getElementById( 'map' );
-	    mapSpace.style.display = "block";
-	
-	    var commentSpace = document.getElementById( 'comment-space' );
-	    commentSpace.style.display = "block";
-	  },
-	
-	}
-	module.exports = EnglishNavView;
-
-/***/ },
+/* 4 */,
 /* 5 */
 /***/ function(module, exports) {
 
@@ -401,119 +278,7 @@
 	module.exports = SpanishHomeView;
 
 /***/ },
-/* 7 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var SpanishHomeView = __webpack_require__( 6 );
-	var SpanishMapView = __webpack_require__( 8 );
-	var SpanishCommentsView = __webpack_require__( 9 );
-	
-	var EnglishNavView = __webpack_require__( 4 );
-	var EnglishHomeView = __webpack_require__( 5 );
-	
-	var SpanishNavView = function() {
-	  this.display();
-	}
-	
-	SpanishNavView.prototype = {
-	
-	  display: function() {
-	    var navSpace = document.getElementById( 'nav-space' );
-	    var navList = document.createElement( 'ul' );
-	    navList.id = 'nav';
-	
-	    var home = document.createElement( 'li' );
-	    home.innerText = "Casa";
-	    home.onclick = function() {
-	      this.displayHome();
-	    }.bind( this );
-	
-	    var map = document.createElement( 'li' );
-	    map.innerText = "Mapa"
-	    map.onclick = function() {
-	      this.displayMap();
-	    }.bind( this );
-	
-	    var comments = document.createElement( 'li' );
-	    comments.innerText = "Comentarios";
-	    comments.onclick = function() {
-	      this.displayComments();
-	    }.bind( this );
-	
-	    var flag = document.createElement( 'li' );
-	    flag.innerHTML = "<img src='./css/image/scotland.png' >";
-	    flag.onclick = function() {
-	      this.changeToEnglish();
-	    }.bind( this );
-	
-	    navSpace.appendChild( map );
-	    navSpace.appendChild( comments );
-	    navSpace.appendChild( home );
-	    navSpace.appendChild( flag );
-	
-	  },
-	
-	  displayHome: function() {
-	    this.clear();
-	    var homeSpace = document.getElementById( 'home-space' );
-	    homeSpace.style.display = "block";
-	    var view = new SpanishHomeView();
-	  },
-	
-	  displayMap: function() {
-	    this.clear();
-	    var mapSpace = document.getElementById( 'map' );
-	    mapSpace.style.display = "block";
-	    var view = new SpanishMapView();
-	  },
-	
-	  displayComments: function() {
-	    this.clear();
-	    var commentSpace = document.getElementById( 'comment-space' );
-	    commentSpace.style.display = "block";
-	    var view = new SpanishCommentsView();
-	  },
-	
-	  changeToEnglish: function() {
-	    this.changeLanguage();
-	    var navView = new EnglishNavView();
-	    var homeView = new EnglishHomeView();
-	  },
-	
-	  clear: function() {
-	    var navSpace = document.getElementById( 'nav-space' );
-	    navSpace.innerText = "";
-	    this.display();
-	
-	    var homeSpace = document.getElementById( 'home-space' );
-	    homeSpace.style.display = "none";
-	
-	    var mapSpace = document.getElementById( 'map' );
-	    mapSpace.style.display = "none";
-	
-	    var commentSpace = document.getElementById( 'comment-space' );
-	    commentSpace.style.display = "none";
-	  },
-	
-	  changeLanguage: function() {
-	    var navSpace = document.getElementById( 'nav-space' );
-	    navSpace.innerText = "";
-	
-	    var homeSpace = document.getElementById( 'home-space' );
-	    homeSpace.style.display = "block";
-	
-	    var mapSpace = document.getElementById( 'map' );
-	    mapSpace.style.display = "block";
-	
-	    var commentSpace = document.getElementById( 'comment-space' );
-	    commentSpace.style.display = "block";
-	  },
-	
-	}
-	
-	module.exports = SpanishNavView;
-
-/***/ },
+/* 7 */,
 /* 8 */
 /***/ function(module, exports) {
 
@@ -620,7 +385,6 @@
 	      if( request.status === 200 ) {
 	        var comments = JSON.parse( request.responseText );
 	        this.comments = comments;
-	        console.log( this.comments );
 	        this.display();
 	      }
 	    }
@@ -651,10 +415,8 @@
 	      var request = new XMLHttpRequest()
 	      request.open( 'POST', this.url )
 	      request.setRequestHeader("Content-Type", "application/json")
-	      console.log( this.url );
 	      request.onload = () => {
 	        this.getComments();
-	        console.log( "Added" );
 	      }
 	      var data = {
 	        comment: {
@@ -662,7 +424,6 @@
 	          comment_text: comment.value
 	        }
 	      }
-	      console.log( data );
 	      request.send( JSON.stringify( data ));
 	    }.bind( this )
 	  },
@@ -692,7 +453,6 @@
 	var EnglishMapView = __webpack_require__( 3 );
 	var EnglishCommentsView = __webpack_require__( 2 );
 	
-	var SpanishNavView = __webpack_require__( 7 );
 	var SpanishHomeView = __webpack_require__( 6 );
 	var SpanishMapView = __webpack_require__( 8 );
 	var SpanishCommentsView = __webpack_require__( 9 );

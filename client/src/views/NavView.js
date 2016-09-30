@@ -2,7 +2,6 @@ var EnglishHomeView = require( './EnglishHomeView' );
 var EnglishMapView = require( './EnglishMapView' );
 var EnglishCommentsView = require( './EnglishCommentsView' );
 
-var SpanishNavView = require( './SpanishNavView' );
 var SpanishHomeView = require( './SpanishHomeView' );
 var SpanishMapView = require( './SpanishMapView' );
 var SpanishCommentsView = require( './SpanishCommentsView' );

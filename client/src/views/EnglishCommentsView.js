@@ -29,7 +29,6 @@ EnglishCommentsView.prototype = {
       if( request.status === 200 ) {
         var comments = JSON.parse( request.responseText );
         this.comments = comments;
-        console.log( this.comments );
         this.display();
       }
     }
@@ -60,10 +59,8 @@ EnglishCommentsView.prototype = {
       var request = new XMLHttpRequest()
       request.open( 'POST', this.url )
       request.setRequestHeader("Content-Type", "application/json")
-      console.log( this.url );
       request.onload = () => {
         this.getComments();
-        console.log( "Added" );
       }
       var data = {
         comment: {
@@ -71,7 +68,6 @@ EnglishCommentsView.prototype = {
           comment_text: comment.value
         }
       }
-      console.log( data );
       request.send( JSON.stringify( data ));
     }.bind( this )
   },
