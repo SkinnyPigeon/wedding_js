@@ -41,6 +41,13 @@ EnglishNavView.prototype = {
       this.changeToSpanish();
     }.bind( this );
 
+    var contact = document.createElement( 'li' );
+    contact.innerText = "Contact";
+    contact.onclick = function() {
+      this.displayEnglishContact();
+    }.bind( this );
+
+    navSpace.appendChild( contact );
     navSpace.appendChild( map );
     navSpace.appendChild( comments );
     navSpace.appendChild( home );
@@ -77,6 +84,13 @@ EnglishNavView.prototype = {
       this.changeToEnglish();
     }.bind( this );
 
+    var contact = document.createElement( 'li' );
+    contact.innerText = "Contacto";
+    contact.onclick = function() {
+      this.displaySpanishContact();
+    }.bind( this );
+
+    navSpace.appendChild( contact );
     navSpace.appendChild( map );
     navSpace.appendChild( comments );
     navSpace.appendChild( home );
@@ -104,6 +118,13 @@ EnglishNavView.prototype = {
     commentSpace.style.display = "block";
     var view = new EnglishCommentsView();
   },
+
+  displayEnglishContact: function() {
+    this.clearEnglish();
+    var contactSpace = document.getElementById( 'contact-space' );
+    contactSpace.style.display = "block";
+    var view = new EnglishContactView();
+  }
 
   displaySpanishHome: function() {
     this.clearSpanish();
@@ -151,6 +172,9 @@ EnglishNavView.prototype = {
 
     var commentSpace = document.getElementById( 'comment-space' );
     commentSpace.style.display = "none";
+
+    var contactSpace = document.getElementById( 'contact-space' );
+    contactSpace.style.display = "none";
   },
 
   clearSpanish: function() {
@@ -166,6 +190,9 @@ EnglishNavView.prototype = {
 
     var commentSpace = document.getElementById( 'comment-space' );
     commentSpace.style.display = "none";
+
+    var contactSpace = document.getElementById( 'contact-space' );
+    contactSpace.style.display = "none";
   },
 
   changeLanguage: function() {
