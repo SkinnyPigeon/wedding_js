@@ -1,10 +1,10 @@
-var EnglishCommentsView = function() {
+var SpanishCommentsView = function() {
   this.comments = [];
   this.url = "http://localhost:5000/comments.json";
   this.getComments();
 }
 
-EnglishCommentsView.prototype = {
+SpanishCommentsView.prototype = {
 
   display: function() {
     this.createForm();
@@ -41,16 +41,16 @@ EnglishCommentsView.prototype = {
 
     var name = document.createElement( 'input' );
     name.type = 'text';
-    name.placeholder = 'Name...';
+    name.placeholder = 'Nombre...';
     name.id = 'name';
 
     var comment = document.createElement( 'input' );
     comment.type = 'input';
-    comment.placeholder = 'Please add your comment';
+    comment.placeholder = 'Agregue su comentario por favor';
     comment.id = 'comment';
 
     var button = document.createElement( 'button' );
-    button.innerText = 'Add Comment';
+    button.innerText = 'Agregar Comentario';
 
     commentSpace.appendChild( name );
     commentSpace.appendChild( comment );
@@ -77,7 +77,7 @@ EnglishCommentsView.prototype = {
   },
 }
 
-module.exports = EnglishCommentsView;
+module.exports = SpanishCommentsView;
 
 
 

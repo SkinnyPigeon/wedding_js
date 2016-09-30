@@ -1,15 +1,15 @@
-var EnglishHomeView = require( './EnglishHomeView' );
-var EnglishMapView = require( './EnglishMapView' );
-var EnglishCommentsView = require( './EnglishCommentsView' );
-
-var SpanishNavView = require( './SpanishNavView' );
 var SpanishHomeView = require( './SpanishHomeView' );
+var SpanishMapView = require( './SpanishMapView' );
+var SpanishCommentsView = require( './SpanishCommentsView' );
 
-function EnglishNavView() {
+var EnglishNavView = require( './EnglishNavView' );
+var EnglishHomeView = require( './EnglishHomeView' );
+
+var SpanishNavView = function() {
   this.display();
 }
 
-EnglishNavView.prototype = {
+SpanishNavView.prototype = {
 
   display: function() {
     var navSpace = document.getElementById( 'nav-space' );
@@ -17,27 +17,27 @@ EnglishNavView.prototype = {
     navList.id = 'nav';
 
     var home = document.createElement( 'li' );
-    home.innerText = "Home";
+    home.innerText = "Casa";
     home.onclick = function() {
       this.displayHome();
     }.bind( this );
 
     var map = document.createElement( 'li' );
-    map.innerText = "Map"
+    map.innerText = "Mapa"
     map.onclick = function() {
       this.displayMap();
     }.bind( this );
 
     var comments = document.createElement( 'li' );
-    comments.innerText = "Comments";
+    comments.innerText = "Comentarios";
     comments.onclick = function() {
       this.displayComments();
     }.bind( this );
 
     var flag = document.createElement( 'li' );
-    flag.innerHTML = "<img src='./css/image/spain.png' >";
+    flag.innerHTML = "<img src='./css/image/scotland.png' >";
     flag.onclick = function() {
-      this.changeToSpanish();
+      this.changeToEnglish();
     }.bind( this );
 
     navSpace.appendChild( map );
@@ -51,27 +51,27 @@ EnglishNavView.prototype = {
     this.clear();
     var homeSpace = document.getElementById( 'home-space' );
     homeSpace.style.display = "block";
-    var view = new EnglishHomeView();
+    var view = new SpanishHomeView();
   },
 
   displayMap: function() {
     this.clear();
     var mapSpace = document.getElementById( 'map' );
     mapSpace.style.display = "block";
-    var view = new EnglishMapView();
+    var view = new SpanishMapView();
   },
 
   displayComments: function() {
     this.clear();
     var commentSpace = document.getElementById( 'comment-space' );
     commentSpace.style.display = "block";
-    var view = new EnglishCommentsView();
+    var view = new SpanishCommentsView();
   },
 
-  changeToSpanish: function() {
+  changeToEnglish: function() {
     this.changeLanguage();
-    var navView = new SpanishNavView();
-    var homeView = new SpanishHomeView();
+    var navView = new EnglishNavView();
+    var homeView = new EnglishHomeView();
   },
 
   clear: function() {
@@ -105,4 +105,4 @@ EnglishNavView.prototype = {
 
 }
 
-module.exports = EnglishNavView;
+module.exports = SpanishNavView;
