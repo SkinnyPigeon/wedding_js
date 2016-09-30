@@ -16,6 +16,27 @@ ul {
   list-style: none;
 }
 
-#nav-space li img {
-  width: 2%;
+#nav-space {
+  height: 50px;
 }
+
+#nav-space li {
+  display: inline-block;
+  padding-top: 15px;
+  padding-right: 10px;
+  float: right;
+}
+
+#nav-space li img {
+  max-width: 8%;
+  float: right;
+  padding-top: 2px
+}
+
+#nav-space li:hover {
+  cursor: pointer; 
+}
+
+
+
+

@@ -255,8 +255,7 @@
 	    var navList = document.createElement( 'ul' );
 	    navList.id = 'nav';
 	
-	    var flag = document.createElement( 'li' );
-	    flag.innerHTML = "<img src='./css/image/spain.png' >";
+	
 	
 	    var home = document.createElement( 'li' );
 	    home.innerText = "Home";
@@ -276,10 +275,14 @@
 	      this.displayComments();
 	    }.bind( this );
 	
-	    navSpace.appendChild( flag );
-	    navSpace.appendChild( home );
+	    var flag = document.createElement( 'li' );
+	    flag.innerHTML = "<img src='./css/image/spain.png' >";
+	
 	    navSpace.appendChild( map );
 	    navSpace.appendChild( comments );
+	    navSpace.appendChild( home );
+	    navSpace.appendChild( flag );
+	
 	  },
 	
 	  displayHome: function() {
