@@ -9,12 +9,6 @@ var EnglishMapView = function() {
   this.displayLosPalacios();
   this.displayLaLaguna();
 
-  
-
-
-
-
-
 }
 
 EnglishMapView.prototype = {

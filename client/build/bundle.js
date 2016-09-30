@@ -44,9 +44,8 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var EnglishNavView = __webpack_require__( !(function webpackMissingModule() { var e = new Error("Cannot find module \"./views/EnglishNavView\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()) );
+	var EnglishNavView = __webpack_require__( 4 );
 	var EnglishCommentsView = __webpack_require__( 2 );
-	var EnglishMapView = __webpack_require__( 3 );
 	
 	window.onload = function() {
 	  main();
@@ -55,7 +54,6 @@
 	var main = function() {
 	  displayNav();
 	  displayComments();
-	  displayMap();
 	}
 	
 	var displayNav = function() {
@@ -65,10 +63,7 @@
 	var displayComments = function() {
 	  var view = new EnglishCommentsView();
 	}
-	
-	var displayMap = function() {
-	  var view = new EnglishMapView();
-	}
+
 
 /***/ },
 /* 1 */,
@@ -185,12 +180,6 @@
 	  this.displayLosPalacios();
 	  this.displayLaLaguna();
 	
-	  
-	
-	
-	
-	
-	
 	}
 	
 	EnglishMapView.prototype = {
@@ -247,6 +236,43 @@
 	module.exports = EnglishMapView;
 	
 
+
+/***/ },
+/* 4 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var EnglishMapView = __webpack_require__( 3 );
+	
+	var EnglishNavView = function() {
+	  this.display();
+	}
+	
+	EnglishNavView.prototype = {
+	
+	  display: function() {
+	    var navSpace = document.getElementById( 'nav-space' );
+	    var navList = document.createElement( 'ul' );
+	    navList.id = 'nav';
+	
+	    var flag = document.createElement( 'li' );
+	
+	    var home = document.createElement( 'li' );
+	    home.innerText = "Home";
+	
+	    var map = document.createElement( 'li' );
+	    map.innerText = "Map"
+	    map.onclick = function() {
+	      this.displayMap();
+	    }
+	  },
+	
+	  displayMap: function() {
+	    var view = new EnglishMapView();
+	  }
+	
+	}
+	
+	module.exports = EnglishNavView;
 
 /***/ }
 /******/ ]);
