@@ -1,4 +1,5 @@
 var EnglishMapView = require( './EnglishMapView' );
+var EnglishCommentsView = require( './EnglishCommentsView' );
 
 var EnglishNavView = function() {
   this.display();
@@ -25,8 +26,15 @@ EnglishNavView.prototype = {
       this.displayMap();
     }.bind( this );
 
+    var comments = document.createElement( 'li' );
+    comments.innerText = "Comments";
+    comments.onclick = function() {
+      this.displayComments();
+    }.bind( this );
+
     navSpace.appendChild( home );
     navSpace.appendChild( map );
+    navSpace.appendChild( comments );
   },
 
   displayHome: function() {
@@ -38,6 +46,13 @@ EnglishNavView.prototype = {
     var mapSpace = document.getElementById( 'map' );
     mapSpace.style.display = "block";
     var view = new EnglishMapView();
+  },
+
+  displayComments: function() {
+    this.clear();
+    var commentSpace = document.getElementById( 'comment-space' );
+    commentSpace.style.display = "block";
+    var view = new EnglishCommentsView();
   },
 
   clear: function() {

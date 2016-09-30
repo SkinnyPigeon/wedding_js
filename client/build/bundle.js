@@ -53,17 +53,11 @@
 	
 	var main = function() {
 	  displayNav();
-	  displayComments();
 	}
 	
 	var displayNav = function() {
 	  var view = new EnglishNavView();
 	}
-	
-	var displayComments = function() {
-	  var view = new EnglishCommentsView();
-	}
-
 
 /***/ },
 /* 1 */,
@@ -242,6 +236,7 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	var EnglishMapView = __webpack_require__( 3 );
+	var EnglishCommentsView = __webpack_require__( 2 );
 	
 	var EnglishNavView = function() {
 	  this.display();
@@ -268,8 +263,15 @@
 	      this.displayMap();
 	    }.bind( this );
 	
+	    var comments = document.createElement( 'li' );
+	    comments.innerText = "Comments";
+	    comments.onclick = function() {
+	      this.displayComments();
+	    }.bind( this );
+	
 	    navSpace.appendChild( home );
 	    navSpace.appendChild( map );
+	    navSpace.appendChild( comments );
 	  },
 	
 	  displayHome: function() {
@@ -281,6 +283,13 @@
 	    var mapSpace = document.getElementById( 'map' );
 	    mapSpace.style.display = "block";
 	    var view = new EnglishMapView();
+	  },
+	
+	  displayComments: function() {
+	    this.clear();
+	    var commentSpace = document.getElementById( 'comment-space' );
+	    commentSpace.style.display = "block";
+	    var view = new EnglishCommentsView();
 	  },
 	
 	  clear: function() {

@@ -7,13 +7,8 @@ window.onload = function() {
 
 var main = function() {
   displayNav();
-  displayComments();
 }
 
 var displayNav = function() {
   var view = new EnglishNavView();
-}
-
-var displayComments = function() {
-  var view = new EnglishCommentsView();
 }
