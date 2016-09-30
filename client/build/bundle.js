@@ -256,6 +256,7 @@
 	    navList.id = 'nav';
 	
 	    var flag = document.createElement( 'li' );
+	    flag.innerHTML = "<img src='./css/image/spain.png' >";
 	
 	    var home = document.createElement( 'li' );
 	    home.innerText = "Home";
@@ -275,6 +276,7 @@
 	      this.displayComments();
 	    }.bind( this );
 	
+	    navSpace.appendChild( flag );
 	    navSpace.appendChild( home );
 	    navSpace.appendChild( map );
 	    navSpace.appendChild( comments );
@@ -302,6 +304,10 @@
 	  },
 	
 	  clear: function() {
+	    var navSpace = document.getElementById( 'nav-space' );
+	    navSpace.innerText = "";
+	    this.display();
+	
 	    var homeSpace = document.getElementById( 'home-space' );
 	    homeSpace.style.display = "none";
 	

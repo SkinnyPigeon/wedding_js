@@ -15,3 +15,7 @@ html, body {
 ul {
   list-style: none;
 }
+
+#nav-space li img {
+  width: 2%;
+}
