@@ -1,3 +1,4 @@
+var EnglishHomeView = require( './EnglishHomeView' );
 var EnglishMapView = require( './EnglishMapView' );
 var EnglishCommentsView = require( './EnglishCommentsView' );
 
@@ -39,6 +40,9 @@ EnglishNavView.prototype = {
 
   displayHome: function() {
     this.clear();
+    var homeSpace = document.getElementById( 'home-space' );
+    homeSpace.style.display = "block";
+    var view = new EnglishHomeView();
   },
 
   displayMap: function() {
@@ -56,8 +60,12 @@ EnglishNavView.prototype = {
   },
 
   clear: function() {
+    var homeSpace = document.getElementById( 'home-space' );
+    homeSpace.style.display = "none";
+
     var mapSpace = document.getElementById( 'map' );
     mapSpace.style.display = "none";
+
     var commentSpace = document.getElementById( 'comment-space' );
     commentSpace.style.display = "none";
   },

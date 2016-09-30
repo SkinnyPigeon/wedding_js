@@ -1,5 +1,5 @@
 var EnglishNavView = require( './views/EnglishNavView' );
-var EnglishCommentsView = require( './views/EnglishCommentsView' );
+var EnglishHomeView = require( './views/EnglishHomeView' );
 
 window.onload = function() {
   main();
@@ -7,8 +7,13 @@ window.onload = function() {
 
 var main = function() {
   displayNav();
+  displayHome();
 }
 
 var displayNav = function() {
   var view = new EnglishNavView();
+}
+
+var displayHome = function() {
+  var view = new EnglishHomeView();
 }

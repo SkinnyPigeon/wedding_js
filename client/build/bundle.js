@@ -45,7 +45,7 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	var EnglishNavView = __webpack_require__( 4 );
-	var EnglishCommentsView = __webpack_require__( 2 );
+	var EnglishHomeView = __webpack_require__( 5 );
 	
 	window.onload = function() {
 	  main();
@@ -53,10 +53,15 @@
 	
 	var main = function() {
 	  displayNav();
+	  displayHome();
 	}
 	
 	var displayNav = function() {
 	  var view = new EnglishNavView();
+	}
+	
+	var displayHome = function() {
+	  var view = new EnglishHomeView();
 	}
 
 /***/ },
@@ -235,6 +240,7 @@
 /* 4 */
 /***/ function(module, exports, __webpack_require__) {
 
+	var EnglishHomeView = __webpack_require__( 5 );
 	var EnglishMapView = __webpack_require__( 3 );
 	var EnglishCommentsView = __webpack_require__( 2 );
 	
@@ -276,6 +282,9 @@
 	
 	  displayHome: function() {
 	    this.clear();
+	    var homeSpace = document.getElementById( 'home-space' );
+	    homeSpace.style.display = "block";
+	    var view = new EnglishHomeView();
 	  },
 	
 	  displayMap: function() {
@@ -293,8 +302,12 @@
 	  },
 	
 	  clear: function() {
+	    var homeSpace = document.getElementById( 'home-space' );
+	    homeSpace.style.display = "none";
+	
 	    var mapSpace = document.getElementById( 'map' );
 	    mapSpace.style.display = "none";
+	
 	    var commentSpace = document.getElementById( 'comment-space' );
 	    commentSpace.style.display = "none";
 	  },
@@ -302,6 +315,28 @@
 	}
 	
 	module.exports = EnglishNavView;
+
+/***/ },
+/* 5 */
+/***/ function(module, exports) {
+
+	var EnglishHomeView = function() {
+	  this.display();
+	}
+	
+	EnglishHomeView.prototype = {
+	
+	  display: function() {
+	    var homeSpace = document.getElementById( 'home-space' );
+	    homeSpace.innerText = "";
+	    var welcome = document.createElement( 'h1' );
+	    welcome.innerText = "Hello";
+	    homeSpace.appendChild( welcome );
+	  },
+	
+	}
+	
+	module.exports = EnglishHomeView;
 
 /***/ }
 /******/ ]);
