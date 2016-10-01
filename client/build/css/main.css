@@ -2,7 +2,7 @@ html{
   height: 100%;
 }
 
-body {
+/*body {
   font-family: 'Amatic SC', sans-serif;
   background: rgb(205,235,142);
   background-image: url( "./image/paper.png" ), -moz-linear-gradient(-45deg,  rgba(205,235,142,1) 0%, rgba(165,201,86,1) 100%);
@@ -14,12 +14,26 @@ body {
   margin: 0;
   padding: 0;
   padding-left: 10px;
+}*/
+
+body {
+  font-family: 'Amatic SC', sans-serif;
+  background: rgb(205,235,142);
+  background: -moz-linear-gradient(-45deg,  rgba(205,235,142,1) 0%, rgba(165,201,86,1) 100%);
+  background: -webkit-linear-gradient(-45deg,  rgba(205,235,142,1) 0%,rgba(165,201,86,1) 100%);
+  background: linear-gradient(135deg,  rgba(205,235,142,1) 0%,rgba(165,201,86,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cdeb8e', endColorstr='#a5c956',GradientType=1 );
+  background-attachment: fixed;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  padding-left: 10px;
 }
 
-#map {
-  height: 600px;
-  width: 600px;
+header {
+  padding-left: 3%;
 }
+
 
 ul {
   list-style: none;
@@ -65,6 +79,10 @@ a {
   color: inherit;
 }
 
+#home-space {
+  padding-left: 3%;
+}
+
 #contact-space div ul li img {
   width: 25px;
 }
@@ -74,24 +92,28 @@ a {
 }
 
 #contact-space #primary {
-  width: 45%;
+  width: 43%;
   display: inline-block;
   float: left;
-  margin-left: 5%;
+  margin-left: 3%;
 }
 
 #contact-space #secondary {
-  width: 45%;
+  width: 43%;
   display: inline-block;
   float: right;
   margin-top: 0;
-  margin-left: 5%;
+  margin-left: 3%;
 }
 
 #comment-space {
   margin-top: 20px;
+  padding-left: 3%;
 }
 
 #map {
+  margin: auto;
+  height: 600px;
+  width: 600px;
   margin-top: 20px;
 }
