@@ -66,4 +66,3 @@ EnglishMapView.prototype = {
 }
 
 module.exports = EnglishMapView;
-

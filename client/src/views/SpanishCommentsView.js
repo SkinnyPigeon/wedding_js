@@ -76,16 +76,3 @@ SpanishCommentsView.prototype = {
 }
 
 module.exports = SpanishCommentsView;
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -65,4 +65,3 @@ SpanishMapView.prototype = {
 }
 
 module.exports = SpanishMapView;
-

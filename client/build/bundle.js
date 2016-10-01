@@ -73,7 +73,7 @@
 	  this.comments = [];
 	  this.url = "https://pacific-fortress-75674.herokuapp.com/comments";
 	  // this.url = "http://localhost:5000/comments.json";
-	  this.getComments();
+	  this.getComments()
 	}
 	
 	EnglishCommentsView.prototype = {
@@ -147,20 +147,6 @@
 	}
 	
 	module.exports = EnglishCommentsView;
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
 
 /***/ },
 /* 3 */
@@ -234,8 +220,6 @@
 	}
 	
 	module.exports = EnglishMapView;
-	
-
 
 /***/ },
 /* 4 */,
@@ -354,8 +338,6 @@
 	}
 	
 	module.exports = SpanishMapView;
-	
-
 
 /***/ },
 /* 9 */
@@ -439,20 +421,6 @@
 	}
 	
 	module.exports = SpanishCommentsView;
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
 
 /***/ },
 /* 10 */
