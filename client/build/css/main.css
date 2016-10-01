@@ -60,6 +60,7 @@ a {
   width: 45%;
   display: inline-block;
   float: left;
+  margin-left: 5%;
 }
 
 #contact-space #secondary {
@@ -67,4 +68,5 @@ a {
   display: inline-block;
   float: right;
   margin-top: 0;
+  margin-left: 5%;
 }
