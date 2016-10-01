@@ -40,6 +40,9 @@ EnglishCommentsView.prototype = {
   createForm: function() {
     var commentSpace = document.getElementById( 'comment-space' );
 
+    var title = document.createElement( 'h2' );
+    title.innerText = "Come and say hi";
+
     var name = document.createElement( 'input' );
     name.type = 'text';
     name.placeholder = 'Name...';
@@ -54,6 +57,7 @@ EnglishCommentsView.prototype = {
     var button = document.createElement( 'button' );
     button.innerText = 'Add Comment';
 
+    commentSpace.appendChild( title );
     commentSpace.appendChild( name );
     commentSpace.appendChild( comment );
     commentSpace.appendChild( button );

@@ -111,6 +111,9 @@
 	  createForm: function() {
 	    var commentSpace = document.getElementById( 'comment-space' );
 	
+	    var title = document.createElement( 'h2' );
+	    title.innerText = "Come and say hi";
+	
 	    var name = document.createElement( 'input' );
 	    name.type = 'text';
 	    name.placeholder = 'Name...';
@@ -125,6 +128,7 @@
 	    var button = document.createElement( 'button' );
 	    button.innerText = 'Add Comment';
 	
+	    commentSpace.appendChild( title );
 	    commentSpace.appendChild( name );
 	    commentSpace.appendChild( comment );
 	    commentSpace.appendChild( button );
@@ -386,6 +390,9 @@
 	  createForm: function() {
 	    var commentSpace = document.getElementById( 'comment-space' );
 	
+	    var title = document.createElement( 'h2' );
+	    title.innerText = "Come and say hola";
+	
 	    var name = document.createElement( 'input' );
 	    name.type = 'text';
 	    name.placeholder = 'Nombre...';
@@ -400,6 +407,7 @@
 	    var button = document.createElement( 'button' );
 	    button.innerText = 'Agregar Comentario';
 	
+	    commentSpace.appendChild( title );
 	    commentSpace.appendChild( name );
 	    commentSpace.appendChild( comment );
 	    commentSpace.appendChild( button );
