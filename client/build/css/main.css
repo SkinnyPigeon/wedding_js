@@ -49,8 +49,16 @@ ul {
   padding-top: 2px;
 }
 
+#nav-space li img:hover {
+  max-width: 8%;
+  float: right;
+  margin-top: 2px;
+  font-weight: bold;
+}
+
 #nav-space li:hover {
-  cursor: pointer; 
+  cursor: pointer;
+  font-weight: bold;
 }
 
 a {
