@@ -1,3 +1,7 @@
+html{
+  height: 100%;
+}
+
 body {
   font-family: 'Amatic SC', sans-serif;
   background: rgb(205,235,142);
@@ -5,17 +9,17 @@ body {
   background: -webkit-linear-gradient(-45deg,  rgba(205,235,142,1) 0%,rgba(165,201,86,1) 100%);
   background: linear-gradient(135deg,  rgba(205,235,142,1) 0%,rgba(165,201,86,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cdeb8e', endColorstr='#a5c956',GradientType=1 );
-}
-
-html, body {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   height: 100%;
   margin: 0;
   padding: 0;
   padding-left: 10px;
 }
+
 #map {
-  height: 640px;
-  width: 640px;
+  height: 600px;
+  width: 600px;
 }
 
 ul {
@@ -24,6 +28,12 @@ ul {
 
 #nav-space {
   height: 50px;
+}
+
+#nav-space h1 {
+  display: inline-block;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 #nav-space li {
@@ -36,7 +46,7 @@ ul {
 #nav-space li img {
   max-width: 8%;
   float: right;
-  padding-top: 2px
+  padding-top: 2px;
 }
 
 #nav-space li:hover {
@@ -69,4 +79,12 @@ a {
   float: right;
   margin-top: 0;
   margin-left: 5%;
+}
+
+#comment-space {
+  margin-top: 20px;
+}
+
+#map {
+  margin-top: 20px;
 }

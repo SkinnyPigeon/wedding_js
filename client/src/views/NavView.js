@@ -16,6 +16,10 @@ EnglishNavView.prototype = {
 
   displayEnglish: function() {
     var navSpace = document.getElementById( 'nav-space' );
+
+    var title = document.createElement( 'h1' );
+    title.innerText = "Our Wedding";
+
     var navList = document.createElement( 'ul' );
     navList.id = 'nav';
 
@@ -49,6 +53,7 @@ EnglishNavView.prototype = {
       this.displayEnglishContact();
     }.bind( this );
 
+    navSpace.appendChild( title );
     navSpace.appendChild( contact );
     navSpace.appendChild( map );
     navSpace.appendChild( comments );
@@ -61,6 +66,9 @@ EnglishNavView.prototype = {
     var navSpace = document.getElementById( 'nav-space' );
     var navList = document.createElement( 'ul' );
     navList.id = 'nav';
+
+    var title = document.createElement( 'h1' );
+    title.innerText = "Nuestra Boda";
 
     var home = document.createElement( 'li' );
     home.innerText = "Casa";
@@ -92,6 +100,7 @@ EnglishNavView.prototype = {
       this.displaySpanishContact();
     }.bind( this );
 
+    navSpace.appendChild( title );
     navSpace.appendChild( contact );
     navSpace.appendChild( map );
     navSpace.appendChild( comments );
