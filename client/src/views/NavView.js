@@ -6,6 +6,7 @@ var EnglishContactView = require( './EnglishContactView' );
 var SpanishHomeView = require( './SpanishHomeView' );
 var SpanishMapView = require( './SpanishMapView' );
 var SpanishCommentsView = require( './SpanishCommentsView' );
+var SpanishContactView = require( './SpanishContactView' );
 
 function EnglishNavView() {
   this.displayEnglish();
@@ -146,6 +147,13 @@ EnglishNavView.prototype = {
     var commentSpace = document.getElementById( 'comment-space' );
     commentSpace.style.display = "block";
     var view = new SpanishCommentsView();
+  },
+
+  displaySpanishContact: function() {
+    this.clearSpanish();
+    var contactSpace = document.getElementById( 'contact-space' );
+    contactSpace.style.display = "block";
+    var view = new SpanishContactView();
   },
 
   changeToSpanish: function() {

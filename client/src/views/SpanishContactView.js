@@ -18,7 +18,7 @@ EnglishContactView.prototype = {
     primary.appendChild( welcome );
 
     var info = document.createElement( 'p' );
-    info.innerText = "Hey guys. We really hope you can join us on the 1st of April 2017 for a day of good weather, good food and of course helping us celebrate our love. If you have any questions please drop us a shout."
+    info.innerText = "Hola guys. We really hope you can join us on the 1st of April 2017 for a day of good weather, good food and of course helping us celebrate our love. If you have any questions please drop us a shout."
     primary.appendChild( info );
 
     var contact = document.createElement( 'ul' );
