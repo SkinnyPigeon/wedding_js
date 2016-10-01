@@ -466,7 +466,7 @@
 	    }.bind( this );
 	
 	    var flag = document.createElement( 'li' );
-	    flag.innerHTML = "<img src='./css/image/spain.png' >";
+	    flag.innerHTML = "<img src='./css/image/scotland.png' >";
 	    flag.onclick = function() {
 	      this.changeToSpanish();
 	    }.bind( this );
@@ -509,7 +509,7 @@
 	    }.bind( this );
 	
 	    var flag = document.createElement( 'li' );
-	    flag.innerHTML = "<img src='./css/image/scotland.png' >";
+	    flag.innerHTML = "<img src='./css/image/spain.png' >";
 	    flag.onclick = function() {
 	      this.changeToEnglish();
 	    }.bind( this );
