@@ -1,6 +1,7 @@
 var EnglishHomeView = require( './EnglishHomeView' );
 var EnglishMapView = require( './EnglishMapView' );
 var EnglishCommentsView = require( './EnglishCommentsView' );
+var EnglishContactView = require( './EnglishContactView' );
 
 var SpanishHomeView = require( './SpanishHomeView' );
 var SpanishMapView = require( './SpanishMapView' );
@@ -36,7 +37,7 @@ EnglishNavView.prototype = {
     }.bind( this );
 
     var flag = document.createElement( 'li' );
-    flag.innerHTML = "<img src='./css/image/scotland.png' >";
+    flag.innerHTML = "<img src='./css/image/spain.png' >";
     flag.onclick = function() {
       this.changeToSpanish();
     }.bind( this );
@@ -79,7 +80,7 @@ EnglishNavView.prototype = {
     }.bind( this );
 
     var flag = document.createElement( 'li' );
-    flag.innerHTML = "<img src='./css/image/spain.png' >";
+    flag.innerHTML = "<img src='./css/image/scotland.png' >";
     flag.onclick = function() {
       this.changeToEnglish();
     }.bind( this );
@@ -124,7 +125,7 @@ EnglishNavView.prototype = {
     var contactSpace = document.getElementById( 'contact-space' );
     contactSpace.style.display = "block";
     var view = new EnglishContactView();
-  }
+  },
 
   displaySpanishHome: function() {
     this.clearSpanish();

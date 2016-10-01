@@ -8,7 +8,6 @@ var SpanishMapView = function() {
   this.displayPalacioAlicante();
   this.displayLosPalacios();
   this.displayLaLaguna();
-
 }
 
 SpanishMapView.prototype = {

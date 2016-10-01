@@ -43,5 +43,13 @@ a {
   color: inherit;
 }
 
+#contact-space div ul li img {
+  width: 25px;
+}
+
+#contact-space div ul li {
+  display: inline-block;
+}
+
 
 
