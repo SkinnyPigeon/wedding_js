@@ -51,5 +51,18 @@ a {
   display: inline-block;
 }
 
+#contact-space #primary {
+  width: 45%;
+  display: inline-block;
+  float: left;
+}
+
+#contact-space #secondary {
+  width: 45%;
+  display: inline-block;
+  float: right;
+  margin-top: 0;
+}
+
 
 

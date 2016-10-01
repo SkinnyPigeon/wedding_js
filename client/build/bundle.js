@@ -656,7 +656,8 @@
 	
 	    var primary = document.createElement( 'div' );
 	    primary.id = "primary";
-	    var secondry = document.createElement( 'div' );
+	    var secondary = document.createElement( 'div' );
+	    secondary.id = "secondary";
 	
 	    var welcome = document.createElement( 'h1' );
 	    welcome.innerText = "General Information";
@@ -667,19 +668,24 @@
 	    primary.appendChild( info );
 	
 	    var contact = document.createElement( 'ul' );
-	    secondry.appendChild( contact );
+	    secondary.appendChild( contact );
+	
+	    var getInTouch = document.createElement( 'h1' );
+	    getInTouch.innerText = "Contact Information";
 	
 	    var email = document.createElement( 'li' );
 	    email.innerHTML = "<img src='./css/image/email.png' >";
 	
-	    var address = document.createElement( 'mailto:' );
+	    var address = document.createElement( 'a' );
+	    address.href = "mailto:euanandlaura@gmail.com";
 	    address.innerText = "euanandlaura@gmail.com";
 	
+	    contact.appendChild( getInTouch );
 	    contact.appendChild( email );
 	    contact.appendChild( address );
 	
 	    contactSpace.appendChild( primary );
-	    contactSpace.appendChild( secondry );
+	    contactSpace.appendChild( secondary );
 	  },
 	
 	}
