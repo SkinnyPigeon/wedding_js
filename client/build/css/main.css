@@ -5,11 +5,10 @@ html{
 body {
   font-family: 'Amatic SC', sans-serif;
   background: rgb(205,235,142);
-  background: -moz-linear-gradient(-45deg,  rgba(205,235,142,1) 0%, rgba(165,201,86,1) 100%);
-  background: -webkit-linear-gradient(-45deg,  rgba(205,235,142,1) 0%,rgba(165,201,86,1) 100%);
-  background: linear-gradient(135deg,  rgba(205,235,142,1) 0%,rgba(165,201,86,1) 100%);
+  background-image: url( "./image/paper.png" ), -moz-linear-gradient(-45deg,  rgba(205,235,142,1) 0%, rgba(165,201,86,1) 100%);
+  background-image: url( "./image/paper.png" ), -webkit-linear-gradient(-45deg,  rgba(205,235,142,1) 0%,rgba(165,201,86,1) 100%);
+  background-image: url( "./image/paper.png" ), linear-gradient(135deg,  rgba(205,235,142,1) 0%,rgba(165,201,86,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cdeb8e', endColorstr='#a5c956',GradientType=1 );
-  background-repeat: no-repeat;
   background-attachment: fixed;
   height: 100%;
   margin: 0;
