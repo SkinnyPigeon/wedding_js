@@ -1,7 +1,8 @@
 var SpanishCommentsView = function() {
   this.comments = [];
   // this.url = "http://localhost:5000/comments.json";
-  this.url = "https://pacific-fortress-75674.herokuapp.com/";
+  // this.url = "https://pacific-fortress-75674.herokuapp.com/";
+  this.url = "https://wedding-comments.herokuapp.com/";
   this.getComments();
 }
 
