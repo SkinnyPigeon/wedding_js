@@ -1,8 +1,8 @@
 var EnglishCommentsView = function() {
   this.comments = [];
-  this.url = "https://wedding-comments.herokuapp.com/comments";
+  // this.url = "https://wedding-comments.herokuapp.com/comments";
   // this.url = "https://pacific-fortress-75674.herokuapp.com/comments";
-  // this.url = "http://localhost:5000/comments.json";
+  this.url = "http://localhost:5000/comments.json";
   this.getComments()
 }
 
