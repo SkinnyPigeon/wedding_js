@@ -12,7 +12,7 @@ EnglishHomeView.prototype = {
     welcome.innerText = "Hello";
 
     var text = document.createElement( 'h5' );
-    text.innerText = "Thanks for visiting the site. Hopefully you'll find some useful information throughout. If you have any other questions then feel free to ping us an email via the Contact page. Also feel free to say hello through the Comments page."
+    text.innerText = "Thanks for visiting the site. Hopefully you'll find some useful information throughout. If you have any other questions then feel free to ping us an email via the Contact page. Also come and say hello on the Comments page."
 
     var language = document.createElement( 'h1' );
     language.innerText = "Change Language";
