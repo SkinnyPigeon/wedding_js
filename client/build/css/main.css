@@ -139,6 +139,17 @@ a {
   display: inline-block;
 }
 
+ul {
+  padding: 0;
+}
+
+ul a {
+  color: #F5EBAE;
+  font-family: 'Gudea', sans-serif;
+  font-size: 0.82em;
+  font-weight: bold;
+}
+
 #comment-space {
   margin-top: 20px;
   padding-left: 3%;
