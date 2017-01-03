@@ -215,9 +215,7 @@ input#comment {
 #map {
   height: 35em;
   width: 35em;
-  border-radius: 35em;
   margin: auto;
-  /*margin-top: 20px;*/
 }
 
 #bus-space {

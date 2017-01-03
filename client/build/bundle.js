@@ -552,11 +552,11 @@
 	  this.map = new google.maps.Map( document.getElementById( 'map' ), {
 	    center: this.center,
 	    zoom: 11,
-	    draggable: false,
 	    scrollwheel: false,
 	    navigationControl: false,
 	    mapTypeControl: false,
 	    scaleControl: false,
+	    streetViewControl: false
 	  })
 	
 	  this.display();
@@ -564,6 +564,7 @@
 	  this.displayHostalReyTeodomiro();
 	  this.displayLosPalacios();
 	  this.displayLaLaguna();
+	  this.displayVenue();
 	
 	}
 	
@@ -585,7 +586,8 @@
 	      position: { lat: 38.0859664, lng: -0.9447066 },
 	      map: this.map,
 	      animation: google.maps.Animation.DROP,
-	      title: 'Palacio de Tudemir'
+	      title: 'Palacio de Tudemir',
+	      icon: 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png'
 	    });
 	
 	    var palacioDeTumedirInfo = new google.maps.InfoWindow({
@@ -602,7 +604,8 @@
 	      position: { lat: 38.0818911, lng: -0.9478066 },
 	      map: this.map,
 	      animation: google.maps.Animation.DROP,
-	      title: 'Hostal Rey Teodomiro'
+	      title: 'Hostal Rey Teodomiro',
+	      icon: 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png'
 	    });
 	
 	    var hostalReyTeodomiroInfo = new google.maps.InfoWindow({
@@ -619,7 +622,8 @@
 	      position: { lat: 38.0881009, lng: -0.7291746 },
 	      map: this.map,
 	      animation: google.maps.Animation.DROP,
-	      title: 'Los Palacios'
+	      title: 'Los Palacios',
+	      icon: 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png'
 	    });
 	
 	    var losPalaciosInfo = new google.maps.InfoWindow({
@@ -636,7 +640,8 @@
 	      position: { lat: 38.0494904, lng: -0.7132986 },
 	      map: this.map,
 	      animation: google.maps.Animation.DROP,
-	      title: 'Hotel La Laguna'
+	      title: 'Hotel La Laguna',
+	      icon: 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png'
 	    });
 	
 	    var laLagunaInfo = new google.maps.InfoWindow({
@@ -647,6 +652,24 @@
 	      laLagunaInfo.open( this.map, laLaguna )
 	    })
 	  },
+	
+	  displayVenue: function() {
+	    var salone = new google.maps.Marker({
+	      position: { lat: 38.085552, lng: -0.729775 },
+	      map: this.map,
+	      animation: google.maps.Animation.DROP,
+	      title: 'Salone Canario',
+	      icon: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png'
+	    });
+	
+	    var saloneInfo = new google.maps.InfoWindow({
+	      content: "Salone Canario"
+	    });
+	
+	    salone.addListener( 'click', function() {
+	      saloneInfo.open( this.map, salone )
+	    })
+	  }
 	}
 	
 	module.exports = EnglishMapView;
