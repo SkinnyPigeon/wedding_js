@@ -1,5 +1,6 @@
 var EnglishHomeView = require( './EnglishHomeView' );
 var EnglishVenueView = require( './EnglishVenueView' );
+var EnglishBusView = require( './EnglishBusView' );
 var EnglishMapView = require( './EnglishMapView' );
 var EnglishCommentsView = require( './EnglishCommentsView' );
 var EnglishContactView = require( './EnglishContactView' );
@@ -136,6 +137,13 @@ EnglishNavView.prototype = {
     var venueSpace = document.getElementById( 'venue-space' );
     venueSpace.style.display = "block";
     var view = new EnglishVenueView();
+  },
+
+  displayEnglishBus: function() {
+    this.clearEnglish();
+    var busSpace = document.getElementById( 'bus-space' );
+    busSpace.style.display = "block";
+    var view = new EnglishBusView();
   },
 
   displayEnglishMap: function() {

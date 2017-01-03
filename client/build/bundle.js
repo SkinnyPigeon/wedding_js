@@ -132,6 +132,7 @@
 
 	var EnglishHomeView = __webpack_require__( 1 );
 	var EnglishVenueView = __webpack_require__( 10 );
+	var EnglishBusView = __webpack_require__( 11 );
 	var EnglishMapView = __webpack_require__( 3 );
 	var EnglishCommentsView = __webpack_require__( 4 );
 	var EnglishContactView = __webpack_require__( 5 );
@@ -268,6 +269,13 @@
 	    var venueSpace = document.getElementById( 'venue-space' );
 	    venueSpace.style.display = "block";
 	    var view = new EnglishVenueView();
+	  },
+	
+	  displayEnglishBus: function() {
+	    this.clearEnglish();
+	    var busSpace = document.getElementById( 'bus-space' );
+	    busSpace.style.display = "block";
+	    var view = new EnglishBusView();
 	  },
 	
 	  displayEnglishMap: function() {
@@ -842,6 +850,16 @@
 	}
 	
 	module.exports = EnglishVenueView;
+
+/***/ },
+/* 11 */
+/***/ function(module, exports) {
+
+	var EnglishBusView = function() {
+	  
+	}
+	
+	module.exports = EnglishBusView;
 
 /***/ }
 /******/ ]);
