@@ -145,6 +145,8 @@ EnglishNavView.prototype = {
     this.clearEnglish();
     var busSpace = document.getElementById( 'bus-space' );
     busSpace.style.display = "block";
+    // var mapSpace = document.getElementById( 'map' );
+    // mapSpace.style.display = "block";
     var view = new EnglishBusView();
   },
 
