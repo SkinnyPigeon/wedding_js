@@ -161,14 +161,17 @@ ul a {
   margin-bottom: 30px;
 }
 
-#comment-space li {
+#comment-space ul {
   margin: auto;
-  padding-bottom: 1em;
   text-align: center;
   max-width: 30em;
-  max-height: 40em;
+  max-height: 2em;
   overflow: hidden;
   overflow-y: scroll;
+}
+
+#comment-space li {
+  padding-bottom: 1em;
   color: #F5EBAE;
   font-family: 'Gudea', sans-serif;
   font-size: 0.82em;
