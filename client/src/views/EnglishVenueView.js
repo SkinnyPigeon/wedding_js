@@ -5,12 +5,17 @@ var EnglishVenueView = function() {
     zoom: 11
   })
 
-  this.displaySalone();
+  this.diplay();
+  this.displayMap();
 }
 
 EnglishVenueView.prototype = {
 
-  displaySalone: function() {
+  display: function() {
+
+  },
+
+  displayMap: function() {
     var salone = new google.maps.Marker({
       position: { lat: 38.085552, lng: -0.729775 },
       map: this.map,
