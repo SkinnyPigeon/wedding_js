@@ -102,9 +102,7 @@ a {
   /*color: #E2AEBD;*/
 }
 
-#home-space {
-  /*margin-left: 3%;*/
-  /*padding-left: 1%;*/
+#circle-space {
   margin: auto;
   height: 35em;
   width: 35em;
@@ -112,17 +110,26 @@ a {
   border-radius: 30em;
 }
 
+#home-space {
+  /*margin-left: 3%;*/
+  /*padding-left: 1%;*/
+
+  text-align: center;
+}
+
+
+
 #contact-space div ul li img {
   width: 25px;
   background-color: #FFF;
-  /*border-bottom: 5px;*/
 }
 
 #contact-space div ul li {
   display: inline-block;
 }
 
-#contact-space #primary {
+
+/*#contact-space #primary {
   width: 43%;
   display: inline-block;
   float: left;
@@ -135,7 +142,7 @@ a {
   float: right;
   margin-top: 0;
   margin-left: 3%;
-}
+}*/
 
 #comment-space {
   margin-top: 20px;
