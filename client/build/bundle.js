@@ -403,14 +403,25 @@
 	    zoom: 11
 	  })
 	
-	  this.diplay();
+	  this.display();
 	  this.displayMap();
 	}
 	
 	EnglishVenueView.prototype = {
 	
 	  display: function() {
+	    var venueSpace = document.getElementById( 'venue-space' );
+	    venueSpace.innerText = "";
 	
+	    var title = document.createElement( 'h1' );
+	    title.className = "circleTitle";
+	    title.innerText = "Salones Canario";
+	
+	    var text = document.createElement( 'h5' );
+	    text.innerText = "We hope to see you all there for the ceremony at 12.30 which will be held in the garden. Afterwards there will be drinks and nibbles. Following that will be a sit down meal inside the venue before the day finishes with a DJ and open bar."
+	
+	    venueSpace.appendChild( title );
+	    venueSpace.appendChild( text );
 	  },
 	
 	  displayMap: function() {
@@ -421,14 +432,14 @@
 	      title: 'Salone Canario'
 	    });
 	
-	    var palacioAlicanteInfo = new google.maps.InfoWindow({
+	    var saloneInfo = new google.maps.InfoWindow({
 	      content: "Salone Canario"
 	    });
 	
 	    salone.addListener( 'click', function() {
-	      palacioAlicanteInfo.open( this.map, salone )
+	      saloneInfo.open( this.map, salone )
 	    })
-	  },
+	  }
 	
 	}
 	
