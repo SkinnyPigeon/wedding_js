@@ -152,6 +152,8 @@ EnglishNavView.prototype = {
 
   displayEnglishMap: function() {
     this.clearEnglish();
+    var hotelSpace = document.getElementById( 'hotel-space' );
+    hotelSpace.style.display = "block";
     var mapSpace = document.getElementById( 'map' );
     mapSpace.style.display = "block";
     var view = new EnglishMapView();

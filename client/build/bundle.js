@@ -284,6 +284,8 @@
 	
 	  displayEnglishMap: function() {
 	    this.clearEnglish();
+	    var hotelSpace = document.getElementById( 'hotel-space' );
+	    hotelSpace.style.display = "block";
 	    var mapSpace = document.getElementById( 'map' );
 	    mapSpace.style.display = "block";
 	    var view = new EnglishMapView();
@@ -407,14 +409,14 @@
 /***/ function(module, exports) {
 
 	var EnglishVenueView = function() {
-	  this.center = { lat: 38.0864422, lng: -0.8313381 };
-	  this.map = new google.maps.Map( document.getElementById( 'map' ), {
-	    center: this.center,
-	    zoom: 11
-	  })
+	  // this.center = { lat: 38.0864422, lng: -0.8313381 };
+	  // this.map = new google.maps.Map( document.getElementById( 'map' ), {
+	  //   center: this.center,
+	  //   zoom: 11
+	  // })
 	
 	  this.display();
-	  this.displayMap();
+	  // this.displayMap();
 	}
 	
 	EnglishVenueView.prototype = {
@@ -428,7 +430,13 @@
 	    title.innerText = "Salones Canario";
 	
 	    var text = document.createElement( 'h5' );
+	    text.id = "venueText";
 	    text.innerText = "We hope to see you all there for the ceremony at 12.30 which will be held in the garden. Afterwards there will be drinks and nibbles. Following that will be a sit down meal inside the venue before the day finishes with a DJ and open bar."
+	
+	    var address = document.createElement( 'a' );
+	    address.innerText = "Salones Canarios, Calle Constitución, 03170 Rojales, Alicante, Spain \n (click me)";
+	    address.href = "https://www.google.co.uk/maps/place/Salones+Canario/@38.085104,-0.7316289,17z/data=!3m1!4b1!4m5!3m4!1s0xd63af14268fcecf:0xe8048d44d8dd442f!8m2!3d38.085104!4d-0.7294402";
+	    address.target = "_blank";
 	
 	    var slackTitle = document.createElement( 'h1' );
 	    slackTitle.innerText = "How Share Your Photos"
@@ -438,26 +446,31 @@
 	
 	    venueSpace.appendChild( title );
 	    venueSpace.appendChild( text );
+	    venueSpace.appendChild( address );
 	    venueSpace.appendChild( slackTitle );
 	    venueSpace.appendChild( slackText );
 	  },
 	
-	  displayMap: function() {
-	    var salone = new google.maps.Marker({
-	      position: { lat: 38.085552, lng: -0.729775 },
-	      map: this.map,
-	      animation: google.maps.Animation.DROP,
-	      title: 'Salone Canario'
-	    });
+	  // openPage: function() {
+	  //   var address = 
+	  // }
 	
-	    var saloneInfo = new google.maps.InfoWindow({
-	      content: "Salone Canario"
-	    });
+	  // displayMap: function() {
+	  //   var salone = new google.maps.Marker({
+	  //     position: { lat: 38.085552, lng: -0.729775 },
+	  //     map: this.map,
+	  //     animation: google.maps.Animation.DROP,
+	  //     title: 'Salone Canario'
+	  //   });
 	
-	    salone.addListener( 'click', function() {
-	      saloneInfo.open( this.map, salone )
-	    })
-	  }
+	  //   var saloneInfo = new google.maps.InfoWindow({
+	  //     content: "Salone Canario"
+	  //   });
+	
+	  //   salone.addListener( 'click', function() {
+	  //     saloneInfo.open( this.map, salone )
+	  //   })
+	  // }
 	
 	}
 	
@@ -527,6 +540,7 @@
 	    zoom: 10
 	  })
 	
+	  this.display();
 	  this.displayPalacioAlicante();
 	  this.displayLosPalacios();
 	  this.displayLaLaguna();
@@ -534,6 +548,17 @@
 	}
 	
 	EnglishMapView.prototype = {
+	
+	  display: function() {
+	    var hotelSpace = document.getElementById( 'hotel-space' );
+	    hotelSpace.innerText = "";
+	
+	    var title = document.createElement( 'h1' );
+	    title.className = "circleTitle";
+	    title.innerText = "Hotels";
+	
+	    hotelSpace.appendChild( title );
+	  },
 	
 	  displayPalacioAlicante: function() {
 	    var palacioAlicante = new google.maps.Marker({

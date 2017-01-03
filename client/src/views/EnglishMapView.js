@@ -5,6 +5,7 @@ var EnglishMapView = function() {
     zoom: 10
   })
 
+  this.display();
   this.displayPalacioAlicante();
   this.displayLosPalacios();
   this.displayLaLaguna();
@@ -12,6 +13,17 @@ var EnglishMapView = function() {
 }
 
 EnglishMapView.prototype = {
+
+  display: function() {
+    var hotelSpace = document.getElementById( 'hotel-space' );
+    hotelSpace.innerText = "";
+
+    var title = document.createElement( 'h1' );
+    title.className = "circleTitle";
+    title.innerText = "Hotels";
+
+    hotelSpace.appendChild( title );
+  },
 
   displayPalacioAlicante: function() {
     var palacioAlicante = new google.maps.Marker({

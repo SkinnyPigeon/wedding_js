@@ -194,6 +194,16 @@ input#comment {
   text-align: center;
 }
 
+#venueText {
+  padding-bottom: 10px;
+}
+
+#venue-space a {
+  color: #F5EBAE;
+  font-family: 'Gudea', sans-serif;
+  font-size: 0.82em;
+}
+
 #circle-space {
   margin: auto;
   height: 35em;
@@ -211,6 +221,10 @@ input#comment {
 }
 
 #bus-space {
+  text-align: center;
+}
+
+#hotel-space {
   text-align: center;
 }
 
