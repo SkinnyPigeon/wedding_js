@@ -136,8 +136,6 @@ EnglishNavView.prototype = {
     this.clearEnglish();
     var venueSpace = document.getElementById( 'venue-space' );
     venueSpace.style.display = "block";
-    var mapSpace = document.getElementById( 'map' );
-    mapSpace.style.display = "block";
     var view = new EnglishVenueView();
   },
 

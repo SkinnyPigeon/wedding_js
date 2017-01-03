@@ -224,6 +224,15 @@ input#comment {
   text-align: center;
 }
 
+#bus-space div ul li img {
+  width: 25px;
+  background-color: #578163;
+}
+
+#bus-space div ul li {
+  display: inline-block;
+}
+
 #hotel-space {
   text-align: center;
 }

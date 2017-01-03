@@ -41,10 +41,6 @@ EnglishVenueView.prototype = {
     venueSpace.appendChild( slackText );
   },
 
-  // openPage: function() {
-  //   var address = 
-  // }
-
   // displayMap: function() {
   //   var salone = new google.maps.Marker({
   //     position: { lat: 38.085552, lng: -0.729775 },
