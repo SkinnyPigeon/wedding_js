@@ -227,6 +227,9 @@ EnglishNavView.prototype = {
     var venueSpace = document.getElementById( 'venue-space' );
     venueSpace.style.display = "none";
 
+    var hotelSpace = document.getElementById( 'hotel-space' );
+    hotelSpace.style.display = "none";
+
     var busSpace = document.getElementById( 'bus-space')
     busSpace.style.display = "none";
 
