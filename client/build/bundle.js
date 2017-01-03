@@ -266,8 +266,10 @@
 	
 	  displayEnglishVenue: function() {
 	    this.clearEnglish();
-	    var venueSpace = document.getElementById( 'map' );
+	    var venueSpace = document.getElementById( 'venue-space' );
 	    venueSpace.style.display = "block";
+	    var mapSpace = document.getElementById( 'map' );
+	    mapSpace.style.display = "block";
 	    var view = new EnglishVenueView();
 	  },
 	
@@ -350,6 +352,12 @@
 	    var mapSpace = document.getElementById( 'map' );
 	    mapSpace.style.display = "none";
 	
+	    var venueSpace = document.getElementById( 'venue-space' );
+	    venueSpace.style.display = "none";
+	
+	    var busSpace = document.getElementById( 'bus-space')
+	    busSpace.style.display = "none";
+	
 	    var commentSpace = document.getElementById( 'comment-space' );
 	    commentSpace.style.display = "none";
 	
@@ -420,8 +428,16 @@
 	    var text = document.createElement( 'h5' );
 	    text.innerText = "We hope to see you all there for the ceremony at 12.30 which will be held in the garden. Afterwards there will be drinks and nibbles. Following that will be a sit down meal inside the venue before the day finishes with a DJ and open bar."
 	
+	    var slackTitle = document.createElement( 'h1' );
+	    slackTitle.innerText = "How Share Your Photos"
+	
+	    var slackText = document.createElement( 'h5' );
+	    slackText.innerText = "We would love for you to share your pictures of the ceremony and party with all of us. \n\n If you'd like to join in then send us your email address and we'll invite you to join a group in an app called Slack. It's free and private. All you have to do is post the photos you take to the channel in Slack and we'll all get to see them on the big screen in the venue."
+	
 	    venueSpace.appendChild( title );
 	    venueSpace.appendChild( text );
+	    venueSpace.appendChild( slackTitle );
+	    venueSpace.appendChild( slackText );
 	  },
 	
 	  displayMap: function() {

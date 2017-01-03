@@ -134,8 +134,10 @@ EnglishNavView.prototype = {
 
   displayEnglishVenue: function() {
     this.clearEnglish();
-    var venueSpace = document.getElementById( 'map' );
+    var venueSpace = document.getElementById( 'venue-space' );
     venueSpace.style.display = "block";
+    var mapSpace = document.getElementById( 'map' );
+    mapSpace.style.display = "block";
     var view = new EnglishVenueView();
   },
 
@@ -217,6 +219,12 @@ EnglishNavView.prototype = {
 
     var mapSpace = document.getElementById( 'map' );
     mapSpace.style.display = "none";
+
+    var venueSpace = document.getElementById( 'venue-space' );
+    venueSpace.style.display = "none";
+
+    var busSpace = document.getElementById( 'bus-space')
+    busSpace.style.display = "none";
 
     var commentSpace = document.getElementById( 'comment-space' );
     commentSpace.style.display = "none";
