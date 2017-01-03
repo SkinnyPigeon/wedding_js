@@ -44,8 +44,8 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var EnglishHomeView = __webpack_require__( 5 );
-	var NavView = __webpack_require__( 10 )
+	var EnglishHomeView = __webpack_require__( 1 );
+	var NavView = __webpack_require__( 2 )
 	
 	window.onload = function() {
 	  main();
@@ -65,170 +65,7 @@
 	}
 
 /***/ },
-/* 1 */,
-/* 2 */
-/***/ function(module, exports) {
-
-	var EnglishCommentsView = function() {
-	  this.comments = [];
-	  this.url = "https://wedding-comments.herokuapp.com/comments";
-	  // this.url = "https://pacific-fortress-75674.herokuapp.com/comments";
-	  // this.url = "http://localhost:5000/comments.json";
-	  this.getComments()
-	}
-	
-	EnglishCommentsView.prototype = {
-	
-	  display: function() {
-	    this.createForm();
-	    var commentSpace = document.getElementById( 'comment-space' );
-	    var list = document.createElement( 'ul' );
-	    commentSpace.appendChild( list );
-	    for( var i = 0; i < this.comments.length; i++ ) {
-	      var comment = document.createElement( 'li' );
-	      var text = this.comments[i].name + " - " + this.comments[i].comment_text;
-	      comment.innerText = text;
-	      list.appendChild( comment );
-	    }
-	  },
-	
-	  getComments: function() {
-	    var commentSpace = document.getElementById( 'comment-space' );
-	    commentSpace.innerText = "";
-	    var request = new XMLHttpRequest();
-	    request.open( 'GET', this.url );
-	    request.setRequestHeader("Content-Type", "application/json")
-	    request.onload = () => {
-	      if( request.status === 200 ) {
-	        var comments = JSON.parse( request.responseText );
-	        this.comments = comments;
-	        this.display();
-	      }
-	    }
-	    request.send( null );
-	  },
-	
-	  createForm: function() {
-	    var commentSpace = document.getElementById( 'comment-space' );
-	
-	    var title = document.createElement( 'h2' );
-	    title.innerText = "Come and say hi";
-	
-	    var name = document.createElement( 'input' );
-	    name.type = 'text';
-	    name.placeholder = 'Name...';
-	    name.id = 'name';
-	
-	    var comment = document.createElement( 'input' );
-	    comment.type = 'input';
-	    comment.placeholder = 'Please add your comment...';
-	    comment.setAttribute('size',comment.getAttribute('placeholder').length);
-	    comment.id = 'comment';
-	
-	    var button = document.createElement( 'button' );
-	    button.innerText = 'Add Comment';
-	
-	    commentSpace.appendChild( title );
-	    commentSpace.appendChild( name );
-	    commentSpace.appendChild( comment );
-	    commentSpace.appendChild( button );
-	
-	    button.onclick = function() {
-	      var request = new XMLHttpRequest()
-	      request.open( 'POST', this.url )
-	      request.setRequestHeader("Content-Type", "application/json")
-	      request.onload = () => {
-	        this.getComments();
-	      }
-	      var data = {
-	        comment: {
-	          name: name.value,
-	          comment_text: comment.value
-	        }
-	      }
-	      request.send( JSON.stringify( data ));
-	    }.bind( this )
-	  },
-	}
-	
-	module.exports = EnglishCommentsView;
-
-/***/ },
-/* 3 */
-/***/ function(module, exports) {
-
-	var EnglishMapView = function() {
-	  this.center = { lat: 38.1976052, lng: -0.6143937 };
-	  this.map = new google.maps.Map( document.getElementById( 'map' ), {
-	    center: this.center,
-	    zoom: 10
-	  })
-	
-	  this.displayPalacioAlicante();
-	  this.displayLosPalacios();
-	  this.displayLaLaguna();
-	
-	}
-	
-	EnglishMapView.prototype = {
-	
-	  displayPalacioAlicante: function() {
-	    var palacioAlicante = new google.maps.Marker({
-	      position: { lat: 38.3960059, lng: -0.5277508 },
-	      map: this.map,
-	      animation: google.maps.Animation.DROP,
-	      title: 'Palacio de Tudemir'
-	    });
-	
-	    var palacioAlicanteInfo = new google.maps.InfoWindow({
-	      content: "<a href='http://www.hotelpalaciotudemir.com/en' target='_blank'>Hotel Palacio</a>"
-	    });
-	
-	    palacioAlicante.addListener( 'click', function() {
-	      palacioAlicanteInfo.open( this.map, palacioAlicante )
-	    })
-	  },
-	
-	  displayLosPalacios: function() {
-	    var losPalacios = new google.maps.Marker({
-	      position: { lat: 38.0881009, lng: -0.7291746 },
-	      map: this.map,
-	      animation: google.maps.Animation.DROP,
-	      title: 'Los Palacios'
-	    });
-	
-	    var losPalaciosInfo = new google.maps.InfoWindow({
-	      content: "<a href='https://goo.gl/0OhSGS' target='_blank'>Los Palacios</a>"
-	    });
-	
-	    losPalacios.addListener( 'click', function() {
-	      losPalaciosInfo.open( this.map, losPalacios )
-	    })
-	  },
-	
-	  displayLaLaguna: function() {
-	    var laLaguna = new google.maps.Marker({
-	      position: { lat: 38.0494904, lng: -0.7132986 },
-	      map: this.map,
-	      animation: google.maps.Animation.DROP,
-	      title: 'Hotel La Laguna'
-	    });
-	
-	    var laLagunaInfo = new google.maps.InfoWindow({
-	      content: "<a href='http://www.hotellalaguna.com/en' target='_blank'>La Laguna</a>"
-	    });
-	
-	    laLaguna.addListener( 'click', function() {
-	      laLagunaInfo.open( this.map, laLaguna )
-	    })
-	  },
-	}
-	
-	module.exports = EnglishMapView;
-
-/***/ },
-/* 4 */,
-/* 5 */
+/* 1 */
 /***/ function(module, exports) {
 
 	var EnglishHomeView = function() {
@@ -242,7 +79,10 @@
 	    homeSpace.innerText = "";
 	    var welcome = document.createElement( 'h1' );
 	    welcome.innerText = "Hello";
+	    var text = document.createElement( 'h5' );
+	    text.innerText = "Thanks for visiting the site. Hopefully you'll find some useful information throughout. If you have any other questions then feel free to ping us an email via the Contact page. Also feel free to say hello through the Comments page."
 	    homeSpace.appendChild( welcome );
+	    homeSpace.appendChild( text );
 	  },
 	
 	}
@@ -250,201 +90,18 @@
 	module.exports = EnglishHomeView;
 
 /***/ },
-/* 6 */
-/***/ function(module, exports) {
-
-	var SpanishHomeView = function() {
-	  this.display();
-	}
-	
-	SpanishHomeView.prototype = {
-	
-	  display: function() {
-	    var homeSpace = document.getElementById( 'home-space' );
-	    homeSpace.innerText = "";
-	    var welcome = document.createElement( 'h1' );
-	    welcome.innerText = "Hola";
-	    homeSpace.appendChild( welcome );
-	  },
-	
-	}
-	
-	module.exports = SpanishHomeView;
-
-/***/ },
-/* 7 */,
-/* 8 */
-/***/ function(module, exports) {
-
-	var SpanishMapView = function() {
-	  this.center = { lat: 38.1976052, lng: -0.6143937 };
-	  this.map = new google.maps.Map( document.getElementById( 'map' ), {
-	    center: this.center,
-	    zoom: 10
-	  })
-	
-	  this.displayPalacioAlicante();
-	  this.displayLosPalacios();
-	  this.displayLaLaguna();
-	}
-	
-	SpanishMapView.prototype = {
-	
-	  displayPalacioAlicante: function() {
-	    var palacioAlicante = new google.maps.Marker({
-	      position: { lat: 38.3960059, lng: -0.5277508 },
-	      map: this.map,
-	      animation: google.maps.Animation.DROP,
-	      title: 'Palacio de Tudemir'
-	    });
-	
-	    var palacioAlicanteInfo = new google.maps.InfoWindow({
-	      content: "<a href='http://www.hotelpalaciotudemir.com/es' target='_blank'>Palacio De Tumemir</a>"
-	    });
-	
-	    palacioAlicante.addListener( 'click', function() {
-	      palacioAlicanteInfo.open( this.map, palacioAlicante )
-	    })
-	  },
-	
-	  displayLosPalacios: function() {
-	    var losPalacios = new google.maps.Marker({
-	      position: { lat: 38.0881009, lng: -0.7291746 },
-	      map: this.map,
-	      animation: google.maps.Animation.DROP,
-	      title: 'Los Palacios'
-	    });
-	
-	    var losPalaciosInfo = new google.maps.InfoWindow({
-	      content: "<a href='https://goo.gl/y9SDUI' target='_blank'>Los Palacios</a>"
-	    });
-	
-	    losPalacios.addListener( 'click', function() {
-	      losPalaciosInfo.open( this.map, losPalacios )
-	    })
-	  },
-	
-	  displayLaLaguna: function() {
-	    var laLaguna = new google.maps.Marker({
-	      position: { lat: 38.0494904, lng: -0.7132986 },
-	      map: this.map,
-	      animation: google.maps.Animation.DROP,
-	      title: 'Hotel La Laguna'
-	    });
-	
-	    var laLagunaInfo = new google.maps.InfoWindow({
-	      content: "<a href='http://www.hotellalaguna.com/' target='_blank'>La Laguna</a>"
-	    });
-	
-	    laLaguna.addListener( 'click', function() {
-	      laLagunaInfo.open( this.map, laLaguna )
-	    })
-	  },
-	}
-	
-	module.exports = SpanishMapView;
-
-/***/ },
-/* 9 */
-/***/ function(module, exports) {
-
-	var SpanishCommentsView = function() {
-	  this.comments = [];
-	  // this.url = "http://localhost:5000/comments.json";
-	  // this.url = "https://pacific-fortress-75674.herokuapp.com/";
-	  this.url = "https://wedding-comments.herokuapp.com/";
-	  this.getComments();
-	}
-	
-	SpanishCommentsView.prototype = {
-	
-	  display: function() {
-	    this.createForm();
-	    var commentSpace = document.getElementById( 'comment-space' );
-	    var list = document.createElement( 'ul' );
-	    commentSpace.appendChild( list );
-	    for( var i = 0; i < this.comments.length; i++ ) {
-	      var comment = document.createElement( 'li' );
-	      var text = this.comments[i].name + " - " + this.comments[i].comment_text;
-	      comment.innerText = text;
-	      list.appendChild( comment );
-	    }
-	  },
-	
-	  getComments: function() {
-	    var commentSpace = document.getElementById( 'comment-space' );
-	    commentSpace.innerText = "";
-	    var request = new XMLHttpRequest();
-	    request.open( 'GET', this.url );
-	    request.setRequestHeader("Content-Type", "application/json")
-	    request.onload = () => {
-	      if( request.status === 200 ) {
-	        var comments = JSON.parse( request.responseText );
-	        this.comments = comments;
-	        this.display();
-	      }
-	    }
-	    request.send( null );
-	  },
-	
-	  createForm: function() {
-	    var commentSpace = document.getElementById( 'comment-space' );
-	
-	    var title = document.createElement( 'h2' );
-	    title.innerText = "Come and say hola";
-	
-	    var name = document.createElement( 'input' );
-	    name.type = 'text';
-	    name.placeholder = 'Nombre...';
-	    name.id = 'name';
-	
-	    var comment = document.createElement( 'input' );
-	    comment.type = 'input';
-	    comment.placeholder = 'Agregue su comentario por favor...';
-	    comment.setAttribute('size',comment.getAttribute('placeholder').length);
-	    comment.id = 'comment';
-	
-	    var button = document.createElement( 'button' );
-	    button.innerText = 'Agregar Comentario';
-	
-	    commentSpace.appendChild( title );
-	    commentSpace.appendChild( name );
-	    commentSpace.appendChild( comment );
-	    commentSpace.appendChild( button );
-	
-	    button.onclick = function() {
-	      var request = new XMLHttpRequest()
-	      request.open( 'POST', this.url )
-	      request.setRequestHeader("Content-Type", "application/json")
-	      request.onload = () => {
-	        this.getComments();
-	      }
-	      var data = {
-	        comment: {
-	          name: name.value,
-	          comment_text: comment.value
-	        }
-	      }
-	      request.send( JSON.stringify( data ));
-	    }.bind( this )
-	  },
-	}
-	
-	module.exports = SpanishCommentsView;
-
-/***/ },
-/* 10 */
+/* 2 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var EnglishHomeView = __webpack_require__( 5 );
+	var EnglishHomeView = __webpack_require__( 1 );
 	var EnglishMapView = __webpack_require__( 3 );
-	var EnglishCommentsView = __webpack_require__( 2 );
-	var EnglishContactView = __webpack_require__( 11 );
+	var EnglishCommentsView = __webpack_require__( 4 );
+	var EnglishContactView = __webpack_require__( 5 );
 	
 	var SpanishHomeView = __webpack_require__( 6 );
-	var SpanishMapView = __webpack_require__( 8 );
-	var SpanishCommentsView = __webpack_require__( 9 );
-	var SpanishContactView = __webpack_require__( 12 );
+	var SpanishMapView = __webpack_require__( 7 );
+	var SpanishCommentsView = __webpack_require__( 8 );
+	var SpanishContactView = __webpack_require__( 9 );
 	
 	function EnglishNavView() {
 	  this.displayEnglish();
@@ -669,7 +326,168 @@
 	module.exports = EnglishNavView;
 
 /***/ },
-/* 11 */
+/* 3 */
+/***/ function(module, exports) {
+
+	var EnglishMapView = function() {
+	  this.center = { lat: 38.1976052, lng: -0.6143937 };
+	  this.map = new google.maps.Map( document.getElementById( 'map' ), {
+	    center: this.center,
+	    zoom: 10
+	  })
+	
+	  this.displayPalacioAlicante();
+	  this.displayLosPalacios();
+	  this.displayLaLaguna();
+	
+	}
+	
+	EnglishMapView.prototype = {
+	
+	  displayPalacioAlicante: function() {
+	    var palacioAlicante = new google.maps.Marker({
+	      position: { lat: 38.3960059, lng: -0.5277508 },
+	      map: this.map,
+	      animation: google.maps.Animation.DROP,
+	      title: 'Palacio de Tudemir'
+	    });
+	
+	    var palacioAlicanteInfo = new google.maps.InfoWindow({
+	      content: "<a href='http://www.hotelpalaciotudemir.com/en' target='_blank'>Hotel Palacio</a>"
+	    });
+	
+	    palacioAlicante.addListener( 'click', function() {
+	      palacioAlicanteInfo.open( this.map, palacioAlicante )
+	    })
+	  },
+	
+	  displayLosPalacios: function() {
+	    var losPalacios = new google.maps.Marker({
+	      position: { lat: 38.0881009, lng: -0.7291746 },
+	      map: this.map,
+	      animation: google.maps.Animation.DROP,
+	      title: 'Los Palacios'
+	    });
+	
+	    var losPalaciosInfo = new google.maps.InfoWindow({
+	      content: "<a href='https://goo.gl/0OhSGS' target='_blank'>Los Palacios</a>"
+	    });
+	
+	    losPalacios.addListener( 'click', function() {
+	      losPalaciosInfo.open( this.map, losPalacios )
+	    })
+	  },
+	
+	  displayLaLaguna: function() {
+	    var laLaguna = new google.maps.Marker({
+	      position: { lat: 38.0494904, lng: -0.7132986 },
+	      map: this.map,
+	      animation: google.maps.Animation.DROP,
+	      title: 'Hotel La Laguna'
+	    });
+	
+	    var laLagunaInfo = new google.maps.InfoWindow({
+	      content: "<a href='http://www.hotellalaguna.com/en' target='_blank'>La Laguna</a>"
+	    });
+	
+	    laLaguna.addListener( 'click', function() {
+	      laLagunaInfo.open( this.map, laLaguna )
+	    })
+	  },
+	}
+	
+	module.exports = EnglishMapView;
+
+/***/ },
+/* 4 */
+/***/ function(module, exports) {
+
+	var EnglishCommentsView = function() {
+	  this.comments = [];
+	  // this.url = "https://wedding-comments.herokuapp.com/comments";
+	  // this.url = "https://pacific-fortress-75674.herokuapp.com/comments";
+	  this.url = "http://localhost:5000/comments.json";
+	  this.getComments()
+	}
+	
+	EnglishCommentsView.prototype = {
+	
+	  display: function() {
+	    this.createForm();
+	    var commentSpace = document.getElementById( 'comment-space' );
+	    var list = document.createElement( 'ul' );
+	    commentSpace.appendChild( list );
+	    for( var i = 0; i < this.comments.length; i++ ) {
+	      var comment = document.createElement( 'li' );
+	      var text = this.comments[i].name + " - " + this.comments[i].comment_text;
+	      comment.innerText = text;
+	      list.appendChild( comment );
+	    }
+	  },
+	
+	  getComments: function() {
+	    var commentSpace = document.getElementById( 'comment-space' );
+	    commentSpace.innerText = "";
+	    var request = new XMLHttpRequest();
+	    request.open( 'GET', this.url );
+	    request.setRequestHeader("Content-Type", "application/json")
+	    request.onload = () => {
+	      if( request.status === 200 ) {
+	        var comments = JSON.parse( request.responseText );
+	        this.comments = comments;
+	        this.display();
+	      }
+	    }
+	    request.send( null );
+	  },
+	
+	  createForm: function() {
+	    var commentSpace = document.getElementById( 'comment-space' );
+	
+	    var title = document.createElement( 'h2' );
+	    title.innerText = "Come and say hi";
+	
+	    var name = document.createElement( 'input' );
+	    name.type = 'text';
+	    name.placeholder = 'Name...';
+	    name.id = 'name';
+	
+	    var comment = document.createElement( 'input' );
+	    comment.type = 'input';
+	    comment.placeholder = 'Please add your comment...';
+	    comment.setAttribute('size',comment.getAttribute('placeholder').length);
+	    comment.id = 'comment';
+	
+	    var button = document.createElement( 'button' );
+	    button.innerText = 'Add Comment';
+	
+	    commentSpace.appendChild( title );
+	    commentSpace.appendChild( name );
+	    commentSpace.appendChild( comment );
+	    commentSpace.appendChild( button );
+	
+	    button.onclick = function() {
+	      var request = new XMLHttpRequest()
+	      request.open( 'POST', this.url )
+	      request.setRequestHeader("Content-Type", "application/json")
+	      request.onload = () => {
+	        this.getComments();
+	      }
+	      var data = {
+	        comment: {
+	          name: name.value,
+	          comment_text: comment.value
+	        }
+	      }
+	      request.send( JSON.stringify( data ));
+	    }.bind( this )
+	  },
+	}
+	
+	module.exports = EnglishCommentsView;
+
+/***/ },
+/* 5 */
 /***/ function(module, exports) {
 
 	var EnglishContactView = function() {
@@ -721,7 +539,189 @@
 	module.exports = EnglishContactView;
 
 /***/ },
-/* 12 */
+/* 6 */
+/***/ function(module, exports) {
+
+	var SpanishHomeView = function() {
+	  this.display();
+	}
+	
+	SpanishHomeView.prototype = {
+	
+	  display: function() {
+	    var homeSpace = document.getElementById( 'home-space' );
+	    homeSpace.innerText = "";
+	    var welcome = document.createElement( 'h1' );
+	    welcome.innerText = "Hola";
+	    homeSpace.appendChild( welcome );
+	  },
+	
+	}
+	
+	module.exports = SpanishHomeView;
+
+/***/ },
+/* 7 */
+/***/ function(module, exports) {
+
+	var SpanishMapView = function() {
+	  this.center = { lat: 38.1976052, lng: -0.6143937 };
+	  this.map = new google.maps.Map( document.getElementById( 'map' ), {
+	    center: this.center,
+	    zoom: 10
+	  })
+	
+	  this.displayPalacioAlicante();
+	  this.displayLosPalacios();
+	  this.displayLaLaguna();
+	}
+	
+	SpanishMapView.prototype = {
+	
+	  displayPalacioAlicante: function() {
+	    var palacioAlicante = new google.maps.Marker({
+	      position: { lat: 38.3960059, lng: -0.5277508 },
+	      map: this.map,
+	      animation: google.maps.Animation.DROP,
+	      title: 'Palacio de Tudemir'
+	    });
+	
+	    var palacioAlicanteInfo = new google.maps.InfoWindow({
+	      content: "<a href='http://www.hotelpalaciotudemir.com/es' target='_blank'>Palacio De Tumemir</a>"
+	    });
+	
+	    palacioAlicante.addListener( 'click', function() {
+	      palacioAlicanteInfo.open( this.map, palacioAlicante )
+	    })
+	  },
+	
+	  displayLosPalacios: function() {
+	    var losPalacios = new google.maps.Marker({
+	      position: { lat: 38.0881009, lng: -0.7291746 },
+	      map: this.map,
+	      animation: google.maps.Animation.DROP,
+	      title: 'Los Palacios'
+	    });
+	
+	    var losPalaciosInfo = new google.maps.InfoWindow({
+	      content: "<a href='https://goo.gl/y9SDUI' target='_blank'>Los Palacios</a>"
+	    });
+	
+	    losPalacios.addListener( 'click', function() {
+	      losPalaciosInfo.open( this.map, losPalacios )
+	    })
+	  },
+	
+	  displayLaLaguna: function() {
+	    var laLaguna = new google.maps.Marker({
+	      position: { lat: 38.0494904, lng: -0.7132986 },
+	      map: this.map,
+	      animation: google.maps.Animation.DROP,
+	      title: 'Hotel La Laguna'
+	    });
+	
+	    var laLagunaInfo = new google.maps.InfoWindow({
+	      content: "<a href='http://www.hotellalaguna.com/' target='_blank'>La Laguna</a>"
+	    });
+	
+	    laLaguna.addListener( 'click', function() {
+	      laLagunaInfo.open( this.map, laLaguna )
+	    })
+	  },
+	}
+	
+	module.exports = SpanishMapView;
+
+/***/ },
+/* 8 */
+/***/ function(module, exports) {
+
+	var SpanishCommentsView = function() {
+	  this.comments = [];
+	  this.url = "http://localhost:5000/comments.json";
+	  // this.url = "https://pacific-fortress-75674.herokuapp.com/";
+	  // this.url = "https://wedding-comments.herokuapp.com/";
+	  this.getComments();
+	}
+	
+	SpanishCommentsView.prototype = {
+	
+	  display: function() {
+	    this.createForm();
+	    var commentSpace = document.getElementById( 'comment-space' );
+	    var list = document.createElement( 'ul' );
+	    commentSpace.appendChild( list );
+	    for( var i = 0; i < this.comments.length; i++ ) {
+	      var comment = document.createElement( 'li' );
+	      var text = this.comments[i].name + " - " + this.comments[i].comment_text;
+	      comment.innerText = text;
+	      list.appendChild( comment );
+	    }
+	  },
+	
+	  getComments: function() {
+	    var commentSpace = document.getElementById( 'comment-space' );
+	    commentSpace.innerText = "";
+	    var request = new XMLHttpRequest();
+	    request.open( 'GET', this.url );
+	    request.setRequestHeader("Content-Type", "application/json")
+	    request.onload = () => {
+	      if( request.status === 200 ) {
+	        var comments = JSON.parse( request.responseText );
+	        this.comments = comments;
+	        this.display();
+	      }
+	    }
+	    request.send( null );
+	  },
+	
+	  createForm: function() {
+	    var commentSpace = document.getElementById( 'comment-space' );
+	
+	    var title = document.createElement( 'h2' );
+	    title.innerText = "Come and say hola";
+	
+	    var name = document.createElement( 'input' );
+	    name.type = 'text';
+	    name.placeholder = 'Nombre...';
+	    name.id = 'name';
+	
+	    var comment = document.createElement( 'input' );
+	    comment.type = 'input';
+	    comment.placeholder = 'Agregue su comentario por favor...';
+	    comment.setAttribute('size',comment.getAttribute('placeholder').length);
+	    comment.id = 'comment';
+	
+	    var button = document.createElement( 'button' );
+	    button.innerText = 'Agregar Comentario';
+	
+	    commentSpace.appendChild( title );
+	    commentSpace.appendChild( name );
+	    commentSpace.appendChild( comment );
+	    commentSpace.appendChild( button );
+	
+	    button.onclick = function() {
+	      var request = new XMLHttpRequest()
+	      request.open( 'POST', this.url )
+	      request.setRequestHeader("Content-Type", "application/json")
+	      request.onload = () => {
+	        this.getComments();
+	      }
+	      var data = {
+	        comment: {
+	          name: name.value,
+	          comment_text: comment.value
+	        }
+	      }
+	      request.send( JSON.stringify( data ));
+	    }.bind( this )
+	  },
+	}
+	
+	module.exports = SpanishCommentsView;
+
+/***/ },
+/* 9 */
 /***/ function(module, exports) {
 
 	var EnglishContactView = function() {
