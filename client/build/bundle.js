@@ -118,8 +118,8 @@
 	    homeSpace.appendChild( venue );
 	    homeSpace.appendChild( dotsTwo );
 	    homeSpace.appendChild( us );
-	    homeSpace.appendChild( language );
-	    homeSpace.appendChild( languageText );
+	    // homeSpace.appendChild( language );
+	    // homeSpace.appendChild( languageText );
 	  },
 	
 	}
@@ -131,6 +131,7 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	var EnglishHomeView = __webpack_require__( 1 );
+	var EnglishVenueView = __webpack_require__( 10 );
 	var EnglishMapView = __webpack_require__( 3 );
 	var EnglishCommentsView = __webpack_require__( 4 );
 	var EnglishContactView = __webpack_require__( 5 );
@@ -161,9 +162,21 @@
 	      this.displayEnglishHome();
 	    }.bind( this );
 	
-	    var map = document.createElement( 'li' );
-	    map.innerText = "Map"
-	    map.onclick = function() {
+	    var venue = document.createElement( 'li' );
+	    venue.innerText = "Venue";
+	    venue.onclick = function() {
+	      this.displayEnglishVenue();
+	    }.bind( this );
+	
+	    var bus = document.createElement( 'li' );
+	    bus.innerText = "Buses";
+	    bus.onclick = function() {
+	      this.displayEnglishBus();
+	    }.bind( this );
+	
+	    var hotels = document.createElement( 'li' );
+	    hotels.innerText = "Hotels"
+	    hotels.onclick = function() {
 	      this.displayEnglishMap();
 	    }.bind( this );
 	
@@ -187,8 +200,10 @@
 	
 	    navSpace.appendChild( title );
 	    navSpace.appendChild( contact );
-	    navSpace.appendChild( map );
 	    navSpace.appendChild( comments );
+	    navSpace.appendChild( hotels );
+	    navSpace.appendChild( bus );
+	    navSpace.appendChild( venue );
 	    navSpace.appendChild( home );
 	    navSpace.appendChild( flag );
 	
@@ -234,8 +249,8 @@
 	
 	    navSpace.appendChild( title );
 	    navSpace.appendChild( contact );
-	    navSpace.appendChild( map );
 	    navSpace.appendChild( comments );
+	    navSpace.appendChild( map );
 	    navSpace.appendChild( home );
 	    navSpace.appendChild( flag );
 	
@@ -246,6 +261,13 @@
 	    var homeSpace = document.getElementById( 'home-space' );
 	    homeSpace.style.display = "block";
 	    var view = new EnglishHomeView();
+	  },
+	
+	  displayEnglishVenue: function() {
+	    this.clearEnglish();
+	    var venueSpace = document.getElementById( 'venue-space' );
+	    venueSpace.style.display = "block";
+	    var view = new EnglishVenueView();
 	  },
 	
 	  displayEnglishMap: function() {
@@ -482,6 +504,7 @@
 	    var commentSpace = document.getElementById( 'comment-space' );
 	
 	    var title = document.createElement( 'h1' );
+	    title.className = "circleTitle";
 	    title.innerText = "Come and say hi";
 	
 	    var name = document.createElement( 'input' );
@@ -543,6 +566,7 @@
 	    secondary.id = "secondary";
 	
 	    var welcome = document.createElement( 'h1' );
+	    welcome.className = "circleTitle";
 	    welcome.innerText = "General Information";
 	    primary.appendChild( welcome );
 	
@@ -808,6 +832,16 @@
 	}
 	
 	module.exports = EnglishContactView;
+
+/***/ },
+/* 10 */
+/***/ function(module, exports) {
+
+	var EnglishVenueView = function() {
+	  
+	}
+	
+	module.exports = EnglishVenueView;
 
 /***/ }
 /******/ ]);

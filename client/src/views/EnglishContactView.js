@@ -14,6 +14,7 @@ EnglishContactView.prototype = {
     secondary.id = "secondary";
 
     var welcome = document.createElement( 'h1' );
+    welcome.className = "circleTitle";
     welcome.innerText = "General Information";
     primary.appendChild( welcome );
 

@@ -1,4 +1,5 @@
 var EnglishHomeView = require( './EnglishHomeView' );
+var EnglishVenueView = require( './EnglishVenueView' );
 var EnglishMapView = require( './EnglishMapView' );
 var EnglishCommentsView = require( './EnglishCommentsView' );
 var EnglishContactView = require( './EnglishContactView' );
@@ -29,9 +30,21 @@ EnglishNavView.prototype = {
       this.displayEnglishHome();
     }.bind( this );
 
-    var map = document.createElement( 'li' );
-    map.innerText = "Map"
-    map.onclick = function() {
+    var venue = document.createElement( 'li' );
+    venue.innerText = "Venue";
+    venue.onclick = function() {
+      this.displayEnglishVenue();
+    }.bind( this );
+
+    var bus = document.createElement( 'li' );
+    bus.innerText = "Buses";
+    bus.onclick = function() {
+      this.displayEnglishBus();
+    }.bind( this );
+
+    var hotels = document.createElement( 'li' );
+    hotels.innerText = "Hotels"
+    hotels.onclick = function() {
       this.displayEnglishMap();
     }.bind( this );
 
@@ -55,8 +68,10 @@ EnglishNavView.prototype = {
 
     navSpace.appendChild( title );
     navSpace.appendChild( contact );
-    navSpace.appendChild( map );
     navSpace.appendChild( comments );
+    navSpace.appendChild( hotels );
+    navSpace.appendChild( bus );
+    navSpace.appendChild( venue );
     navSpace.appendChild( home );
     navSpace.appendChild( flag );
 
@@ -102,8 +117,8 @@ EnglishNavView.prototype = {
 
     navSpace.appendChild( title );
     navSpace.appendChild( contact );
-    navSpace.appendChild( map );
     navSpace.appendChild( comments );
+    navSpace.appendChild( map );
     navSpace.appendChild( home );
     navSpace.appendChild( flag );
 
@@ -114,6 +129,13 @@ EnglishNavView.prototype = {
     var homeSpace = document.getElementById( 'home-space' );
     homeSpace.style.display = "block";
     var view = new EnglishHomeView();
+  },
+
+  displayEnglishVenue: function() {
+    this.clearEnglish();
+    var venueSpace = document.getElementById( 'venue-space' );
+    venueSpace.style.display = "block";
+    var view = new EnglishVenueView();
   },
 
   displayEnglishMap: function() {

@@ -41,6 +41,7 @@ EnglishCommentsView.prototype = {
     var commentSpace = document.getElementById( 'comment-space' );
 
     var title = document.createElement( 'h1' );
+    title.className = "circleTitle";
     title.innerText = "Come and say hi";
 
     var name = document.createElement( 'input' );

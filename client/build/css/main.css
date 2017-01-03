@@ -20,7 +20,7 @@ header {
 }
 
 #circle-space h1.circleTitle {
-  padding-top: 40px;
+  padding-top: 95px;
 }
 
 h5 {
@@ -113,13 +113,7 @@ input {
   font-weight: bold;
 }
 
-#circle-space {
-  margin: auto;
-  height: 35em;
-  width: 35em;
-  background-color: #578163;
-  border-radius: 30em;
-}
+
 
 a {
   text-decoration: none;
@@ -200,6 +194,14 @@ input#comment {
   height: 600px;
   width: 600px;
   margin-top: 20px;
+}
+
+#circle-space {
+  margin: auto;
+  height: 35em;
+  width: 35em;
+  background-color: #578163;
+  border-radius: 30em;
 }
 
 

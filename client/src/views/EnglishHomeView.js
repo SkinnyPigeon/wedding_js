@@ -48,8 +48,8 @@ EnglishHomeView.prototype = {
     homeSpace.appendChild( venue );
     homeSpace.appendChild( dotsTwo );
     homeSpace.appendChild( us );
-    homeSpace.appendChild( language );
-    homeSpace.appendChild( languageText );
+    // homeSpace.appendChild( language );
+    // homeSpace.appendChild( languageText );
   },
 
 }
