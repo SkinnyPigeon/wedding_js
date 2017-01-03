@@ -105,20 +105,20 @@ input {
   font-weight: bold;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
-  font-family: 'Clicker Script', cursive;
-  font-size: 1.2em;
-  background-color: #578163;
-}
-
 #circle-space {
   margin: auto;
   height: 35em;
   width: 35em;
   background-color: #578163;
   border-radius: 30em;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  font-family: 'Clicker Script', cursive;
+  font-size: 1.2em;
+  background-color: #578163;
 }
 
 #home-space {
@@ -151,8 +151,28 @@ ul a {
 }
 
 #comment-space {
-  margin-top: 20px;
-  padding-left: 3%;
+  margin: auto;
+  text-align: center;
+  /*margin-top: 20px;*/
+  /*padding-left: 3%;*/
+}
+
+#comment-space input {
+  margin-bottom: 30px;
+}
+
+#comment-space li {
+  margin: auto;
+  padding-bottom: 1em;
+  text-align: center;
+  max-width: 30em;
+  max-height: 40em;
+  overflow: hidden;
+  overflow-y: scroll;
+  color: #F5EBAE;
+  font-family: 'Gudea', sans-serif;
+  font-size: 0.82em;
+  font-weight: bold;
 }
 
 #map {
@@ -162,21 +182,6 @@ ul a {
   margin-top: 20px;
 }
 
-
-/*#contact-space #primary {
-  width: 43%;
-  display: inline-block;
-  float: left;
-  margin-left: 3%;
-}
-
-#contact-space #secondary {
-  width: 43%;
-  display: inline-block;
-  float: right;
-  margin-top: 0;
-  margin-left: 3%;
-}*/
 
 /******colors******
 

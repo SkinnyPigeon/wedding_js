@@ -455,7 +455,7 @@
 	  createForm: function() {
 	    var commentSpace = document.getElementById( 'comment-space' );
 	
-	    var title = document.createElement( 'h2' );
+	    var title = document.createElement( 'h1' );
 	    title.innerText = "Come and say hi";
 	
 	    var name = document.createElement( 'input' );
@@ -649,9 +649,9 @@
 
 	var SpanishCommentsView = function() {
 	  this.comments = [];
-	  this.url = "http://localhost:5000/comments.json";
+	  // this.url = "http://localhost:5000/comments.json";
 	  // this.url = "https://pacific-fortress-75674.herokuapp.com/";
-	  // this.url = "https://wedding-comments.herokuapp.com/";
+	  this.url = "https://wedding-comments.herokuapp.com/";
 	  this.getComments();
 	}
 	

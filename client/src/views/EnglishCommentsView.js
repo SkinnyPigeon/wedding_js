@@ -40,7 +40,7 @@ EnglishCommentsView.prototype = {
   createForm: function() {
     var commentSpace = document.getElementById( 'comment-space' );
 
-    var title = document.createElement( 'h2' );
+    var title = document.createElement( 'h1' );
     title.innerText = "Come and say hi";
 
     var name = document.createElement( 'input' );
