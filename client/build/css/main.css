@@ -235,6 +235,11 @@ input#comment {
   text-align: center;
 }
 
+#map a {
+  background-color: white;
+  font-family: 'Gudea', sans-serif;
+}
+
 /******colors******
 
 #E2AEBD - PINK
