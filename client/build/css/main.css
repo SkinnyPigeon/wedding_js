@@ -165,7 +165,7 @@ ul a {
   margin: auto;
   text-align: center;
   max-width: 30em;
-  max-height: 2em;
+  max-height: 40em;
   overflow: hidden;
   overflow-y: scroll;
 }
