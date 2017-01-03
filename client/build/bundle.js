@@ -131,16 +131,16 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	var EnglishHomeView = __webpack_require__( 1 );
-	var EnglishVenueView = __webpack_require__( 10 );
-	var EnglishBusView = __webpack_require__( 11 );
-	var EnglishMapView = __webpack_require__( 3 );
-	var EnglishCommentsView = __webpack_require__( 4 );
-	var EnglishContactView = __webpack_require__( 5 );
+	var EnglishVenueView = __webpack_require__( 3 );
+	var EnglishBusView = __webpack_require__( 4 );
+	var EnglishMapView = __webpack_require__( 5 );
+	var EnglishCommentsView = __webpack_require__( 6 );
+	var EnglishContactView = __webpack_require__( 7 );
 	
-	var SpanishHomeView = __webpack_require__( 6 );
-	var SpanishMapView = __webpack_require__( 7 );
-	var SpanishCommentsView = __webpack_require__( 8 );
-	var SpanishContactView = __webpack_require__( 9 );
+	var SpanishHomeView = __webpack_require__( 8 );
+	var SpanishMapView = __webpack_require__( 9 );
+	var SpanishCommentsView = __webpack_require__( 10 );
+	var SpanishContactView = __webpack_require__( 11 );
 	
 	function EnglishNavView() {
 	  this.displayEnglish();
@@ -266,7 +266,7 @@
 	
 	  displayEnglishVenue: function() {
 	    this.clearEnglish();
-	    var venueSpace = document.getElementById( 'venue-space' );
+	    var venueSpace = document.getElementById( 'map' );
 	    venueSpace.style.display = "block";
 	    var view = new EnglishVenueView();
 	  },
@@ -396,6 +396,53 @@
 /* 3 */
 /***/ function(module, exports) {
 
+	var EnglishVenueView = function() {
+	  this.center = { lat: 38.0864422, lng: -0.8313381 };
+	  this.map = new google.maps.Map( document.getElementById( 'map' ), {
+	    center: this.center,
+	    zoom: 11
+	  })
+	
+	  this.displaySalone();
+	}
+	
+	EnglishVenueView.prototype = {
+	
+	  displaySalone: function() {
+	    var salone = new google.maps.Marker({
+	      position: { lat: 38.085552, lng: -0.729775 },
+	      map: this.map,
+	      animation: google.maps.Animation.DROP,
+	      title: 'Salone Canario'
+	    });
+	
+	    var palacioAlicanteInfo = new google.maps.InfoWindow({
+	      content: "Salone Canario"
+	    });
+	
+	    salone.addListener( 'click', function() {
+	      palacioAlicanteInfo.open( this.map, salone )
+	    })
+	  },
+	
+	}
+	
+	module.exports = EnglishVenueView;
+
+/***/ },
+/* 4 */
+/***/ function(module, exports) {
+
+	var EnglishBusView = function() {
+	  
+	}
+	
+	module.exports = EnglishBusView;
+
+/***/ },
+/* 5 */
+/***/ function(module, exports) {
+
 	var EnglishMapView = function() {
 	  this.center = { lat: 38.1976052, lng: -0.6143937 };
 	  this.map = new google.maps.Map( document.getElementById( 'map' ), {
@@ -466,7 +513,7 @@
 	module.exports = EnglishMapView;
 
 /***/ },
-/* 4 */
+/* 6 */
 /***/ function(module, exports) {
 
 	var EnglishCommentsView = function() {
@@ -555,7 +602,7 @@
 	module.exports = EnglishCommentsView;
 
 /***/ },
-/* 5 */
+/* 7 */
 /***/ function(module, exports) {
 
 	var EnglishContactView = function() {
@@ -608,7 +655,7 @@
 	module.exports = EnglishContactView;
 
 /***/ },
-/* 6 */
+/* 8 */
 /***/ function(module, exports) {
 
 	var SpanishHomeView = function() {
@@ -630,7 +677,7 @@
 	module.exports = SpanishHomeView;
 
 /***/ },
-/* 7 */
+/* 9 */
 /***/ function(module, exports) {
 
 	var SpanishMapView = function() {
@@ -702,7 +749,7 @@
 	module.exports = SpanishMapView;
 
 /***/ },
-/* 8 */
+/* 10 */
 /***/ function(module, exports) {
 
 	var SpanishCommentsView = function() {
@@ -790,7 +837,7 @@
 	module.exports = SpanishCommentsView;
 
 /***/ },
-/* 9 */
+/* 11 */
 /***/ function(module, exports) {
 
 	var EnglishContactView = function() {
@@ -840,26 +887,6 @@
 	}
 	
 	module.exports = EnglishContactView;
-
-/***/ },
-/* 10 */
-/***/ function(module, exports) {
-
-	var EnglishVenueView = function() {
-	  
-	}
-	
-	module.exports = EnglishVenueView;
-
-/***/ },
-/* 11 */
-/***/ function(module, exports) {
-
-	var EnglishBusView = function() {
-	  
-	}
-	
-	module.exports = EnglishBusView;
 
 /***/ }
 /******/ ]);
