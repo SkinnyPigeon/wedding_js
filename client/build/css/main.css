@@ -103,7 +103,13 @@ a {
 }
 
 #home-space {
-  padding-left: 3%;
+  /*margin-left: 3%;*/
+  /*padding-left: 1%;*/
+  margin: auto;
+  height: 35em;
+  width: 35em;
+  background-color: #578163;
+  border-radius: 30em;
 }
 
 #contact-space div ul li img {
