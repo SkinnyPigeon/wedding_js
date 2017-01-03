@@ -77,12 +77,23 @@
 	  display: function() {
 	    var homeSpace = document.getElementById( 'home-space' );
 	    homeSpace.innerText = "";
+	
 	    var welcome = document.createElement( 'h1' );
 	    welcome.innerText = "Hello";
+	
 	    var text = document.createElement( 'h5' );
 	    text.innerText = "Thanks for visiting the site. Hopefully you'll find some useful information throughout. If you have any other questions then feel free to ping us an email via the Contact page. Also feel free to say hello through the Comments page."
+	
+	    var language = document.createElement( 'h1' );
+	    language.innerText = "Change Language";
+	
+	    var languageText = document.createElement( 'h5' );
+	    languageText.innerText = "Click the flag at any point to change the language."
+	
 	    homeSpace.appendChild( welcome );
 	    homeSpace.appendChild( text );
+	    homeSpace.appendChild( language );
+	    homeSpace.appendChild( languageText );
 	  },
 	
 	}
@@ -404,9 +415,9 @@
 
 	var EnglishCommentsView = function() {
 	  this.comments = [];
-	  // this.url = "https://wedding-comments.herokuapp.com/comments";
+	  this.url = "https://wedding-comments.herokuapp.com/comments";
 	  // this.url = "https://pacific-fortress-75674.herokuapp.com/comments";
-	  this.url = "http://localhost:5000/comments.json";
+	  // this.url = "http://localhost:5000/comments.json";
 	  this.getComments()
 	}
 	
@@ -509,7 +520,7 @@
 	    welcome.innerText = "General Information";
 	    primary.appendChild( welcome );
 	
-	    var info = document.createElement( 'p' );
+	    var info = document.createElement( 'h5' );
 	    info.innerText = "Hey guys. We really hope you can join us on the 1st of April 2017 for a day of good weather, good food and of course helping us celebrate our love. If you have any questions please drop us a shout."
 	    primary.appendChild( info );
 	

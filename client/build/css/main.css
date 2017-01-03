@@ -15,6 +15,10 @@ header {
   /*padding-left: 3%;*/
 }
 
+#circle-space h1 {
+  padding-top: 40px;
+}
+
 h5 {
   color: #F5EBAE;
   font-family: 'Gudea', sans-serif;
@@ -48,7 +52,6 @@ h2 {
 p {
   font-family: 'Clicker Script', cursive;
   font-size: 1.2em;
-  /*color: #E2AEBD;*/
   background-color: #FFF;
 }
 
@@ -107,8 +110,7 @@ a {
   color: inherit;
   font-family: 'Clicker Script', cursive;
   font-size: 1.2em;
-  background-color: #FFF;
-  /*color: #E2AEBD;*/
+  background-color: #578163;
 }
 
 #circle-space {
@@ -120,21 +122,33 @@ a {
 }
 
 #home-space {
-  /*margin-left: 3%;*/
-  /*padding-left: 1%;*/
-
   text-align: center;
 }
 
-
+#contact-space {
+  margin: auto;
+  text-align: center;
+}
 
 #contact-space div ul li img {
   width: 25px;
-  background-color: #FFF;
+  background-color: #578163;
 }
 
 #contact-space div ul li {
   display: inline-block;
+}
+
+#comment-space {
+  margin-top: 20px;
+  padding-left: 3%;
+}
+
+#map {
+  margin: auto;
+  height: 600px;
+  width: 600px;
+  margin-top: 20px;
 }
 
 
@@ -152,18 +166,6 @@ a {
   margin-top: 0;
   margin-left: 3%;
 }*/
-
-#comment-space {
-  margin-top: 20px;
-  padding-left: 3%;
-}
-
-#map {
-  margin: auto;
-  height: 600px;
-  width: 600px;
-  margin-top: 20px;
-}
 
 /******colors******
 
