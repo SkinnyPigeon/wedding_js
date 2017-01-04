@@ -1165,6 +1165,9 @@
 	
 	    var button = document.createElement( 'button' );
 	    button.innerText = "Click Me";
+	    button.onclick = function() {
+	      this.displayCircles();
+	    }.bind( this );
 	
 	    giftCircle.appendChild( title );
 	    giftCircle.appendChild( dotsOne );
@@ -1178,6 +1181,8 @@
 	    circleSpace.style.display = "none";
 	
 	    var giftSpace = document.getElementById( 'gift-space' );
+	    giftSpace.style.display = "block";
+	    
 	    var table = document.createElement( 'table' );
 	    table.id = "giftTable";
 	
