@@ -2,6 +2,7 @@ var EnglishHomeView = require( './EnglishHomeView' );
 var EnglishVenueView = require( './EnglishVenueView' );
 var EnglishBusView = require( './EnglishBusView' );
 var EnglishMapView = require( './EnglishMapView' );
+var EnglishGiftView = require( './EnglishGiftView' );
 var EnglishCommentsView = require( './EnglishCommentsView' );
 var EnglishContactView = require( './EnglishContactView' );
 
@@ -49,6 +50,13 @@ EnglishNavView.prototype = {
       this.displayEnglishMap();
     }.bind( this );
 
+    var gifts = document.createElement( 'li' );
+    gifts.innerText = "Gifts"
+    gifts.onclick = function() {
+      this.displayEnglishGift();
+    }.bind( this );
+
+
     var comments = document.createElement( 'li' );
     comments.innerText = "Comments";
     comments.onclick = function() {
@@ -70,6 +78,7 @@ EnglishNavView.prototype = {
     navSpace.appendChild( title );
     navSpace.appendChild( contact );
     navSpace.appendChild( comments );
+    navSpace.appendChild( gifts );
     navSpace.appendChild( hotels );
     navSpace.appendChild( bus );
     navSpace.appendChild( venue );
@@ -157,6 +166,15 @@ EnglishNavView.prototype = {
     var view = new EnglishMapView();
   },
 
+  displayEnglishGift: function() {
+    this.clearEnglish();
+    var giftSpace = document.getElementById( 'gift-space' );
+    giftSpace.style.display = "block";
+    var circleSpace = document.getElementById( 'circle-space' );
+    circleSpace.style.display = "none";
+    var view = new EnglishGiftView();
+  },
+
   displayEnglishComments: function() {
     this.clearEnglish();
     var commentSpace = document.getElementById( 'comment-space' );
@@ -228,14 +246,21 @@ EnglishNavView.prototype = {
     var hotelSpace = document.getElementById( 'hotel-space' );
     hotelSpace.style.display = "none";
 
-    var busSpace = document.getElementById( 'bus-space')
+    var busSpace = document.getElementById( 'bus-space' );
     busSpace.style.display = "none";
+
+    var giftSpace = document.getElementById( 'gift-space' );
+    giftSpace.style.display = "none";
 
     var commentSpace = document.getElementById( 'comment-space' );
     commentSpace.style.display = "none";
 
     var contactSpace = document.getElementById( 'contact-space' );
     contactSpace.style.display = "none";
+
+    var circleSpace = document.getElementById( 'circle-space' );
+    circleSpace.style.display = "none";
+    circleSpace.style.display = "block";
   },
 
   clearSpanish: function() {

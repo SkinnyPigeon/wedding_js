@@ -134,6 +134,7 @@
 	var EnglishVenueView = __webpack_require__( 3 );
 	var EnglishBusView = __webpack_require__( 4 );
 	var EnglishMapView = __webpack_require__( 5 );
+	var EnglishGiftView = __webpack_require__( 12 );
 	var EnglishCommentsView = __webpack_require__( 6 );
 	var EnglishContactView = __webpack_require__( 7 );
 	
@@ -181,6 +182,13 @@
 	      this.displayEnglishMap();
 	    }.bind( this );
 	
+	    var gifts = document.createElement( 'li' );
+	    gifts.innerText = "Gifts"
+	    gifts.onclick = function() {
+	      this.displayEnglishGift();
+	    }.bind( this );
+	
+	
 	    var comments = document.createElement( 'li' );
 	    comments.innerText = "Comments";
 	    comments.onclick = function() {
@@ -202,6 +210,7 @@
 	    navSpace.appendChild( title );
 	    navSpace.appendChild( contact );
 	    navSpace.appendChild( comments );
+	    navSpace.appendChild( gifts );
 	    navSpace.appendChild( hotels );
 	    navSpace.appendChild( bus );
 	    navSpace.appendChild( venue );
@@ -289,6 +298,15 @@
 	    var view = new EnglishMapView();
 	  },
 	
+	  displayEnglishGift: function() {
+	    this.clearEnglish();
+	    var giftSpace = document.getElementById( 'gift-space' );
+	    giftSpace.style.display = "block";
+	    var circleSpace = document.getElementById( 'circle-space' );
+	    circleSpace.style.display = "none";
+	    var view = new EnglishGiftView();
+	  },
+	
 	  displayEnglishComments: function() {
 	    this.clearEnglish();
 	    var commentSpace = document.getElementById( 'comment-space' );
@@ -360,14 +378,21 @@
 	    var hotelSpace = document.getElementById( 'hotel-space' );
 	    hotelSpace.style.display = "none";
 	
-	    var busSpace = document.getElementById( 'bus-space')
+	    var busSpace = document.getElementById( 'bus-space' );
 	    busSpace.style.display = "none";
+	
+	    var giftSpace = document.getElementById( 'gift-space' );
+	    giftSpace.style.display = "none";
 	
 	    var commentSpace = document.getElementById( 'comment-space' );
 	    commentSpace.style.display = "none";
 	
 	    var contactSpace = document.getElementById( 'contact-space' );
 	    contactSpace.style.display = "none";
+	
+	    var circleSpace = document.getElementById( 'circle-space' );
+	    circleSpace.style.display = "none";
+	    circleSpace.style.display = "block";
 	  },
 	
 	  clearSpanish: function() {
@@ -1107,6 +1132,24 @@
 	}
 	
 	module.exports = EnglishContactView;
+
+/***/ },
+/* 12 */
+/***/ function(module, exports) {
+
+	var EnglishGiftView = function() {
+	  this.display();
+	}
+	
+	EnglishGiftView.prototype = {
+	
+	  display: function() {
+	    
+	  },
+	
+	}
+	
+	module.exports = EnglishGiftView;
 
 /***/ }
 /******/ ]);
