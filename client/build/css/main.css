@@ -1,5 +1,5 @@
 html{
-  height: 100%;
+  /*height: 100%;*/
 }
 
 body {
@@ -211,11 +211,13 @@ input#comment {
 
 #circle-space {
   margin: auto;
+  /*margin-top: 25em;*/
   height: 35em;
   width: 35em;
   background-color: #578163;
-  border-radius: 30em;
+  border-radius: 35em;
   /*background-image: url('./image/paper-2.png');*/
+
 }
 
 #map {
@@ -265,7 +267,7 @@ input#comment {
 .circle {
   height: 19em;
   width: 19em;
-  border-radius: 19em;
+  /*border*/-radius: 19em;
   background-color: #578163;
   text-align: center;
 }

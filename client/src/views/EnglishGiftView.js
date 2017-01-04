@@ -94,7 +94,7 @@ EnglishGiftView.prototype = {
     circleThree.className = "circle";
 
     var circleThreeTitle = document.createElement( 'h1' );
-    circleThreeTitle.innerText = "Lava Tour";
+    circleThreeTitle.innerText = "boat Tour";
     circleThree.appendChild( circleThreeTitle );
 
     var circleThreeText = document.createElement( 'a' );
