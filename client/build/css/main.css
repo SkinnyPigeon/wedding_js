@@ -24,6 +24,11 @@ header {
   padding-top: 95px;
 }
 
+#circle-space h1.circleTitleRaised {
+  font-size: 3em;
+  padding-top: 50px;
+}
+
 h5 {
   color: #F5EBAE;
   font-family: 'Gudea', sans-serif;

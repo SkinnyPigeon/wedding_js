@@ -427,8 +427,14 @@
 	    venueSpace.innerText = "";
 	
 	    var title = document.createElement( 'h1' );
-	    title.className = "circleTitle";
+	    title.className = "circleTitleRaised";
 	    title.innerText = "Salones Canario";
+	
+	    var dotsOne = document.createElement( 'p' );
+	    dotsOne.innerText = "--------------------------------"
+	
+	    var dotsTwo = document.createElement( 'p' );
+	    dotsTwo.innerText = "--------------------------------"
 	
 	    var text = document.createElement( 'h5' );
 	    text.id = "venueText";
@@ -440,15 +446,17 @@
 	    address.target = "_blank";
 	
 	    var slackTitle = document.createElement( 'h1' );
-	    slackTitle.innerText = "How Share Your Photos"
+	    slackTitle.innerText = "How To Share Your Photos"
 	
 	    var slackText = document.createElement( 'h5' );
 	    slackText.innerText = "We would love for you to share your pictures of the ceremony and party with all of us. \n\n If you'd like to join in then send us your email address and we'll invite you to join a group in an app called Slack. It's free and private. All you have to do is post the photos you take to the channel in Slack and we'll all get to see them on the big screen in the venue."
 	
 	    venueSpace.appendChild( title );
+	    venueSpace.appendChild( dotsOne );
 	    venueSpace.appendChild( text );
 	    venueSpace.appendChild( address );
 	    venueSpace.appendChild( slackTitle );
+	    venueSpace.appendChild( dotsTwo );
 	    venueSpace.appendChild( slackText );
 	  },
 	
@@ -499,6 +507,9 @@
 	    title.className = "circleTitle";
 	    title.innerText = "Buses";
 	
+	    var dotsOne = document.createElement( 'p' );
+	    dotsOne.innerText = "--------------------------------"
+	
 	    var text = document.createElement( 'h5' );
 	    text.innerText = "For those of you staying in Orihuela we will be providing a bus to and from the wedding so no need to worry about taxis or sorting out a lift. We don't have the exact time or location that it'll run from but we will update this as soon as we have those details. \n\n It would be great if you could let us know if you are likely to want to use the bus so we can get an idea of numbers."
 	
@@ -519,6 +530,7 @@
 	    contact.appendChild( address );
 	
 	    busSpace.appendChild( title );
+	    busSpace.appendChild( dotsOne );
 	    busSpace.appendChild( text );
 	    busSpace.appendChild( contactDiv );
 	  },
@@ -578,10 +590,14 @@
 	    title.className = "circleTitle";
 	    title.innerText = "Hotels";
 	
+	    var dotsOne = document.createElement( 'p' );
+	    dotsOne.innerText = "--------------------------------"
+	
 	    var text = document.createElement( 'h5' );
 	    text.innerText = "For those of you who are travelling in from out of town or just looking for somewhere a bit closer to the venue we have picked a couple places that you might be interested in. \n\n Orihuela is a large and lovely town that's home to Laura's family and has got a great selection of places to eat, drink and enjoy. It's also got the Hotel Palacio de Tudemir that's happy to give us a discount if we block book 10 rooms so let us know if you fancy booking there and we'll get it all set up. \n\n For those looking for an even easier life on the day of the wedding there are a couple that are very close to the venue. The venue is marked as green on the map below";
 	
 	    hotelSpace.appendChild( title );
+	    hotelSpace.appendChild( dotsOne );
 	    hotelSpace.appendChild( text );
 	  },
 	
@@ -736,6 +752,9 @@
 	    title.className = "circleTitle";
 	    title.innerText = "Come and say hi";
 	
+	    var dotsOne = document.createElement( 'p' );
+	    dotsOne.innerText = "--------------------------------"
+	
 	    var name = document.createElement( 'input' );
 	    name.type = 'text';
 	    name.placeholder = 'Name...';
@@ -751,6 +770,7 @@
 	    button.innerText = 'Add Comment';
 	
 	    commentSpace.appendChild( title );
+	    commentSpace.appendChild( dotsOne );
 	    commentSpace.appendChild( name );
 	    commentSpace.appendChild( comment );
 	    commentSpace.appendChild( button );
@@ -808,10 +828,18 @@
 	    var secondary = document.createElement( 'div' );
 	    secondary.id = "secondary";
 	
+	    var dotsOne = document.createElement( 'p' );
+	    dotsOne.innerText = "--------------------------------"
+	
+	    var dotsTwo = document.createElement( 'p' );
+	    dotsTwo.innerText = "--------------------------------"
+	
 	    var welcome = document.createElement( 'h1' );
 	    welcome.className = "circleTitle";
 	    welcome.innerText = "General Information";
+	
 	    primary.appendChild( welcome );
+	    primary.appendChild( dotsOne );
 	
 	    var info = document.createElement( 'h5' );
 	    info.innerText = "Hey guys. We really hope you can join us on the 1st of April 2017 for a day of good weather, good food and of course helping us celebrate our love. If you have any questions please drop us a shout."
@@ -831,10 +859,12 @@
 	    address.innerText = "euanandlaura@gmail.com";
 	
 	    contact.appendChild( getInTouch );
+	    contact.appendChild( dotsTwo );
 	    contact.appendChild( email );
 	    contact.appendChild( address );
 	
 	    contactSpace.appendChild( primary );
+	
 	    contactSpace.appendChild( secondary );
 	  },
 	

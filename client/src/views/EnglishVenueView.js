@@ -16,8 +16,14 @@ EnglishVenueView.prototype = {
     venueSpace.innerText = "";
 
     var title = document.createElement( 'h1' );
-    title.className = "circleTitle";
+    title.className = "circleTitleRaised";
     title.innerText = "Salones Canario";
+
+    var dotsOne = document.createElement( 'p' );
+    dotsOne.innerText = "--------------------------------"
+
+    var dotsTwo = document.createElement( 'p' );
+    dotsTwo.innerText = "--------------------------------"
 
     var text = document.createElement( 'h5' );
     text.id = "venueText";
@@ -29,15 +35,17 @@ EnglishVenueView.prototype = {
     address.target = "_blank";
 
     var slackTitle = document.createElement( 'h1' );
-    slackTitle.innerText = "How Share Your Photos"
+    slackTitle.innerText = "How To Share Your Photos"
 
     var slackText = document.createElement( 'h5' );
     slackText.innerText = "We would love for you to share your pictures of the ceremony and party with all of us. \n\n If you'd like to join in then send us your email address and we'll invite you to join a group in an app called Slack. It's free and private. All you have to do is post the photos you take to the channel in Slack and we'll all get to see them on the big screen in the venue."
 
     venueSpace.appendChild( title );
+    venueSpace.appendChild( dotsOne );
     venueSpace.appendChild( text );
     venueSpace.appendChild( address );
     venueSpace.appendChild( slackTitle );
+    venueSpace.appendChild( dotsTwo );
     venueSpace.appendChild( slackText );
   },
 

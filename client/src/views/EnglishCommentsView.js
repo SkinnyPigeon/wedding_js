@@ -52,6 +52,9 @@ EnglishCommentsView.prototype = {
     title.className = "circleTitle";
     title.innerText = "Come and say hi";
 
+    var dotsOne = document.createElement( 'p' );
+    dotsOne.innerText = "--------------------------------"
+
     var name = document.createElement( 'input' );
     name.type = 'text';
     name.placeholder = 'Name...';
@@ -67,6 +70,7 @@ EnglishCommentsView.prototype = {
     button.innerText = 'Add Comment';
 
     commentSpace.appendChild( title );
+    commentSpace.appendChild( dotsOne );
     commentSpace.appendChild( name );
     commentSpace.appendChild( comment );
     commentSpace.appendChild( button );
