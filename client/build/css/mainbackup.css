@@ -1,0 +1,343 @@
+html{
+}
+
+body {
+  font-family: 'Amatic SC', sans-serif;
+  background-attachment: fixed;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#circle-space h1 {
+  padding-top: 15px;
+  text-align: center;
+}
+
+#circle-space h1.circleTitle {
+  font-size: 3em;
+  padding-top: 95px;
+  text-align: center;
+}
+
+#circle-space h1.circleTitleRaised {
+  font-size: 3em;
+  padding-top: 50px;
+  text-align: center;
+}
+
+h5 {
+  color: #F5EBAE;
+  font-family: 'Gudea', sans-serif;
+  background-color: transparent;
+  max-width: 30em;
+  text-align: center;
+  margin: auto;
+}
+
+header h1 {
+  font-family: 'Clicker Script', cursive;
+  color: #E2AEBD;
+  padding-left: 3%;
+}
+
+header li {
+  font-family: 'Clicker Script', cursive;
+  color: #E2AEBD;
+}
+
+h1 {
+  font-family: 'Clicker Script', cursive;
+  color: #E2AEBD;
+  margin-bottom: 0;
+}
+
+h2 {
+  font-family: 'Clicker Script', cursive;
+  color: #E2AEBD;
+}
+
+p {
+  font-family: 'Clicker Script', cursive;
+  font-size: 1.2em;
+  background-color: transparent;
+  margin: auto;
+  max-width: 15em;
+  color: #F5EBAE;
+}
+
+
+ul {
+  list-style: none;
+}
+
+button {
+  font-family: 'Clicker Script', cursive;
+}
+
+input {
+  font-family: 'Clicker Script', cursive;
+}
+
+#nav-space {
+  height: 70px;
+  background-color: #578163;
+  left: 0;
+}
+
+#nav-space h1 {
+  display: inline-block;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#nav-space li {
+  display: inline-block;
+  padding-top: 30px;
+  padding-right: 10px;
+  float: right;
+}
+
+#nav-space li img {
+  max-width: 8%;
+  float: right;
+  padding-top: 2px;
+}
+
+#nav-space li img:hover {
+  max-width: 8%;
+  float: right;
+  margin-top: 2px;
+  font-weight: bold;
+}
+
+#nav-space li:hover {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+
+a {
+  text-decoration: none;
+  color: inherit;
+  font-family: 'Clicker Script', cursive;
+  font-size: 1.2em;
+  background-color: #578163;
+}
+
+#home-space {
+  text-align: center;
+}
+
+#contact-space {
+  margin: auto;
+  text-align: center;
+}
+
+#contact-space div ul li img {
+  width: 25px;
+  background-color: #578163;
+}
+
+#contact-space div ul li {
+  display: inline-block;
+}
+
+ul {
+  padding: 0;
+}
+
+ul a {
+  color: #F5EBAE;
+  font-family: 'Gudea', sans-serif;
+  font-size: 0.82em;
+  font-weight: bold;
+}
+
+a {
+  color: #F5EBAE;
+  font-family: 'Gudea', sans-serif;
+  background-color: transparent;
+  font-size: 0.82em;
+}
+
+#comment-space {
+  margin: auto;
+  text-align: center;
+}
+
+input#comment {
+  margin-bottom: 30px;
+  border: 1px 2px 2px 2px;
+  max-width: 10em;
+}
+
+#comment-space ul {
+  margin: auto;
+  text-align: center;
+  max-width: 30em;
+  max-height: 40em;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+#comment-space li {
+  padding-bottom: 1em;
+  color: #F5EBAE;
+  font-family: 'Gudea', sans-serif;
+  font-size: 0.82em;
+  font-weight: bold;
+}
+
+#comment-space button {
+  border: 0px 2px;
+}
+
+#venue-space {
+  text-align: center;
+}
+
+#venueText {
+  padding-bottom: 10px;
+}
+
+#venue-space a {
+  color: #F5EBAE;
+  font-family: 'Gudea', sans-serif;
+  font-size: 0.82em;
+}
+
+#circle-space {
+  margin: auto;
+/*  height: 35em;
+  width: 35em;
+  background-color: #578163;
+  border-radius: 35em;*/
+  background-image: url('./image/circle.png');
+}
+
+#map {
+  height: 35em;
+  width: 35em;
+  margin: auto;
+}
+
+#bus-space {
+  text-align: center;
+}
+
+#bus-space div ul li img {
+  width: 25px;
+  background-color: transparent;
+}
+
+#bus-space div ul li {
+  display: inline-block;
+}
+
+#hotel-space {
+  text-align: center;
+}
+
+#map a {
+  background-color: white;
+  font-family: 'Gudea', sans-serif;
+}
+
+#loading {
+  padding-top: 100px;
+}
+
+#gift-circle p {
+  text-align: center;
+}
+
+#gift-circle h5 {
+  padding-bottom: 20px;
+}
+
+#gift-circle {
+  text-align: center;
+}
+
+.circle {
+  height: 19em;
+  width: 19em;
+  border-radius: 19em;
+  background-color: #578163;
+  text-align: center;
+}
+
+table {
+  margin: auto;
+  border-spacing: 20px 10px;
+}
+
+#circleOne a {
+  padding: 85px 0;
+}
+
+#circleTwo a {
+  padding: 85px 0;
+}
+
+#circleThree a {
+  padding: 85px 0;
+}
+
+#circleFour a {
+  padding: 85px 0;
+}
+
+#circleFive a {
+  padding: 85px 0;
+}
+
+#circleSix a {
+  padding: 85px 0;
+}
+
+table#giftTable tr #circleOne.circle h1 {
+  margin-top: 0;
+}
+
+#circleTwo.circle h1 {
+  margin-top: 0;
+}
+
+#circleThree.circle h1 {
+  margin-top: 0;
+}
+
+#circleFour.circle h1 {
+  margin-top: 0;
+}
+
+#circleFive.circle h1 {
+  margin-top: 0;
+}
+
+#circleSix.circle h1 {
+  margin-top: 0;
+}
+
+/******colors******
+
+#E2AEBD - PINK
+#F5EBAE - YELLOW
+#578163 - GREEN
+
+*******possible fonts******
+
+Butterfly Kids
+Clicker Script
+
+PT Sans
+Open Sans Condesnsed
+Abel
+Gudea
+
+font-family: 'Gudea', sans-serif;
+font-family: 'Clicker Script', cursive;
+
+******/

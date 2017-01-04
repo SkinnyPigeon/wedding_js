@@ -75,15 +75,17 @@ EnglishNavView.prototype = {
       this.displayEnglishContact();
     }.bind( this );
 
+    navList.appendChild( flag );
+    navList.appendChild( home );
+    navList.appendChild( venue );
+    navList.appendChild( bus );
+    navList.appendChild( hotels );
+    navList.appendChild( gifts );
+    navList.appendChild( comments );
+    navList.appendChild( contact );
+
     navSpace.appendChild( title );
-    navSpace.appendChild( contact );
-    navSpace.appendChild( comments );
-    navSpace.appendChild( gifts );
-    navSpace.appendChild( hotels );
-    navSpace.appendChild( bus );
-    navSpace.appendChild( venue );
-    navSpace.appendChild( home );
-    navSpace.appendChild( flag );
+    navSpace.appendChild( navList );
 
   },
 
