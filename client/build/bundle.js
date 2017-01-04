@@ -1199,17 +1199,23 @@
 	    circleOne.appendChild( circleOneTitle );
 	
 	    var circleOneText = document.createElement( 'h5' );
-	    circleOneText.innerText = "These are the big ones. We've got a couple flights to get to Hawaii then another few internal flights."
+	    circleOneText.innerText = "These are the big ones. We've got a couple flights to get to Hawaii then another few internal flights. \n\n If you'd like to help with these the give this a click."
 	
 	    circleOne.onmouseover = function() {
 	      circleOne.innerText = "";
 	      circleOne.appendChild( circleOneText );
+	      circleOne.onclick = function() {
+	        var giftSpace = document.getElementById( 'gift-space' );
+	        giftSpace.style.display = "none";
+	      }
 	    }
 	
 	    circleOne.onmouseleave = function() {
 	      circleOne.innerText = "";
 	      circleOne.appendChild( circleOneTitle );
 	    }
+	
+	
 	
 	
 	    var circleTwo = document.createElement( 'td' );
@@ -1232,7 +1238,6 @@
 	    circleSix.id = "circleSix";
 	    circleSix.className = "circle";    
 	
-	
 	    rowOne.appendChild( circleOne );
 	    rowOne.appendChild( circleTwo );
 	    rowOne.appendChild( circleThree );
@@ -1244,6 +1249,10 @@
 	    table.appendChild( rowTwo );
 	
 	    giftSpace.appendChild( table );
+	  },
+	
+	  helpWithFlights: function() {
+	
 	  },
 	
 	}
