@@ -1,43 +1,50 @@
 @media screen and (min-width: 660px) {
   
-  nav {
-    background: none;
-    float: right;
-    font-size: 1.125em;
-    margin-right: 5%;
-    text-align: right;
-    width: 45%;
-  }
-  
-  nav a.selected, nav a:hover {
-  color: #40aac8;
-}
-  
-  #logo {
-    float: left;
-    margin-left: 5%;
-    text-align: left;
-    width: 45%;
-  }
-  
-  h1 {
-    font-size: 2.5em;
-  }
-  
-  h2 {
-    font-size: 1.3em;
-    margin-bottom: 20px;
-  }
-  
-  p {
-    color: black;
+  #nav-space {
+    height: 500px;
+    background-color: #578163;
+    left: 0;
+    text-align: center;
+    /*background-image: url('./image/paper.png');*/
   }
 
-  #display-page img:hover {
-      -webkit-transform:scale(1.25);
-      -moz-transform:scale(1.25);
-      -ms-transform:scale(1.25);
-      -o-transform:scale(1.25);
-       transform:scale(1.25);
+  #nav-space h1 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 5em;
+    text-align: center;
   }
+
+  #nav-space li {
+    padding-top: 30px;
+    padding-right: 10px;
+    font-size: 2em;
+    text-align: center;
+  }
+
+  #nav-space li img {
+    max-width: 15%;
+    padding-top: 2px;
+  }
+
+  #nav-space li img:hover {
+    max-width: 8%;
+    margin-top: 2px;
+    font-weight: bold;
+  }
+
+  #nav-space li:hover {
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+
+  a {
+    text-decoration: none;
+    color: inherit;
+    font-family: 'Clicker Script', cursive;
+    font-size: 40px;
+    background-color: #578163;
+  }
+
 }
