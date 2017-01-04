@@ -1,3 +1,7 @@
+'use strict'
+
+var SparkPost = require( 'sparkpost' );
+
 var EnglishGiftView = function() {
   this.display();
 }
@@ -60,8 +64,7 @@ EnglishGiftView.prototype = {
       circleOne.innerText = "";
       circleOne.appendChild( circleOneText );
       circleOne.onclick = function() {
-        var giftSpace = document.getElementById( 'gift-space' );
-        giftSpace.style.display = "none";
+
       }
     }
 
@@ -69,9 +72,6 @@ EnglishGiftView.prototype = {
       circleOne.innerText = "";
       circleOne.appendChild( circleOneTitle );
     }
-
-
-
 
     var circleTwo = document.createElement( 'td' );
     circleTwo.id = "circleTwo";  
