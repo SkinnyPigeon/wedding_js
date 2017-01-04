@@ -27,10 +27,18 @@ EnglishCommentsView.prototype = {
     var request = new XMLHttpRequest();
     request.open( 'GET', this.url );
     request.setRequestHeader("Content-Type", "application/json")
+
     request.onload = () => {
+
+      do {
+        this.displayLoading() 
+      }
+      while( request.status !== 200 )
+      
       if( request.status === 200 ) {
         var comments = JSON.parse( request.responseText );
         this.comments = comments;
+        this.hideLoading();
         this.display();
       }
     }
@@ -79,6 +87,20 @@ EnglishCommentsView.prototype = {
       request.send( JSON.stringify( data ));
     }.bind( this )
   },
+
+  displayLoading: function() {
+    var commentSpace = document.getElementById( 'comment-space' );
+    commentSpace.innerText = "";
+
+    var img = document.createElement( 'img' );
+    img.src = "./css/image/loading.gif";
+    commentSpace.appendChild( img );
+  },
+
+  hideLoading: function() {
+    var commentSpace = document.getElementById( 'comment-space' );
+    commentSpace.innerText = "";
+  }
 }
 
 module.exports = EnglishCommentsView;
