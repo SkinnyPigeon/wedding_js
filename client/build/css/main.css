@@ -93,11 +93,46 @@ h1.circleTitleRaised {
   color: #F5EBAE;
 }
 
+#circle-space img {
+  max-width: 1.9em;
+}
+
 h1 {
   font-size: 3em;
   font-family: 'Clicker Script', cursive;
   color: #E2AEBD;
   margin-bottom: 0;
+}
+
+#circle-space ul {
+  max-width: 95%;
+  margin: 0;
+  max-width: 65%;
+  max-height: 25%;
+  overflow: hidden;
+  overflow-y: scroll;
+  display: inline-block;
+}
+
+#circle-space li {
+  display: inline-block;
+  font-family: 'Gudea', sans-serif;
+  color: #F5EBAE;
+  font-size: 1em;
+  font-weight: bold;
+  margin: auto;
+  padding-bottom: 2em;
+}
+
+button {
+  font-family: 'Clicker Script', cursive;
+  border: 0px 2px;
+  padding-bottom: 1.5em;
+  padding-top: 1.5em;
+}
+
+ul {
+  padding-left: 0;
 }
 
 
