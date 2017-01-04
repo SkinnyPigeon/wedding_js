@@ -138,6 +138,7 @@ EnglishNavView.prototype = {
     this.clearEnglish();
     var homeSpace = document.getElementById( 'home-space' );
     homeSpace.style.display = "block";
+
     var view = new EnglishHomeView();
   },
 

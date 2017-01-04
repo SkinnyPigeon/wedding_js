@@ -253,6 +253,28 @@ input#comment {
   padding-top: 100px;
 }
 
+/*.column {
+  float: left;
+  position: relative;
+  width: 19em;
+  height: 19em;
+  border-radius: 19em;
+  background-color: #578163;
+  margin: auto;
+}*/
+
+.circle {
+  height: 19em;
+  width: 19em;
+  border-radius: 19em;
+  background-color: #578163;
+}
+
+table {
+  margin: auto;
+  border-spacing: 10px;
+}
+
 /******colors******
 
 #E2AEBD - PINK
