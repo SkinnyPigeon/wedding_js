@@ -287,7 +287,7 @@ input#comment {
 .circle {
   height: 19em;
   width: 19em;
-  /*border*/-radius: 19em;
+  border-radius: 19em;
   background-color: #578163;
   text-align: center;
 }
