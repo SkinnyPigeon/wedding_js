@@ -49,7 +49,6 @@
 	var NavView = __webpack_require__( 2 )
 	
 	window.onload = function() {
-	  screen.orientation.lock('landscape');
 	  main();
 	}
 	
