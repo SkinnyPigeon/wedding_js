@@ -726,7 +726,6 @@
 	    setInterval( function() {
 	      if( this.comments.length === 0 ) {
 	        this.displayLoading()
-	        console.log( "Hello" );
 	      }
 	    }.bind( this ), 10 );
 	

@@ -86,6 +86,7 @@ input {
   height: 70px;
   background-color: #578163;
   left: 0;
+  /*background-image: url('./image/paper.png');*/
 }
 
 #nav-space h1 {
@@ -216,6 +217,8 @@ input#comment {
   width: 35em;
   background-color: #578163;
   border-radius: 30em;
+  /*background-image: url('./image/paper-2.png');*/
+
 }
 
 #map {
