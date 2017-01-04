@@ -8,25 +8,23 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  /*padding-left: 10px;*/
-}
-
-header {
-  /*padding-left: 3%;*/
 }
 
 #circle-space h1 {
   padding-top: 15px;
+  text-align: center;
 }
 
 #circle-space h1.circleTitle {
   font-size: 3em;
   padding-top: 95px;
+  text-align: center;
 }
 
 #circle-space h1.circleTitleRaised {
   font-size: 3em;
   padding-top: 50px;
+  text-align: center;
 }
 
 h5 {
@@ -121,7 +119,6 @@ input {
 }
 
 
-
 a {
   text-decoration: none;
   color: inherit;
@@ -134,10 +131,6 @@ a {
   text-align: center;
 }
 
-/*h5#venue {
-  color: #E2AEBD;
-}
-*/
 #contact-space {
   margin: auto;
   text-align: center;
@@ -166,8 +159,6 @@ ul a {
 #comment-space {
   margin: auto;
   text-align: center;
-  /*margin-top: 20px;*/
-  /*padding-left: 3%;*/
 }
 
 input#comment {
@@ -218,7 +209,6 @@ input#comment {
   background-color: #578163;
   border-radius: 30em;
   /*background-image: url('./image/paper-2.png');*/
-
 }
 
 #map {
@@ -253,15 +243,17 @@ input#comment {
   padding-top: 100px;
 }
 
-/*.column {
-  float: left;
-  position: relative;
-  width: 19em;
-  height: 19em;
-  border-radius: 19em;
-  background-color: #578163;
-  margin: auto;
-}*/
+#gift-circle p {
+  text-align: center;
+}
+
+#gift-circle h5 {
+  padding-bottom: 20px;
+}
+
+#gift-circle {
+  text-align: center;
+}
 
 .circle {
   height: 19em;

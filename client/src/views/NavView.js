@@ -169,10 +169,8 @@ EnglishNavView.prototype = {
 
   displayEnglishGift: function() {
     this.clearEnglish();
-    var giftSpace = document.getElementById( 'gift-space' );
-    giftSpace.style.display = "block";
-    var circleSpace = document.getElementById( 'circle-space' );
-    circleSpace.style.display = "none";
+    var giftCircle = document.getElementById( 'gift-circle' );
+    giftCircle.style.display = "block";
     var view = new EnglishGiftView();
   },
 
@@ -262,6 +260,9 @@ EnglishNavView.prototype = {
     var circleSpace = document.getElementById( 'circle-space' );
     circleSpace.style.display = "none";
     circleSpace.style.display = "block";
+
+    var giftCircle = document.getElementById( 'gift-circle' );
+    giftCircle.style.display = "none"
   },
 
   clearSpanish: function() {

@@ -5,6 +5,33 @@ var EnglishGiftView = function() {
 EnglishGiftView.prototype = {
 
   display: function() {
+    var giftCircle = document.getElementById( 'gift-circle' );
+    giftCircle.innerText = "";
+
+    var title = document.createElement( 'h1' );
+    title.className = "circleTitle";
+    title.innerText = "Gifts";
+
+    var dotsOne = document.createElement( 'p' );
+    dotsOne.innerText = "--------------------------------"
+
+    var text = document.createElement( 'h5' );
+    text.innerText = "Obviously we will be delighted just to see you all there but for those of you who wish to give us a gift then we certainly wouldn't turn down you generousity. Currently we are renting a flat that is fully kitted out so we are not in desperate need of household goods. We are however going on our honeymoon a few days after the wedding and if you'd like to contribute towards some of it then we would be eternally greatful to you. \n\n Click below to see some of the ways you could help out.";
+
+    var button = document.createElement( 'button' );
+    button.innerText = "Click Me";
+
+    giftCircle.appendChild( title );
+    giftCircle.appendChild( dotsOne );
+    giftCircle.appendChild( text );
+    giftCircle.appendChild( button );
+
+  },
+
+  displayCircles: function() {
+    var circleSpace = document.getElementById( 'circle-space' );
+    circleSpace.style.display = "none";
+
     var giftSpace = document.getElementById( 'gift-space' );
     var table = document.createElement( 'table' );
     table.id = "giftTable";
@@ -48,9 +75,6 @@ EnglishGiftView.prototype = {
     table.appendChild( rowTwo );
 
     giftSpace.appendChild( table );
-
-    
-    
   },
 
 }
