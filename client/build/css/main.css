@@ -299,6 +299,30 @@ table {
   padding: 85px 0;
 }
 
+table#giftTable tr #circleOne.circle h1 {
+  margin-top: 0;
+}
+
+#circleTwo.circle h1 {
+  margin-top: 0;
+}
+
+#circleThree.circle h1 {
+  margin-top: 0;
+}
+
+#circleFour.circle h1 {
+  margin-top: 0;
+}
+
+#circleFive.circle h1 {
+  margin-top: 0;
+}
+
+#circleSix.circle h1 {
+  margin-top: 0;
+}
+
 /******colors******
 
 #E2AEBD - PINK
