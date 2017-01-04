@@ -279,6 +279,10 @@ EnglishNavView.prototype = {
 
     var contactSpace = document.getElementById( 'contact-space' );
     contactSpace.style.display = "none";
+
+    var circleSpace = document.getElementById( 'circle-space' );
+    circleSpace.style.display = "none";
+    circleSpace.style.display = "block";
   },
 
   changeLanguage: function() {
