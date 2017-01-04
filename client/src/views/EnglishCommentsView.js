@@ -22,6 +22,14 @@ EnglishCommentsView.prototype = {
   },
 
   getComments: function() {
+
+    setInterval( function() {
+      if( this.comments.length === 0 ) {
+        this.displayLoading()
+        console.log( "Hello" );
+      }
+    }.bind( this ), 10 );
+
     var commentSpace = document.getElementById( 'comment-space' );
     commentSpace.innerText = "";
     var request = new XMLHttpRequest();
@@ -29,12 +37,6 @@ EnglishCommentsView.prototype = {
     request.setRequestHeader("Content-Type", "application/json")
 
     request.onload = () => {
-
-      do {
-        this.displayLoading() 
-      }
-      while( request.status !== 200 )
-      
       if( request.status === 200 ) {
         var comments = JSON.parse( request.responseText );
         this.comments = comments;
@@ -98,6 +100,7 @@ EnglishCommentsView.prototype = {
 
     var img = document.createElement( 'img' );
     img.src = "./css/image/loading.gif";
+    img.id = "loading";
     commentSpace.appendChild( img );
   },
 

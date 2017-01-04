@@ -246,6 +246,10 @@ input#comment {
   font-family: 'Gudea', sans-serif;
 }
 
+#loading {
+  padding-top: 100px;
+}
+
 /******colors******
 
 #E2AEBD - PINK
