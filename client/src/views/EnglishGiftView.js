@@ -1,7 +1,3 @@
-'use strict'
-
-var SparkPost = require( 'sparkpost' );
-
 var EnglishGiftView = function() {
   this.display();
 }
@@ -57,15 +53,13 @@ EnglishGiftView.prototype = {
     circleOneTitle.innerText = "Flights";
     circleOne.appendChild( circleOneTitle );
 
-    var circleOneText = document.createElement( 'h5' );
+    var circleOneText = document.createElement( 'a' );
     circleOneText.innerText = "These are the big ones. We've got a couple flights to get to Hawaii then another few internal flights. \n\n If you'd like to help with these the give this a click."
 
     circleOne.onmouseover = function() {
       circleOne.innerText = "";
       circleOne.appendChild( circleOneText );
-      circleOne.onclick = function() {
-
-      }
+      circleOneText.href = "mailto:euanandlaura@gmail.com";
     }
 
     circleOne.onmouseleave = function() {
