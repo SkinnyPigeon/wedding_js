@@ -56,5 +56,30 @@ ul#nav {
 }
 
 h1.circleTitle {
-  padding-top: 20vh;
+  padding-top: 18vh;
+  font-size: 4.5em;
+  font-family: 'Clicker Script', cursive;
+  color: #E2AEBD;
+  margin-bottom: 0;
+}
+
+#circle-space p {
+  color: #F5EBAE;
+  font-size: 2em;
+  font-family: 'Clicker Script', cursive;
+  margin: 0.5em;
+}
+
+#circle-space h5 {
+  color: #F5EBAE;
+  font-size: 1em;
+  margin: 0.5em;
+  font-family: 'Gudea', sans-serif;
+}
+
+h1 {
+  font-size: 3em;
+  font-family: 'Clicker Script', cursive;
+  color: #E2AEBD;
+  margin-bottom: 0;
 }
