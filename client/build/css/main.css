@@ -30,7 +30,7 @@ body {
 h5 {
   color: #F5EBAE;
   font-family: 'Gudea', sans-serif;
-  background-color: #578163;
+  background-color: transparent;
   max-width: 30em;
   text-align: center;
   margin: auto;
@@ -61,7 +61,7 @@ h2 {
 p {
   font-family: 'Clicker Script', cursive;
   font-size: 1.2em;
-  background-color: #578163;
+  background-color: transparent;
   margin: auto;
   max-width: 15em;
   color: #F5EBAE;
@@ -223,7 +223,7 @@ input#comment {
 
 #bus-space div ul li img {
   width: 25px;
-  background-color: #578163;
+  background-color: transparent;
 }
 
 #bus-space div ul li {
@@ -260,11 +260,12 @@ input#comment {
   width: 19em;
   border-radius: 19em;
   background-color: #578163;
+  text-align: center;
 }
 
 table {
   margin: auto;
-  border-spacing: 10px;
+  border-spacing: 20px 10px;
 }
 
 /******colors******

@@ -1181,8 +1181,9 @@
 	    circleSpace.style.display = "none";
 	
 	    var giftSpace = document.getElementById( 'gift-space' );
+	    giftSpace.innerText = "";
 	    giftSpace.style.display = "block";
-	    
+	
 	    var table = document.createElement( 'table' );
 	    table.id = "giftTable";
 	
@@ -1191,7 +1192,25 @@
 	
 	    var circleOne = document.createElement( 'td' );
 	    circleOne.id = "circleOne";
-	    circleOne.className = "circle"; 
+	    circleOne.className = "circle";
+	
+	    var circleOneTitle = document.createElement( 'h1' );
+	    circleOneTitle.innerText = "Flights";
+	    circleOne.appendChild( circleOneTitle );
+	
+	    var circleOneText = document.createElement( 'h5' );
+	    circleOneText.innerText = "These are the big ones. We've got a couple flights to get to Hawaii then another few internal flights."
+	
+	    circleOne.onmouseover = function() {
+	      circleOne.innerText = "";
+	      circleOne.appendChild( circleOneText );
+	    }
+	
+	    circleOne.onmouseleave = function() {
+	      circleOne.innerText = "";
+	      circleOne.appendChild( circleOneTitle );
+	    }
+	
 	
 	    var circleTwo = document.createElement( 'td' );
 	    circleTwo.id = "circleTwo";  
