@@ -63,6 +63,14 @@ h1.circleTitle {
   margin-bottom: 0;
 }
 
+h1.circleTitleRaised {
+  padding-top: 16vh;
+  font-size: 4.5em;
+  font-family: 'Clicker Script', cursive;
+  color: #E2AEBD;
+  margin-bottom: 0;
+}
+
 #circle-space p {
   color: #F5EBAE;
   font-size: 2em;
@@ -74,7 +82,15 @@ h1.circleTitle {
   color: #F5EBAE;
   font-size: 1em;
   margin: 0.5em;
+  margin: auto;
+  max-width: 65%;
   font-family: 'Gudea', sans-serif;
+}
+
+#circle-space a {
+  text-decoration: none;
+  font-family: 'Gudea', sans-serif;
+  color: #F5EBAE;
 }
 
 h1 {
@@ -83,3 +99,6 @@ h1 {
   color: #E2AEBD;
   margin-bottom: 0;
 }
+
+
+
