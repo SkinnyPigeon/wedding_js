@@ -1,50 +1,7 @@
 @media screen and (min-width: 660px) {
   
-  #nav-space {
-    height: 500px;
-    background-color: #578163;
-    left: 0;
-    text-align: center;
-    /*background-image: url('./image/paper.png');*/
-  }
-
-  #nav-space h1 {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    font-size: 5em;
-    text-align: center;
-  }
-
-  #nav-space li {
-    padding-top: 30px;
-    padding-right: 10px;
-    font-size: 2em;
-    text-align: center;
-  }
-
-  #nav-space li img {
-    max-width: 15%;
-    padding-top: 2px;
-  }
-
-  #nav-space li img:hover {
-    max-width: 8%;
-    margin-top: 2px;
-    font-weight: bold;
-  }
-
-  #nav-space li:hover {
-    cursor: pointer;
-    font-weight: bold;
-  }
-
-
-  a {
-    text-decoration: none;
-    color: inherit;
-    font-family: 'Clicker Script', cursive;
-    font-size: 40px;
-    background-color: #578163;
-  }
+  #background-circle {
+    padding-top: 0;
+  }  
 
 }
