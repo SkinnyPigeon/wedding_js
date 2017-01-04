@@ -2,6 +2,7 @@ var EnglishHomeView = require( './views/EnglishHomeView' );
 var NavView = require( './views/NavView' )
 
 window.onload = function() {
+  screen.orientation.lock('landscape');
   main();
 }
 
