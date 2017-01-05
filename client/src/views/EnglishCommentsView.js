@@ -70,11 +70,14 @@ EnglishCommentsView.prototype = {
     var button = document.createElement( 'button' );
     button.innerText = 'Add Comment';
 
+    var br = document.createElement( 'br' );
+
     commentSpace.appendChild( title );
     commentSpace.appendChild( dotsOne );
     commentSpace.appendChild( name );
     commentSpace.appendChild( comment );
     commentSpace.appendChild( button );
+    commentSpace.appendChild( br );
 
     button.onclick = function() {
       var request = new XMLHttpRequest()

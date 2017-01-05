@@ -77,7 +77,7 @@
   }
 
   #circle-space h5 {
-    font-size: 0.5em;
+    font-size: 0.6em;
     max-width: 50%;
   }
 
@@ -90,16 +90,21 @@
   }
 
   #circle-space ul {
-    max-width: 70%;
     margin: 0;
     max-width: 65%;
     max-height: 25%;
   }
 
   #circle-space li {
-    font-size: 0.4em;
-    padding-bottom: 0em;
+    font-size: 0.57em;
+    padding-bottom: 0.8em;
+    padding-top: 0.8em;
+    max-width: 80%;
     clear: both;
+  }
+
+  #circle-space a {
+    font-size: 0.58em;
   }
 
   input {
@@ -112,7 +117,6 @@
     padding: 0;
     padding-bottom: 0em;
     padding-top: 0em;
-    padding-right: 4em;
   }
 
 

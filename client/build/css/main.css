@@ -97,6 +97,7 @@ h1.circleTitleRaised {
   font-family: 'Gudea', sans-serif;
   color: #F5EBAE;
   font-size: 0.4em;
+  font-weight: bold;
 }
 
 #circle-space img {
@@ -127,13 +128,11 @@ h1 {
   font-size: 0.4em;
   font-weight: bold;
   margin: auto;
-  padding-bottom: 2em;
 }
 
 input {
   font-family: 'Clicker Script', cursive;
   font-size: 0.5em;
-  padding-bottom: 0.5em;
 }
 
 button {
