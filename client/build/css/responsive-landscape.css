@@ -26,22 +26,24 @@
   }
 
   #background-circle {
-    min-width: 55%;
-    max-width: 55%;
+    min-width: 50%;
+    max-width: 50%;
   }
 
   h1.circleTitle {
     padding-top: 20vh;
+    margin-top: 0;
   }
 
   h1.circleTitleRaised {
     padding-top: 15vh;
     font-size: 1.5em;
+    margin-top: 0;
   }
 
   #circle-space h5 {
     font-size: 0.34em;
-    max-width: 45%;
+    max-width: 40%;
   }
 
   #loading {
