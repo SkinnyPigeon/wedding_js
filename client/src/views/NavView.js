@@ -58,7 +58,7 @@ EnglishNavView.prototype = {
 
 
     var comments = document.createElement( 'li' );
-    comments.innerText = "Comments";
+    comments.innerText = "Guest Book";
     comments.onclick = function() {
       this.displayEnglishComments();
     }.bind( this );
