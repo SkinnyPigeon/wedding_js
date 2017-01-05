@@ -5,4 +5,8 @@
     max-width: 65%;
   }  
 
+  h1.circleTitle {
+    font-size: 10em;
+  }
+
 }

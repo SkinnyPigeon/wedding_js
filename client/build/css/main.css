@@ -128,6 +128,7 @@ h1 {
 input {
   font-family: 'Clicker Script', cursive;
   font-size: 0.5em;
+  padding-bottom: 0.5em;
 }
 
 button {
