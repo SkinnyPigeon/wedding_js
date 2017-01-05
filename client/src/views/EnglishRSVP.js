@@ -1,5 +1,6 @@
 var EnglishRSVP = function() {
-  this.url = "https://guest-database.herokuapp.com/guests";
+  // this.url = "https://guest-database.herokuapp.com/guests";
+  this.url = "http://localhost:5000/guests";
   this.display();
 }
 
@@ -38,40 +39,42 @@ EnglishRSVP.prototype = {
     kidsSlider.value = 0;
     kidsSlider.list = "steplist";
 
-
     var button = document.createElement( 'button' );
     button.innerText = "Go";
     button.style.padding = "1em";
     button.onclick = function() {
 
-      var total = 0;
+      var adultTotal = 0;
       if( comingBox.checked && !plusOneBox.checked ) {
-        total = 1;
+        adultTotal = 1;
       }
       if( comingBox.checked && plusOneBox.checked ) {
-        total = 2;
+        adultTotal = 2;
       }
       if( !comingBox.checked && plusOneBox.checked ) {
-        total = 1;
+        adultTotal = 1;
       }
 
       var comingBoolean = false;
-      if( total >= 1 ) {
+      if( adultTotal >= 1 ) {
         comingBoolean = true;
       }
+
+      var familyTotal = adultTotal += parseInt( kidsSlider.value );
 
       var request = new XMLHttpRequest()
       request.open( 'POST', this.url )
       request.setRequestHeader("Content-Type", "application/json")
       request.onload = () => {
-        this.getComments();
+        // this.getComments();
       }
       var data = {
         guest: {
           name: name.value,
           email: email.value,
-          adults: total,
+          adults: adultTotal,
           kids: kidsSlider.value,
+          total: familyTotal,
           coming: comingBoolean
         }
       }
