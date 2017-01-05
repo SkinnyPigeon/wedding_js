@@ -53,6 +53,12 @@
 
 @media screen and (min-width: 660px) {
 
+  #nav-space li {
+    font-size: 1.4em;
+    padding-right: 0.4em;
+    padding-bottom: 1em;
+  }
+
   #background-circle {
     padding-top: 0;
     min-width: 65%;
@@ -65,7 +71,7 @@
   }
 
   h1.circleTitleRaised {
-    padding-top: 12vh;
+    padding-top: 10vh;
     font-size: 2.5em;
   }
 
