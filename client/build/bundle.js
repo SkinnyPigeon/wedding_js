@@ -201,7 +201,7 @@
 	    var flag = document.createElement( 'li' );
 	    flag.innerHTML = "<img src='./css/image/scotland.png' >";
 	    flag.onclick = function() {
-	      this.changeToSpanish();
+	      // this.changeToSpanish();
 	    }.bind( this );
 	
 	    var contact = document.createElement( 'li' );
