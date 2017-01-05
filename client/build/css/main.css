@@ -85,10 +85,10 @@ h1.circleTitleRaised {
 
 #circle-space h5 {
   color: #F5EBAE;
-  font-size: 0.35em;
+  font-size: 0.3em;
   margin: 0.5em;
   margin: auto;
-  max-width: 60%;
+  max-width: 55%;
   font-family: 'Gudea', sans-serif;
 }
 
@@ -114,7 +114,7 @@ h1 {
 #circle-space ul {
   max-width: 95%;
   margin: 0;
-  max-width: 65%;
+  max-width: 60%;
   max-height: 25%;
   overflow: hidden;
   overflow-y: scroll;
@@ -125,7 +125,7 @@ h1 {
   display: inline-block;
   font-family: 'Gudea', sans-serif;
   color: #F5EBAE;
-  font-size: 0.4em;
+  font-size: 0.3em;
   font-weight: bold;
   margin: auto;
 }
