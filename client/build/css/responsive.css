@@ -1,8 +1,33 @@
+@media screen and ( min-width: 400px ) {
+  #background-circle {
+    padding-top: 5vh;
+    min-width: 70%;
+    max-width: 70%;
+  }
+
+  h1.circleTitle {
+    padding-top: 15vh;
+  }
+
+  h1.circleTitleRaised {
+    padding-top: 12vh;
+    font-size: 1.5em;
+  }
+
+  #circle-space h5 {
+    font-size: 0.34em;
+    max-width: 60%;
+  }
+}
+
+
+
+/*
 @media screen and (min-width: 660px) {
   
-  #background-circle {
+  #background-circle {*/
     /*padding-top: 6vh;*/
-    position: absolute;
+/*    position: absolute;
     margin-left: auto;
     margin-right: auto;
     left: 0;
@@ -11,8 +36,8 @@
     max-width: 65%;
     z-index: -1;
   }  
-
-  h1.circleTitle {
+*/
+/*  h1.circleTitle {
     font-size: 10em;
   }
 
@@ -22,4 +47,4 @@
   
 
 
-}
+}*/

@@ -35,6 +35,11 @@
   padding-bottom: 2em;
 }
 
+#nav-space li:hover {
+  cursor: pointer;
+  font-weight: bold;
+}
+
 ul#nav {
   padding-left: 0;
 }
@@ -146,6 +151,8 @@ ul {
 #loading {
   padding-top: 15vh;
 }
+
+
 
 
 
