@@ -128,19 +128,28 @@
 }
 
 @media screen and (min-width: 720px) {
+
+  #nav-space {
+    /*height: 1em;*/
+  }
   
   #background-circle {
-    min-width: 55%;
-    max-width: 55%;
+    min-width: 65%;
+    max-width: 65%;
+  }
+
+  h1.circleTitle {
+    padding-top: 9vh;
+    font-size: 3em;
   }
 
   h1.circleTitleRaised {
-    padding-top: 9vh;
-    font-size: 2.5em;
+    padding-top: 6vh;
+    font-size: 3em;
   }
 
   #circle-space h5 {
-    font-size: 0.6em;
+    font-size: 0.8em;
     max-width: 45%;
   }
 
@@ -148,6 +157,27 @@
     margin: 0;
     max-width: 55%;
     max-height: 25%;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  #circle-space li {
+    font-size: 0.8em;
+    max-width: 70%;
+  }
+
+  #circle-space a {
+    font-size: 0.8em;
+  }
+
+  input {
+    font-size: 0.8em;
+  }
+
+  button {
+    font-size: 0.8em;
   }
 
 }
