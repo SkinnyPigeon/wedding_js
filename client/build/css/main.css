@@ -46,8 +46,8 @@ ul#nav {
   margin-right: auto;
   left: 0;
   right: 0;
-  min-width: 85%;
-  max-width: 85%;
+  min-width: 90%;
+  max-width: 90%;
   z-index: -1;
 }
 
@@ -56,7 +56,7 @@ ul#nav {
 }
 
 h1.circleTitle {
-  padding-top: 6.5vh;
+  padding-top: 9vh;
   font-size: 1.5em;
   font-family: 'Clicker Script', cursive;
   color: #E2AEBD;
