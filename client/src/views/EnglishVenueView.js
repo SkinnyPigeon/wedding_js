@@ -40,6 +40,18 @@ EnglishVenueView.prototype = {
     var slackText = document.createElement( 'h5' );
     slackText.innerText = "We would love for you to share your pictures of the ceremony and party with all of us. \n If you'd like to join in then send us your email address and we'll invite you to join a group in an app called Slack. It's free and private. All you have to do is post \n the photos you take to the channel in Slack and we'll all get to see \n them on the big screen in the venue."
 
+    var contact = document.createElement( 'ul' );
+
+    var email = document.createElement( 'li' );
+    email.innerHTML = "<img src='./css/image/email.png' >";
+
+    var emailAddress = document.createElement( 'a' );
+    emailAddress.href = "mailto:euanandlaura@gmail.com";
+    emailAddress.innerText = "euanandlaura@gmail.com";
+
+    contact.appendChild( email );
+    contact.appendChild( emailAddress );
+
     venueSpace.appendChild( title );
     venueSpace.appendChild( dotsOne );
     venueSpace.appendChild( text );
@@ -47,6 +59,7 @@ EnglishVenueView.prototype = {
     venueSpace.appendChild( slackTitle );
     venueSpace.appendChild( dotsTwo );
     venueSpace.appendChild( slackText );
+    venueSpace.appendChild( contact );
   },
 
   // displayMap: function() {
