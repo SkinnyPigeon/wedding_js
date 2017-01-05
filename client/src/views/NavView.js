@@ -5,6 +5,7 @@ var EnglishMapView = require( './EnglishMapView' );
 var EnglishGiftView = require( './EnglishGiftView' );
 var EnglishCommentsView = require( './EnglishCommentsView' );
 var EnglishContactView = require( './EnglishContactView' );
+var EnglishRSPV = require( './EnglishRSVP' );
 
 var SpanishHomeView = require( './SpanishHomeView' );
 var SpanishMapView = require( './SpanishMapView' );
@@ -45,9 +46,15 @@ EnglishNavView.prototype = {
     }.bind( this );
 
     var hotels = document.createElement( 'li' );
-    hotels.innerText = "Hotels"
+    hotels.innerText = "Hotels";
     hotels.onclick = function() {
       this.displayEnglishMap();
+    }.bind( this );
+
+    var rsvp = document.createElement( 'li' );
+    rsvp.innerText = "RSVP";
+    rsvp.onclick = function() {
+      this.displayEnglishRSVP();
     }.bind( this );
 
     var gifts = document.createElement( 'li' );
@@ -55,7 +62,6 @@ EnglishNavView.prototype = {
     gifts.onclick = function() {
       this.displayEnglishGift();
     }.bind( this );
-
 
     var comments = document.createElement( 'li' );
     comments.innerText = "Guest Book";
@@ -80,6 +86,7 @@ EnglishNavView.prototype = {
     navList.appendChild( venue );
     navList.appendChild( bus );
     navList.appendChild( hotels );
+    navList.appendChild( rsvp );
     navList.appendChild( gifts );
     navList.appendChild( comments );
     navList.appendChild( contact );
@@ -169,6 +176,13 @@ EnglishNavView.prototype = {
     var view = new EnglishMapView();
   },
 
+  displayEnglishRSVP: function() {
+    this.clearEnglish();
+    var rsvpSpace = document.getElementById( 'rsvp-space' );
+    rsvpSpace.style.display = "block";
+    var view = new EnglishRSPV();
+  },
+
   displayEnglishGift: function() {
     this.clearEnglish();
     var giftCircle = document.getElementById( 'gift-circle' );
@@ -249,6 +263,9 @@ EnglishNavView.prototype = {
 
     var busSpace = document.getElementById( 'bus-space' );
     busSpace.style.display = "none";
+
+    var rsvpSpace = document.getElementById( 'rsvp-space' );
+    rsvpSpace.style.display = "none";
 
     var giftSpace = document.getElementById( 'gift-space' );
     giftSpace.style.display = "none";

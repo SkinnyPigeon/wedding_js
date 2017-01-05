@@ -140,6 +140,7 @@
 	var EnglishGiftView = __webpack_require__( 6 );
 	var EnglishCommentsView = __webpack_require__( 243 );
 	var EnglishContactView = __webpack_require__( 244 );
+	var EnglishRSPV = __webpack_require__( 250 );
 	
 	var SpanishHomeView = __webpack_require__( 245 );
 	var SpanishMapView = __webpack_require__( 246 );
@@ -180,9 +181,15 @@
 	    }.bind( this );
 	
 	    var hotels = document.createElement( 'li' );
-	    hotels.innerText = "Hotels"
+	    hotels.innerText = "Hotels";
 	    hotels.onclick = function() {
 	      this.displayEnglishMap();
+	    }.bind( this );
+	
+	    var rsvp = document.createElement( 'li' );
+	    rsvp.innerText = "RSVP";
+	    rsvp.onclick = function() {
+	      this.displayEnglishRSVP();
 	    }.bind( this );
 	
 	    var gifts = document.createElement( 'li' );
@@ -190,7 +197,6 @@
 	    gifts.onclick = function() {
 	      this.displayEnglishGift();
 	    }.bind( this );
-	
 	
 	    var comments = document.createElement( 'li' );
 	    comments.innerText = "Guest Book";
@@ -215,6 +221,7 @@
 	    navList.appendChild( venue );
 	    navList.appendChild( bus );
 	    navList.appendChild( hotels );
+	    navList.appendChild( rsvp );
 	    navList.appendChild( gifts );
 	    navList.appendChild( comments );
 	    navList.appendChild( contact );
@@ -304,6 +311,13 @@
 	    var view = new EnglishMapView();
 	  },
 	
+	  displayEnglishRSVP: function() {
+	    this.clearEnglish();
+	    var rsvpSpace = document.getElementById( 'rsvp-space' );
+	    rsvpSpace.style.display = "block";
+	    var view = new EnglishRSPV();
+	  },
+	
 	  displayEnglishGift: function() {
 	    this.clearEnglish();
 	    var giftCircle = document.getElementById( 'gift-circle' );
@@ -384,6 +398,9 @@
 	
 	    var busSpace = document.getElementById( 'bus-space' );
 	    busSpace.style.display = "none";
+	
+	    var rsvpSpace = document.getElementById( 'rsvp-space' );
+	    rsvpSpace.style.display = "none";
 	
 	    var giftSpace = document.getElementById( 'gift-space' );
 	    giftSpace.style.display = "none";
@@ -1419,6 +1436,66 @@
 	}
 	
 	module.exports = EnglishContactView;
+
+/***/ },
+
+/***/ 250:
+/***/ function(module, exports) {
+
+	var EnglishRSVP = function() {
+	  this.url = "https://guest-database.herokuapp.com/guests";
+	  this.display();
+	}
+	
+	EnglishRSVP.prototype = {
+	
+	  display: function() {
+	    var rsvpSpace = document.getElementById( 'rsvp-space' );
+	
+	    var name = document.createElement( 'input' );
+	    name.placeholder = "Name...";
+	
+	    var email = document.createElement( 'input' );
+	    email.placeholder = "Email...";
+	
+	    var comingText = document.createElement( 'h4' );
+	    comingText.innerText = "Are you coming?";
+	
+	    var comingBox = document.createElement( 'input' );
+	    comingBox.type = "checkbox";
+	
+	    var kidsText = document.createElement( 'h4' );
+	    kidsText.innerText = "Are you taking any kids?";
+	
+	    var kidsSlider = document.createElement( 'input' );
+	    kidsSlider.id = "kidsSlider";
+	    kidsSlider.type = "range";
+	    kidsSlider.step = 1;
+	    kidsSlider.min = 0;
+	    kidsSlider.max = 5;
+	    kidsSlider.value = 0;
+	    kidsSlider.list = "steplist";
+	
+	    var button = document.createElement( 'button' );
+	    button.innerText = "Go";
+	    button.style.padding = "1em";
+	    button.onclick = function() {
+	      this.sendConfirmation();
+	    }
+	
+	
+	    rsvpSpace.appendChild( name );
+	    rsvpSpace.appendChild( email );
+	    rsvpSpace.appendChild( comingText );
+	    rsvpSpace.appendChild( comingBox );
+	    rsvpSpace.appendChild( kidsText );
+	    rsvpSpace.appendChild( kidsSlider );
+	    rsvpSpace.appendChild( button );
+	  },
+	
+	}
+	
+	module.exports = EnglishRSVP;
 
 /***/ }
 
