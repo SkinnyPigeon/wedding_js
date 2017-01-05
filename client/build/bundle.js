@@ -761,7 +761,7 @@
 	    var button = document.createElement( 'button' );
 	    button.innerText = "Click Me";
 	    button.onclick = function() {
-	      this.displayCircles();
+	      // this.displayCircles();
 	    }.bind( this );
 	
 	    giftCircle.appendChild( title );
