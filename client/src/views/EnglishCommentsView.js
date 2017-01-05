@@ -17,7 +17,9 @@ EnglishCommentsView.prototype = {
       var comment = document.createElement( 'li' );
       var text = this.comments[i].name + " - " + this.comments[i].comment_text;
       comment.innerText = text;
+      var br = document.createElement( 'br' );
       list.appendChild( comment );
+      list.appendChild( br );
     }
   },
 
