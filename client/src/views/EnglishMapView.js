@@ -26,7 +26,7 @@ EnglishMapView.prototype = {
     hotelSpace.innerText = "";
 
     var title = document.createElement( 'h1' );
-    title.className = "circleTitle";
+    title.className = "circleTitleRaised";
     title.innerText = "Hotels";
 
     var dotsOne = document.createElement( 'p' );
