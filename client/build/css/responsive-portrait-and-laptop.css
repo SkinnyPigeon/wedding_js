@@ -1,4 +1,4 @@
-@media screen and ( min-width: 360px ) {
+@media screen and ( min-width: 360px ) and ( orientation: portrait ) {
   #background-circle {
     padding-top: 5vh;
     min-width: 70%;
@@ -24,7 +24,7 @@
   }
 }
 
-@media screen and ( min-width: 400px ) {
+@media screen and ( min-width: 400px ) and ( orientation: portrait ) {
   #background-circle {
     padding-top: 5vh;
     min-width: 70%;
@@ -51,7 +51,7 @@
 }
 
 
-@media screen and (min-width: 660px) {
+@media screen and ( min-width: 660px ) and ( orientation: portrait ) {
 
   #nav-space li {
     font-size: 1.4em;
@@ -127,11 +127,7 @@
 
 }
 
-@media screen and (min-width: 720px) {
-
-  #nav-space {
-    /*height: 1em;*/
-  }
+@media screen and ( min-width: 720px ) and ( orientation: portrait ) {
   
   #background-circle {
     min-width: 65%;
@@ -182,7 +178,7 @@
 
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and ( min-width: 1000px ) and ( orientation: portrait ) {
 
   #nav-space {
     height: 5em;
@@ -208,8 +204,8 @@
   }
 
   #background-circle {
-    min-width: 50%;
-    max-width: 50%;
+    min-width: 60%;
+    max-width: 60%;
     padding-top: 4vh;
   }
 
@@ -258,7 +254,7 @@
 
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and ( min-width: 1200px ) {
 
   #nav-space {
     height: 6em;
@@ -335,7 +331,7 @@
   }
 }
 
-@media screen and (min-width: 1400px) {
+@media screen and ( min-width: 1400px ) {
 
   #nav-space {
     height: 6em;
@@ -409,7 +405,7 @@
   }
 }
 
-@media screen and (min-width: 2500px) {
+@media screen and ( min-width: 2500px ) {
 
   #nav-space {
     height: 10em;
