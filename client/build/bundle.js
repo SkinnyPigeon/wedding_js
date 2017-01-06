@@ -221,7 +221,7 @@
 	    navList.appendChild( venue );
 	    navList.appendChild( bus );
 	    navList.appendChild( hotels );
-	    navList.appendChild( rsvp );
+	    // navList.appendChild( rsvp );
 	    navList.appendChild( gifts );
 	    navList.appendChild( comments );
 	    navList.appendChild( contact );
