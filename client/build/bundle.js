@@ -859,6 +859,143 @@
 	    giftSpace.appendChild( goButton );
 	    giftSpace.appendChild( backButton );
 	  },
+	  displayBoatTour: function() {
+	    var giftSpace = document.getElementById( 'gift-space' );
+	    giftSpace.style.display = "none";
+	
+	    while( giftSpace.hasChildNodes() ) {
+	      giftSpace.removeChild( giftSpace.lastChild );
+	    }
+	
+	    var title = document.createElement( 'h1' );
+	    title.innerText = "Boat Tour";
+	    title.className = "circleTitle";
+	
+	    var text = document.createElement( 'h5' );
+	    text.innerText = "Another of the main attractions we would love to get to is a boat tour of the Napali Coast. \n\n If you'd like to help with this then give this a click."
+	
+	    var goButton = document.createElement( 'button' );
+	    goButton.innerText = "Click";
+	    goButton.onclick = function() {
+	      this.displayForm( "Boat Tour" );
+	    }.bind( this );
+	
+	    var backButton = document.createElement( 'button' );
+	    backButton.innerText = "Back";
+	    backButton.onclick = function() {
+	      this.displayGifts() 
+	    }.bind( this );
+	
+	    giftSpace.style.display = "block";
+	
+	    giftSpace.appendChild( title );
+	    giftSpace.appendChild( text );
+	    giftSpace.appendChild( goButton );
+	    giftSpace.appendChild( backButton );
+	  },
+	  displayHotels: function() {
+	    var giftSpace = document.getElementById( 'gift-space' );
+	    giftSpace.style.display = "none";
+	
+	    while( giftSpace.hasChildNodes() ) {
+	      giftSpace.removeChild( giftSpace.lastChild );
+	    }
+	
+	    var title = document.createElement( 'h1' );
+	    title.innerText = "Hotels";
+	    title.className = "circleTitle";
+	
+	    var text = document.createElement( 'h5' );
+	    text.innerText = "Like the flights these are pretty essential. We are doing a fair amount of travelling throughout the islands so any help will be very much appreciated. \n\n If you'd like to help with these then give this a click."
+	
+	    var goButton = document.createElement( 'button' );
+	    goButton.innerText = "Click";
+	    goButton.onclick = function() {
+	      this.displayForm( "Hotels" );
+	    }.bind( this );
+	
+	    var backButton = document.createElement( 'button' );
+	    backButton.innerText = "Back";
+	    backButton.onclick = function() {
+	      this.displayGifts() 
+	    }.bind( this );
+	
+	    giftSpace.style.display = "block";
+	
+	    giftSpace.appendChild( title );
+	    giftSpace.appendChild( text );
+	    giftSpace.appendChild( goButton );
+	    giftSpace.appendChild( backButton );
+	  },
+	  displayDrinks: function() {
+	    var giftSpace = document.getElementById( 'gift-space' );
+	    giftSpace.style.display = "none";
+	
+	    while( giftSpace.hasChildNodes() ) {
+	      giftSpace.removeChild( giftSpace.lastChild );
+	    }
+	
+	    var title = document.createElement( 'h1' );
+	    title.innerText = "Drinks on the Beach";
+	    title.className = "circleTitle";
+	
+	    var text = document.createElement( 'h5' );
+	    text.innerText = "For those of you who know Laura you'll be aware that relaxing on the beach is pretty important to her so any help to do it in style would be amazing. \n\n If you'd like to help with this then give this a click."
+	
+	    var goButton = document.createElement( 'button' );
+	    goButton.innerText = "Click";
+	    goButton.onclick = function() {
+	      this.displayForm( "Drinks" );
+	    }.bind( this );
+	
+	    var backButton = document.createElement( 'button' );
+	    backButton.innerText = "Back";
+	    backButton.onclick = function() {
+	      this.displayGifts() 
+	    }.bind( this );
+	
+	    giftSpace.style.display = "block";
+	
+	    giftSpace.appendChild( title );
+	    giftSpace.appendChild( text );
+	    giftSpace.appendChild( goButton );
+	    giftSpace.appendChild( backButton );
+	  },
+	  displayFood: function() {
+	    var giftSpace = document.getElementById( 'gift-space' );
+	    giftSpace.style.display = "none";
+	
+	    while( giftSpace.hasChildNodes() ) {
+	      giftSpace.removeChild( giftSpace.lastChild );
+	    }
+	
+	    var title = document.createElement( 'h1' );
+	    title.innerText = "Delicious Food";
+	    title.className = "circleTitle";
+	
+	    var text = document.createElement( 'h5' );
+	    text.innerText = "What would be the point in travelling half way round the world without sampling as much delicious food as possible? \n\n If you'd like to help with this then give this a click."
+	
+	    var goButton = document.createElement( 'button' );
+	    goButton.innerText = "Click";
+	    goButton.onclick = function() {
+	      this.displayForm( "Food" );
+	    }.bind( this );
+	
+	    var backButton = document.createElement( 'button' );
+	    backButton.innerText = "Back";
+	    backButton.onclick = function() {
+	      this.displayGifts() 
+	    }.bind( this );
+	
+	    giftSpace.style.display = "block";
+	
+	    giftSpace.appendChild( title );
+	    giftSpace.appendChild( text );
+	    giftSpace.appendChild( goButton );
+	    giftSpace.appendChild( backButton );
+	  },
+	
 	
 	  displayForm: function( towardsValue ) {
 	    var giftSpace = document.getElementById( 'gift-space' );
