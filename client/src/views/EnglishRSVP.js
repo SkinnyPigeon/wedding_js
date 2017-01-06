@@ -1,8 +1,8 @@
 var EnglishRSVP = function() {
   this.url = "https://guest-database.herokuapp.com/guests";
   // this.url = "http://localhost:5000/guests";
-  // this.busUrl = "https://guest-database.herokuapp.com/buses";
-  this.busUrl = "http://localhost:9090/buses";
+  this.busUrl = "https://bus-database.herokuapp.com/buses";
+  // this.busUrl = "http://localhost:9090/buses";
   this.display();
 }
 
