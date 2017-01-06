@@ -2461,14 +2461,16 @@
 	    var message = document.createElement( 'input' );
 	    message.placeholder = "Message";
 	
-	    var change = document.createElement( 'h4' );
+	    var change = document.createElement( 'h5' );
 	    change.innerText = "Click to change currency";
+	    change.id = "change";
 	
 	    var changeBox = document.createElement( 'input' );
 	    changeBox.type = "checkbox";
 	
-	    var currency = document.createElement( 'h4' );
+	    var currency = document.createElement( 'h5' );
 	    currency.innerText = "€";
+	    currency.id = "currency";
 	
 	    changeBox.onchange = function() {
 	      if( changeBox.checked ) {
@@ -2507,15 +2509,24 @@
 	      this.displayGifts();
 	    }.bind( this );
 	
+	    var brOne = document.createElement( 'br' );
+	    var brTwo = document.createElement( 'br' );
+	    var brThree = document.createElement( 'br' );
+	    var brFour = document.createElement( 'br' );
+	
 	    giftSpace.appendChild( title );
 	    giftSpace.appendChild( dotsThree );
 	    giftSpace.appendChild( name );
 	    giftSpace.appendChild( email );
+	    giftSpace.appendChild( brOne );
+	    giftSpace.appendChild( currency );
 	    giftSpace.appendChild( contribution );
-	    giftSpace.appendChild( message );
+	    giftSpace.appendChild( brTwo );
 	    giftSpace.appendChild( change );
 	    giftSpace.appendChild( changeBox );
-	    giftSpace.appendChild( currency );
+	    giftSpace.appendChild( brThree );
+	    giftSpace.appendChild( message );
+	    giftSpace.appendChild( brFour );
 	    giftSpace.appendChild( button );
 	    giftSpace.appendChild( backButton );
 	  },
