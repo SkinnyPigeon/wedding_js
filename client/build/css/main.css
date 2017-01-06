@@ -185,6 +185,14 @@ h3 {
   padding-right: 0.5em;
 }
 
+#circle-space h5 {
+  margin-bottom: 1em;
+}
+
+#circle-space img.giftImage {
+  max-width: 15%;
+}
+
 
 
 
