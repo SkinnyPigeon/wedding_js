@@ -804,38 +804,50 @@
 	    var listOne = document.createElement( 'ul' );
 	    var listTwo = document.createElement( 'ul' );
 	
-	    var flights = document.createElement( 'h3' );
-	    flights.innerText = "Flights";
+	    // var flights = document.createElement( 'h3' );
+	    // flights.innerText = "Flights";
+	    var flights = document.createElement( 'img' );
+	    flights.src = "../css/image/plane.png";
 	    flights.onclick = function() {
 	      this.displayFlights();
 	    }.bind( this );
 	
-	    var lavaTour = document.createElement( 'h3' );
-	    lavaTour.innerText = "Lava Tour";
+	    // var lavaTour = document.createElement( 'h3' );
+	    // lavaTour.innerText = "Lava Tour";
+	    var lavaTour = document.createElement( 'img' );
+	    lavaTour.src = "../css/image/volcano.png";
 	    lavaTour.onclick = function() {
 	      this.displayLavaTour();
 	    }.bind( this );
 	
-	    var boatTour = document.createElement( 'h3' );
-	    boatTour.innerText = "Boat Tour";
+	    // var boatTour = document.createElement( 'h3' );
+	    // boatTour.innerText = "Boat Tour";
+	    var boatTour = document.createElement( 'img' );
+	    boatTour.src = "../css/image/boat.png";
 	    boatTour.onclick = function() {
 	      this.displayBoatTour();
 	    }.bind( this );
 	
-	    var hotels = document.createElement( 'h3' );
-	    hotels.innerText = "Hotels";
+	    // var hotels = document.createElement( 'h3' );
+	    // hotels.innerText = "Hotels";
+	    var hotels = document.createElement( 'img' );
+	    hotels.src = "../css/image/hotel.png";
 	    hotels.onclick = function() {
 	      this.displayHotels();
 	    }.bind( this );
 	
-	    var drinks = document.createElement( 'h3' );
-	    drinks.innerText = "Drinks on the Beach";
+	    // var drinks = document.createElement( 'h3' );
+	    // drinks.innerText = "Drinks on the Beach";
+	    var drinks = document.createElement( 'img' );
+	    drinks.src = "../css/image/drink.png";
 	    drinks.onclick = function() {
 	      this.displayDrinks();
 	    }.bind( this );
 	
-	    var food = document.createElement( 'h3' );
-	    food.innerText = "Delicious Food";
+	    // var food = document.createElement( 'h3' );
+	    // food.innerText = "Delicious Food";
+	    var food = document.createElement( 'img' );
+	    food.src = "../css/image/pineapple.png";
 	    food.onclick = function() {
 	      this.displayFood();
 	    }.bind( this );
