@@ -14,6 +14,9 @@ EnglishRSVP.prototype = {
     rsvp.className = "circleTitle";
     rsvp.innerText = "R.S.V.P";
 
+    var dotsOne = document.createElement( 'p' );
+    dotsOne.innerText = "--------------------------------"
+
     var name = document.createElement( 'input' );
     name.placeholder = "Name...";
 
@@ -100,6 +103,7 @@ EnglishRSVP.prototype = {
     var brFour = document.createElement( 'br' );
 
     rsvpSpace.appendChild( rsvp );
+    rsvpSpace.appendChild( dotsOne );
     rsvpSpace.appendChild( name );
     rsvpSpace.appendChild( email );
     rsvpSpace.appendChild( brOne );

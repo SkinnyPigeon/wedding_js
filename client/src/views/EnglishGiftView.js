@@ -43,6 +43,9 @@ EnglishGiftView.prototype = {
     title.className = "circleTitle";
     title.innerText = "Gifts";
 
+    var dotsTwo = document.createElement( 'p' );
+    dotsTwo.innerText = "--------------------------------"
+
     var text = document.createElement( 'h5' );
     text.innerText = "Click on on of the items below to see a bit more about it and to contribute should you wish."
 
@@ -83,6 +86,7 @@ EnglishGiftView.prototype = {
     }.bind( this );
 
     giftSpace.appendChild( title );
+    giftSpace.appendChild( dotsTwo );
     giftSpace.appendChild( text );
     giftSpace.appendChild( flights );
     giftSpace.appendChild( lavaTour );
@@ -104,6 +108,9 @@ EnglishGiftView.prototype = {
     title.innerText = "Flights";
     title.className = "circleTitle";
 
+    var dotsFour = document.createElement( 'p' );
+    dotsFour.innerText = "--------------------------------"
+
     var text = document.createElement( 'h5' );
     text.innerText = "These are the big ones. We've got a couple flights to get to Hawaii then another few internal flights. \n\n If you'd like to help with these the give this a click."
 
@@ -122,6 +129,7 @@ EnglishGiftView.prototype = {
     giftSpace.style.display = "block";
 
     giftSpace.appendChild( title );
+    giftSpace.appendChild( dotsFour );
     giftSpace.appendChild( text );
     giftSpace.appendChild( goButton );
     giftSpace.appendChild( backButton );
@@ -138,6 +146,9 @@ EnglishGiftView.prototype = {
     var title = document.createElement( 'h1' );
     title.innerText = "Lava Tour";
     title.className = "circleTitle";
+
+    var dotsFive = document.createElement( 'p' );
+    dotsFive.innerText = "--------------------------------"
 
     var text = document.createElement( 'h5' );
     text.innerText = "One of the sights we are really hoping to get to is a tour of the volcanos. \n\n If you'd like to help with this then give this a click."
@@ -157,6 +168,7 @@ EnglishGiftView.prototype = {
     giftSpace.style.display = "block";
 
     giftSpace.appendChild( title );
+    giftSpace.appendChild( dotsFive );
     giftSpace.appendChild( text );
     giftSpace.appendChild( goButton );
     giftSpace.appendChild( backButton );
@@ -173,6 +185,9 @@ EnglishGiftView.prototype = {
     var title = document.createElement( 'h1' );
     title.innerText = "Boat Tour";
     title.className = "circleTitle";
+
+    var dotsSix = document.createElement( 'p' );
+    dotsSix.innerText = "--------------------------------"
 
     var text = document.createElement( 'h5' );
     text.innerText = "Another of the main attractions we would love to get to is a boat tour of the Napali Coast. \n\n If you'd like to help with this then give this a click."
@@ -192,6 +207,7 @@ EnglishGiftView.prototype = {
     giftSpace.style.display = "block";
 
     giftSpace.appendChild( title );
+    giftSpace.appendChild( dotsSix );
     giftSpace.appendChild( text );
     giftSpace.appendChild( goButton );
     giftSpace.appendChild( backButton );
@@ -208,6 +224,9 @@ EnglishGiftView.prototype = {
     var title = document.createElement( 'h1' );
     title.innerText = "Hotels";
     title.className = "circleTitle";
+
+    var dotsSeven = document.createElement( 'p' );
+    dotsSeven.innerText = "--------------------------------"
 
     var text = document.createElement( 'h5' );
     text.innerText = "Like the flights these are pretty essential. We are doing a fair amount of travelling throughout the islands so any help will be very much appreciated. \n\n If you'd like to help with these then give this a click."
@@ -227,6 +246,7 @@ EnglishGiftView.prototype = {
     giftSpace.style.display = "block";
 
     giftSpace.appendChild( title );
+    giftSpace.appendChild( dotsSeven );
     giftSpace.appendChild( text );
     giftSpace.appendChild( goButton );
     giftSpace.appendChild( backButton );
@@ -243,6 +263,9 @@ EnglishGiftView.prototype = {
     var title = document.createElement( 'h1' );
     title.innerText = "Drinks on the Beach";
     title.className = "circleTitle";
+
+    var dotsEight = document.createElement( 'p' );
+    dotsEight.innerText = "--------------------------------"
 
     var text = document.createElement( 'h5' );
     text.innerText = "For those of you who know Laura you'll be aware that relaxing on the beach is pretty important to her so any help to do it in style would be amazing. \n\n If you'd like to help with this then give this a click."
@@ -262,6 +285,7 @@ EnglishGiftView.prototype = {
     giftSpace.style.display = "block";
 
     giftSpace.appendChild( title );
+    giftSpace.appendChild( dotsEight );
     giftSpace.appendChild( text );
     giftSpace.appendChild( goButton );
     giftSpace.appendChild( backButton );
@@ -278,6 +302,9 @@ EnglishGiftView.prototype = {
     var title = document.createElement( 'h1' );
     title.innerText = "Delicious Food";
     title.className = "circleTitle";
+
+    var dotsNine = document.createElement( 'p' );
+    dotsNine.innerText = "--------------------------------"
 
     var text = document.createElement( 'h5' );
     text.innerText = "What would be the point in travelling half way round the world without sampling as much delicious food as possible? \n\n If you'd like to help with this then give this a click."
@@ -297,6 +324,7 @@ EnglishGiftView.prototype = {
     giftSpace.style.display = "block";
 
     giftSpace.appendChild( title );
+    giftSpace.appendChild( dotsNine );
     giftSpace.appendChild( text );
     giftSpace.appendChild( goButton );
     giftSpace.appendChild( backButton );
@@ -316,6 +344,9 @@ EnglishGiftView.prototype = {
     title.className = "circleTitle";
     title.innerText = "Thank You";
 
+    var dotsThree = document.createElement( 'p' );
+    dotsThree.innerText = "--------------------------------"
+
     var name = document.createElement( 'input' );
     name.placeholder = "Name...";
 
@@ -326,7 +357,7 @@ EnglishGiftView.prototype = {
     contribution.placeholder = "Contribution...";
 
     var message = document.createElement( 'input' );
-    message.placeholder = "message";
+    message.placeholder = "Message";
 
     var change = document.createElement( 'h4' );
     change.innerText = "Click to change currency";
@@ -375,6 +406,7 @@ EnglishGiftView.prototype = {
     }.bind( this );
 
     giftSpace.appendChild( title );
+    giftSpace.appendChild( dotsThree );
     giftSpace.appendChild( name );
     giftSpace.appendChild( email );
     giftSpace.appendChild( contribution );
