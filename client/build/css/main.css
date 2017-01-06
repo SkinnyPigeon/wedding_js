@@ -75,14 +75,6 @@ h1.circleTitleRaised {
   margin-bottom: 0;
 }
 
-/*h1.rsvpTitle {
-  padding-top: 12vh;
-  font-size: 1.5em;
-  font-family: 'Clicker Script', cursive;
-  color: #E2AEBD;
-  margin-bottom: 0;
-}*/
-
 h1.thankYou {
   padding-top: 20vh;
   font-size: 2em;
@@ -180,6 +172,10 @@ ul {
 
 #rsvp-space input:last-child {
   margin-right: 0em;
+}
+
+h3:hover {
+  cursor: pointer;
 }
 
 
