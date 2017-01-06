@@ -9,8 +9,8 @@ EnglishHomeView.prototype = {
     homeSpace.innerText = "";
 
     var welcome = document.createElement( 'h1' );
-    welcome.className = "circleTitle";
-    welcome.innerText = "We are getting married";
+    welcome.className = "circleTitleRaised";
+    welcome.innerText = "Welcome to our website";
 
     var dotsOne = document.createElement( 'p' );
     dotsOne.innerText = "--------------------------------"
@@ -19,17 +19,11 @@ EnglishHomeView.prototype = {
     dotsTwo.innerText = "--------------------------------"
 
     var text = document.createElement( 'h5' );
-    text.innerText = "and we wish to share with you \n our happiness on this special day. \n We would love for you to join us for the civil ceremony \n and the celebration which will take place on"
+    text.innerText = "Here you’ll find everything you’ll need to get to our wedding and more. \n\n Drop by our guest book to say hello or go to the venue page to find information about the venue location and a way to share photos on the big day. \n\n For those of you travelling in from out of town you’ll find some suggested hotels and information about the bus that’ll be running from Orihuela to the venue. \n\n Some of you have already asked us what we would like in the way of presents. For those so inclined you can find some ideas in the gift section. \n\n Please RSVP through the website. You can also confirm if you’ll need the bus on that page."
 
-    var date = document.createElement( 'h1' );
-    date.innerText = "Saturday 1st of April 2017";
-
-    var time = document.createElement( 'h5' );
-    time.innerText = "at half past twelve at";
-
-    var venue = document.createElement( 'h5' );
-    venue.id = "venue";
-    venue.innerText = "Salones Canario en Rojales, Alicante."
+    var message = document.createElement( 'h5' );
+    message.innerText = "We hope to see you all there on the 1st of April at half past twelve.";
+    message.id = "message";
 
     var us = document.createElement( 'h1' );
     us.innerText = "Laura & Euan";
@@ -43,10 +37,11 @@ EnglishHomeView.prototype = {
     homeSpace.appendChild( welcome );
     homeSpace.appendChild( dotsOne );
     homeSpace.appendChild( text );
-    homeSpace.appendChild( date );
-    homeSpace.appendChild( time );
-    homeSpace.appendChild( venue );
-    homeSpace.appendChild( dotsTwo );
+    // homeSpace.appendChild( date );
+    // homeSpace.appendChild( time );
+    // homeSpace.appendChild( venue );
+    // homeSpace.appendChild( dotsTwo );
+    homeSpace.appendChild( message );
     homeSpace.appendChild( us );
     // homeSpace.appendChild( language );
     // homeSpace.appendChild( languageText );

@@ -33,6 +33,7 @@ EnglishVenueView.prototype = {
     address.innerText = "Salones Canarios, Calle Constitución, 03170 Rojales, Alicante, Spain \n (click me)";
     address.href = "https://www.google.co.uk/maps/place/Salones+Canario/@38.085104,-0.7316289,17z/data=!3m1!4b1!4m5!3m4!1s0xd63af14268fcecf:0xe8048d44d8dd442f!8m2!3d38.085104!4d-0.7294402";
     address.target = "_blank";
+    address.id = "address";
 
     var slackTitle = document.createElement( 'h1' );
     slackTitle.innerText = "How To Share Your Photos"

@@ -216,6 +216,22 @@ input {
   border-radius: 5px;
 }
 
+h5#message {
+  color: #E2AEBD;
+}
+
+a#address {
+  color: #E2AEBD;
+}
+
+h5.hotels {
+  display: inline-block;
+}
+
+#hotel-space a {
+  padding-left: 0.7em;
+}
+
 
 
 

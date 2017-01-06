@@ -24,7 +24,7 @@ EnglishBusView.prototype = {
     dotsOne.innerText = "--------------------------------"
 
     var text = document.createElement( 'h5' );
-    text.innerText = "For those of you staying in Orihuela we will be providing a bus to and from the wedding so no need to worry about taxis or sorting out a lift. We don't have the exact time or location that it'll run from but we will update this as soon as we have those details. \n\n It would be great if you could let us know if you are likely to want to use the bus so we can get an idea of numbers."
+    text.innerText = "For those of you staying in Orihuela we will be providing a bus to and from the wedding so no need to worry about taxis or sorting out a lift. We don't have the exact time or location that it'll run from but we will update this as soon as we have those details. \n\n Please confirm on the RSVP page if you will need to use the bus so we can have an idea about the numbers."
 
     var contactDiv = document.createElement( 'div' );
     contactDiv.id = "contactDiv";

@@ -48,7 +48,7 @@ EnglishRSVP.prototype = {
     kidsSlider.type = "range";
     kidsSlider.step = 1;
     kidsSlider.min = 0;
-    kidsSlider.max = 5;
+    kidsSlider.max = 3;
     kidsSlider.value = 0;
     kidsSlider.list = "steplist";
 
