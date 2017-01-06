@@ -193,6 +193,9 @@ h3 {
   max-width: 15%;
 }
 
+#circle-space img.giftImage:hover {
+  cursor: pointer;
+}
 
 
 
