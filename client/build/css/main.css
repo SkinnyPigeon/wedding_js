@@ -135,13 +135,14 @@ h1 {
 }
 
 input {
-  font-family: 'Clicker Script', cursive;
+  font-family: 'Gudea', sans-serif;
   font-size: 0.5em;
 }
 
 button {
-  font-family: 'Clicker Script', cursive;
+  font-family: 'Gudea', sans-serif;
   font-size: 0.5em;
+  font-weight: bold;
   padding: 0;
   padding-bottom: 1.5em;
   padding-top: 1.5em;
@@ -153,6 +154,16 @@ ul {
 
 #loading {
   padding-top: 15vh;
+}
+
+h4 {
+  font-family: 'Gudea', sans-serif;
+  color: #F5EBAE;
+  font-size: 0.7em;
+  display: inline-block;
+  margin: 0;
+  padding-top: 0.8em;
+  padding-right: 0.3em;
 }
 
 /*#map {

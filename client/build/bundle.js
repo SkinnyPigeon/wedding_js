@@ -1305,11 +1305,16 @@
 	    var rsvpSpace = document.getElementById( 'rsvp-space' );
 	    rsvpSpace.innerText = "";
 	
+	    var rsvp = document.createElement( 'h1' );
+	    rsvp.className = "circleTitle";
+	    rsvp.innerText = "R.S.V.P";
+	
 	    var name = document.createElement( 'input' );
 	    name.placeholder = "Name...";
 	
 	    var email = document.createElement( 'input' );
 	    email.placeholder = "Email...";
+	
 	
 	    var comingText = document.createElement( 'h4' );
 	    comingText.innerText = "Are you coming?";
@@ -1326,6 +1331,9 @@
 	    var kidsText = document.createElement( 'h4' );
 	    kidsText.innerText = "Are you taking any kids?";
 	
+	    var kidsNumber = document.createElement( 'h4' );
+	    kidsNumber.innerText = 0;
+	
 	    var kidsSlider = document.createElement( 'input' );
 	    kidsSlider.id = "kidsSlider";
 	    kidsSlider.type = "range";
@@ -1335,9 +1343,12 @@
 	    kidsSlider.value = 0;
 	    kidsSlider.list = "steplist";
 	
+	    kidsSlider.onchange = function() {
+	      kidsNumber.innerText = kidsSlider.value;
+	    }
+	
 	    var button = document.createElement( 'button' );
-	    button.innerText = "Go";
-	    button.style.padding = "1em";
+	    button.innerText = "Click";
 	    button.onclick = function() {
 	
 	      this.showGratitude();
@@ -1379,14 +1390,24 @@
 	      request.send( JSON.stringify( data ));
 	    }.bind( this )
 	
+	    var brOne = document.createElement( 'br' );
+	    var brTwo = document.createElement( 'br' );
+	    var brThree = document.createElement( 'br' );
+	    var brFour = document.createElement( 'br' );
+	
+	    rsvpSpace.appendChild( rsvp );
 	    rsvpSpace.appendChild( name );
 	    rsvpSpace.appendChild( email );
+	    rsvpSpace.appendChild( brOne );
 	    rsvpSpace.appendChild( comingText );
 	    rsvpSpace.appendChild( comingBox );
 	    rsvpSpace.appendChild( plusOneText );
 	    rsvpSpace.appendChild( plusOneBox );
+	    rsvpSpace.appendChild( brTwo );
 	    rsvpSpace.appendChild( kidsText );
 	    rsvpSpace.appendChild( kidsSlider );
+	    rsvpSpace.appendChild( kidsNumber );
+	    rsvpSpace.appendChild( brThree );
 	    rsvpSpace.appendChild( button );
 	  },
 	
