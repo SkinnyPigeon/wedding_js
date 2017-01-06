@@ -20,23 +20,22 @@ EnglishRSVP.prototype = {
     var email = document.createElement( 'input' );
     email.placeholder = "Email...";
 
-
-    var comingText = document.createElement( 'h4' );
+    var comingText = document.createElement( 'h5' );
     comingText.innerText = "Are you coming?";
 
     var comingBox = document.createElement( 'input' );
     comingBox.type = "checkbox";
 
-    var plusOneText = document.createElement( 'h4' );
+    var plusOneText = document.createElement( 'h5' );
     plusOneText.innerText = "Plus One?";
 
     var plusOneBox = document.createElement( 'input' );
     plusOneBox.type = "checkbox";
 
-    var kidsText = document.createElement( 'h4' );
+    var kidsText = document.createElement( 'h5' );
     kidsText.innerText = "Are you taking any kids?";
 
-    var kidsNumber = document.createElement( 'h4' );
+    var kidsNumber = document.createElement( 'h5' );
     kidsNumber.innerText = 0;
 
     var kidsSlider = document.createElement( 'input' );

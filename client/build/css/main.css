@@ -75,6 +75,14 @@ h1.circleTitleRaised {
   margin-bottom: 0;
 }
 
+/*h1.rsvpTitle {
+  padding-top: 12vh;
+  font-size: 1.5em;
+  font-family: 'Clicker Script', cursive;
+  color: #E2AEBD;
+  margin-bottom: 0;
+}*/
+
 h1.thankYou {
   padding-top: 20vh;
   font-size: 2em;
@@ -156,23 +164,23 @@ ul {
   padding-top: 15vh;
 }
 
-h4 {
-  font-family: 'Gudea', sans-serif;
+#rsvp-space h5 {
   color: #F5EBAE;
-  font-size: 0.7em;
+  font-size: 0.3em;
   display: inline-block;
-  margin: 0;
-  padding-top: 0.8em;
-  padding-right: 0.3em;
+  margin: 0.5em;
+  padding-right: 0.5em;
+  margin: auto;
+  font-family: 'Gudea', sans-serif;
 }
 
-/*#map {
-  height: 50vh;
-  width: 50vw;
-  margin: auto;
-}*/
+#rsvp-space input {
+  margin-right: 0.5em;
+}
 
-
+#rsvp-space input:last-child {
+  margin-right: 0em;
+}
 
 
 
