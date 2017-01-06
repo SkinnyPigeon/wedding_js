@@ -698,6 +698,8 @@
 
 	var EnglishGiftView = function() {
 	  this.display();
+	  // this.url = "https://gift-database.herokuapp.com/gifts";
+	  this.url = "http://localhost:8080/gifts";
 	}
 	
 	EnglishGiftView.prototype = {
@@ -748,9 +750,44 @@
 	      this.displayFlights();
 	    }.bind( this );
 	
+	    var lavaTour = document.createElement( 'h3' );
+	    lavaTour.innerText = "Lava Tour";
+	    lavaTour.onclick = function() {
+	      this.displayLavaTour();
+	    }.bind( this );
+	
+	    var boatTour = document.createElement( 'h3' );
+	    boatTour.innerText = "Boat Tour";
+	    boatTour.onclick = function() {
+	      this.displayBoatTour();
+	    }.bind( this );
+	
+	    var hotels = document.createElement( 'h3' );
+	    hotels.innerText = "Hotels";
+	    hotels.onclick = function() {
+	      this.displayHotels();
+	    }.bind( this );
+	
+	    var drinks = document.createElement( 'h3' );
+	    drinks.innerText = "Drinks on the Beach";
+	    drinks.onclick = function() {
+	      this.displayDrinks();
+	    }.bind( this );
+	
+	    var food = document.createElement( 'h3' );
+	    food.innerText = "Delicious Food";
+	    food.onclick = function() {
+	      this.displayFood();
+	    }.bind( this );
+	
 	    giftSpace.appendChild( title );
 	    giftSpace.appendChild( text );
 	    giftSpace.appendChild( flights );
+	    giftSpace.appendChild( lavaTour );
+	    giftSpace.appendChild( boatTour );
+	    giftSpace.appendChild( hotels );
+	    giftSpace.appendChild( drinks );
+	    giftSpace.appendChild( food );
 	  },
 	
 	  displayFlights: function() {
@@ -761,10 +798,69 @@
 	      giftSpace.removeChild( giftSpace.lastChild );
 	    }
 	
-	    this.displayThankYou();
+	    var title = document.createElement( 'h1' );
+	    title.innerText = "Flights";
+	    title.className = "circleTitle";
+	
+	    var text = document.createElement( 'h5' );
+	    text.innerText = "These are the big ones. We've got a couple flights to get to Hawaii then another few internal flights. \n\n If you'd like to help with these the give this a click."
+	
+	    var goButton = document.createElement( 'button' );
+	    goButton.innerText = "Click";
+	    goButton.onclick = function() {
+	      this.displayForm( "Flights" );
+	    }.bind( this );
+	
+	    var backButton = document.createElement( 'button' );
+	    backButton.innerText = "Back";
+	    backButton.onclick = function() {
+	      this.displayGifts() 
+	    }.bind( this );
+	
+	    giftSpace.style.display = "block";
+	
+	    giftSpace.appendChild( title );
+	    giftSpace.appendChild( text );
+	    giftSpace.appendChild( goButton );
+	    giftSpace.appendChild( backButton );
 	  },
 	
-	  displayForm: function( towards ) {
+	  displayLavaTour: function() {
+	    var giftSpace = document.getElementById( 'gift-space' );
+	    giftSpace.style.display = "none";
+	
+	    while( giftSpace.hasChildNodes() ) {
+	      giftSpace.removeChild( giftSpace.lastChild );
+	    }
+	
+	    var title = document.createElement( 'h1' );
+	    title.innerText = "Lava Tour";
+	    title.className = "circleTitle";
+	
+	    var text = document.createElement( 'h5' );
+	    text.innerText = "One of the sights we are really hoping to get to is a tour of the volcanos. \n\n If you'd like to help with this then give this a click."
+	
+	    var goButton = document.createElement( 'button' );
+	    goButton.innerText = "Click";
+	    goButton.onclick = function() {
+	      this.displayForm( "Lava Tour" );
+	    }.bind( this );
+	
+	    var backButton = document.createElement( 'button' );
+	    backButton.innerText = "Back";
+	    backButton.onclick = function() {
+	      this.displayGifts() 
+	    }.bind( this );
+	
+	    giftSpace.style.display = "block";
+	
+	    giftSpace.appendChild( title );
+	    giftSpace.appendChild( text );
+	    giftSpace.appendChild( goButton );
+	    giftSpace.appendChild( backButton );
+	  },
+	
+	  displayForm: function( towardsValue ) {
 	    var giftSpace = document.getElementById( 'gift-space' );
 	    giftSpace.style.display = "none";
 	
@@ -773,11 +869,88 @@
 	    }
 	
 	    giftSpace.style.display = "block";
+	
+	    var title = document.createElement( 'h1' );
+	    title.className = "circleTitle";
+	    title.innerText = "Thank You";
+	
+	    var name = document.createElement( 'input' );
+	    name.placeholder = "Name...";
+	
+	    var email = document.createElement( 'input' );
+	    email.placeholder = "Email...";
+	
+	    var contribution = document.createElement( 'input' );
+	    contribution.placeholder = "Contribution...";
+	
+	    var message = document.createElement( 'input' );
+	    message.placeholder = "message";
+	
+	    var change = document.createElement( 'h4' );
+	    change.innerText = "Click to change currency";
+	
+	    var changeBox = document.createElement( 'input' );
+	    changeBox.type = "checkbox";
+	
+	    var currency = document.createElement( 'h4' );
+	    currency.innerText = "€";
+	
+	    changeBox.onchange = function() {
+	      if( changeBox.checked ) {
+	        currency.innerText = "£"
+	      } else {
+	        currency.innerText = "€"
+	      }
+	    }
+	
+	    var button = document.createElement( 'button' );
+	    button.innerText = "Click";
+	
+	    button.onclick = function() {
+	      var request = new XMLHttpRequest()
+	      request.open( 'POST', this.url )
+	      request.setRequestHeader("Content-Type", "application/json")
+	      request.onload = () => {
+	        this.displayThankYou();
+	      }
+	      var data = {
+	        gift: {
+	          name: name.value,
+	          email: email.value,
+	          contribution: contribution.value,
+	          towards: towardsValue,
+	          message: message.value,
+	          currency: currency.innerText
+	        }
+	      }
+	      request.send( JSON.stringify( data ));
+	    }.bind( this )
+	
+	    var backButton = document.createElement( 'button' );
+	    backButton.innerText = "Back";
+	    backButton.onclick = function() {
+	      this.displayGifts();
+	    }.bind( this );
+	
+	    giftSpace.appendChild( title );
+	    giftSpace.appendChild( name );
+	    giftSpace.appendChild( email );
+	    giftSpace.appendChild( contribution );
+	    giftSpace.appendChild( message );
+	    giftSpace.appendChild( change );
+	    giftSpace.appendChild( changeBox );
+	    giftSpace.appendChild( currency );
+	    giftSpace.appendChild( button );
+	    giftSpace.appendChild( backButton );
 	  },
 	
 	  displayThankYou: function() {
 	    var giftSpace = document.getElementById( 'gift-space' );
 	    giftSpace.style.display = "none";
+	
+	    while( giftSpace.hasChildNodes() ) {
+	      giftSpace.removeChild( giftSpace.lastChild );
+	    }
 	
 	    var thankYou = document.createElement( 'h1' );
 	    thankYou.className = "thankYou";
@@ -791,8 +964,6 @@
 	
 	module.exports = EnglishGiftView;
 	
-	
-	// displayCircles: function() {
 	//   var circleSpace = document.getElementById( 'circle-space' );
 	//   circleSpace.style.display = "none";
 	
