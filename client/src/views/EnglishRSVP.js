@@ -1,6 +1,8 @@
 var EnglishRSVP = function() {
   this.url = "https://guest-database.herokuapp.com/guests";
   // this.url = "http://localhost:5000/guests";
+  // this.busUrl = "https://guest-database.herokuapp.com/buses";
+  this.busUrl = "http://localhost:9090/buses";
   this.display();
 }
 
@@ -54,6 +56,12 @@ EnglishRSVP.prototype = {
       kidsNumber.innerText = kidsSlider.value;
     }
 
+    var busText = document.createElement( 'h5' );
+    busText.innerText = "Will you need the bus?";
+
+    var busBox = document.createElement( 'input' );
+    busBox.type = "checkbox";
+
     var button = document.createElement( 'button' );
     button.innerText = "Click";
     button.onclick = function() {
@@ -78,9 +86,9 @@ EnglishRSVP.prototype = {
 
       var familyTotal = adultTotal += parseInt( kidsSlider.value );
 
-      var request = new XMLHttpRequest()
-      request.open( 'POST', this.url )
-      request.setRequestHeader("Content-Type", "application/json")
+      var request = new XMLHttpRequest();
+      request.open( 'POST', this.url );
+      request.setRequestHeader("Content-Type", "application/json");
       request.onload = () => {
         this.showGratitude();
       }
@@ -95,12 +103,29 @@ EnglishRSVP.prototype = {
         }
       }
       request.send( JSON.stringify( data ));
+
+      if( busBox.checked ) {
+        var busRequest = new XMLHttpRequest();
+        busRequest.open( 'POST', this.busUrl );
+        busRequest.setRequestHeader("Content-Type", "application/json");
+        busRequest.onload = () => {
+        }
+        var data = {
+          bus: {
+            name: name.value,
+            email: email.value,
+            party: familyTotal
+          }
+        }
+        busRequest.send( JSON.stringify( data ));
+      }
     }.bind( this )
 
     var brOne = document.createElement( 'br' );
     var brTwo = document.createElement( 'br' );
     var brThree = document.createElement( 'br' );
     var brFour = document.createElement( 'br' );
+    var brFive = document.createElement( 'br' );
 
     rsvpSpace.appendChild( rsvp );
     rsvpSpace.appendChild( dotsOne );
@@ -116,6 +141,9 @@ EnglishRSVP.prototype = {
     rsvpSpace.appendChild( kidsSlider );
     rsvpSpace.appendChild( kidsNumber );
     rsvpSpace.appendChild( brThree );
+    rsvpSpace.appendChild( busText );
+    rsvpSpace.appendChild( busBox );
+    rsvpSpace.appendChild( brFour );
     rsvpSpace.appendChild( button );
   },
 
