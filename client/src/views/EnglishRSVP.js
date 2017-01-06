@@ -8,6 +8,7 @@ EnglishRSVP.prototype = {
 
   display: function() {
     var rsvpSpace = document.getElementById( 'rsvp-space' );
+    rsvpSpace.innerText = "";
 
     var name = document.createElement( 'input' );
     name.placeholder = "Name...";
@@ -44,6 +45,8 @@ EnglishRSVP.prototype = {
     button.style.padding = "1em";
     button.onclick = function() {
 
+      this.showGratitude();
+
       var adultTotal = 0;
       if( comingBox.checked && !plusOneBox.checked ) {
         adultTotal = 1;
@@ -66,7 +69,7 @@ EnglishRSVP.prototype = {
       request.open( 'POST', this.url )
       request.setRequestHeader("Content-Type", "application/json")
       request.onload = () => {
-        // this.getComments();
+        this.showGratitude();
       }
       var data = {
         guest: {
@@ -78,7 +81,7 @@ EnglishRSVP.prototype = {
           coming: comingBoolean
         }
       }
-      request.send( JSON.stringify( data ));
+      // request.send( JSON.stringify( data ));
     }.bind( this )
 
     rsvpSpace.appendChild( name );
@@ -92,8 +95,21 @@ EnglishRSVP.prototype = {
     rsvpSpace.appendChild( button );
   },
 
+  showGratitude: function() {
+    var rsvpSpace = document.getElementById( 'rsvp-space' );
+    rsvpSpace.style.display = "none";
 
+    while( rsvpSpace.hasChildNodes() ) {
+      rsvpSpace.removeChild( rsvpSpace.lastChild );
+    }
 
+    var thankYou = document.createElement( 'h1' );
+    thankYou.className = "thankYou";
+    thankYou.innerText = "Thank you very much";
+    rsvpSpace.style.display = "block";
+
+    rsvpSpace.appendChild( thankYou );
+  }
 }
 
 module.exports = EnglishRSVP;

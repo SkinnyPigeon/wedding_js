@@ -75,6 +75,11 @@ h1.circleTitleRaised {
   margin-bottom: 0;
 }
 
+h1.thankYou {
+  padding-top: 20vh;
+  font-size: 2em;
+}
+
 #circle-space p {
   color: #F5EBAE;
   font-size: 0.7em;
