@@ -197,6 +197,21 @@ h3 {
   cursor: pointer;
 }
 
+#currency {
+  display: inline-block;
+  padding-right: 0.2em;
+}
+
+#change {
+  display: inline-block;
+  padding-right: 0.2em;
+}
+
+#gift-space input {
+  margin-right: 1em;
+  margin-bottom: 1em;
+}
+
 
 
 
