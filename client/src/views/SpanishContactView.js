@@ -13,12 +13,21 @@ EnglishContactView.prototype = {
     var secondary = document.createElement( 'div' );
     secondary.id = "secondary";
 
-    var welcome = document.createElement( 'h1' );
-    welcome.innerText = "General Information";
-    primary.appendChild( welcome );
+    var dotsOne = document.createElement( 'p' );
+    dotsOne.innerText = "--------------------------------"
 
-    var info = document.createElement( 'p' );
-    info.innerText = "Hola guys. We really hope you can join us on the 1st of April 2017 for a day of good weather, good food and of course helping us celebrate our love. If you have any questions please drop us a shout."
+    var dotsTwo = document.createElement( 'p' );
+    dotsTwo.innerText = "--------------------------------"
+
+    var welcome = document.createElement( 'h1' );
+    welcome.className = "circleTitle";
+    welcome.innerText = "General Information";
+
+    primary.appendChild( welcome );
+    primary.appendChild( dotsOne );
+
+    var info = document.createElement( 'h5' );
+    info.innerText = "We really hope you can join us on the 1st of April 2017 for a day of good weather, good food and of course helping us celebrate our love. If you have any questions please drop us a shout."
     primary.appendChild( info );
 
     var contact = document.createElement( 'ul' );
@@ -35,10 +44,12 @@ EnglishContactView.prototype = {
     address.innerText = "euanandlaura@gmail.com";
 
     contact.appendChild( getInTouch );
+    contact.appendChild( dotsTwo );
     contact.appendChild( email );
     contact.appendChild( address );
 
     contactSpace.appendChild( primary );
+
     contactSpace.appendChild( secondary );
   },
 

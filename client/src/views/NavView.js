@@ -8,9 +8,13 @@ var EnglishContactView = require( './EnglishContactView' );
 var EnglishRSPV = require( './EnglishRSVP' );
 
 var SpanishHomeView = require( './SpanishHomeView' );
+var SpanishVenueView = require( './SpanishVenueView' );
+var SpanishBusView = require( './SpanishBusView' );
 var SpanishMapView = require( './SpanishMapView' );
+var SpanishGiftView = require( './SpanishGiftView' );
 var SpanishCommentsView = require( './SpanishCommentsView' );
 var SpanishContactView = require( './SpanishContactView' );
+var SpanishRSPV = require( './SpanishRSVP' );
 
 function EnglishNavView() {
   this.displayEnglish();
