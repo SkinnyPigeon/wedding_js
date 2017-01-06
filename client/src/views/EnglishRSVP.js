@@ -1,6 +1,6 @@
 var EnglishRSVP = function() {
-  // this.url = "https://guest-database.herokuapp.com/guests";
-  this.url = "http://localhost:5000/guests";
+  this.url = "https://guest-database.herokuapp.com/guests";
+  // this.url = "http://localhost:5000/guests";
   this.display();
 }
 
@@ -81,7 +81,7 @@ EnglishRSVP.prototype = {
           coming: comingBoolean
         }
       }
-      // request.send( JSON.stringify( data ));
+      request.send( JSON.stringify( data ));
     }.bind( this )
 
     rsvpSpace.appendChild( name );

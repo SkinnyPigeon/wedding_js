@@ -86,7 +86,7 @@ EnglishNavView.prototype = {
     navList.appendChild( venue );
     navList.appendChild( bus );
     navList.appendChild( hotels );
-    // navList.appendChild( rsvp );
+    navList.appendChild( rsvp );
     navList.appendChild( gifts );
     navList.appendChild( comments );
     navList.appendChild( contact );
@@ -185,8 +185,8 @@ EnglishNavView.prototype = {
 
   displayEnglishGift: function() {
     this.clearEnglish();
-    var giftCircle = document.getElementById( 'gift-circle' );
-    giftCircle.style.display = "block";
+    var giftSpace = document.getElementById( 'gift-space' );
+    giftSpace.style.display = "block";
     var view = new EnglishGiftView();
   },
 
@@ -280,8 +280,8 @@ EnglishNavView.prototype = {
     circleSpace.style.display = "none";
     circleSpace.style.display = "block";
 
-    var giftCircle = document.getElementById( 'gift-circle' );
-    giftCircle.style.display = "none"
+    // var giftCircle = document.getElementById( 'gift-circle' );
+    // giftCircle.style.display = "none"
   },
 
   clearSpanish: function() {
