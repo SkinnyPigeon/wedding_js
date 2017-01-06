@@ -47,7 +47,10 @@ EnglishGiftView.prototype = {
     dotsTwo.innerText = "--------------------------------"
 
     var text = document.createElement( 'h5' );
-    text.innerText = "Click on on of the items below to see a bit more about it and to contribute should you wish."
+    text.innerText = "Click on one of the items below to see a bit more about it and to contribute should you wish."
+
+    var listOne = document.createElement( 'ul' );
+    var listTwo = document.createElement( 'ul' );
 
     var flights = document.createElement( 'h3' );
     flights.innerText = "Flights";
@@ -85,15 +88,21 @@ EnglishGiftView.prototype = {
       this.displayFood();
     }.bind( this );
 
+    var br = document.createElement( 'br' );
+
+    listOne.appendChild( flights );
+    listOne.appendChild( lavaTour );
+    listOne.appendChild( boatTour );
+    listTwo.appendChild( hotels );
+    listTwo.appendChild( drinks );
+    listTwo.appendChild( food );
+
     giftSpace.appendChild( title );
     giftSpace.appendChild( dotsTwo );
     giftSpace.appendChild( text );
-    giftSpace.appendChild( flights );
-    giftSpace.appendChild( lavaTour );
-    giftSpace.appendChild( boatTour );
-    giftSpace.appendChild( hotels );
-    giftSpace.appendChild( drinks );
-    giftSpace.appendChild( food );
+    giftSpace.appendChild( listOne );
+    giftSpace.appendChild( br );
+    giftSpace.appendChild( listTwo );
   },
 
   displayFlights: function() {

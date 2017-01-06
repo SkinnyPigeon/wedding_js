@@ -178,5 +178,16 @@ h3:hover {
   cursor: pointer;
 }
 
+h3 {
+  color: #F5EBAE;
+  font-family: 'Gudea', sans-serif;
+  display: inline-block;
+  padding-right: 0.5em;
+}
+
+
+
+
+
 
 
