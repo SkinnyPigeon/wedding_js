@@ -208,7 +208,7 @@
 	    var flag = document.createElement( 'li' );
 	    flag.innerHTML = "<img src='./css/image/scotland.png' >";
 	    flag.onclick = function() {
-	      // this.changeToSpanish();
+	      this.changeToSpanish();
 	    }.bind( this );
 	
 	    var contact = document.createElement( 'li' );
@@ -229,16 +229,16 @@
 	
 	    navSpace.appendChild( title );
 	    navSpace.appendChild( navList );
-	
 	  },
 	
 	  displaySpanish: function() {
 	    var navSpace = document.getElementById( 'nav-space' );
-	    var navList = document.createElement( 'ul' );
-	    navList.id = 'nav';
 	
 	    var title = document.createElement( 'h1' );
-	    title.innerText = "Nuestra Boda";
+	    title.innerText = "Our Wedding";
+	
+	    var navList = document.createElement( 'ul' );
+	    navList.id = 'nav';
 	
 	    var home = document.createElement( 'li' );
 	    home.innerText = "Casa";
@@ -246,14 +246,38 @@
 	      this.displaySpanishHome();
 	    }.bind( this );
 	
-	    var map = document.createElement( 'li' );
-	    map.innerText = "Mapa"
-	    map.onclick = function() {
+	    var venue = document.createElement( 'li' );
+	    venue.innerText = "Venue";
+	    venue.onclick = function() {
+	      this.displaySpanishVenue();
+	    }.bind( this );
+	
+	    var bus = document.createElement( 'li' );
+	    bus.innerText = "Buses";
+	    bus.onclick = function() {
+	      this.displaySpanishBus();
+	    }.bind( this );
+	
+	    var hotels = document.createElement( 'li' );
+	    hotels.innerText = "Hotels";
+	    hotels.onclick = function() {
 	      this.displaySpanishMap();
 	    }.bind( this );
 	
+	    var rsvp = document.createElement( 'li' );
+	    rsvp.innerText = "RSVP";
+	    rsvp.onclick = function() {
+	      this.displaySpanishRSVP();
+	    }.bind( this );
+	
+	    var gifts = document.createElement( 'li' );
+	    gifts.innerText = "Gifts"
+	    gifts.onclick = function() {
+	      this.displaySpanishGift();
+	    }.bind( this );
+	
 	    var comments = document.createElement( 'li' );
-	    comments.innerText = "Comentarios";
+	    comments.innerText = "Guest Book";
 	    comments.onclick = function() {
 	      this.displaySpanishComments();
 	    }.bind( this );
@@ -265,18 +289,23 @@
 	    }.bind( this );
 	
 	    var contact = document.createElement( 'li' );
-	    contact.innerText = "Contacto";
+	    contact.innerText = "Contact";
 	    contact.onclick = function() {
 	      this.displaySpanishContact();
 	    }.bind( this );
 	
-	    navSpace.appendChild( title );
-	    navSpace.appendChild( contact );
-	    navSpace.appendChild( comments );
-	    navSpace.appendChild( map );
-	    navSpace.appendChild( home );
-	    navSpace.appendChild( flag );
+	    navList.appendChild( flag );
+	    navList.appendChild( home );
+	    navList.appendChild( venue );
+	    navList.appendChild( bus );
+	    navList.appendChild( hotels );
+	    navList.appendChild( rsvp );
+	    navList.appendChild( gifts );
+	    navList.appendChild( comments );
+	    navList.appendChild( contact );
 	
+	    navSpace.appendChild( title );
+	    navSpace.appendChild( navList );
 	  },
 	
 	  displayEnglishHome: function() {
@@ -340,18 +369,55 @@
 	    var view = new EnglishContactView();
 	  },
 	
+	
+	
+	
+	
 	  displaySpanishHome: function() {
 	    this.clearSpanish();
 	    var homeSpace = document.getElementById( 'home-space' );
 	    homeSpace.style.display = "block";
+	
 	    var view = new SpanishHomeView();
+	  },
+	
+	  displaySpanishVenue: function() {
+	    this.clearSpanish();
+	    var venueSpace = document.getElementById( 'venue-space' );
+	    venueSpace.style.display = "block";
+	    var view = new SpanishVenueView();
+	  },
+	
+	  displaySpanishBus: function() {
+	    this.clearSpanish();
+	    var busSpace = document.getElementById( 'bus-space' );
+	    busSpace.style.display = "block";
+	    // var mapSpace = document.getElementById( 'map' );
+	    // mapSpace.style.display = "block";
+	    var view = new SpanishBusView();
 	  },
 	
 	  displaySpanishMap: function() {
 	    this.clearSpanish();
+	    var hotelSpace = document.getElementById( 'hotel-space' );
+	    hotelSpace.style.display = "block";
 	    var mapSpace = document.getElementById( 'map' );
 	    mapSpace.style.display = "block";
 	    var view = new SpanishMapView();
+	  },
+	
+	  displaySpanishRSVP: function() {
+	    this.clearSpanish();
+	    var rsvpSpace = document.getElementById( 'rsvp-space' );
+	    rsvpSpace.style.display = "block";
+	    var view = new SpanishRSPV();
+	  },
+	
+	  displaySpanishGift: function() {
+	    this.clearSpanish();
+	    var giftSpace = document.getElementById( 'gift-space' );
+	    giftSpace.style.display = "block";
+	    var view = new SpanishGiftView();
 	  },
 	
 	  displaySpanishComments: function() {
@@ -381,9 +447,18 @@
 	  },
 	
 	  clearEnglish: function() {
+	    this.clear();
+	    this.displayEnglish();
+	  },
+	
+	  clearSpanish: function() {
+	    this.clear();
+	    this.displaySpanish();
+	  },
+	
+	  clear: function() {
 	    var navSpace = document.getElementById( 'nav-space' );
 	    navSpace.innerText = "";
-	    this.displayEnglish();
 	
 	    var homeSpace = document.getElementById( 'home-space' );
 	    homeSpace.style.display = "none";
@@ -405,31 +480,6 @@
 	
 	    var giftSpace = document.getElementById( 'gift-space' );
 	    giftSpace.style.display = "none";
-	
-	    var commentSpace = document.getElementById( 'comment-space' );
-	    commentSpace.style.display = "none";
-	
-	    var contactSpace = document.getElementById( 'contact-space' );
-	    contactSpace.style.display = "none";
-	
-	    var circleSpace = document.getElementById( 'circle-space' );
-	    circleSpace.style.display = "none";
-	    circleSpace.style.display = "block";
-	
-	    // var giftCircle = document.getElementById( 'gift-circle' );
-	    // giftCircle.style.display = "none"
-	  },
-	
-	  clearSpanish: function() {
-	    var navSpace = document.getElementById( 'nav-space' );
-	    navSpace.innerText = "";
-	    this.displaySpanish();
-	
-	    var homeSpace = document.getElementById( 'home-space' );
-	    homeSpace.style.display = "none";
-	
-	    var mapSpace = document.getElementById( 'map' );
-	    mapSpace.style.display = "none";
 	
 	    var commentSpace = document.getElementById( 'comment-space' );
 	    commentSpace.style.display = "none";
@@ -1522,7 +1572,7 @@
 	
 	    var welcome = document.createElement( 'h1' );
 	    welcome.className = "circleTitle";
-	    welcome.innerText = "We are getting married";
+	    welcome.innerText = "Hola. We are getting married";
 	
 	    var dotsOne = document.createElement( 'p' );
 	    dotsOne.innerText = "--------------------------------"

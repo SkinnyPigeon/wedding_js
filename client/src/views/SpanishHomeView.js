@@ -10,7 +10,7 @@ EnglishHomeView.prototype = {
 
     var welcome = document.createElement( 'h1' );
     welcome.className = "circleTitle";
-    welcome.innerText = "We are getting married";
+    welcome.innerText = "Hola. We are getting married";
 
     var dotsOne = document.createElement( 'p' );
     dotsOne.innerText = "--------------------------------"
