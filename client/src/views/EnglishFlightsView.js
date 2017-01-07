@@ -1,136 +1,133 @@
-var EnglishFlightsView = require( './EnglishFlightsView.js' );
-
-var EnglishGiftView = function() {
+var EnglishFlightsView = function() {
   // this.display();
   // this.url = "https://gift-database.herokuapp.com/gifts";
-  // this.url = "http://localhost:8080/gifts";
-  // this.flightUrl = "http://localhost:1235/flights";
+  this.url = "http://localhost:8080/gifts";
+  this.flightUrl = "http://localhost:1235/flights";
 
-  // this.flightObject = [];
-  // this.leave = 0;
-  // this.returnFlight = 0;
-  // this.bigIsland = 0;
-  // this.maui = 0;
-  // this.kauai = 0;
+  this.flightObject = [];
+  this.leave = 0;
+  this.returnFlight = 0;
+  this.bigIsland = 0;
+  this.maui = 0;
+  this.kauai = 0;
 
-  // this.buyLeave = 0;
-  // this.buyReturnFlight = 0;
-  // this.buyBigIsland = 0;
-  // this.buyMaui = 0;
-  // this.buyKauai = 0;
+  this.buyLeave = 0;
+  this.buyReturnFlight = 0;
+  this.buyBigIsland = 0;
+  this.buyMaui = 0;
+  this.buyKauai = 0;
 
-  // this.total = 0;
+  this.total = 0;
 
-  // this.getFlights();
-  this.display();
+  this.getFlights();
 }
 
-EnglishGiftView.prototype = {
+EnglishFlightsView.prototype = {
 
   display: function() {
     // this.getFlights();
-    var giftSpace = document.getElementById( 'gift-space' );
-    giftSpace.innerText = "";
+    // var giftSpace = document.getElementById( 'gift-space' );
+    // giftSpace.innerText = "";
 
-    var title = document.createElement( 'h1' );
-    title.className = "circleTitle";
-    title.innerText = "Gifts";
+    // var title = document.createElement( 'h1' );
+    // title.className = "circleTitle";
+    // title.innerText = "Gifts";
 
-    var dotsOne = document.createElement( 'p' );
-    dotsOne.innerText = "--------------------------------"
+    // var dotsOne = document.createElement( 'p' );
+    // dotsOne.innerText = "--------------------------------"
 
-    var text = document.createElement( 'h5' );
-    text.innerText = "Obviously we will be delighted just to see you all there but for those of you who wish to give us a gift then we certainly wouldn't turn down you generousity. Currently we are renting a flat that is fully kitted out so we are not in desperate need of household goods. We are however going on our honeymoon a few days after the wedding and if you'd like to contribute towards some of it then we would be eternally greatful to you. \n\n Click below to see some of the ways you could help out.";
+    // var text = document.createElement( 'h5' );
+    // text.innerText = "Obviously we will be delighted just to see you all there but for those of you who wish to give us a gift then we certainly wouldn't turn down you generousity. Currently we are renting a flat that is fully kitted out so we are not in desperate need of household goods. We are however going on our honeymoon a few days after the wedding and if you'd like to contribute towards some of it then we would be eternally greatful to you. \n\n Click below to see some of the ways you could help out.";
 
-    var button = document.createElement( 'button' );
-    button.innerText = "Click Me";
-    button.onclick = function() {
-      this.displayGifts();
-    }.bind( this );
+    // var button = document.createElement( 'button' );
+    // button.innerText = "Click Me";
+    // button.onclick = function() {
+    //   this.displayGifts();
+    // }.bind( this );
 
-    giftSpace.appendChild( title );
-    giftSpace.appendChild( dotsOne );
-    giftSpace.appendChild( text );
-    giftSpace.appendChild( button );
+    // giftSpace.appendChild( title );
+    // giftSpace.appendChild( dotsOne );
+    // giftSpace.appendChild( text );
+    // giftSpace.appendChild( button );
   },
 
   displayGifts: function() {
-    var circleSpace = document.getElementById( 'circle-space' );
+    // var circleSpace = document.getElementById( 'circle-space' );
 
-    var giftSpace = document.getElementById( 'gift-space' );
-    giftSpace.innerText = "";
-    giftSpace.style.display = "block";
+    // var giftSpace = document.getElementById( 'gift-space' );
+    // giftSpace.innerText = "";
+    // giftSpace.style.display = "block";
 
-    var title = document.createElement( 'h1' );
-    title.className = "circleTitle";
-    title.innerText = "Gifts";
+    // var title = document.createElement( 'h1' );
+    // title.className = "circleTitle";
+    // title.innerText = "Gifts";
 
-    var dotsTwo = document.createElement( 'p' );
-    dotsTwo.innerText = "--------------------------------"
+    // var dotsTwo = document.createElement( 'p' );
+    // dotsTwo.innerText = "--------------------------------"
 
-    var text = document.createElement( 'h5' );
-    text.innerText = "Click on one of the items below to see a bit more about it and to contribute should you wish."
+    // var text = document.createElement( 'h5' );
+    // text.innerText = "Click on one of the items below to see a bit more about it and to contribute should you wish."
 
-    var listOne = document.createElement( 'ul' );
-    var listTwo = document.createElement( 'ul' );
+    // var listOne = document.createElement( 'ul' );
+    // var listTwo = document.createElement( 'ul' );
 
-    var flights = document.createElement( 'img' );
-    flights.className = "giftImage";
-    flights.src = "../css/image/plane.png";
-    flights.onclick = function() {
-      this.displayFlights();
-    }.bind( this );
+    // var flights = document.createElement( 'img' );
+    // flights.className = "giftImage";
+    // flights.src = "../css/image/plane.png";
+    // flights.onclick = function() {
+    //   this.displayFlights();
+    // }.bind( this );
 
-    var lavaTour = document.createElement( 'img' );
-    lavaTour.className = "giftImage";
-    lavaTour.src = "../css/image/volcano.png";
-    lavaTour.onclick = function() {
-      this.displayLavaTour();
-    }.bind( this );
+    // var lavaTour = document.createElement( 'img' );
+    // lavaTour.className = "giftImage";
+    // lavaTour.src = "../css/image/volcano.png";
+    // lavaTour.onclick = function() {
+    //   this.displayLavaTour();
+    // }.bind( this );
 
-    var boatTour = document.createElement( 'img' );
-    boatTour.className = "giftImage";
-    boatTour.src = "../css/image/boat.png";
-    boatTour.onclick = function() {
-      this.displayBoatTour();
-    }.bind( this );
+    // var boatTour = document.createElement( 'img' );
+    // boatTour.className = "giftImage";
+    // boatTour.src = "../css/image/boat.png";
+    // boatTour.onclick = function() {
+    //   this.displayBoatTour();
+    // }.bind( this );
 
-    var hotels = document.createElement( 'img' );
-    hotels.className = "giftImage";
-    hotels.src = "../css/image/hotel.png";
-    hotels.onclick = function() {
-      this.displayHotels();
-    }.bind( this );
+    // var hotels = document.createElement( 'img' );
+    // hotels.className = "giftImage";
+    // hotels.src = "../css/image/hotel.png";
+    // hotels.onclick = function() {
+    //   this.displayHotels();
+    // }.bind( this );
 
-    var drinks = document.createElement( 'img' );
-    drinks.className = "giftImage";
-    drinks.src = "../css/image/drink.png";
-    drinks.onclick = function() {
-      this.displayDrinks();
-    }.bind( this );
+    // var drinks = document.createElement( 'img' );
+    // drinks.className = "giftImage";
+    // drinks.src = "../css/image/drink.png";
+    // drinks.onclick = function() {
+    //   this.displayDrinks();
+    // }.bind( this );
 
-    var food = document.createElement( 'img' );
-    food.className = "giftImage";
-    food.src = "../css/image/pineapple.png";
-    food.onclick = function() {
-      this.displayFood();
-    }.bind( this );
+    // var food = document.createElement( 'img' );
+    // food.className = "giftImage";
+    // food.src = "../css/image/pineapple.png";
+    // food.onclick = function() {
+    //   this.displayFood();
+    // }.bind( this );
 
-    var br = document.createElement( 'br' );
+    // var br = document.createElement( 'br' );
 
-    listOne.appendChild( flights );
-    listOne.appendChild( lavaTour );
-    listOne.appendChild( boatTour );
-    listTwo.appendChild( hotels );
-    listTwo.appendChild( drinks );
-    listTwo.appendChild( food );
+    // listOne.appendChild( flights );
+    // listOne.appendChild( lavaTour );
+    // listOne.appendChild( boatTour );
+    // listTwo.appendChild( hotels );
+    // listTwo.appendChild( drinks );
+    // listTwo.appendChild( food );
 
-    giftSpace.appendChild( title );
-    giftSpace.appendChild( dotsTwo );
-    giftSpace.appendChild( text );
-    giftSpace.appendChild( listOne );
-    giftSpace.appendChild( br );
-    giftSpace.appendChild( listTwo );
+    // giftSpace.appendChild( title );
+    // giftSpace.appendChild( dotsTwo );
+    // giftSpace.appendChild( text );
+    // giftSpace.appendChild( listOne );
+    // giftSpace.appendChild( br );
+    // giftSpace.appendChild( listTwo );
   },
 
   getFlights: function() {
@@ -159,7 +156,7 @@ EnglishGiftView.prototype = {
             }
         }
         this.hideLoading();
-        this.display();
+        this.displayFlights();
       }
     }
     request.send( null );
@@ -193,7 +190,6 @@ EnglishGiftView.prototype = {
   },
 
 
-
   displayLoading: function() {
     var commentSpace = document.getElementById( 'comment-space' );
     commentSpace.innerText = "";
@@ -210,51 +206,48 @@ EnglishGiftView.prototype = {
   },
 
   displayFlights: function() {
+    var giftSpace = document.getElementById( 'gift-space' );
+    giftSpace.style.display = "none";
 
-    var view = new EnglishFlightsView();
+    while( giftSpace.hasChildNodes() ) {
+      giftSpace.removeChild( giftSpace.lastChild );
+    }
 
-    // var giftSpace = document.getElementById( 'gift-space' );
-    // giftSpace.style.display = "none";
+    var giftList = document.getElementById( 'gift-list' );
 
-    // while( giftSpace.hasChildNodes() ) {
-    //   giftSpace.removeChild( giftSpace.lastChild );
-    // }
+    while( giftList.hasChildNodes() ) {
+      giftList.removeChild( giftList.lastChild );
+    }
 
-    // var giftList = document.getElementById( 'gift-list' );
+    var title = document.createElement( 'h1' );
+    title.innerText = "Flights";
+    title.className = "circleTitle";
 
-    // while( giftList.hasChildNodes() ) {
-    //   giftList.removeChild( giftList.lastChild );
-    // }
+    var dotsFour = document.createElement( 'p' );
+    dotsFour.innerText = "--------------------------------"
 
-    // var title = document.createElement( 'h1' );
-    // title.innerText = "Flights";
-    // title.className = "circleTitle";
+    var text = document.createElement( 'h5' );
+    text.innerText = "These are the big ones. We've got a couple flights to get to Hawaii then another few internal flights. \n\n If you'd like to help with these the give this a click."
 
-    // var dotsFour = document.createElement( 'p' );
-    // dotsFour.innerText = "--------------------------------"
+    var goButton = document.createElement( 'button' );
+    goButton.innerText = "Click";
+    goButton.onclick = function() {
+      this.displayFlightPick();
+    }.bind( this );
 
-    // var text = document.createElement( 'h5' );
-    // text.innerText = "These are the big ones. We've got a couple flights to get to Hawaii then another few internal flights. \n\n If you'd like to help with these the give this a click."
+    var backButton = document.createElement( 'button' );
+    backButton.innerText = "Back";
+    backButton.onclick = function() {
+      this.displayGifts() 
+    }.bind( this );
 
-    // var goButton = document.createElement( 'button' );
-    // goButton.innerText = "Click";
-    // goButton.onclick = function() {
-    //   this.displayFlightPick();
-    // }.bind( this );
+    giftSpace.style.display = "block";
 
-    // var backButton = document.createElement( 'button' );
-    // backButton.innerText = "Back";
-    // backButton.onclick = function() {
-    //   this.displayGifts() 
-    // }.bind( this );
-
-    // giftSpace.style.display = "block";
-
-    // giftSpace.appendChild( title );
-    // giftSpace.appendChild( dotsFour );
-    // giftSpace.appendChild( text );
-    // giftSpace.appendChild( goButton );
-    // giftSpace.appendChild( backButton );
+    giftSpace.appendChild( title );
+    giftSpace.appendChild( dotsFour );
+    giftSpace.appendChild( text );
+    giftSpace.appendChild( goButton );
+    giftSpace.appendChild( backButton );
   },
 
 
@@ -855,4 +848,4 @@ EnglishGiftView.prototype = {
   }
 }
 
-module.exports = EnglishGiftView;
+module.exports = EnglishFlightsView;
