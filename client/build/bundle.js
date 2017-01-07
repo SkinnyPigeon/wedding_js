@@ -799,6 +799,12 @@
 	  this.display();
 	  // this.url = "https://gift-database.herokuapp.com/gifts";
 	  this.url = "http://localhost:8080/gifts";
+	
+	  this.leave = 8;
+	  this.returnFlight = 8;
+	  this.bigIsland = 1;
+	  this.maui = 1;
+	  this.kauai = 1;
 	}
 	
 	EnglishGiftView.prototype = {
@@ -941,7 +947,8 @@
 	    var goButton = document.createElement( 'button' );
 	    goButton.innerText = "Click";
 	    goButton.onclick = function() {
-	      this.displayForm( "Flights" );
+	      // this.displayForm( "Flights" );
+	      this.displayFlightPick();
 	    }.bind( this );
 	
 	    var backButton = document.createElement( 'button' );
@@ -1177,30 +1184,30 @@
 	    var email = document.createElement( 'input' );
 	    email.placeholder = "Email...";
 	
-	    var contribution = document.createElement( 'input' );
-	    contribution.placeholder = "Contribution...";
+	    // var contribution = document.createElement( 'input' );
+	    // contribution.placeholder = "Contribution...";
 	
 	    var message = document.createElement( 'input' );
 	    message.placeholder = "Message";
 	
-	    var change = document.createElement( 'h5' );
-	    change.innerText = "Click to change currency";
-	    change.id = "change";
+	    // var change = document.createElement( 'h5' );
+	    // change.innerText = "Click to change currency";
+	    // change.id = "change";
 	
-	    var changeBox = document.createElement( 'input' );
-	    changeBox.type = "checkbox";
+	    // var changeBox = document.createElement( 'input' );
+	    // changeBox.type = "checkbox";
 	
-	    var currency = document.createElement( 'h5' );
-	    currency.innerText = "€";
-	    currency.id = "currency";
+	    // var currency = document.createElement( 'h5' );
+	    // currency.innerText = "€";
+	    // currency.id = "currency";
 	
-	    changeBox.onchange = function() {
-	      if( changeBox.checked ) {
-	        currency.innerText = "£"
-	      } else {
-	        currency.innerText = "€"
-	      }
-	    }
+	    // changeBox.onchange = function() {
+	    //   if( changeBox.checked ) {
+	    //     currency.innerText = "£"
+	    //   } else {
+	    //     currency.innerText = "€"
+	    //   }
+	    // }
 	
 	    var button = document.createElement( 'button' );
 	    button.innerText = "Click";
@@ -1241,11 +1248,11 @@
 	    giftSpace.appendChild( name );
 	    giftSpace.appendChild( email );
 	    giftSpace.appendChild( brOne );
-	    giftSpace.appendChild( currency );
-	    giftSpace.appendChild( contribution );
-	    giftSpace.appendChild( brTwo );
-	    giftSpace.appendChild( change );
-	    giftSpace.appendChild( changeBox );
+	    // giftSpace.appendChild( currency );
+	    // giftSpace.appendChild( contribution );
+	    // giftSpace.appendChild( brTwo );
+	    // giftSpace.appendChild( change );
+	    // giftSpace.appendChild( changeBox );
 	    giftSpace.appendChild( brThree );
 	    giftSpace.appendChild( message );
 	    giftSpace.appendChild( brFour );
@@ -1267,11 +1274,174 @@
 	    giftSpace.style.display = "block";
 	
 	    giftSpace.appendChild( thankYou );
+	  },
+	
+	  displayFlightPick: function() {
+	
+	    var giftSpaced = document.getElementById( 'gift-space' );
+	    giftSpaced.style.display = "none";
+	
+	    while( giftSpaced.hasChildNodes() ) {
+	      giftSpaced.removeChild( giftSpaced.lastChild );
+	    }
+	
+	    var giftSpace = document.getElementById( 'gift-list' );
+	    giftSpace.style.display = "block";
+	
+	    var flightTitle = document.createElement( 'h1' );
+	    flightTitle.innerText = "Flights";
+	    flightTitle.className = "circleTitleRaisedHigher";
+	
+	    var flightListOne = document.createElement( 'ul' );
+	
+	    var leaveList = document.createElement( 'li' );
+	
+	
+	    var leave = document.createElement( 'img' );
+	    leave.src = "../css/image/plane.png";
+	    leave.id = "leaveImg";
+	    leave.className = "giftImage";
+	
+	    var leaveUnit = document.createElement( 'h5' );
+	    leaveUnit.innerText = "Unit Price: " + "£100";
+	
+	    var leaveAvail = document.createElement( 'h5' );
+	    leaveAvail.innerText = "Available: " + this.leave + "/8";
+	
+	    var leaveSelectValue = document.createElement( 'h5' );
+	
+	    var leaveSelect = document.createElement( 'input' );
+	    leaveSelect.type = "range";
+	    leaveSelect.step = 1;
+	    leaveSelect.min = 0;
+	    leaveSelect.max = 8;
+	    leaveSelect.value = 0;
+	    leaveSelect.list = "steplist";
+	
+	    leaveSelect.onchange = function() {
+	        leaveSelectValue.innerText = "Give " + leaveSelect.value + " Units";
+	    }
+	
+	    leaveSelectValue.innerText = "Give " + leaveSelect.value + " Units";
+	
+	    giftSpace.appendChild( flightTitle );
+	    giftSpace.appendChild( flightListOne );
+	
+	    leaveList.appendChild( leave );
+	    leaveList.appendChild( leaveUnit );
+	    leaveList.appendChild( leaveAvail );
+	    leaveList.appendChild( leaveSelect );
+	    leaveList.appendChild( leaveSelectValue );
+	
+	    flightListOne.appendChild( leaveList );
+	
+	// ########################################################
+	
+	    var returnFlightList = document.createElement( 'li' );
+	
+	    var returnFlight = document.createElement( 'img' );
+	    returnFlight.src = "../css/image/plane.png";
+	    returnFlight.id = "returnFlightImg";
+	    returnFlight.className = "giftImage";
+	
+	    var returnFlightUnit = document.createElement( 'h5' );
+	    returnFlightUnit.innerText = "Unit Price: " + "£100";
+	
+	    var returnFlightAvail = document.createElement( 'h5' );
+	    returnFlightAvail.innerText = "Available: " + this.returnFlight + "/8";
+	
+	    var returnFlightSelectValue = document.createElement( 'h5' );
+	
+	    var returnFlightSelect = document.createElement( 'input' );
+	    returnFlightSelect.type = "range";
+	    returnFlightSelect.step = 1;
+	    returnFlightSelect.min = 0;
+	    returnFlightSelect.max = 8;
+	    returnFlightSelect.value = 0;
+	    returnFlightSelect.list = "steplist";
+	
+	    returnFlightSelect.onchange = function() {
+	        returnFlightSelectValue.innerText = "Give " + returnFlightSelect.value + " Units";
+	    }
+	
+	    returnFlightSelectValue.innerText = "Give " + returnFlightSelect.value + " Units";
+	
+	    giftSpace.appendChild( flightTitle );
+	    giftSpace.appendChild( flightListOne );
+	
+	    returnFlightList.appendChild( returnFlight );
+	    returnFlightList.appendChild( returnFlightUnit );
+	    returnFlightList.appendChild( returnFlightAvail );
+	    returnFlightList.appendChild( returnFlightSelect );
+	    returnFlightList.appendChild( returnFlightSelectValue );
+	
+	    flightListOne.appendChild( returnFlightList );
+	
+	
+	    // ###########################################################
+	
+	    var flightListTwo = document.createElement( 'ul' );
+	
+	    var returnFlightList = document.createElement( 'li' );
+	
+	    var returnFlight = document.createElement( 'img' );
+	    returnFlight.src = "../css/image/plane.png";
+	    returnFlight.id = "returnFlightImg";
+	    returnFlight.className = "giftImage";
+	
+	    var returnFlightUnit = document.createElement( 'h5' );
+	    returnFlightUnit.innerText = "Unit Price: " + "£100";
+	
+	    var returnFlightAvail = document.createElement( 'h5' );
+	    returnFlightAvail.innerText = "Available: " + this.returnFlight + "/8";
+	
+	    var returnFlightSelectValue = document.createElement( 'h5' );
+	
+	    var returnFlightSelect = document.createElement( 'input' );
+	    returnFlightSelect.type = "range";
+	    returnFlightSelect.step = 1;
+	    returnFlightSelect.min = 0;
+	    returnFlightSelect.max = 1;
+	    returnFlightSelect.value = 0;
+	    returnFlightSelect.list = "steplist";
+	
+	    returnFlightSelect.onchange = function() {
+	        returnFlightSelectValue.innerText = "Give " + returnFlightSelect.value + " Units";
+	    }
+	
+	    returnFlightSelectValue.innerText = "Give " + returnFlightSelect.value + " Units";
+	
+	    giftSpace.appendChild( flightTitle );
+	    giftSpace.appendChild( flightListOne );
+	
+	    returnFlightList.appendChild( returnFlight );
+	    returnFlightList.appendChild( returnFlightUnit );
+	    returnFlightList.appendChild( returnFlightAvail );
+	    returnFlightList.appendChild( returnFlightSelect );
+	    returnFlightList.appendChild( returnFlightSelectValue );
+	
+	    flightListOne.appendChild( returnFlightList );
+	
+	    giftSpace.style.display = "block";
 	  }
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	}
 	
 	module.exports = EnglishGiftView;
-
 
 /***/ },
 /* 7 */

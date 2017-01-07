@@ -59,6 +59,10 @@ ul#nav {
   text-align: center;
 }
 
+#gift-list {
+  text-align: center;
+}
+
 h1.circleTitle {
   padding-top: 9vh;
   font-size: 1.5em;
@@ -70,6 +74,14 @@ h1.circleTitle {
 h1.circleTitleRaised {
   padding-top: 6vh;
   font-size: 1.5em;
+  font-family: 'Clicker Script', cursive;
+  color: #E2AEBD;
+  margin-bottom: 0;
+}
+
+h1.circleTitleRaisedHigher {
+  padding-top: 3vh;
+  font-size: 3em;
   font-family: 'Clicker Script', cursive;
   color: #E2AEBD;
   margin-bottom: 0;
@@ -230,6 +242,34 @@ h5.hotels {
 
 #hotel-space a {
   padding-left: 0.7em;
+}
+
+#gift-list ul {
+  margin: auto;
+  max-width: 70%;
+  list-style: none;
+  text-align: center;
+  display: inline-block;
+}
+
+#gift-list li {
+  max-width: 10%;
+  display: inline-block;
+  margin-right: 1em;
+}
+
+#gift-list img {
+  max-width: 100%;
+}
+
+#gift-list h5 {
+  margin: 0;
+  color: #F5EBAE;
+  font-family: 'Gudea', sans-serif;
+}
+
+#gift-list input {
+  max-width: 100%;
 }
 
 
