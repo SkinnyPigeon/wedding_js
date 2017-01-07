@@ -1,5 +1,4 @@
 var EnglishFlightsView = function() {
-  // this.display();
   // this.url = "https://gift-database.herokuapp.com/gifts";
   this.url = "http://localhost:8080/gifts";
   this.flightUrl = "http://localhost:1235/flights";

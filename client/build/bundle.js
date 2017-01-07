@@ -807,7 +807,6 @@
 	EnglishGiftView.prototype = {
 	
 	  display: function() {
-	    // this.getFlights();
 	    var giftSpace = document.getElementById( 'gift-space' );
 	    giftSpace.innerText = "";
 	
@@ -2420,7 +2419,6 @@
 /***/ function(module, exports) {
 
 	var EnglishFlightsView = function() {
-	  // this.display();
 	  // this.url = "https://gift-database.herokuapp.com/gifts";
 	  this.url = "http://localhost:8080/gifts";
 	  this.flightUrl = "http://localhost:1235/flights";

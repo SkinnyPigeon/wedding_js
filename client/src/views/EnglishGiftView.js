@@ -7,7 +7,6 @@ var EnglishGiftView = function() {
 EnglishGiftView.prototype = {
 
   display: function() {
-    // this.getFlights();
     var giftSpace = document.getElementById( 'gift-space' );
     giftSpace.innerText = "";
 
