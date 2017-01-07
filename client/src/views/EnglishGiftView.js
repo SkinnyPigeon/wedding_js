@@ -608,7 +608,7 @@ EnglishGiftView.prototype = {
     }.bind( this );
 
     var leaveText = document.createElement( 'h5' );
-    leaveText.innerText = "Don't miss us too much...";
+    leaveText.innerText = "Flight to Hawaii!!!";
 
     giftSpace.appendChild( flightListOne );
 
@@ -643,12 +643,13 @@ EnglishGiftView.prototype = {
     returnFlightSelect.type = "range";
     returnFlightSelect.step = 1;
     returnFlightSelect.min = 0;
-    returnFlightSelect.max = 8;
+    returnFlightSelect.max = this.returnFlight;
     returnFlightSelect.value = 0;
     returnFlightSelect.list = "steplist";
 
     returnFlightSelect.onchange = function() {
         returnFlightSelectValue.innerText = "Give " + returnFlightSelect.value + " Units";
+        this.total = cost * returnFlightSelect.value;
     }
 
     returnFlightSelectValue.innerText = "Give " + returnFlightSelect.value + " Units";
@@ -657,7 +658,7 @@ EnglishGiftView.prototype = {
     returnButton.innerText = "Click...";
 
     var returnText = document.createElement( 'h5' );
-    returnText.innerText = "Cause we'll be back";
+    returnText.innerText = "Flights back home";
 
     giftSpace.appendChild( flightListOne );
 
