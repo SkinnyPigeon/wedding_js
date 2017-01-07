@@ -1,24 +1,32 @@
 var EnglishGiftView = function() {
-  this.display();
+  // this.display();
   // this.url = "https://gift-database.herokuapp.com/gifts";
   this.url = "http://localhost:8080/gifts";
 
-  this.leave = 8;
-  this.returnFlight = 8;
-  this.bigIsland = 1;
-  this.maui = 1;
-  this.kauai = 1;
+  this.flightUrl = "http://localhost:1234/flights";
+
+  this.flightObject = [];
+  this.leave = 0;
+  this.returnFlight = 0;
+  this.bigIsland = 0;
+  this.maui = 0;
+  this.kauai = 0;
 
   this.buyLeave = 0;
   this.buyReturnFlight = 0;
   this.buyBigIsland = 0;
   this.buyMaui = 0;
   this.buyKauai = 0;
+
+  this.total = 0;
+
+  this.getFlights();
 }
 
 EnglishGiftView.prototype = {
 
   display: function() {
+    // this.getFlights();
     var giftSpace = document.getElementById( 'gift-space' );
     giftSpace.innerText = "";
 
@@ -121,6 +129,78 @@ EnglishGiftView.prototype = {
     giftSpace.appendChild( listOne );
     giftSpace.appendChild( br );
     giftSpace.appendChild( listTwo );
+  },
+
+  getFlights: function() {
+
+    setInterval( function() {
+      if( this.flightObject.length === 0 ) {
+        this.displayLoading()
+      }
+    }.bind( this ), 10 );
+
+    var request = new XMLHttpRequest();
+    request.open( 'GET', this.flightUrl );
+    request.setRequestHeader("Content-Type", "application/json")
+
+    request.onload = () => {
+      if( request.status === 200 ) {
+        var flightObject = JSON.parse( request.responseText );
+        this.flightObject = flightObject;
+        console.log( flightObject );
+        this.leave = flightObject[0].leave;
+        this.returnFlight = flightObject[0].return;
+        this.bigIsland = flightObject[0].bigisland;
+        this.maui = flightObject[0].maui;
+        this.kauai = flightObject[0].kauai;
+        this.hideLoading();
+        this.display();
+      }
+    }
+    request.send( null );
+  },
+
+  updateFlights: function() {
+    var newLeave = this.leave - this.buyLeave;
+    var newReturn = this.returnFlight - this.buyReturnFlight;
+    var newBigIsland = this.bigIsland - this.buyBigIsland;
+    var newMaui = this.maui - this.buyMaui;
+    var newKauai = this.kauai - this.buyKauai;
+
+    var url = this.flightUrl + "/1";
+    var request = new XMLHttpRequest();
+    request.open( 'PUT', url );
+    request.setRequestHeader( "Content-type", "application/json" );
+    // request.withCredentials = true;
+    request.onload = () => {
+        console.log( "Loaded" );
+    }
+    var data = {
+      flight : {
+        leave: newLeave,
+        return: newReturn,
+        bigisland: newBigIsland,
+        maui: newMaui,
+        kauai: newKauai
+      }
+    }
+    request.send( JSON.stringify( data ));
+    console.log( data );
+  },
+
+  displayLoading: function() {
+    var commentSpace = document.getElementById( 'comment-space' );
+    commentSpace.innerText = "";
+
+    var img = document.createElement( 'img' );
+    img.src = "./css/image/loading.gif";
+    img.id = "loading";
+    commentSpace.appendChild( img );
+  },
+
+  hideLoading: function() {
+    var commentSpace = document.getElementById( 'comment-space' );
+    commentSpace.innerText = "";
   },
 
   displayFlights: function() {
@@ -387,20 +467,25 @@ EnglishGiftView.prototype = {
     button.innerText = "Click";
 
     button.onclick = function() {
-      var request = new XMLHttpRequest()
-      request.open( 'POST', this.url )
-      request.setRequestHeader("Content-Type", "application/json")
+      this.updateFlights();
+      var request = new XMLHttpRequest();
+      request.open( 'POST', this.flightUrl );
+      request.setRequestHeader("Content-Type", "application/json");
       request.onload = () => {
         this.displayThankYou();
       }
       var data = {
-        gift: {
+        flight: {
           name: name.value,
           email: email.value,
-          contribution: contribution.value,
-          towards: towardsValue,
-          message: message.value,
-          currency: currency.innerText
+          total: this.total,
+          comment: message.value,
+          leave: this.buyLeave,
+          return: this.buyReturnFlight,
+          bigisland: this.buyBigIsland,
+          maui: this.buyMaui,
+          kauai: this.buyKauai,
+          currency: "£"
         }
       }
       request.send( JSON.stringify( data ));
@@ -472,8 +557,10 @@ EnglishGiftView.prototype = {
     leave.id = "leaveImg";
     leave.className = "giftImage";
 
+    var cost = 100;
+
     var leaveUnit = document.createElement( 'h5' );
-    leaveUnit.innerText = "Unit Price: £100";
+    leaveUnit.innerText = "Unit Price: £" + cost;
 
     var leaveAvail = document.createElement( 'h5' );
     leaveAvail.innerText = "Available: " + this.leave + "/8";
@@ -491,6 +578,7 @@ EnglishGiftView.prototype = {
     leaveSelect.onchange = function() {
         leaveSelectValue.innerText = "Give " + leaveSelect.value + " Units";
         this.buyLeave = leaveSelect.value;
+        this.total = cost * leaveSelect.value;
     }.bind( this );
 
     leaveSelectValue.innerText = "Give " + leaveSelect.value + " Units";
@@ -498,7 +586,7 @@ EnglishGiftView.prototype = {
     var leaveButton = document.createElement( 'button' );
     leaveButton.innerText = "Click...";
     leaveButton.onclick = function() {
-        console.log( this.buyLeave );
+        this.displayForm( "Flights" );
     }.bind( this );
 
     var leaveText = document.createElement( 'h5' );
@@ -578,7 +666,7 @@ EnglishGiftView.prototype = {
     bigIslandFlightUnit.innerText = "Unit Price: " + "£100";
 
     var bigIslandFlightAvail = document.createElement( 'h5' );
-    bigIslandFlightAvail.innerText = "Available: " + this.bigIsland + "/1";
+    bigIslandFlightAvail.innerText = "Available: " + this.bigIsland + "/2";
 
     var bigIslandFlightSelectValue = document.createElement( 'h5' );
 
@@ -586,7 +674,7 @@ EnglishGiftView.prototype = {
     bigIslandFlightSelect.type = "range";
     bigIslandFlightSelect.step = 1;
     bigIslandFlightSelect.min = 0;
-    bigIslandFlightSelect.max = 1;
+    bigIslandFlightSelect.max = 2;
     bigIslandFlightSelect.value = 0;
     bigIslandFlightSelect.list = "steplist";
 
@@ -628,7 +716,7 @@ EnglishGiftView.prototype = {
     mauiFlightUnit.innerText = "Unit Price: £100";
 
     var mauiFlightAvail = document.createElement( 'h5' );
-    mauiFlightAvail.innerText = "Available: " + this.maui + "/1";
+    mauiFlightAvail.innerText = "Available: " + this.maui + "/2";
 
     var mauiFlightSelectValue = document.createElement( 'h5' );
 
@@ -636,7 +724,7 @@ EnglishGiftView.prototype = {
     mauiFlightSelect.type = "range";
     mauiFlightSelect.step = 1;
     mauiFlightSelect.min = 0;
-    mauiFlightSelect.max = 1;
+    mauiFlightSelect.max = 2;
     mauiFlightSelect.value = 0;
     mauiFlightSelect.list = "steplist";
 
