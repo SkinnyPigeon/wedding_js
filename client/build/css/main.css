@@ -258,6 +258,10 @@ h5.hotels {
   margin-right: 1em;
 }
 
+#gift-list li:last-child {
+  margin-right: 0em;
+}
+
 #gift-list img {
   max-width: 100%;
 }
