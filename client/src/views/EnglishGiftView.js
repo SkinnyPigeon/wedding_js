@@ -1,4 +1,5 @@
 var EnglishFlightsView = require( './EnglishFlightsView.js' );
+var EnglishHotelsView = require( './EnglishHotelsView.js' );
 
 var EnglishGiftView = function() {
   this.display();
@@ -113,6 +114,10 @@ EnglishGiftView.prototype = {
 
   displayFlights: function() {
     var view = new EnglishFlightsView();
+  },
+
+  displayHotels: function() {
+    var view = new EnglishHotelsView();
   },
 
 }

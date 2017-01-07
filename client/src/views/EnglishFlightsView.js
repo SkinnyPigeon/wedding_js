@@ -1,6 +1,6 @@
 var EnglishFlightsView = function() {
   // this.url = "https://gift-database.herokuapp.com/gifts";
-  this.url = "http://localhost:8080/gifts";
+  // this.url = "http://localhost:8080/gifts";
   this.flightUrl = "http://localhost:1235/flights";
 
   this.flightObject = [];
@@ -84,18 +84,18 @@ EnglishFlightsView.prototype = {
 
 
   displayLoading: function() {
-    var commentSpace = document.getElementById( 'comment-space' );
-    commentSpace.innerText = "";
+    var giftSpace = document.getElementById( 'gift-space' );
+    giftSpace.innerText = "";
 
     var img = document.createElement( 'img' );
     img.src = "./css/image/loading.gif";
     img.id = "loading";
-    commentSpace.appendChild( img );
+    giftSpace.appendChild( img );
   },
 
   hideLoading: function() {
-    var commentSpace = document.getElementById( 'comment-space' );
-    commentSpace.innerText = "";
+    var giftSpace = document.getElementById( 'gift-space' );
+    giftSpace.innerText = "";
   },
 
   displayFlights: function() {
