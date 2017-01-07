@@ -3203,7 +3203,7 @@
 	    }.bind( this ), 10 );
 	
 	    var request = new XMLHttpRequest();
-	    request.open( 'GET', this.flightUrl );
+	    request.open( 'GET', this.hotelUrl );
 	    request.setRequestHeader("Content-Type", "application/json")
 	
 	    request.onload = () => {
@@ -3310,7 +3310,6 @@
 	    giftSpace.appendChild( text );
 	    giftSpace.appendChild( goButton );
 	    giftSpace.appendChild( backButton );
-	
 	  },
 	
 	}
