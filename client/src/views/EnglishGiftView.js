@@ -602,13 +602,13 @@ EnglishGiftView.prototype = {
     leaveSelectValue.innerText = "Give " + leaveSelect.value + " Units";
 
     var leaveButton = document.createElement( 'button' );
-    leaveButton.innerText = "Click...";
+    leaveButton.innerText = "Give...";
     leaveButton.onclick = function() {
         this.displayForm( "Flights" );
-    }.bind( this );
+        }.bind( this ); 
 
     var leaveText = document.createElement( 'h5' );
-    leaveText.innerText = "Flight to Hawaii!!!";
+    leaveText.innerText = "Flights to Hawaii";
 
     giftSpace.appendChild( flightListOne );
 
@@ -631,8 +631,9 @@ EnglishGiftView.prototype = {
     returnFlight.id = "returnFlightImg";
     returnFlight.className = "giftImage";
 
+    var cost = 100
     var returnFlightUnit = document.createElement( 'h5' );
-    returnFlightUnit.innerText = "Unit Price: " + "£100";
+    returnFlightUnit.innerText = "Unit Price: £" + cost;
 
     var returnFlightAvail = document.createElement( 'h5' );
     returnFlightAvail.innerText = "Available: " + this.returnFlight + "/8";
@@ -649,13 +650,17 @@ EnglishGiftView.prototype = {
 
     returnFlightSelect.onchange = function() {
         returnFlightSelectValue.innerText = "Give " + returnFlightSelect.value + " Units";
+        this.buyReturnFlight = returnFlightSelect.value;
         this.total = cost * returnFlightSelect.value;
-    }
+    }.bind( this );
 
     returnFlightSelectValue.innerText = "Give " + returnFlightSelect.value + " Units";
 
     var returnButton = document.createElement( 'button' );
-    returnButton.innerText = "Click...";
+    returnButton.innerText = "Give...";
+    returnButton.onclick = function() {
+        this.displayForm( "Flights" );
+    }.bind( this );
 
     var returnText = document.createElement( 'h5' );
     returnText.innerText = "Flights back home";
