@@ -274,7 +274,7 @@ EnglishHotelsView.prototype = {
     konaUnit.innerText = "Unit Price: £" + cost;
 
     var konaAvail = document.createElement( 'h5' );
-    konaAvail.innerText = "Available: " + this.kona + "/8";
+    konaAvail.innerText = "Available: " + this.kona + "/2";
 
     var konaSelectValue = document.createElement( 'h5' );
 
@@ -288,7 +288,7 @@ EnglishHotelsView.prototype = {
 
     konaSelect.onchange = function() {
         konaSelectValue.innerText = "Give " + konaSelect.value + " Units";
-        this.buykona = konaSelect.value;
+        this.buyKona = konaSelect.value;
         this.total = cost * konaSelect.value;
     }.bind( this );
 
@@ -314,6 +314,61 @@ EnglishHotelsView.prototype = {
     konaList.appendChild( konaText );
 
     hotelListOne.appendChild( konaList );
+
+    // ######################################################
+
+        var returnFlightList = document.createElement( 'li' );
+
+        var returnFlight = document.createElement( 'img' );
+        returnFlight.src = "../css/image/plane.png";
+        returnFlight.id = "returnFlightImg";
+        returnFlight.className = "giftImage";
+
+        var cost = 100
+        var returnFlightUnit = document.createElement( 'h5' );
+        returnFlightUnit.innerText = "Unit Price: £" + cost;
+
+        var returnFlightAvail = document.createElement( 'h5' );
+        returnFlightAvail.innerText = "Available: " + this.returnFlight + "/8";
+
+        var returnFlightSelectValue = document.createElement( 'h5' );
+
+        var returnFlightSelect = document.createElement( 'input' );
+        returnFlightSelect.type = "range";
+        returnFlightSelect.step = 1;
+        returnFlightSelect.min = 0;
+        returnFlightSelect.max = this.returnFlight;
+        returnFlightSelect.value = 0;
+        returnFlightSelect.list = "steplist";
+
+        returnFlightSelect.onchange = function() {
+            returnFlightSelectValue.innerText = "Give " + returnFlightSelect.value + " Units";
+            this.buyReturnFlight = returnFlightSelect.value;
+            this.total = cost * returnFlightSelect.value;
+        }.bind( this );
+
+        returnFlightSelectValue.innerText = "Give " + returnFlightSelect.value + " Units";
+
+        var returnButton = document.createElement( 'button' );
+        returnButton.innerText = "Give...";
+        returnButton.onclick = function() {
+            this.displayForm( "Flights" );
+        }.bind( this );
+
+        var returnText = document.createElement( 'h5' );
+        returnText.innerText = "Flights back home";
+
+        giftSpace.appendChild( flightListOne );
+
+        returnFlightList.appendChild( returnFlight );
+        returnFlightList.appendChild( returnFlightUnit );
+        returnFlightList.appendChild( returnFlightAvail );
+        returnFlightList.appendChild( returnFlightSelect );
+        returnFlightList.appendChild( returnFlightSelectValue );
+        returnFlightList.appendChild( returnButton );
+        returnFlightList.appendChild( returnText );
+
+        flightListOne.appendChild( returnFlightList );
   }
 
 
