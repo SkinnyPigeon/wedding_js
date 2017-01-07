@@ -317,72 +317,230 @@ EnglishHotelsView.prototype = {
 
     // ######################################################
 
-        var returnFlightList = document.createElement( 'li' );
+    var volcanoList = document.createElement( 'li' );
 
-        var returnFlight = document.createElement( 'img' );
-        returnFlight.src = "../css/image/plane.png";
-        returnFlight.id = "returnFlightImg";
-        returnFlight.className = "giftImage";
+    var volcano = document.createElement( 'img' );
+    volcano.src = "../css/image/hotel.png";
+    volcano.id = "volcanoImg";
+    volcano.className = "giftImage";
 
-        var cost = 100
-        var returnFlightUnit = document.createElement( 'h5' );
-        returnFlightUnit.innerText = "Unit Price: £" + cost;
+    var cost = 120
+    var volcanoUnit = document.createElement( 'h5' );
+    volcanoUnit.innerText = "Unit Price: £" + cost;
 
-        var returnFlightAvail = document.createElement( 'h5' );
-        returnFlightAvail.innerText = "Available: " + this.returnFlight + "/8";
+    var volcanoAvail = document.createElement( 'h5' );
+    volcanoAvail.innerText = "Available: " + this.volcano + "/3";
 
-        var returnFlightSelectValue = document.createElement( 'h5' );
+    var volcanoSelectValue = document.createElement( 'h5' );
 
-        var returnFlightSelect = document.createElement( 'input' );
-        returnFlightSelect.type = "range";
-        returnFlightSelect.step = 1;
-        returnFlightSelect.min = 0;
-        returnFlightSelect.max = this.returnFlight;
-        returnFlightSelect.value = 0;
-        returnFlightSelect.list = "steplist";
+    var volcanoSelect = document.createElement( 'input' );
+    volcanoSelect.type = "range";
+    volcanoSelect.step = 1;
+    volcanoSelect.min = 0;
+    volcanoSelect.max = this.volcano;
+    volcanoSelect.value = 0;
+    volcanoSelect.list = "steplist";
 
-        returnFlightSelect.onchange = function() {
-            returnFlightSelectValue.innerText = "Give " + returnFlightSelect.value + " Units";
-            this.buyReturnFlight = returnFlightSelect.value;
-            this.total = cost * returnFlightSelect.value;
-        }.bind( this );
+    volcanoSelect.onchange = function() {
+        volcanoSelectValue.innerText = "Give " + volcanoSelect.value + " Units";
+        this.buyVolcano = volcanoSelect.value;
+        this.total = cost * volcanoSelect.value;
+    }.bind( this );
 
-        returnFlightSelectValue.innerText = "Give " + returnFlightSelect.value + " Units";
+    volcanoSelectValue.innerText = "Give " + volcanoSelect.value + " Units";
 
-        var returnButton = document.createElement( 'button' );
-        returnButton.innerText = "Give...";
-        returnButton.onclick = function() {
-            this.displayForm( "Flights" );
-        }.bind( this );
+    var returnButton = document.createElement( 'button' );
+    returnButton.innerText = "Give...";
+    returnButton.onclick = function() {
+        this.displayForm( "Hotels" );
+    }.bind( this );
 
-        var returnText = document.createElement( 'h5' );
-        returnText.innerText = "Flights back home";
+    var returnText = document.createElement( 'h5' );
+    returnText.innerText = "Hotels in Volcano Park";
 
-        giftSpace.appendChild( flightListOne );
+    giftSpace.appendChild( hotelListOne );
 
-        returnFlightList.appendChild( returnFlight );
-        returnFlightList.appendChild( returnFlightUnit );
-        returnFlightList.appendChild( returnFlightAvail );
-        returnFlightList.appendChild( returnFlightSelect );
-        returnFlightList.appendChild( returnFlightSelectValue );
-        returnFlightList.appendChild( returnButton );
-        returnFlightList.appendChild( returnText );
+    volcanoList.appendChild( volcano );
+    volcanoList.appendChild( volcanoUnit );
+    volcanoList.appendChild( volcanoAvail );
+    volcanoList.appendChild( volcanoSelect );
+    volcanoList.appendChild( volcanoSelectValue );
+    volcanoList.appendChild( returnButton );
+    volcanoList.appendChild( returnText );
 
-        flightListOne.appendChild( returnFlightList );
-  }
+    hotelListOne.appendChild( volcanoList );
+
+    // ##################################################
+
+    var mauiFlightList = document.createElement( 'li' );
+
+    var mauiFlight = document.createElement( 'img' );
+    mauiFlight.src = "../css/image/hotel.png";
+    mauiFlight.id = "returnFlightImg";
+    mauiFlight.className = "giftImage";
+
+    var cost = 145;
+
+    var mauiFlightUnit = document.createElement( 'h5' );
+    mauiFlightUnit.innerText = "Unit Price: £" + cost;
+
+    var mauiFlightAvail = document.createElement( 'h5' );
+    mauiFlightAvail.innerText = "Available: " + this.maui + "/4";
+
+    var mauiFlightSelectValue = document.createElement( 'h5' );
+
+    var mauiFlightSelect = document.createElement( 'input' );
+    mauiFlightSelect.type = "range";
+    mauiFlightSelect.step = 1;
+    mauiFlightSelect.min = 0;
+    mauiFlightSelect.max = this.maui;
+    mauiFlightSelect.value = 0;
+    mauiFlightSelect.list = "steplist";
+
+    mauiFlightSelect.onchange = function() {
+        mauiFlightSelectValue.innerText = "Give " + mauiFlightSelect.value + " Units";
+        this.buyMaui = mauiFlightSelect.value;
+        this.total = cost * mauiFlightSelect.value;
+    }.bind( this );
+
+    mauiFlightSelectValue.innerText = "Give " + mauiFlightSelect.value + " Units";
+
+    var mauiButton = document.createElement( 'button' );
+    mauiButton.innerText = "Give...";
+    mauiButton.onclick = function() {
+        this.displayForm( "Hotels" );
+    }.bind( this );
+
+    var mauiText = document.createElement( 'h5' );
+    mauiText.innerText = "Hotels in Maui";
+
+    mauiFlightList.appendChild( mauiFlight );
+    mauiFlightList.appendChild( mauiFlightUnit );
+    mauiFlightList.appendChild( mauiFlightAvail );
+    mauiFlightList.appendChild( mauiFlightSelect );
+    mauiFlightList.appendChild( mauiFlightSelectValue );
+    mauiFlightList.appendChild( mauiButton );
+    mauiFlightList.appendChild( mauiText );
+
+    hotelListOne.appendChild( mauiFlightList );
+
+    // ##################################################
+
+    var hotelListTwo = document.createElement( 'ul' );
+    giftSpace.appendChild( hotelListTwo );
+
+    hotelListTwo.id = "hotelListTwo";
+
+    var kauaiFlightList = document.createElement( 'li' );
+
+    var kauaiFlight = document.createElement( 'img' );
+    kauaiFlight.src = "../css/image/plane.png";
+    kauaiFlight.id = "returnFlightImg";
+    kauaiFlight.className = "giftImage";
+
+    var cost = 150;
+
+    var kauaiFlightUnit = document.createElement( 'h5' );
+    kauaiFlightUnit.innerText = "Unit Price: £" + cost;
+
+    var kauaiFlightAvail = document.createElement( 'h5' );
+    kauaiFlightAvail.innerText = "Available: " + this.kauai + "/5";
+
+    var kauaiFlightSelectValue = document.createElement( 'h5' );
+
+    var kauaiFlightSelect = document.createElement( 'input' );
+    kauaiFlightSelect.type = "range";
+    kauaiFlightSelect.step = 1;
+    kauaiFlightSelect.min = 0;
+    kauaiFlightSelect.max = this.kauai;
+    kauaiFlightSelect.value = 0;
+    kauaiFlightSelect.list = "steplist";
+
+    kauaiFlightSelect.onchange = function() {
+        kauaiFlightSelectValue.innerText = "Give " + kauaiFlightSelect.value + " Units";
+        this.buyKauai = kauaiFlightSelect.value;
+        this.total = cost * kauaiFlightSelect.value;
+    }.bind( this );
+
+    kauaiFlightSelectValue.innerText = "Give " + kauaiFlightSelect.value + " Units";
+
+    var kauaiButton = document.createElement( 'button' );
+    kauaiButton.innerText = "Give...";
+    kauaiButton.onclick = function() {
+        this.displayForm( "Flights" );
+    }.bind( this );
+
+    var kauaiText = document.createElement( 'h5' );
+    kauaiText.innerText = "Hotels in Kauai";
+
+    kauaiFlightList.appendChild( kauaiFlight );
+    kauaiFlightList.appendChild( kauaiFlightUnit );
+    kauaiFlightList.appendChild( kauaiFlightAvail );
+    kauaiFlightList.appendChild( kauaiFlightSelect );
+    kauaiFlightList.appendChild( kauaiFlightSelectValue );
+    kauaiFlightList.appendChild( kauaiButton );
+    kauaiFlightList.appendChild( kauaiText );
+
+    hotelListTwo.appendChild( kauaiFlightList );
 
 
+      // ###################################################
 
+    var honoluluFlightList = document.createElement( 'li' );
 
+    var honoluluFlight = document.createElement( 'img' );
+    honoluluFlight.src = "../css/image/plane.png";
+    honoluluFlight.id = "returnFlightImg";
+    honoluluFlight.className = "giftImage";
+
+    var cost = 70;
+
+    var honoluluFlightUnit = document.createElement( 'h5' );
+    honoluluFlightUnit.innerText = "Unit Price: £" + cost;
+
+    var honoluluFlightAvail = document.createElement( 'h5' );
+    honoluluFlightAvail.innerText = "Available: " + this.honolulu + "/2";
+
+    var honoluluFlightSelectValue = document.createElement( 'h5' );
+
+    var honoluluFlightSelect = document.createElement( 'input' );
+    honoluluFlightSelect.type = "range";
+    honoluluFlightSelect.step = 1;
+    honoluluFlightSelect.min = 0;
+    honoluluFlightSelect.max = this.honolulu;
+    honoluluFlightSelect.value = 0;
+    honoluluFlightSelect.list = "steplist";
+
+    honoluluFlightSelect.onchange = function() {
+        honoluluFlightSelectValue.innerText = "Give " + honoluluFlightSelect.value + " Units";
+        this.buyHonolulu = honoluluFlightSelect.value;
+        this.total = cost * honoluluFlightSelect.value;
+    }.bind( this );
+
+    honoluluFlightSelectValue.innerText = "Give " + honoluluFlightSelect.value + " Units";
+
+    var honoluluButton = document.createElement( 'button' );
+    honoluluButton.innerText = "Give...";
+    honoluluButton.onclick = function() {
+        this.displayForm( "Hotels" );
+    }.bind( this );
+
+    var honoluluText = document.createElement( 'h5' );
+    honoluluText.innerText = "Hotels in Honolulu";
+
+    honoluluFlightList.appendChild( honoluluFlight );
+    honoluluFlightList.appendChild( honoluluFlightUnit );
+    honoluluFlightList.appendChild( honoluluFlightAvail );
+    honoluluFlightList.appendChild( honoluluFlightSelect );
+    honoluluFlightList.appendChild( honoluluFlightSelectValue );
+    honoluluFlightList.appendChild( honoluluButton );
+    honoluluFlightList.appendChild( honoluluText );
+
+    hotelListTwo.appendChild( honoluluFlightList );
+    giftSpace.appendChild( hotelListTwo );
+
+    giftSpace.style.display = "block";
+  },
 }
 
 module.exports = EnglishHotelsView;
-
-
-
-
-// 150 * 2 - holiday inn
-// 120 * 3 - volcano park
-// 145 * 4 - Maui
-// 170 * 5 - Kauai
-// 70 * 2 - Honolulu

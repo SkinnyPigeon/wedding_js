@@ -742,7 +742,7 @@ EnglishFlightsView.prototype = {
   },
 
   displayGifts: function() {
-    var view = new EnglishGiftView();
+    // var view = new EnglishGiftView();
   }
 
 
