@@ -1,3 +1,5 @@
+var EnglishGiftView = require( './EnglishGiftView' );
+
 var EnglishFlightsView = function() {
   // this.url = "https://gift-database.herokuapp.com/gifts";
   // this.url = "http://localhost:8080/gifts";
@@ -143,201 +145,200 @@ EnglishFlightsView.prototype = {
     giftSpace.appendChild( backButton );
   },
 
+  // displayLavaTour: function() {
+  //   var giftSpace = document.getElementById( 'gift-space' );
+  //   giftSpace.style.display = "none";
 
-  displayLavaTour: function() {
-    var giftSpace = document.getElementById( 'gift-space' );
-    giftSpace.style.display = "none";
+  //   while( giftSpace.hasChildNodes() ) {
+  //     giftSpace.removeChild( giftSpace.lastChild );
+  //   }
 
-    while( giftSpace.hasChildNodes() ) {
-      giftSpace.removeChild( giftSpace.lastChild );
-    }
+  //   var title = document.createElement( 'h1' );
+  //   title.innerText = "Lava Tour";
+  //   title.className = "circleTitle";
 
-    var title = document.createElement( 'h1' );
-    title.innerText = "Lava Tour";
-    title.className = "circleTitle";
+  //   var dotsFive = document.createElement( 'p' );
+  //   dotsFive.innerText = "--------------------------------"
 
-    var dotsFive = document.createElement( 'p' );
-    dotsFive.innerText = "--------------------------------"
+  //   var text = document.createElement( 'h5' );
+  //   text.innerText = "One of the sights we are really hoping to get to is a tour of the volcanos. \n\n If you'd like to help with this then give this a click."
 
-    var text = document.createElement( 'h5' );
-    text.innerText = "One of the sights we are really hoping to get to is a tour of the volcanos. \n\n If you'd like to help with this then give this a click."
+  //   var goButton = document.createElement( 'button' );
+  //   goButton.innerText = "Click";
+  //   goButton.onclick = function() {
+  //     this.displayForm( "Lava Tour" );
+  //   }.bind( this );
 
-    var goButton = document.createElement( 'button' );
-    goButton.innerText = "Click";
-    goButton.onclick = function() {
-      this.displayForm( "Lava Tour" );
-    }.bind( this );
+  //   var backButton = document.createElement( 'button' );
+  //   backButton.innerText = "Back";
+  //   backButton.onclick = function() {
+  //     this.displayGifts() 
+  //   }.bind( this );
 
-    var backButton = document.createElement( 'button' );
-    backButton.innerText = "Back";
-    backButton.onclick = function() {
-      this.displayGifts() 
-    }.bind( this );
+  //   giftSpace.style.display = "block";
 
-    giftSpace.style.display = "block";
+  //   giftSpace.appendChild( title );
+  //   giftSpace.appendChild( dotsFive );
+  //   giftSpace.appendChild( text );
+  //   giftSpace.appendChild( goButton );
+  //   giftSpace.appendChild( backButton );
+  // },
 
-    giftSpace.appendChild( title );
-    giftSpace.appendChild( dotsFive );
-    giftSpace.appendChild( text );
-    giftSpace.appendChild( goButton );
-    giftSpace.appendChild( backButton );
-  },
+  // displayBoatTour: function() {
+  //   var giftSpace = document.getElementById( 'gift-space' );
+  //   giftSpace.style.display = "none";
 
-  displayBoatTour: function() {
-    var giftSpace = document.getElementById( 'gift-space' );
-    giftSpace.style.display = "none";
+  //   while( giftSpace.hasChildNodes() ) {
+  //     giftSpace.removeChild( giftSpace.lastChild );
+  //   }
 
-    while( giftSpace.hasChildNodes() ) {
-      giftSpace.removeChild( giftSpace.lastChild );
-    }
+  //   var title = document.createElement( 'h1' );
+  //   title.innerText = "Boat Tour";
+  //   title.className = "circleTitle";
 
-    var title = document.createElement( 'h1' );
-    title.innerText = "Boat Tour";
-    title.className = "circleTitle";
+  //   var dotsSix = document.createElement( 'p' );
+  //   dotsSix.innerText = "--------------------------------"
 
-    var dotsSix = document.createElement( 'p' );
-    dotsSix.innerText = "--------------------------------"
+  //   var text = document.createElement( 'h5' );
+  //   text.innerText = "Another of the main attractions we would love to get to is a boat tour of the Napali Coast. \n\n If you'd like to help with this then give this a click."
 
-    var text = document.createElement( 'h5' );
-    text.innerText = "Another of the main attractions we would love to get to is a boat tour of the Napali Coast. \n\n If you'd like to help with this then give this a click."
+  //   var goButton = document.createElement( 'button' );
+  //   goButton.innerText = "Click";
+  //   goButton.onclick = function() {
+  //     this.displayForm( "Boat Tour" );
+  //   }.bind( this );
 
-    var goButton = document.createElement( 'button' );
-    goButton.innerText = "Click";
-    goButton.onclick = function() {
-      this.displayForm( "Boat Tour" );
-    }.bind( this );
+  //   var backButton = document.createElement( 'button' );
+  //   backButton.innerText = "Back";
+  //   backButton.onclick = function() {
+  //     this.displayGifts() 
+  //   }.bind( this );
 
-    var backButton = document.createElement( 'button' );
-    backButton.innerText = "Back";
-    backButton.onclick = function() {
-      this.displayGifts() 
-    }.bind( this );
+  //   giftSpace.style.display = "block";
 
-    giftSpace.style.display = "block";
+  //   giftSpace.appendChild( title );
+  //   giftSpace.appendChild( dotsSix );
+  //   giftSpace.appendChild( text );
+  //   giftSpace.appendChild( goButton );
+  //   giftSpace.appendChild( backButton );
+  // },
 
-    giftSpace.appendChild( title );
-    giftSpace.appendChild( dotsSix );
-    giftSpace.appendChild( text );
-    giftSpace.appendChild( goButton );
-    giftSpace.appendChild( backButton );
-  },
+  // displayHotels: function() {
+  //   var giftSpace = document.getElementById( 'gift-space' );
+  //   giftSpace.style.display = "none";
 
-  displayHotels: function() {
-    var giftSpace = document.getElementById( 'gift-space' );
-    giftSpace.style.display = "none";
+  //   while( giftSpace.hasChildNodes() ) {
+  //     giftSpace.removeChild( giftSpace.lastChild );
+  //   }
 
-    while( giftSpace.hasChildNodes() ) {
-      giftSpace.removeChild( giftSpace.lastChild );
-    }
+  //   var title = document.createElement( 'h1' );
+  //   title.innerText = "Hotels";
+  //   title.className = "circleTitle";
 
-    var title = document.createElement( 'h1' );
-    title.innerText = "Hotels";
-    title.className = "circleTitle";
+  //   var dotsSeven = document.createElement( 'p' );
+  //   dotsSeven.innerText = "--------------------------------"
 
-    var dotsSeven = document.createElement( 'p' );
-    dotsSeven.innerText = "--------------------------------"
+  //   var text = document.createElement( 'h5' );
+  //   text.innerText = "Like the flights these are pretty essential. We are doing a fair amount of travelling throughout the islands so any help will be very much appreciated. \n\n If you'd like to help with these then give this a click."
 
-    var text = document.createElement( 'h5' );
-    text.innerText = "Like the flights these are pretty essential. We are doing a fair amount of travelling throughout the islands so any help will be very much appreciated. \n\n If you'd like to help with these then give this a click."
+  //   var goButton = document.createElement( 'button' );
+  //   goButton.innerText = "Click";
+  //   goButton.onclick = function() {
+  //     this.displayForm( "Hotels" );
+  //   }.bind( this );
 
-    var goButton = document.createElement( 'button' );
-    goButton.innerText = "Click";
-    goButton.onclick = function() {
-      this.displayForm( "Hotels" );
-    }.bind( this );
+  //   var backButton = document.createElement( 'button' );
+  //   backButton.innerText = "Back";
+  //   backButton.onclick = function() {
+  //     this.displayGifts() 
+  //   }.bind( this );
 
-    var backButton = document.createElement( 'button' );
-    backButton.innerText = "Back";
-    backButton.onclick = function() {
-      this.displayGifts() 
-    }.bind( this );
+  //   giftSpace.style.display = "block";
 
-    giftSpace.style.display = "block";
+  //   giftSpace.appendChild( title );
+  //   giftSpace.appendChild( dotsSeven );
+  //   giftSpace.appendChild( text );
+  //   giftSpace.appendChild( goButton );
+  //   giftSpace.appendChild( backButton );
+  // },
 
-    giftSpace.appendChild( title );
-    giftSpace.appendChild( dotsSeven );
-    giftSpace.appendChild( text );
-    giftSpace.appendChild( goButton );
-    giftSpace.appendChild( backButton );
-  },
+  // displayDrinks: function() {
+  //   var giftSpace = document.getElementById( 'gift-space' );
+  //   giftSpace.style.display = "none";
 
-  displayDrinks: function() {
-    var giftSpace = document.getElementById( 'gift-space' );
-    giftSpace.style.display = "none";
+  //   while( giftSpace.hasChildNodes() ) {
+  //     giftSpace.removeChild( giftSpace.lastChild );
+  //   }
 
-    while( giftSpace.hasChildNodes() ) {
-      giftSpace.removeChild( giftSpace.lastChild );
-    }
+  //   var title = document.createElement( 'h1' );
+  //   title.innerText = "Drinks on the Beach";
+  //   title.className = "circleTitle";
 
-    var title = document.createElement( 'h1' );
-    title.innerText = "Drinks on the Beach";
-    title.className = "circleTitle";
+  //   var dotsEight = document.createElement( 'p' );
+  //   dotsEight.innerText = "--------------------------------"
 
-    var dotsEight = document.createElement( 'p' );
-    dotsEight.innerText = "--------------------------------"
+  //   var text = document.createElement( 'h5' );
+  //   text.innerText = "For those of you who know Laura you'll be aware that relaxing on the beach is pretty important to her so any help to do it in style would be amazing. \n\n If you'd like to help with this then give this a click."
 
-    var text = document.createElement( 'h5' );
-    text.innerText = "For those of you who know Laura you'll be aware that relaxing on the beach is pretty important to her so any help to do it in style would be amazing. \n\n If you'd like to help with this then give this a click."
+  //   var goButton = document.createElement( 'button' );
+  //   goButton.innerText = "Click";
+  //   goButton.onclick = function() {
+  //     this.displayForm( "Drinks" );
+  //   }.bind( this );
 
-    var goButton = document.createElement( 'button' );
-    goButton.innerText = "Click";
-    goButton.onclick = function() {
-      this.displayForm( "Drinks" );
-    }.bind( this );
+  //   var backButton = document.createElement( 'button' );
+  //   backButton.innerText = "Back";
+  //   backButton.onclick = function() {
+  //     this.displayGifts() 
+  //   }.bind( this );
 
-    var backButton = document.createElement( 'button' );
-    backButton.innerText = "Back";
-    backButton.onclick = function() {
-      this.displayGifts() 
-    }.bind( this );
+  //   giftSpace.style.display = "block";
 
-    giftSpace.style.display = "block";
+  //   giftSpace.appendChild( title );
+  //   giftSpace.appendChild( dotsEight );
+  //   giftSpace.appendChild( text );
+  //   giftSpace.appendChild( goButton );
+  //   giftSpace.appendChild( backButton );
+  // },
 
-    giftSpace.appendChild( title );
-    giftSpace.appendChild( dotsEight );
-    giftSpace.appendChild( text );
-    giftSpace.appendChild( goButton );
-    giftSpace.appendChild( backButton );
-  },
+  // displayFood: function() {
+  //   var giftSpace = document.getElementById( 'gift-space' );
+  //   giftSpace.style.display = "none";
 
-  displayFood: function() {
-    var giftSpace = document.getElementById( 'gift-space' );
-    giftSpace.style.display = "none";
+  //   while( giftSpace.hasChildNodes() ) {
+  //     giftSpace.removeChild( giftSpace.lastChild );
+  //   }
 
-    while( giftSpace.hasChildNodes() ) {
-      giftSpace.removeChild( giftSpace.lastChild );
-    }
+  //   var title = document.createElement( 'h1' );
+  //   title.innerText = "Delicious Food";
+  //   title.className = "circleTitle";
 
-    var title = document.createElement( 'h1' );
-    title.innerText = "Delicious Food";
-    title.className = "circleTitle";
+  //   var dotsNine = document.createElement( 'p' );
+  //   dotsNine.innerText = "--------------------------------"
 
-    var dotsNine = document.createElement( 'p' );
-    dotsNine.innerText = "--------------------------------"
+  //   var text = document.createElement( 'h5' );
+  //   text.innerText = "What would be the point in travelling half way round the world without sampling as much delicious food as possible? \n\n If you'd like to help with this then give this a click."
 
-    var text = document.createElement( 'h5' );
-    text.innerText = "What would be the point in travelling half way round the world without sampling as much delicious food as possible? \n\n If you'd like to help with this then give this a click."
+  //   var goButton = document.createElement( 'button' );
+  //   goButton.innerText = "Click";
+  //   goButton.onclick = function() {
+  //     this.displayForm( "Food" );
+  //   }.bind( this );
 
-    var goButton = document.createElement( 'button' );
-    goButton.innerText = "Click";
-    goButton.onclick = function() {
-      this.displayForm( "Food" );
-    }.bind( this );
+  //   var backButton = document.createElement( 'button' );
+  //   backButton.innerText = "Back";
+  //   backButton.onclick = function() {
+  //     this.displayGifts() 
+  //   }.bind( this );
 
-    var backButton = document.createElement( 'button' );
-    backButton.innerText = "Back";
-    backButton.onclick = function() {
-      this.displayGifts() 
-    }.bind( this );
+  //   giftSpace.style.display = "block";
 
-    giftSpace.style.display = "block";
-
-    giftSpace.appendChild( title );
-    giftSpace.appendChild( dotsNine );
-    giftSpace.appendChild( text );
-    giftSpace.appendChild( goButton );
-    giftSpace.appendChild( backButton );
-  },
+  //   giftSpace.appendChild( title );
+  //   giftSpace.appendChild( dotsNine );
+  //   giftSpace.appendChild( text );
+  //   giftSpace.appendChild( goButton );
+  //   giftSpace.appendChild( backButton );
+  // },
 
   displayForm: function( towardsValue ) {
     var giftSpace = document.getElementById( 'gift-space' );
@@ -738,7 +739,13 @@ EnglishFlightsView.prototype = {
     giftSpace.appendChild( flightListTwo );
 
     giftSpace.style.display = "block";
+  },
+
+  displayGifts: function() {
+    var view = new EnglishGiftView();
   }
+
+
 }
 
 module.exports = EnglishFlightsView;

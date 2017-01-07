@@ -12,7 +12,7 @@ var EnglishHotelsView = function() {
   this.buyVolcano = 0;
   this.buyMaui = 0;
   this.buyKauai = 0;
-  this.buyHololulu = 0;
+  this.buyHonolulu = 0;
 
   this.total = 0;
 
@@ -74,7 +74,7 @@ EnglishHotelsView.prototype = {
     var newKauai = this.kauai - this.buyKauai;
     var newHonolulu = this.honolulu - this.buyHonolulu;
 
-    var url = this.flightUrl + "/1";
+    var url = this.hotelUrl + "/1";
     var request = new XMLHttpRequest();
     request.open( 'PUT', url );
     request.setRequestHeader( "Content-type", "application/json" );
@@ -137,6 +137,187 @@ EnglishHotelsView.prototype = {
     giftSpace.appendChild( goButton );
     giftSpace.appendChild( backButton );
   },
+
+  displayForm: function( towardsValue ) {
+    var giftSpace = document.getElementById( 'gift-space' );
+    giftSpace.style.display = "none";
+
+    while( giftSpace.hasChildNodes() ) {
+      giftSpace.removeChild( giftSpace.lastChild );
+    }
+
+    giftSpace.style.display = "block";
+
+    var giftList = document.getElementById( 'gift-list' );
+    giftList.style.display = "none";
+
+    while( giftList.hasChildNodes() ) {
+      giftList.removeChild( giftList.lastChild );
+    }
+
+    giftList.style.display = "block";
+
+    var title = document.createElement( 'h1' );
+    title.className = "circleTitle";
+    title.innerText = "Thank You";
+
+    var dotsThree = document.createElement( 'p' );
+    dotsThree.innerText = "--------------------------------"
+
+    var name = document.createElement( 'input' );
+    name.placeholder = "Name...";
+
+    var email = document.createElement( 'input' );
+    email.placeholder = "Email...";
+
+    var message = document.createElement( 'input' );
+    message.placeholder = "Message";
+
+    var button = document.createElement( 'button' );
+    button.innerText = "Click";
+
+    button.onclick = function() {
+      this.updateHotels();
+      var request = new XMLHttpRequest();
+      request.open( 'POST', this.hotelUrl );
+      request.setRequestHeader("Content-Type", "application/json");
+      request.onload = () => {
+        this.displayThankYou();
+      }
+      var data = {
+        hotel: {
+          name: name.value,
+          email: email.value,
+          total: this.total,
+          comment: message.value,
+          kona: this.buyKona,
+          volcano: this.buyVolcano,
+          maui: this.buyMaui,
+          kauai: this.buyKauai,
+          honolulu: this.buyHonolulu,
+          currency: "£"
+        }
+      }
+      request.send( JSON.stringify( data ));
+    }.bind( this )
+
+    var backButton = document.createElement( 'button' );
+    backButton.innerText = "Back";
+    backButton.onclick = function() {
+      this.displayGifts();
+    }.bind( this );
+
+    var brOne = document.createElement( 'br' );
+    var brTwo = document.createElement( 'br' );
+    var brThree = document.createElement( 'br' );
+
+    giftSpace.appendChild( title );
+    giftSpace.appendChild( dotsThree );
+    giftSpace.appendChild( name );
+    giftSpace.appendChild( email );
+    giftSpace.appendChild( brOne );
+    giftSpace.appendChild( brTwo );
+    giftSpace.appendChild( message );
+    giftSpace.appendChild( brThree );
+    giftSpace.appendChild( button );
+    giftSpace.appendChild( backButton );
+  },
+
+  displayThankYou: function() {
+    var giftSpace = document.getElementById( 'gift-space' );
+    giftSpace.style.display = "none";
+
+    while( giftSpace.hasChildNodes() ) {
+      giftSpace.removeChild( giftSpace.lastChild );
+    }
+
+    var thankYou = document.createElement( 'h1' );
+    thankYou.className = "circleTitle";
+    thankYou.innerText = "Thank you very much";
+    giftSpace.style.display = "block";
+
+    giftSpace.appendChild( thankYou );
+  },
+
+  displayHotelPick: function() {
+
+    var giftSpaced = document.getElementById( 'gift-space' );
+    giftSpaced.style.display = "none";
+
+    while( giftSpaced.hasChildNodes() ) {
+      giftSpaced.removeChild( giftSpaced.lastChild );
+    }
+
+    var giftSpace = document.getElementById( 'gift-list' );
+    giftSpace.style.display = "block";
+
+    var hotelTitle = document.createElement( 'h1' );
+    hotelTitle.innerText = "Hotels";
+    hotelTitle.className = "circleTitleRaisedHigher";
+
+  // ###################################
+
+
+    var hotelListOne = document.createElement( 'ul' );
+    hotelListOne.id = "hotelListOne";
+
+    var konaList = document.createElement( 'li' );
+
+    var kona = document.createElement( 'img' );
+    kona.src = "../css/image/hotel.png";
+    kona.id = "konaImg";
+    kona.className = "giftImage";
+
+    var cost = 150;
+
+    var konaUnit = document.createElement( 'h5' );
+    konaUnit.innerText = "Unit Price: £" + cost;
+
+    var konaAvail = document.createElement( 'h5' );
+    konaAvail.innerText = "Available: " + this.kona + "/8";
+
+    var konaSelectValue = document.createElement( 'h5' );
+
+    var konaSelect = document.createElement( 'input' );
+    konaSelect.type = "range";
+    konaSelect.step = 1;
+    konaSelect.min = 0;
+    konaSelect.max = this.kona;
+    konaSelect.value = 0;
+    konaSelect.list = "steplist";
+
+    konaSelect.onchange = function() {
+        konaSelectValue.innerText = "Give " + konaSelect.value + " Units";
+        this.buykona = konaSelect.value;
+        this.total = cost * konaSelect.value;
+    }.bind( this );
+
+    konaSelectValue.innerText = "Give " + konaSelect.value + " Units";
+
+    var konaButton = document.createElement( 'button' );
+    konaButton.innerText = "Give...";
+    konaButton.onclick = function() {
+        this.displayForm( "Hotels" );
+        }.bind( this ); 
+
+    var konaText = document.createElement( 'h5' );
+    konaText.innerText = "Hotels in Kona";
+
+    giftSpace.appendChild( hotelListOne );
+
+    konaList.appendChild( kona );
+    konaList.appendChild( konaUnit );
+    konaList.appendChild( konaAvail );
+    konaList.appendChild( konaSelect );
+    konaList.appendChild( konaSelectValue );
+    konaList.appendChild( konaButton );
+    konaList.appendChild( konaText );
+
+    hotelListOne.appendChild( konaList );
+  }
+
+
+
 
 }
 
