@@ -8,6 +8,12 @@ var EnglishGiftView = function() {
   this.bigIsland = 1;
   this.maui = 1;
   this.kauai = 1;
+
+  this.buyLeave = 0;
+  this.buyReturnFlight = 0;
+  this.buyBigIsland = 0;
+  this.buyMaui = 0;
+  this.buyKauai = 0;
 }
 
 EnglishGiftView.prototype = {
@@ -58,8 +64,6 @@ EnglishGiftView.prototype = {
     var listOne = document.createElement( 'ul' );
     var listTwo = document.createElement( 'ul' );
 
-    // var flights = document.createElement( 'h3' );
-    // flights.innerText = "Flights";
     var flights = document.createElement( 'img' );
     flights.className = "giftImage";
     flights.src = "../css/image/plane.png";
@@ -67,8 +71,6 @@ EnglishGiftView.prototype = {
       this.displayFlights();
     }.bind( this );
 
-    // var lavaTour = document.createElement( 'h3' );
-    // lavaTour.innerText = "Lava Tour";
     var lavaTour = document.createElement( 'img' );
     lavaTour.className = "giftImage";
     lavaTour.src = "../css/image/volcano.png";
@@ -76,8 +78,6 @@ EnglishGiftView.prototype = {
       this.displayLavaTour();
     }.bind( this );
 
-    // var boatTour = document.createElement( 'h3' );
-    // boatTour.innerText = "Boat Tour";
     var boatTour = document.createElement( 'img' );
     boatTour.className = "giftImage";
     boatTour.src = "../css/image/boat.png";
@@ -85,8 +85,6 @@ EnglishGiftView.prototype = {
       this.displayBoatTour();
     }.bind( this );
 
-    // var hotels = document.createElement( 'h3' );
-    // hotels.innerText = "Hotels";
     var hotels = document.createElement( 'img' );
     hotels.className = "giftImage";
     hotels.src = "../css/image/hotel.png";
@@ -94,8 +92,6 @@ EnglishGiftView.prototype = {
       this.displayHotels();
     }.bind( this );
 
-    // var drinks = document.createElement( 'h3' );
-    // drinks.innerText = "Drinks on the Beach";
     var drinks = document.createElement( 'img' );
     drinks.className = "giftImage";
     drinks.src = "../css/image/drink.png";
@@ -103,8 +99,6 @@ EnglishGiftView.prototype = {
       this.displayDrinks();
     }.bind( this );
 
-    // var food = document.createElement( 'h3' );
-    // food.innerText = "Delicious Food";
     var food = document.createElement( 'img' );
     food.className = "giftImage";
     food.src = "../css/image/pineapple.png";
@@ -150,7 +144,6 @@ EnglishGiftView.prototype = {
     var goButton = document.createElement( 'button' );
     goButton.innerText = "Click";
     goButton.onclick = function() {
-      // this.displayForm( "Flights" );
       this.displayFlightPick();
     }.bind( this );
 
@@ -467,11 +460,10 @@ EnglishGiftView.prototype = {
     flightTitle.innerText = "Flights";
     flightTitle.className = "circleTitleRaisedHigher";
 
-    giftSpace.appendChild( flightTitle );
-
     // ###################################################
 
     var flightListOne = document.createElement( 'ul' );
+    flightListOne.id = "flightListOne";
 
     var leaveList = document.createElement( 'li' );
 
@@ -498,9 +490,19 @@ EnglishGiftView.prototype = {
 
     leaveSelect.onchange = function() {
         leaveSelectValue.innerText = "Give " + leaveSelect.value + " Units";
-    }
+        this.buyLeave = leaveSelect.value;
+    }.bind( this );
 
     leaveSelectValue.innerText = "Give " + leaveSelect.value + " Units";
+
+    var leaveButton = document.createElement( 'button' );
+    leaveButton.innerText = "Click...";
+    leaveButton.onclick = function() {
+        console.log( this.buyLeave );
+    }.bind( this );
+
+    var leaveText = document.createElement( 'h5' );
+    leaveText.innerText = "Don't miss us too much...";
 
     giftSpace.appendChild( flightListOne );
 
@@ -509,6 +511,8 @@ EnglishGiftView.prototype = {
     leaveList.appendChild( leaveAvail );
     leaveList.appendChild( leaveSelect );
     leaveList.appendChild( leaveSelectValue );
+    leaveList.appendChild( leaveButton );
+    leaveList.appendChild( leaveText );
 
     flightListOne.appendChild( leaveList );
 
@@ -539,12 +543,16 @@ EnglishGiftView.prototype = {
 
     returnFlightSelect.onchange = function() {
         returnFlightSelectValue.innerText = "Give " + returnFlightSelect.value + " Units";
-        console.log( returnFlightSelect.value )
     }
 
     returnFlightSelectValue.innerText = "Give " + returnFlightSelect.value + " Units";
 
-    giftSpace.appendChild( flightTitle );
+    var returnButton = document.createElement( 'button' );
+    returnButton.innerText = "Click...";
+
+    var returnText = document.createElement( 'h5' );
+    returnText.innerText = "Cause we'll be back";
+
     giftSpace.appendChild( flightListOne );
 
     returnFlightList.appendChild( returnFlight );
@@ -552,6 +560,8 @@ EnglishGiftView.prototype = {
     returnFlightList.appendChild( returnFlightAvail );
     returnFlightList.appendChild( returnFlightSelect );
     returnFlightList.appendChild( returnFlightSelectValue );
+    returnFlightList.appendChild( returnButton );
+    returnFlightList.appendChild( returnText );
 
     flightListOne.appendChild( returnFlightList );
 
@@ -586,19 +596,26 @@ EnglishGiftView.prototype = {
 
     bigIslandFlightSelectValue.innerText = "Give " + bigIslandFlightSelect.value + " Units";
 
-    // giftSpace.appendChild( flightListOne );
+    var bigIslandButton = document.createElement( 'button' );
+    bigIslandButton.innerText = "Click...";
+
+    var bigIslandText = document.createElement( 'h5' );
+    bigIslandText.innerText = "Big Island to Maui";
 
     bigIslandFlightList.appendChild( bigIslandFlight );
     bigIslandFlightList.appendChild( bigIslandFlightUnit );
     bigIslandFlightList.appendChild( bigIslandFlightAvail );
     bigIslandFlightList.appendChild( bigIslandFlightSelect );
     bigIslandFlightList.appendChild( bigIslandFlightSelectValue );
+    bigIslandFlightList.appendChild( bigIslandButton );
+    bigIslandFlightList.appendChild( bigIslandText );
 
     flightListOne.appendChild( bigIslandFlightList );
 
     // ############################################################
 
     var flightListTwo = document.createElement( 'ul' );
+    flightListTwo.id = "flightListTwo";
 
     var mauiFlightList = document.createElement( 'li' );
 
@@ -629,15 +646,21 @@ EnglishGiftView.prototype = {
 
     mauiFlightSelectValue.innerText = "Give " + mauiFlightSelect.value + " Units";
 
+    var mauiButton = document.createElement( 'button' );
+    mauiButton.innerText = "Click...";
+
+    var mauiText = document.createElement( 'h5' );
+    mauiText.innerText = "Maui to Kauai";
+
     mauiFlightList.appendChild( mauiFlight );
     mauiFlightList.appendChild( mauiFlightUnit );
     mauiFlightList.appendChild( mauiFlightAvail );
     mauiFlightList.appendChild( mauiFlightSelect );
     mauiFlightList.appendChild( mauiFlightSelectValue );
+    mauiFlightList.appendChild( mauiButton );
+    mauiFlightList.appendChild( mauiText );
 
     // ####################################################
-
-    var flightListTwo = document.createElement( 'ul' );
 
     var kauaiFlightList = document.createElement( 'li' );
 
@@ -668,11 +691,19 @@ EnglishGiftView.prototype = {
 
     kauaiFlightSelectValue.innerText = "Give " + kauaiFlightSelect.value + " Units";
 
+    var kauaiButton = document.createElement( 'button' );
+    kauaiButton.innerText = "Click...";
+
+    var kauaiText = document.createElement( 'h5' );
+    kauaiText.innerText = "Kauai to Honolulu";
+
     kauaiFlightList.appendChild( kauaiFlight );
     kauaiFlightList.appendChild( kauaiFlightUnit );
     kauaiFlightList.appendChild( kauaiFlightAvail );
     kauaiFlightList.appendChild( kauaiFlightSelect );
     kauaiFlightList.appendChild( kauaiFlightSelectValue );
+    kauaiFlightList.appendChild( kauaiButton );
+    kauaiFlightList.appendChild( kauaiText );
 
     flightListTwo.appendChild( mauiFlightList );
     flightListTwo.appendChild( kauaiFlightList );

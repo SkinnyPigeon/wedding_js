@@ -244,6 +244,7 @@ h5.hotels {
   padding-left: 0.7em;
 }
 
+
 #gift-list ul {
   margin: auto;
   max-width: 70%;
@@ -256,6 +257,7 @@ h5.hotels {
   max-width: 10%;
   display: inline-block;
   margin-right: 1em;
+  vertical-align: top;
 }
 
 #gift-list li:last-child {
@@ -274,6 +276,10 @@ h5.hotels {
 
 #gift-list input {
   max-width: 100%;
+}
+
+ul#flightListOne {
+  margin-top: 8.5vh;
 }
 
 
