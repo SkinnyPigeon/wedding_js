@@ -349,6 +349,9 @@ EnglishNavView.prototype = {
     var giftSpace = document.getElementById( 'gift-space' );
     giftSpace.style.display = "none";
 
+    var giftList = document.getElementById( 'gift-list' );
+    giftList.style.display = "none";
+
     var commentSpace = document.getElementById( 'comment-space' );
     commentSpace.style.display = "none";
 

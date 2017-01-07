@@ -476,6 +476,9 @@
 	    var giftSpace = document.getElementById( 'gift-space' );
 	    giftSpace.style.display = "none";
 	
+	    var giftList = document.getElementById( 'gift-list' );
+	    giftList.style.display = "none";
+	
 	    var commentSpace = document.getElementById( 'comment-space' );
 	    commentSpace.style.display = "none";
 	
@@ -799,8 +802,7 @@
 	  // this.display();
 	  // this.url = "https://gift-database.herokuapp.com/gifts";
 	  this.url = "http://localhost:8080/gifts";
-	
-	  this.flightUrl = "http://localhost:1234/flights";
+	  this.flightUrl = "http://localhost:1235/flights";
 	
 	  this.flightObject = [];
 	  this.leave = 0;
@@ -944,12 +946,15 @@
 	      if( request.status === 200 ) {
 	        var flightObject = JSON.parse( request.responseText );
 	        this.flightObject = flightObject;
-	        console.log( flightObject );
-	        this.leave = flightObject[0].leave;
-	        this.returnFlight = flightObject[0].return;
-	        this.bigIsland = flightObject[0].bigisland;
-	        this.maui = flightObject[0].maui;
-	        this.kauai = flightObject[0].kauai;
+	        for( var i = 0; i < flightObject.length; i++ ) {
+	            if( this.flightObject[i].id === 1 ) {
+	                this.leave = flightObject[i].leave;
+	                this.returnFlight = flightObject[i].return;
+	                this.bigIsland = flightObject[i].bigisland;
+	                this.maui = flightObject[i].maui;
+	                this.kauai = flightObject[i].kauai;
+	            }
+	        }
 	        this.hideLoading();
 	        this.display();
 	      }
@@ -968,7 +973,6 @@
 	    var request = new XMLHttpRequest();
 	    request.open( 'PUT', url );
 	    request.setRequestHeader( "Content-type", "application/json" );
-	    // request.withCredentials = true;
 	    request.onload = () => {
 	        console.log( "Loaded" );
 	    }
@@ -984,6 +988,7 @@
 	    request.send( JSON.stringify( data ));
 	    console.log( data );
 	  },
+	
 	
 	  displayLoading: function() {
 	    var commentSpace = document.getElementById( 'comment-space' );
@@ -1006,6 +1011,12 @@
 	
 	    while( giftSpace.hasChildNodes() ) {
 	      giftSpace.removeChild( giftSpace.lastChild );
+	    }
+	
+	    var giftList = document.getElementById( 'gift-list' );
+	
+	    while( giftList.hasChildNodes() ) {
+	      giftList.removeChild( giftList.lastChild );
 	    }
 	
 	    var title = document.createElement( 'h1' );
@@ -1038,6 +1049,7 @@
 	    giftSpace.appendChild( goButton );
 	    giftSpace.appendChild( backButton );
 	  },
+	
 	
 	  displayLavaTour: function() {
 	    var giftSpace = document.getElementById( 'gift-space' );
@@ -1244,6 +1256,15 @@
 	
 	    giftSpace.style.display = "block";
 	
+	    var giftList = document.getElementById( 'gift-list' );
+	    giftList.style.display = "none";
+	
+	    while( giftList.hasChildNodes() ) {
+	      giftList.removeChild( giftList.lastChild );
+	    }
+	
+	    giftList.style.display = "block";
+	
 	    var title = document.createElement( 'h1' );
 	    title.className = "circleTitle";
 	    title.innerText = "Thank You";
@@ -1368,7 +1389,7 @@
 	    leaveSelect.type = "range";
 	    leaveSelect.step = 1;
 	    leaveSelect.min = 0;
-	    leaveSelect.max = 8;
+	    leaveSelect.max = this.leave;
 	    leaveSelect.value = 0;
 	    leaveSelect.list = "steplist";
 	
@@ -1597,21 +1618,6 @@
 	
 	    giftSpace.style.display = "block";
 	  }
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	}
 	
 	module.exports = EnglishGiftView;
