@@ -675,7 +675,7 @@ EnglishGiftView.prototype = {
     returnFlightList.appendChild( returnButton );
     returnFlightList.appendChild( returnText );
 
-    flightListOne.appendChild( returnFlightList );
+    // flightListOne.appendChild( returnFlightList );
 
     // ##################################################
 
@@ -838,8 +838,9 @@ EnglishGiftView.prototype = {
     kauaiFlightList.appendChild( kauaiButton );
     kauaiFlightList.appendChild( kauaiText );
 
+    flightListOne.appendChild( kauaiFlightList );
     flightListTwo.appendChild( mauiFlightList );
-    flightListTwo.appendChild( kauaiFlightList );
+    flightListTwo.appendChild( returnFlightList );
 
     giftSpace.appendChild( flightListTwo );
 
