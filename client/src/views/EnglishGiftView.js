@@ -121,6 +121,10 @@ EnglishGiftView.prototype = {
     var view = new EnglishHotelsView();
   },
 
+  displayDrinks: function() {
+    var view = new EnglishDrinksView();
+  }
+
 }
 
 module.exports = EnglishGiftView;

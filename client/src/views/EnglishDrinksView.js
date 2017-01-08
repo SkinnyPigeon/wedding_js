@@ -153,9 +153,9 @@ EnglishDrinksView.prototype = {
     button.innerText = "Click";
 
     button.onclick = function() {
-      this.updateHotels();
+      this.updateDrinks();
       var request = new XMLHttpRequest();
-      request.open( 'POST', this.hotelUrl );
+      request.open( 'POST', this.drinkUrl );
       request.setRequestHeader("Content-Type", "application/json");
       request.onload = () => {
         this.displayThankYou();
@@ -176,7 +176,7 @@ EnglishDrinksView.prototype = {
     var backButton = document.createElement( 'button' );
     backButton.innerText = "Back";
     backButton.onclick = function() {
-      this.displayHotelPick();
+      this.displayDrinkPick();
     }.bind( this );
 
     var brOne = document.createElement( 'br' );
@@ -226,13 +226,87 @@ EnglishDrinksView.prototype = {
       giftSpace.removeChild( giftSpace.lastChild );
     }
 
-    var hotelTitle = document.createElement( 'h1' );
-    hotelTitle.innerText = "Drinks";
-    hotelTitle.className = "circleTitleRaisedHigher";
+    var drinkTitle = document.createElement( 'h1' );
+    drinkTitle.innerText = "Drinks";
+    drinkTitle.className = "circleTitleRaisedHigher";
 
-    // ##################################
+    var drinkListOne = document.createElement( 'ul' );
+    drinkListOne.id = "drinkListOne";
 
+    var drinkList = document.createElement( 'li' );
 
+    var drink = document.createElement( 'img' );
+    drink.src = "../css/image/drink.png";
+    drink.id = "drinkImg";
+    drink.className = "giftImage";
+
+    var cost = 20;
+
+    var drinkUnit = document.createElement( 'h5' );
+    drinkUnit.innerText = "Unit Price: £" + cost;
+
+    var drinkAvail = document.createElement( 'h5' );
+    drinkAvail.innerText = "Available: " + String.fromCharCode( 8734 ) + "/" + String.fromCharCode( 8734 );
+
+    var drinkSelectValue = document.createElement( 'h5' );
+
+    var drinkSelect = document.createElement( 'input' );
+    drinkSelect.type = "range";
+    drinkSelect.step = 1;
+    drinkSelect.min = 0;
+    drinkSelect.max = 10;
+    drinkSelect.value = 0;
+    drinkSelect.list = "steplist";
+
+    drinkSelect.onchange = function() {
+        drinkSelectValue.innerText = "Give " + drinkSelect.value + " Units";
+        this.buyDrinks = drinkSelect.value;
+        this.total = cost * drinkSelect.value;
+    }.bind( this );
+
+    drinkSelectValue.innerText = "Give " + drinkSelect.value + " Units";
+
+    var drinkText = document.createElement( 'h5' );
+    drinkText.innerText = "Drinks on the Beach";
+
+    giftSpace.appendChild( drinkListOne );
+
+    drinkList.appendChild( drink );
+    drinkList.appendChild( drinkUnit );
+    drinkList.appendChild( drinkAvail );
+    drinkList.appendChild( drinkSelect );
+    drinkList.appendChild( drinkSelectValue );
+    drinkList.appendChild( drinkText );
+
+    drinkListOne.appendChild( drinkList );
+    giftSpace.appendChild( drinkListOne );
+
+    giftSpace.style.display = "block";
+
+    var giveButton = document.createElement( 'button' );
+    var cancelButton = document.createElement( 'button' );
+
+    giveButton.innerText = "Give...";
+    giveButton.onclick = function() {
+      this.displayForm();
+    }.bind( this );
+
+    cancelButton.innerText = "Back...";
+    cancelButton.onclick = function() {
+      this.displayGifts();
+    }.bind( this );
+
+    giftSpace.appendChild( giveButton );
+    giftSpace.appendChild( cancelButton ); 
+  },
+
+  displayGifts: function() {
+    var giftList = document.getElementById( 'gift-list' );
+    giftList.style.display = "none";
+
+    var giftSpace = document.getElementById( 'gift-space' );
+    giftSpace.style.display = "block";
+  }  
 }
 
 module.exports = EnglishDrinksView;
