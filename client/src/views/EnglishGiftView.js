@@ -2,6 +2,7 @@ var EnglishFlightsView = require( './EnglishFlightsView.js' );
 var EnglishHotelsView = require( './EnglishHotelsView.js' );
 var EnglishDrinksView = require( './EnglishDrinksView.js' );
 var EnglishFoodView = require( './EnglishFoodView.js' );
+var EnglishBoatView = require( './EnglishBoatView.js' );
 
 var EnglishGiftView = function() {
   this.display();
@@ -128,6 +129,10 @@ EnglishGiftView.prototype = {
 
   displayFood: function() {
     var view = new EnglishFoodView();
+  },
+
+  displayBoatTour: function() {
+    var view = new EnglishBoatView();
   }
 
 }
