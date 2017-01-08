@@ -2512,26 +2512,31 @@
 	
 	  displayLoading: function() {
 	    var giftSpace = document.getElementById( 'gift-space' );
-	    giftSpace.innerText = "";
+	    // giftSpace.innerText = "";
+	    giftSpace.style.display = "none";
+	
+	    var giftList = document.getElementById( "gift-list" );
+	    giftList.innerText = "";
+	    giftList.style.display = "block";
 	
 	    var img = document.createElement( 'img' );
 	    img.src = "./css/image/loading.gif";
 	    img.id = "loading";
-	    giftSpace.appendChild( img );
+	    giftList.appendChild( img );
 	  },
 	
 	  hideLoading: function() {
-	    var giftSpace = document.getElementById( 'gift-space' );
-	    giftSpace.innerText = "";
+	    var giftList = document.getElementById( 'gift-list' );
+	    giftList.innerText = "";
 	  },
 	
 	  displayFlights: function() {
 	    var giftSpace = document.getElementById( 'gift-space' );
 	    giftSpace.style.display = "none";
 	
-	    while( giftSpace.hasChildNodes() ) {
-	      giftSpace.removeChild( giftSpace.lastChild );
-	    }
+	    // while( giftSpace.hasChildNodes() ) {
+	    //   giftSpace.removeChild( giftSpace.lastChild );
+	    // }
 	
 	    var giftList = document.getElementById( 'gift-list' );
 	
@@ -2558,222 +2563,29 @@
 	    var backButton = document.createElement( 'button' );
 	    backButton.innerText = "Back";
 	    backButton.onclick = function() {
-	      this.displayGifts() 
+	      this.displayGifts(); 
 	    }.bind( this );
 	
-	    giftSpace.style.display = "block";
+	    giftList.style.display = "block";
 	
-	    giftSpace.appendChild( title );
-	    giftSpace.appendChild( dotsFour );
-	    giftSpace.appendChild( text );
-	    giftSpace.appendChild( goButton );
-	    giftSpace.appendChild( backButton );
+	    giftList.appendChild( title );
+	    giftList.appendChild( dotsFour );
+	    giftList.appendChild( text );
+	    giftList.appendChild( goButton );
+	    giftList.appendChild( backButton );
 	  },
-	
-	  // displayLavaTour: function() {
-	  //   var giftSpace = document.getElementById( 'gift-space' );
-	  //   giftSpace.style.display = "none";
-	
-	  //   while( giftSpace.hasChildNodes() ) {
-	  //     giftSpace.removeChild( giftSpace.lastChild );
-	  //   }
-	
-	  //   var title = document.createElement( 'h1' );
-	  //   title.innerText = "Lava Tour";
-	  //   title.className = "circleTitle";
-	
-	  //   var dotsFive = document.createElement( 'p' );
-	  //   dotsFive.innerText = "--------------------------------"
-	
-	  //   var text = document.createElement( 'h5' );
-	  //   text.innerText = "One of the sights we are really hoping to get to is a tour of the volcanos. \n\n If you'd like to help with this then give this a click."
-	
-	  //   var goButton = document.createElement( 'button' );
-	  //   goButton.innerText = "Click";
-	  //   goButton.onclick = function() {
-	  //     this.displayForm( "Lava Tour" );
-	  //   }.bind( this );
-	
-	  //   var backButton = document.createElement( 'button' );
-	  //   backButton.innerText = "Back";
-	  //   backButton.onclick = function() {
-	  //     this.displayGifts() 
-	  //   }.bind( this );
-	
-	  //   giftSpace.style.display = "block";
-	
-	  //   giftSpace.appendChild( title );
-	  //   giftSpace.appendChild( dotsFive );
-	  //   giftSpace.appendChild( text );
-	  //   giftSpace.appendChild( goButton );
-	  //   giftSpace.appendChild( backButton );
-	  // },
-	
-	  // displayBoatTour: function() {
-	  //   var giftSpace = document.getElementById( 'gift-space' );
-	  //   giftSpace.style.display = "none";
-	
-	  //   while( giftSpace.hasChildNodes() ) {
-	  //     giftSpace.removeChild( giftSpace.lastChild );
-	  //   }
-	
-	  //   var title = document.createElement( 'h1' );
-	  //   title.innerText = "Boat Tour";
-	  //   title.className = "circleTitle";
-	
-	  //   var dotsSix = document.createElement( 'p' );
-	  //   dotsSix.innerText = "--------------------------------"
-	
-	  //   var text = document.createElement( 'h5' );
-	  //   text.innerText = "Another of the main attractions we would love to get to is a boat tour of the Napali Coast. \n\n If you'd like to help with this then give this a click."
-	
-	  //   var goButton = document.createElement( 'button' );
-	  //   goButton.innerText = "Click";
-	  //   goButton.onclick = function() {
-	  //     this.displayForm( "Boat Tour" );
-	  //   }.bind( this );
-	
-	  //   var backButton = document.createElement( 'button' );
-	  //   backButton.innerText = "Back";
-	  //   backButton.onclick = function() {
-	  //     this.displayGifts() 
-	  //   }.bind( this );
-	
-	  //   giftSpace.style.display = "block";
-	
-	  //   giftSpace.appendChild( title );
-	  //   giftSpace.appendChild( dotsSix );
-	  //   giftSpace.appendChild( text );
-	  //   giftSpace.appendChild( goButton );
-	  //   giftSpace.appendChild( backButton );
-	  // },
-	
-	  // displayHotels: function() {
-	  //   var giftSpace = document.getElementById( 'gift-space' );
-	  //   giftSpace.style.display = "none";
-	
-	  //   while( giftSpace.hasChildNodes() ) {
-	  //     giftSpace.removeChild( giftSpace.lastChild );
-	  //   }
-	
-	  //   var title = document.createElement( 'h1' );
-	  //   title.innerText = "Hotels";
-	  //   title.className = "circleTitle";
-	
-	  //   var dotsSeven = document.createElement( 'p' );
-	  //   dotsSeven.innerText = "--------------------------------"
-	
-	  //   var text = document.createElement( 'h5' );
-	  //   text.innerText = "Like the flights these are pretty essential. We are doing a fair amount of travelling throughout the islands so any help will be very much appreciated. \n\n If you'd like to help with these then give this a click."
-	
-	  //   var goButton = document.createElement( 'button' );
-	  //   goButton.innerText = "Click";
-	  //   goButton.onclick = function() {
-	  //     this.displayForm( "Hotels" );
-	  //   }.bind( this );
-	
-	  //   var backButton = document.createElement( 'button' );
-	  //   backButton.innerText = "Back";
-	  //   backButton.onclick = function() {
-	  //     this.displayGifts() 
-	  //   }.bind( this );
-	
-	  //   giftSpace.style.display = "block";
-	
-	  //   giftSpace.appendChild( title );
-	  //   giftSpace.appendChild( dotsSeven );
-	  //   giftSpace.appendChild( text );
-	  //   giftSpace.appendChild( goButton );
-	  //   giftSpace.appendChild( backButton );
-	  // },
-	
-	  // displayDrinks: function() {
-	  //   var giftSpace = document.getElementById( 'gift-space' );
-	  //   giftSpace.style.display = "none";
-	
-	  //   while( giftSpace.hasChildNodes() ) {
-	  //     giftSpace.removeChild( giftSpace.lastChild );
-	  //   }
-	
-	  //   var title = document.createElement( 'h1' );
-	  //   title.innerText = "Drinks on the Beach";
-	  //   title.className = "circleTitle";
-	
-	  //   var dotsEight = document.createElement( 'p' );
-	  //   dotsEight.innerText = "--------------------------------"
-	
-	  //   var text = document.createElement( 'h5' );
-	  //   text.innerText = "For those of you who know Laura you'll be aware that relaxing on the beach is pretty important to her so any help to do it in style would be amazing. \n\n If you'd like to help with this then give this a click."
-	
-	  //   var goButton = document.createElement( 'button' );
-	  //   goButton.innerText = "Click";
-	  //   goButton.onclick = function() {
-	  //     this.displayForm( "Drinks" );
-	  //   }.bind( this );
-	
-	  //   var backButton = document.createElement( 'button' );
-	  //   backButton.innerText = "Back";
-	  //   backButton.onclick = function() {
-	  //     this.displayGifts() 
-	  //   }.bind( this );
-	
-	  //   giftSpace.style.display = "block";
-	
-	  //   giftSpace.appendChild( title );
-	  //   giftSpace.appendChild( dotsEight );
-	  //   giftSpace.appendChild( text );
-	  //   giftSpace.appendChild( goButton );
-	  //   giftSpace.appendChild( backButton );
-	  // },
-	
-	  // displayFood: function() {
-	  //   var giftSpace = document.getElementById( 'gift-space' );
-	  //   giftSpace.style.display = "none";
-	
-	  //   while( giftSpace.hasChildNodes() ) {
-	  //     giftSpace.removeChild( giftSpace.lastChild );
-	  //   }
-	
-	  //   var title = document.createElement( 'h1' );
-	  //   title.innerText = "Delicious Food";
-	  //   title.className = "circleTitle";
-	
-	  //   var dotsNine = document.createElement( 'p' );
-	  //   dotsNine.innerText = "--------------------------------"
-	
-	  //   var text = document.createElement( 'h5' );
-	  //   text.innerText = "What would be the point in travelling half way round the world without sampling as much delicious food as possible? \n\n If you'd like to help with this then give this a click."
-	
-	  //   var goButton = document.createElement( 'button' );
-	  //   goButton.innerText = "Click";
-	  //   goButton.onclick = function() {
-	  //     this.displayForm( "Food" );
-	  //   }.bind( this );
-	
-	  //   var backButton = document.createElement( 'button' );
-	  //   backButton.innerText = "Back";
-	  //   backButton.onclick = function() {
-	  //     this.displayGifts() 
-	  //   }.bind( this );
-	
-	  //   giftSpace.style.display = "block";
-	
-	  //   giftSpace.appendChild( title );
-	  //   giftSpace.appendChild( dotsNine );
-	  //   giftSpace.appendChild( text );
-	  //   giftSpace.appendChild( goButton );
-	  //   giftSpace.appendChild( backButton );
-	  // },
 	
 	  displayForm: function( towardsValue ) {
 	    var giftSpace = document.getElementById( 'gift-space' );
 	    giftSpace.style.display = "none";
 	
-	    while( giftSpace.hasChildNodes() ) {
-	      giftSpace.removeChild( giftSpace.lastChild );
-	    }
+	    // giftSpace.innerText = "";
 	
-	    giftSpace.style.display = "block";
+	    // while( giftSpace.hasChildNodes() ) {
+	    //   giftSpace.removeChild( giftSpace.lastChild );
+	    // }
+	
+	    // giftSpace.style.display = "block";
 	
 	    var giftList = document.getElementById( 'gift-list' );
 	    giftList.style.display = "none";
@@ -2831,32 +2643,32 @@
 	    var backButton = document.createElement( 'button' );
 	    backButton.innerText = "Back";
 	    backButton.onclick = function() {
-	      this.displayGifts();
+	      this.displayFlightPick();
 	    }.bind( this );
 	
 	    var brOne = document.createElement( 'br' );
 	    var brTwo = document.createElement( 'br' );
 	    var brThree = document.createElement( 'br' );
 	
-	    giftSpace.appendChild( title );
-	    giftSpace.appendChild( dotsThree );
-	    giftSpace.appendChild( name );
-	    giftSpace.appendChild( email );
-	    giftSpace.appendChild( brOne );
-	    giftSpace.appendChild( brTwo );
-	    giftSpace.appendChild( message );
-	    giftSpace.appendChild( brThree );
-	    giftSpace.appendChild( button );
-	    giftSpace.appendChild( backButton );
+	    giftList.appendChild( title );
+	    giftList.appendChild( dotsThree );
+	    giftList.appendChild( name );
+	    giftList.appendChild( email );
+	    giftList.appendChild( brOne );
+	    giftList.appendChild( brTwo );
+	    giftList.appendChild( message );
+	    giftList.appendChild( brThree );
+	    giftList.appendChild( button );
+	    giftList.appendChild( backButton );
 	  },
 	
 	  displayThankYou: function() {
 	    var giftSpace = document.getElementById( 'gift-space' );
 	    giftSpace.style.display = "none";
 	
-	    while( giftSpace.hasChildNodes() ) {
-	      giftSpace.removeChild( giftSpace.lastChild );
-	    }
+	    // while( giftSpace.hasChildNodes() ) {
+	    //   giftSpace.removeChild( giftSpace.lastChild );
+	    // }
 	
 	    var thankYou = document.createElement( 'h1' );
 	    thankYou.className = "circleTitle";
@@ -2871,12 +2683,16 @@
 	    var giftSpaced = document.getElementById( 'gift-space' );
 	    giftSpaced.style.display = "none";
 	
-	    while( giftSpaced.hasChildNodes() ) {
-	      giftSpaced.removeChild( giftSpaced.lastChild );
-	    }
+	    // while( giftSpaced.hasChildNodes() ) {
+	    //   giftSpaced.removeChild( giftSpaced.lastChild );
+	    // }
 	
 	    var giftSpace = document.getElementById( 'gift-list' );
 	    giftSpace.style.display = "block";
+	
+	    while( giftSpace.hasChildNodes() ) {
+	      giftSpace.removeChild( giftSpace.lastChild );
+	    }
 	
 	    var flightTitle = document.createElement( 'h1' );
 	    flightTitle.innerText = "Flights";
@@ -3167,7 +2983,11 @@
 	  },
 	
 	  displayGifts: function() {
-	    // var view = new EnglishGiftView();
+	    var giftList = document.getElementById( 'gift-list' );
+	    giftList.style.display = "none";
+	
+	    var giftSpace = document.getElementById( 'gift-space' );
+	    giftSpace.style.display = "block";
 	  }
 	
 	
