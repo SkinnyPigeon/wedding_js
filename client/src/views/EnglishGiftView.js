@@ -1,5 +1,6 @@
 var EnglishFlightsView = require( './EnglishFlightsView.js' );
 var EnglishHotelsView = require( './EnglishHotelsView.js' );
+var EnglishDrinksView = require( './EnglishDrinksView.js' );
 
 var EnglishGiftView = function() {
   this.display();
