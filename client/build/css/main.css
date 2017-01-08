@@ -99,6 +99,13 @@ h1.thankYou {
   margin: 0;
 }
 
+p {
+  color: #F5EBAE;
+  font-size: 0.7em;
+  font-family: 'Clicker Script', cursive;
+  margin: 0;
+}
+
 #circle-space h5 {
   color: #F5EBAE;
   font-size: 0.3em;
@@ -280,6 +287,11 @@ h5.hotels {
 
 ul#flightListOne {
   margin-top: 8.5vh;
+}
+
+ul#flightListTwo {
+  display: block;
+  margin-bottom: 1em;
 }
 
 

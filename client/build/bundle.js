@@ -2579,14 +2579,6 @@
 	    var giftSpace = document.getElementById( 'gift-space' );
 	    giftSpace.style.display = "none";
 	
-	    // giftSpace.innerText = "";
-	
-	    // while( giftSpace.hasChildNodes() ) {
-	    //   giftSpace.removeChild( giftSpace.lastChild );
-	    // }
-	
-	    // giftSpace.style.display = "block";
-	
 	    var giftList = document.getElementById( 'gift-list' );
 	    giftList.style.display = "none";
 	
@@ -2666,9 +2658,12 @@
 	    var giftSpace = document.getElementById( 'gift-space' );
 	    giftSpace.style.display = "none";
 	
-	    // while( giftSpace.hasChildNodes() ) {
-	    //   giftSpace.removeChild( giftSpace.lastChild );
-	    // }
+	    while( giftSpace.hasChildNodes() ) {
+	      giftSpace.removeChild( giftSpace.lastChild );
+	    }
+	
+	    var giftList = document.getElementById( 'gift-list' );
+	    giftList.style.display = "none";
 	
 	    var thankYou = document.createElement( 'h1' );
 	    thankYou.className = "circleTitle";
@@ -2682,10 +2677,6 @@
 	
 	    var giftSpaced = document.getElementById( 'gift-space' );
 	    giftSpaced.style.display = "none";
-	
-	    // while( giftSpaced.hasChildNodes() ) {
-	    //   giftSpaced.removeChild( giftSpaced.lastChild );
-	    // }
 	
 	    var giftSpace = document.getElementById( 'gift-list' );
 	    giftSpace.style.display = "block";
@@ -2736,12 +2727,6 @@
 	
 	    leaveSelectValue.innerText = "Give " + leaveSelect.value + " Units";
 	
-	    var leaveButton = document.createElement( 'button' );
-	    leaveButton.innerText = "Give...";
-	    leaveButton.onclick = function() {
-	        this.displayForm( "Flights" );
-	        }.bind( this ); 
-	
 	    var leaveText = document.createElement( 'h5' );
 	    leaveText.innerText = "Flights to Hawaii";
 	
@@ -2752,7 +2737,6 @@
 	    leaveList.appendChild( leaveAvail );
 	    leaveList.appendChild( leaveSelect );
 	    leaveList.appendChild( leaveSelectValue );
-	    leaveList.appendChild( leaveButton );
 	    leaveList.appendChild( leaveText );
 	
 	    flightListOne.appendChild( leaveList );
@@ -2791,12 +2775,6 @@
 	
 	    returnFlightSelectValue.innerText = "Give " + returnFlightSelect.value + " Units";
 	
-	    var returnButton = document.createElement( 'button' );
-	    returnButton.innerText = "Give...";
-	    returnButton.onclick = function() {
-	        this.displayForm( "Flights" );
-	    }.bind( this );
-	
 	    var returnText = document.createElement( 'h5' );
 	    returnText.innerText = "Flights back home";
 	
@@ -2807,10 +2785,7 @@
 	    returnFlightList.appendChild( returnFlightAvail );
 	    returnFlightList.appendChild( returnFlightSelect );
 	    returnFlightList.appendChild( returnFlightSelectValue );
-	    returnFlightList.appendChild( returnButton );
 	    returnFlightList.appendChild( returnText );
-	
-	    // flightListOne.appendChild( returnFlightList );
 	
 	    // ##################################################
 	
@@ -2847,12 +2822,6 @@
 	
 	    bigIslandFlightSelectValue.innerText = "Give " + bigIslandFlightSelect.value + " Units";
 	
-	    var bigIslandButton = document.createElement( 'button' );
-	    bigIslandButton.innerText = "Give...";
-	    bigIslandButton.onclick = function() {
-	        this.displayForm( "Flights" );
-	    }.bind( this );
-	
 	    var bigIslandText = document.createElement( 'h5' );
 	    bigIslandText.innerText = "Big Island to Maui";
 	
@@ -2861,7 +2830,6 @@
 	    bigIslandFlightList.appendChild( bigIslandFlightAvail );
 	    bigIslandFlightList.appendChild( bigIslandFlightSelect );
 	    bigIslandFlightList.appendChild( bigIslandFlightSelectValue );
-	    bigIslandFlightList.appendChild( bigIslandButton );
 	    bigIslandFlightList.appendChild( bigIslandText );
 	
 	    flightListOne.appendChild( bigIslandFlightList );
@@ -2904,12 +2872,6 @@
 	
 	    mauiFlightSelectValue.innerText = "Give " + mauiFlightSelect.value + " Units";
 	
-	    var mauiButton = document.createElement( 'button' );
-	    mauiButton.innerText = "Give...";
-	    mauiButton.onclick = function() {
-	        this.displayForm( "Flights" );
-	    }.bind( this );
-	
 	    var mauiText = document.createElement( 'h5' );
 	    mauiText.innerText = "Maui to Kauai";
 	
@@ -2918,7 +2880,6 @@
 	    mauiFlightList.appendChild( mauiFlightAvail );
 	    mauiFlightList.appendChild( mauiFlightSelect );
 	    mauiFlightList.appendChild( mauiFlightSelectValue );
-	    mauiFlightList.appendChild( mauiButton );
 	    mauiFlightList.appendChild( mauiText );
 	
 	    // ###################################################
@@ -2956,12 +2917,6 @@
 	
 	    kauaiFlightSelectValue.innerText = "Give " + kauaiFlightSelect.value + " Units";
 	
-	    var kauaiButton = document.createElement( 'button' );
-	    kauaiButton.innerText = "Give...";
-	    kauaiButton.onclick = function() {
-	        this.displayForm( "Flights" );
-	    }.bind( this );
-	
 	    var kauaiText = document.createElement( 'h5' );
 	    kauaiText.innerText = "Kauai to Honolulu";
 	
@@ -2970,7 +2925,6 @@
 	    kauaiFlightList.appendChild( kauaiFlightAvail );
 	    kauaiFlightList.appendChild( kauaiFlightSelect );
 	    kauaiFlightList.appendChild( kauaiFlightSelectValue );
-	    kauaiFlightList.appendChild( kauaiButton );
 	    kauaiFlightList.appendChild( kauaiText );
 	
 	    flightListOne.appendChild( kauaiFlightList );
@@ -2980,6 +2934,24 @@
 	    giftSpace.appendChild( flightListTwo );
 	
 	    giftSpace.style.display = "block";
+	
+	    // #############################################
+	
+	    var giveButton = document.createElement( 'button' );
+	    var cancelButton = document.createElement( 'button' );
+	
+	    giveButton.innerText = "Give...";
+	    giveButton.onclick = function() {
+	      this.displayForm();
+	    }.bind( this );
+	
+	    cancelButton.innerText = "Back...";
+	    cancelButton.onclick = function() {
+	      this.displayGifts();
+	    }.bind( this );
+	
+	    giftSpace.appendChild( giveButton );
+	    giftSpace.appendChild( cancelButton );
 	  },
 	
 	  displayGifts: function() {
@@ -2989,8 +2961,6 @@
 	    var giftSpace = document.getElementById( 'gift-space' );
 	    giftSpace.style.display = "block";
 	  }
-	
-	
 	}
 	
 	module.exports = EnglishFlightsView;
