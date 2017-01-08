@@ -3,6 +3,7 @@ var EnglishHotelsView = require( './EnglishHotelsView.js' );
 var EnglishDrinksView = require( './EnglishDrinksView.js' );
 var EnglishFoodView = require( './EnglishFoodView.js' );
 var EnglishBoatView = require( './EnglishBoatView.js' );
+var EnglishLavaView = require( './EnglishLavaView.js' );
 
 var EnglishGiftView = function() {
   this.display();
@@ -133,6 +134,10 @@ EnglishGiftView.prototype = {
 
   displayBoatTour: function() {
     var view = new EnglishBoatView();
+  },
+
+  displayLavaTour: function() {
+    var view = new EnglishLavaView();
   }
 
 }

@@ -1,41 +1,41 @@
-var EnglishBoatView = function() {
+var EnglishLavaView = function() {
 
-  this.boatUrl = "http://localhost:1235/boats";
+  this.lavaUrl = "http://localhost:1235/lavas";
 
-  this.boatObject = [];
-  this.boat = 0;
+  this.lavaObject = [];
+  this.lava = 0;
 
-  this.buyBoats = 0;
+  this.buyLavas = 0;
 
   this.total = 0;
 
-  this.getBoats();
+  this.getLavas();
 }
 
-EnglishBoatView.prototype = {
+EnglishLavaView.prototype = {
 
-  getBoats: function() {
+  getLavas: function() {
     setInterval( function() {
-      if( this.boatObject.length === 0 ) {
+      if( this.lavaObject.length === 0 ) {
         this.displayLoading()
       }
     }.bind( this ), 10 );
 
     var request = new XMLHttpRequest();
-    request.open( 'GET', this.boatUrl );
+    request.open( 'GET', this.lavaUrl );
     request.setRequestHeader("Content-Type", "application/json")
 
     request.onload = () => {
       if( request.status === 200 ) {
-        var boatObject = JSON.parse( request.responseText );
-        this.boatObject = boatObject;
-        for( var i = 0; i < boatObject.length; i++ ) {
-            if( this.boatObject[i].id === 1 ) {
-                this.boat = boatObject[i].boat;
+        var lavaObject = JSON.parse( request.responseText );
+        this.lavaObject = lavaObject;
+        for( var i = 0; i < lavaObject.length; i++ ) {
+            if( this.lavaObject[i].id === 1 ) {
+                this.lava = lavaObject[i].lava;
             }
         }
         this.hideLoading();
-        this.displayBoats();
+        this.displayLavas();
       }
     }
     request.send( null );
@@ -60,27 +60,28 @@ EnglishBoatView.prototype = {
     giftList.innerText = "";
   },
 
-  updateBoats: function() {
-    // var newBoat = 1;
-    var newBoat = this.boat -= this.buyBoats;
+  updateLavas: function() {
+    // var newLava = 1;
+    var newLava = this.lava -= this.buyLavas;
 
-    var url = this.boatUrl + "/1";
+    var url = this.lavaUrl + "/1";
     var request = new XMLHttpRequest();
     request.open( 'PUT', url );
     request.setRequestHeader( "Content-type", "application/json" );
     request.onload = () => {
-        // console.log( "Loaded" );
+        console.log( "Loaded" );
+        console.log( newLava );
     }
     var data = {
-      boat : {
-        boat: newBoat
+      lava : {
+        lava: newLava
       }
     }
     request.send( JSON.stringify( data ));
     console.log( data );
   },
 
-  displayBoats: function() {
+  displayLavas: function() {
     var giftSpace = document.getElementById( 'gift-space' );
     giftSpace.style.display = "none";
 
@@ -91,19 +92,19 @@ EnglishBoatView.prototype = {
     }
 
     var title = document.createElement( 'h1' );
-    title.innerText = "Boat Tour";
+    title.innerText = "Lava Tour";
     title.className = "circleTitle";
 
     var dotsFour = document.createElement( 'p' );
     dotsFour.innerText = "--------------------------------"
 
     var text = document.createElement( 'h5' );
-    text.innerText = "Another of the main attractions we would love to get to is a boat tour of the Napali Coast. \n\n If you'd like to help with this then give this a click."
+    text.innerText = "One of the sights we are really hoping to get to is a tour of the volcanos. \n\n If you'd like to help with this then give this a click."
 
     var goButton = document.createElement( 'button' );
     goButton.innerText = "Click";
     goButton.onclick = function() {
-      this.displayBoatPick();
+      this.displayLavaPick();
     }.bind( this );
 
     var backButton = document.createElement( 'button' );
@@ -154,20 +155,20 @@ EnglishBoatView.prototype = {
     button.innerText = "Click";
 
     button.onclick = function() {
-      this.updateBoats();
+      this.updateLavas();
       var request = new XMLHttpRequest();
-      request.open( 'POST', this.boatUrl );
+      request.open( 'POST', this.lavaUrl );
       request.setRequestHeader("Content-Type", "application/json");
       request.onload = () => {
         this.displayThankYou();
       }
       var data = {
-        boat: {
+        lava: {
           name: name.value,
           email: email.value,
           total: this.total,
           comment: message.value,
-          boat: this.buyBoats,
+          lava: this.buyLavas,
           currency: "£"
         }
       }
@@ -177,7 +178,7 @@ EnglishBoatView.prototype = {
     var backButton = document.createElement( 'button' );
     backButton.innerText = "Back";
     backButton.onclick = function() {
-      this.displayBoatPick();
+      this.displayLavaPick();
     }.bind( this );
 
     var brOne = document.createElement( 'br' );
@@ -215,7 +216,7 @@ EnglishBoatView.prototype = {
     giftSpace.appendChild( thankYou );
   },
 
-  displayBoatPick: function() {
+  displayLavaPick: function() {
 
     var giftSpaced = document.getElementById( 'gift-space' );
     giftSpaced.style.display = "none";
@@ -227,60 +228,60 @@ EnglishBoatView.prototype = {
       giftSpace.removeChild( giftSpace.lastChild );
     }
 
-    var boatTitle = document.createElement( 'h1' );
-    boatTitle.innerText = "Boats";
-    boatTitle.className = "circleTitleRaisedHigher";
+    var lavaTitle = document.createElement( 'h1' );
+    lavaTitle.innerText = "Lavas";
+    lavaTitle.className = "circleTitleRaisedHigher";
 
-    var boatListOne = document.createElement( 'ul' );
-    boatListOne.id = "boatListOne";
+    var lavaListOne = document.createElement( 'ul' );
+    lavaListOne.id = "lavaListOne";
 
-    var boatList = document.createElement( 'li' );
+    var lavaList = document.createElement( 'li' );
 
-    var boat = document.createElement( 'img' );
-    boat.src = "../css/image/boat.png";
-    boat.id = "boatImg";
-    boat.className = "giftImage";
+    var lava = document.createElement( 'img' );
+    lava.src = "../css/image/volcano.png";
+    lava.id = "lavaImg";
+    lava.className = "giftImage";
 
-    var cost = 100;
+    var cost = 250;
 
-    var boatUnit = document.createElement( 'h5' );
-    boatUnit.innerText = "Unit Price: £" + cost;
+    var lavaUnit = document.createElement( 'h5' );
+    lavaUnit.innerText = "Unit Price: £" + cost;
 
-    var boatAvail = document.createElement( 'h5' );
-    boatAvail.innerText = "Available: " + this.boat + "/1";
+    var lavaAvail = document.createElement( 'h5' );
+    lavaAvail.innerText = "Available: " + this.lava + "/1";
 
-    var boatSelectValue = document.createElement( 'h5' );
+    var lavaSelectValue = document.createElement( 'h5' );
 
-    var boatSelect = document.createElement( 'input' );
-    boatSelect.type = "range";
-    boatSelect.step = 1;
-    boatSelect.min = 0;
-    boatSelect.max = this.boat;
-    boatSelect.value = 0;
-    boatSelect.list = "steplist";
+    var lavaSelect = document.createElement( 'input' );
+    lavaSelect.type = "range";
+    lavaSelect.step = 1;
+    lavaSelect.min = 0;
+    lavaSelect.max = this.lava;
+    lavaSelect.value = 0;
+    lavaSelect.list = "steplist";
 
-    boatSelect.onchange = function() {
-        boatSelectValue.innerText = "Give " + boatSelect.value + " Units";
-        this.buyBoats = boatSelect.value;
-        this.total = cost * boatSelect.value;
+    lavaSelect.onchange = function() {
+        lavaSelectValue.innerText = "Give " + lavaSelect.value + " Units";
+        this.buyLavas = lavaSelect.value;
+        this.total = cost * lavaSelect.value;
     }.bind( this );
 
-    boatSelectValue.innerText = "Give " + boatSelect.value + " Units";
+    lavaSelectValue.innerText = "Give " + lavaSelect.value + " Units";
 
-    var boatText = document.createElement( 'h5' );
-    boatText.innerText = "Boat tour of Napali Bay";
+    var lavaText = document.createElement( 'h5' );
+    lavaText.innerText = "Lava tour of Napali Bay";
 
-    giftSpace.appendChild( boatListOne );
+    giftSpace.appendChild( lavaListOne );
 
-    boatList.appendChild( boat );
-    boatList.appendChild( boatUnit );
-    boatList.appendChild( boatAvail );
-    boatList.appendChild( boatSelect );
-    boatList.appendChild( boatSelectValue );
-    boatList.appendChild( boatText );
+    lavaList.appendChild( lava );
+    lavaList.appendChild( lavaUnit );
+    lavaList.appendChild( lavaAvail );
+    lavaList.appendChild( lavaSelect );
+    lavaList.appendChild( lavaSelectValue );
+    lavaList.appendChild( lavaText );
 
-    boatListOne.appendChild( boatList );
-    giftSpace.appendChild( boatListOne );
+    lavaListOne.appendChild( lavaList );
+    giftSpace.appendChild( lavaListOne );
 
     giftSpace.style.display = "block";
 
@@ -310,4 +311,4 @@ EnglishBoatView.prototype = {
   }  
 }
 
-module.exports = EnglishBoatView;
+module.exports = EnglishLavaView;
