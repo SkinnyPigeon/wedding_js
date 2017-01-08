@@ -294,6 +294,15 @@ ul#flightListTwo {
   margin-bottom: 1em;
 }
 
+ul#hotelListOne {
+  margin-top: 8.5vh;
+}
+
+ul#hotelListTwo {
+  display: block;
+  margin-bottom: 1em;
+}
+
 
 
 

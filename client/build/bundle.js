@@ -2421,10 +2421,8 @@
 
 /***/ },
 /* 18 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ function(module, exports) {
 
-	var EnglishGiftView = __webpack_require__( 6 );
-	
 	var EnglishFlightsView = function() {
 	  // this.url = "https://gift-database.herokuapp.com/gifts";
 	  // this.url = "http://localhost:8080/gifts";
@@ -2512,7 +2510,6 @@
 	
 	  displayLoading: function() {
 	    var giftSpace = document.getElementById( 'gift-space' );
-	    // giftSpace.innerText = "";
 	    giftSpace.style.display = "none";
 	
 	    var giftList = document.getElementById( "gift-list" );
@@ -2533,10 +2530,6 @@
 	  displayFlights: function() {
 	    var giftSpace = document.getElementById( 'gift-space' );
 	    giftSpace.style.display = "none";
-	
-	    // while( giftSpace.hasChildNodes() ) {
-	    //   giftSpace.removeChild( giftSpace.lastChild );
-	    // }
 	
 	    var giftList = document.getElementById( 'gift-list' );
 	
@@ -3025,17 +3018,21 @@
 	
 	  displayLoading: function() {
 	    var giftSpace = document.getElementById( 'gift-space' );
-	    giftSpace.innerText = "";
+	    giftSpace.style.display = "none";
+	
+	    var giftList = document.getElementById( "gift-list" );
+	    giftList.innerText = "";
+	    giftList.style.display = "block";
 	
 	    var img = document.createElement( 'img' );
 	    img.src = "./css/image/loading.gif";
 	    img.id = "loading";
-	    giftSpace.appendChild( img );
+	    giftList.appendChild( img );
 	  },
 	
 	  hideLoading: function() {
-	    var giftSpace = document.getElementById( 'gift-space' );
-	    giftSpace.innerText = "";
+	    var giftList = document.getElementById( 'gift-list' );
+	    giftList.innerText = "";
 	  },
 	
 	  updateHotels: function() {
@@ -3069,10 +3066,6 @@
 	    var giftSpace = document.getElementById( 'gift-space' );
 	    giftSpace.style.display = "none";
 	
-	    while( giftSpace.hasChildNodes() ) {
-	      giftSpace.removeChild( giftSpace.lastChild );
-	    }
-	
 	    var giftList = document.getElementById( 'gift-list' );
 	
 	    while( giftList.hasChildNodes() ) {
@@ -3100,24 +3093,19 @@
 	    backButton.onclick = function() {
 	      this.displayGifts() 
 	    }.bind( this );
-	    giftSpace.style.display = "block";
 	
-	    giftSpace.appendChild( title );
-	    giftSpace.appendChild( dotsFour );
-	    giftSpace.appendChild( text );
-	    giftSpace.appendChild( goButton );
-	    giftSpace.appendChild( backButton );
+	    giftList.style.display = "block";
+	
+	    giftList.appendChild( title );
+	    giftList.appendChild( dotsFour );
+	    giftList.appendChild( text );
+	    giftList.appendChild( goButton );
+	    giftList.appendChild( backButton );
 	  },
 	
 	  displayForm: function( towardsValue ) {
 	    var giftSpace = document.getElementById( 'gift-space' );
 	    giftSpace.style.display = "none";
-	
-	    while( giftSpace.hasChildNodes() ) {
-	      giftSpace.removeChild( giftSpace.lastChild );
-	    }
-	
-	    giftSpace.style.display = "block";
 	
 	    var giftList = document.getElementById( 'gift-list' );
 	    giftList.style.display = "none";
@@ -3175,23 +3163,23 @@
 	    var backButton = document.createElement( 'button' );
 	    backButton.innerText = "Back";
 	    backButton.onclick = function() {
-	      this.displayGifts();
+	      this.displayHotelPick();
 	    }.bind( this );
 	
 	    var brOne = document.createElement( 'br' );
 	    var brTwo = document.createElement( 'br' );
 	    var brThree = document.createElement( 'br' );
 	
-	    giftSpace.appendChild( title );
-	    giftSpace.appendChild( dotsThree );
-	    giftSpace.appendChild( name );
-	    giftSpace.appendChild( email );
-	    giftSpace.appendChild( brOne );
-	    giftSpace.appendChild( brTwo );
-	    giftSpace.appendChild( message );
-	    giftSpace.appendChild( brThree );
-	    giftSpace.appendChild( button );
-	    giftSpace.appendChild( backButton );
+	    giftList.appendChild( title );
+	    giftList.appendChild( dotsThree );
+	    giftList.appendChild( name );
+	    giftList.appendChild( email );
+	    giftList.appendChild( brOne );
+	    giftList.appendChild( brTwo );
+	    giftList.appendChild( message );
+	    giftList.appendChild( brThree );
+	    giftList.appendChild( button );
+	    giftList.appendChild( backButton );
 	  },
 	
 	  displayThankYou: function() {
@@ -3201,6 +3189,9 @@
 	    while( giftSpace.hasChildNodes() ) {
 	      giftSpace.removeChild( giftSpace.lastChild );
 	    }
+	
+	    var giftList = document.getElementById( 'gift-list' );
+	    giftList.style.display = "none";
 	
 	    var thankYou = document.createElement( 'h1' );
 	    thankYou.className = "circleTitle";
@@ -3215,12 +3206,12 @@
 	    var giftSpaced = document.getElementById( 'gift-space' );
 	    giftSpaced.style.display = "none";
 	
-	    while( giftSpaced.hasChildNodes() ) {
-	      giftSpaced.removeChild( giftSpaced.lastChild );
-	    }
-	
 	    var giftSpace = document.getElementById( 'gift-list' );
 	    giftSpace.style.display = "block";
+	
+	    while( giftSpace.hasChildNodes() ) {
+	      giftSpace.removeChild( giftSpace.lastChild );
+	    }
 	
 	    var hotelTitle = document.createElement( 'h1' );
 	    hotelTitle.innerText = "Hotels";
@@ -3265,12 +3256,6 @@
 	
 	    konaSelectValue.innerText = "Give " + konaSelect.value + " Units";
 	
-	    var konaButton = document.createElement( 'button' );
-	    konaButton.innerText = "Give...";
-	    konaButton.onclick = function() {
-	        this.displayForm( "Hotels" );
-	        }.bind( this ); 
-	
 	    var konaText = document.createElement( 'h5' );
 	    konaText.innerText = "Hotels in Kona";
 	
@@ -3281,7 +3266,6 @@
 	    konaList.appendChild( konaAvail );
 	    konaList.appendChild( konaSelect );
 	    konaList.appendChild( konaSelectValue );
-	    konaList.appendChild( konaButton );
 	    konaList.appendChild( konaText );
 	
 	    hotelListOne.appendChild( konaList );
@@ -3320,12 +3304,6 @@
 	
 	    volcanoSelectValue.innerText = "Give " + volcanoSelect.value + " Units";
 	
-	    var returnButton = document.createElement( 'button' );
-	    returnButton.innerText = "Give...";
-	    returnButton.onclick = function() {
-	        this.displayForm( "Hotels" );
-	    }.bind( this );
-	
 	    var returnText = document.createElement( 'h5' );
 	    returnText.innerText = "Hotels in Volcano Park";
 	
@@ -3336,7 +3314,6 @@
 	    volcanoList.appendChild( volcanoAvail );
 	    volcanoList.appendChild( volcanoSelect );
 	    volcanoList.appendChild( volcanoSelectValue );
-	    volcanoList.appendChild( returnButton );
 	    volcanoList.appendChild( returnText );
 	
 	    hotelListOne.appendChild( volcanoList );
@@ -3376,12 +3353,6 @@
 	
 	    mauiFlightSelectValue.innerText = "Give " + mauiFlightSelect.value + " Units";
 	
-	    var mauiButton = document.createElement( 'button' );
-	    mauiButton.innerText = "Give...";
-	    mauiButton.onclick = function() {
-	        this.displayForm( "Hotels" );
-	    }.bind( this );
-	
 	    var mauiText = document.createElement( 'h5' );
 	    mauiText.innerText = "Hotels in Maui";
 	
@@ -3390,7 +3361,6 @@
 	    mauiFlightList.appendChild( mauiFlightAvail );
 	    mauiFlightList.appendChild( mauiFlightSelect );
 	    mauiFlightList.appendChild( mauiFlightSelectValue );
-	    mauiFlightList.appendChild( mauiButton );
 	    mauiFlightList.appendChild( mauiText );
 	
 	    hotelListOne.appendChild( mauiFlightList );
@@ -3435,12 +3405,6 @@
 	
 	    kauaiFlightSelectValue.innerText = "Give " + kauaiFlightSelect.value + " Units";
 	
-	    var kauaiButton = document.createElement( 'button' );
-	    kauaiButton.innerText = "Give...";
-	    kauaiButton.onclick = function() {
-	        this.displayForm( "Flights" );
-	    }.bind( this );
-	
 	    var kauaiText = document.createElement( 'h5' );
 	    kauaiText.innerText = "Hotels in Kauai";
 	
@@ -3449,7 +3413,6 @@
 	    kauaiFlightList.appendChild( kauaiFlightAvail );
 	    kauaiFlightList.appendChild( kauaiFlightSelect );
 	    kauaiFlightList.appendChild( kauaiFlightSelectValue );
-	    kauaiFlightList.appendChild( kauaiButton );
 	    kauaiFlightList.appendChild( kauaiText );
 	
 	    hotelListTwo.appendChild( kauaiFlightList );
@@ -3490,12 +3453,6 @@
 	
 	    honoluluFlightSelectValue.innerText = "Give " + honoluluFlightSelect.value + " Units";
 	
-	    var honoluluButton = document.createElement( 'button' );
-	    honoluluButton.innerText = "Give...";
-	    honoluluButton.onclick = function() {
-	        this.displayForm( "Hotels" );
-	    }.bind( this );
-	
 	    var honoluluText = document.createElement( 'h5' );
 	    honoluluText.innerText = "Hotels in Honolulu";
 	
@@ -3504,14 +3461,37 @@
 	    honoluluFlightList.appendChild( honoluluFlightAvail );
 	    honoluluFlightList.appendChild( honoluluFlightSelect );
 	    honoluluFlightList.appendChild( honoluluFlightSelectValue );
-	    honoluluFlightList.appendChild( honoluluButton );
 	    honoluluFlightList.appendChild( honoluluText );
 	
 	    hotelListTwo.appendChild( honoluluFlightList );
 	    giftSpace.appendChild( hotelListTwo );
 	
 	    giftSpace.style.display = "block";
+	
+	    var giveButton = document.createElement( 'button' );
+	    var cancelButton = document.createElement( 'button' );
+	
+	    giveButton.innerText = "Give...";
+	    giveButton.onclick = function() {
+	      this.displayForm();
+	    }.bind( this );
+	
+	    cancelButton.innerText = "Back...";
+	    cancelButton.onclick = function() {
+	      this.displayGifts();
+	    }.bind( this );
+	
+	    giftSpace.appendChild( giveButton );
+	    giftSpace.appendChild( cancelButton );
 	  },
+	
+	  displayGifts: function() {
+	    var giftList = document.getElementById( 'gift-list' );
+	    giftList.style.display = "none";
+	
+	    var giftSpace = document.getElementById( 'gift-space' );
+	    giftSpace.style.display = "block";
+	  }
 	}
 	
 	module.exports = EnglishHotelsView;

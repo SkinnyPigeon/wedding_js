@@ -1,5 +1,3 @@
-var EnglishGiftView = require( './EnglishGiftView' );
-
 var EnglishFlightsView = function() {
   // this.url = "https://gift-database.herokuapp.com/gifts";
   // this.url = "http://localhost:8080/gifts";
@@ -87,7 +85,6 @@ EnglishFlightsView.prototype = {
 
   displayLoading: function() {
     var giftSpace = document.getElementById( 'gift-space' );
-    // giftSpace.innerText = "";
     giftSpace.style.display = "none";
 
     var giftList = document.getElementById( "gift-list" );
@@ -108,10 +105,6 @@ EnglishFlightsView.prototype = {
   displayFlights: function() {
     var giftSpace = document.getElementById( 'gift-space' );
     giftSpace.style.display = "none";
-
-    // while( giftSpace.hasChildNodes() ) {
-    //   giftSpace.removeChild( giftSpace.lastChild );
-    // }
 
     var giftList = document.getElementById( 'gift-list' );
 
