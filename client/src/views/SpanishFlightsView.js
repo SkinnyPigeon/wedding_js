@@ -113,23 +113,23 @@ EnglishFlightsView.prototype = {
     }
 
     var title = document.createElement( 'h1' );
-    title.innerText = "Flights";
+    title.innerText = "Vuelos";
     title.className = "circleTitle";
 
     var dotsFour = document.createElement( 'p' );
     dotsFour.innerText = "--------------------------------"
 
     var text = document.createElement( 'h5' );
-    text.innerText = "These are the big ones. We've got a couple flights to get to Hawaii then another few internal flights. \n\n If you are worried we would might have to swim some of it click below."
+    text.innerText = "Estos los más importantes, cogeremos varios aviones para ir y volver de Hawaii y para movernos entre las islas. \n\n Si os preocupa que tengamos que ir nadando pulsad debajo."
 
     var goButton = document.createElement( 'button' );
-    goButton.innerText = "Flights";
+    goButton.innerText = "Vuelos";
     goButton.onclick = function() {
       this.displayFlightPick();
     }.bind( this );
 
     var backButton = document.createElement( 'button' );
-    backButton.innerText = "Back";
+    backButton.innerText = "Volver";
     backButton.onclick = function() {
       this.displayGifts(); 
     }.bind( this );
@@ -158,22 +158,22 @@ EnglishFlightsView.prototype = {
 
     var title = document.createElement( 'h1' );
     title.className = "circleTitle";
-    title.innerText = "Thank You";
+    title.innerText = "Gracias";
 
     var dotsThree = document.createElement( 'p' );
     dotsThree.innerText = "--------------------------------"
 
     var name = document.createElement( 'input' );
-    name.placeholder = "Name...";
+    name.placeholder = "Nombre...";
 
     var email = document.createElement( 'input' );
     email.placeholder = "Email...";
 
     var message = document.createElement( 'input' );
-    message.placeholder = "Message";
+    message.placeholder = "Mensaje";
 
     var button = document.createElement( 'button' );
-    button.innerText = "Gift";
+    button.innerText = "Regalo";
 
     button.onclick = function() {
       this.updateFlights();
@@ -201,7 +201,7 @@ EnglishFlightsView.prototype = {
     }.bind( this )
 
     var backButton = document.createElement( 'button' );
-    backButton.innerText = "Back";
+    backButton.innerText = "Volver";
     backButton.onclick = function() {
       this.displayFlightPick();
     }.bind( this );
@@ -235,7 +235,7 @@ EnglishFlightsView.prototype = {
 
     var thankYou = document.createElement( 'h1' );
     thankYou.className = "circleTitle";
-    thankYou.innerText = "Thank you very much";
+    thankYou.innerText = "Muchas gracias!";
     giftSpace.style.display = "block";
 
     giftSpace.appendChild( thankYou );
@@ -254,7 +254,7 @@ EnglishFlightsView.prototype = {
     }
 
     var flightTitle = document.createElement( 'h1' );
-    flightTitle.innerText = "Flights";
+    flightTitle.innerText = "Vuelos";
     flightTitle.className = "circleTitleRaisedHigher";
 
     // ##################################################
@@ -272,10 +272,10 @@ EnglishFlightsView.prototype = {
     var cost = 100;
 
     var leaveUnit = document.createElement( 'h5' );
-    leaveUnit.innerText = "£" + cost + "\nPer Unit";
+    leaveUnit.innerText = "€" + cost + "\nCada Unidad";
 
     var leaveAvail = document.createElement( 'h5' );
-    leaveAvail.innerText = "Available: " + this.leave + "/8";
+    leaveAvail.innerText = "Disponible: " + this.leave + "/8";
 
     var leaveSelectValue = document.createElement( 'h5' );
 
@@ -288,15 +288,15 @@ EnglishFlightsView.prototype = {
     leaveSelect.list = "steplist";
 
     leaveSelect.onchange = function() {
-        leaveSelectValue.innerText = "Give " + leaveSelect.value + " Units";
+        leaveSelectValue.innerText = "Regalar " + leaveSelect.value + " Units";
         this.buyLeave = leaveSelect.value;
         this.total = cost * leaveSelect.value;
     }.bind( this );
 
-    leaveSelectValue.innerText = "Give " + leaveSelect.value + " Units";
+    leaveSelectValue.innerText = "Regalar " + leaveSelect.value + " Units";
 
     var leaveText = document.createElement( 'h5' );
-    leaveText.innerText = "Flight to Hawaii \n\n";
+    leaveText.innerText = "Vuelo de ida a Hawaii\n";
 
     giftSpace.appendChild( flightListOne );
 
@@ -344,7 +344,7 @@ EnglishFlightsView.prototype = {
     returnFlightSelectValue.innerText = "Give " + returnFlightSelect.value + " Units";
 
     var returnText = document.createElement( 'h5' );
-    returnText.innerText = "Flight back home";
+    returnText.innerText = "Vuelo de vuela\n\n";
 
     giftSpace.appendChild( flightListOne );
 

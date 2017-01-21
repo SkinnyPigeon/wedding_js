@@ -1,4 +1,4 @@
-var EnglishFlightsView = require( './EnglishFlightsView.js' );
+var SpanishFlightsView = require( './SpanishFlightsView.js' );
 var EnglishHotelsView = require( './EnglishHotelsView.js' );
 var EnglishDrinksView = require( './EnglishDrinksView.js' );
 var EnglishFoodView = require( './EnglishFoodView.js' );
@@ -46,7 +46,7 @@ EnglishGiftView.prototype = {
 
     var title = document.createElement( 'h1' );
     title.className = "circleTitle";
-    title.innerText = "Gifts";
+    title.innerText = "Lista de bodas";
 
     var dotsTwo = document.createElement( 'p' );
     dotsTwo.innerText = "--------------------------------"
@@ -117,7 +117,7 @@ EnglishGiftView.prototype = {
   },
 
   displayFlights: function() {
-    var view = new EnglishFlightsView();
+    var view = new SpanishFlightsView();
   },
 
   displayHotels: function() {
