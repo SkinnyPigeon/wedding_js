@@ -91,23 +91,23 @@ EnglishBoatView.prototype = {
     }
 
     var title = document.createElement( 'h1' );
-    title.innerText = "Boat Tour";
+    title.innerText = "Tout en bote";
     title.className = "circleTitle";
 
     var dotsFour = document.createElement( 'p' );
     dotsFour.innerText = "--------------------------------"
 
     var text = document.createElement( 'h5' );
-    text.innerText = "We have read that the Nā Pali Coast is amazing and we woud like to spend a morning on a boat to experience it from the sea. We will send photos! \n\n If you'd like to help with this then give this a click."
+    text.innerText = "Hemos leído que la costa Nā Pali es una pasada y nos gustaría pasar una mañana en un bote recorriéndola desde el mar. Os mandaremos fotos! \n\n Si te apetece contribuir a esta parte de la luna de miel pulsa aquí."
 
     var goButton = document.createElement( 'button' );
-    goButton.innerText = "Boat Tour";
+    goButton.innerText = "Tout en bote";
     goButton.onclick = function() {
       this.displayBoatPick();
     }.bind( this );
 
     var backButton = document.createElement( 'button' );
-    backButton.innerText = "Back";
+    backButton.innerText = "Volver";
     backButton.onclick = function() {
       this.displayGifts() 
     }.bind( this );
@@ -136,22 +136,22 @@ EnglishBoatView.prototype = {
 
     var title = document.createElement( 'h1' );
     title.className = "circleTitle";
-    title.innerText = "Thank You";
+    title.innerText = "Gracias!";
 
     var dotsThree = document.createElement( 'p' );
     dotsThree.innerText = "--------------------------------"
 
     var name = document.createElement( 'input' );
-    name.placeholder = "Name...";
+    name.placeholder = "Nombre...";
 
     var email = document.createElement( 'input' );
     email.placeholder = "Email...";
 
     var message = document.createElement( 'input' );
-    message.placeholder = "Message";
+    message.placeholder = "Mensaje";
 
     var button = document.createElement( 'button' );
-    button.innerText = "Click";
+    button.innerText = "Regalar";
 
     button.onclick = function() {
       this.updateBoats();
@@ -168,14 +168,14 @@ EnglishBoatView.prototype = {
           total: this.total,
           comment: message.value,
           boat: this.buyBoats,
-          currency: "£"
+          currency: "€"
         }
       }
       request.send( JSON.stringify( data ));
     }.bind( this )
 
     var backButton = document.createElement( 'button' );
-    backButton.innerText = "Back";
+    backButton.innerText = "Volver";
     backButton.onclick = function() {
       this.displayBoatPick();
     }.bind( this );
@@ -209,7 +209,7 @@ EnglishBoatView.prototype = {
 
     var thankYou = document.createElement( 'h1' );
     thankYou.className = "circleTitle";
-    thankYou.innerText = "Thank you very much";
+    thankYou.innerText = "Muchas gracias!";
     giftSpace.style.display = "block";
 
     giftSpace.appendChild( thankYou );
@@ -228,7 +228,7 @@ EnglishBoatView.prototype = {
     }
 
     var boatTitle = document.createElement( 'h1' );
-    boatTitle.innerText = "Boats";
+    boatTitle.innerText = "Tout en bote";
     boatTitle.className = "circleTitleRaisedHigher";
 
     var boatListOne = document.createElement( 'ul' );
@@ -244,10 +244,10 @@ EnglishBoatView.prototype = {
     var cost = 100;
 
     var boatUnit = document.createElement( 'h5' );
-    boatUnit.innerText = "£" + cost + "\nPer Unit";
+    boatUnit.innerText = "€" + cost + "\nPer Unit";
 
     var boatAvail = document.createElement( 'h5' );
-    boatAvail.innerText = "Available: " + this.boat + "/1";
+    boatAvail.innerText = "Disponible: " + this.boat + "/1";
 
     var boatSelectValue = document.createElement( 'h5' );
 
@@ -260,15 +260,15 @@ EnglishBoatView.prototype = {
     boatSelect.list = "steplist";
 
     boatSelect.onchange = function() {
-        boatSelectValue.innerText = "Give " + boatSelect.value + " Units";
+        boatSelectValue.innerText = "Regalar " + boatSelect.value + " Unidades";
         this.buyBoats = boatSelect.value;
         this.total = cost * boatSelect.value;
     }.bind( this );
 
-    boatSelectValue.innerText = "Give " + boatSelect.value + " Units";
+    boatSelectValue.innerText = "Regalar " + boatSelect.value + " Unidades";
 
     var boatText = document.createElement( 'h5' );
-    boatText.innerText = "Boat tour of Na Pali Coast";
+    boatText.innerText = "Tour en bote por la costa Nā Pali";
 
     giftSpace.appendChild( boatListOne );
 
@@ -287,12 +287,12 @@ EnglishBoatView.prototype = {
     var giveButton = document.createElement( 'button' );
     var cancelButton = document.createElement( 'button' );
 
-    giveButton.innerText = "Give...";
+    giveButton.innerText = "Regalar...";
     giveButton.onclick = function() {
       this.displayForm();
     }.bind( this );
 
-    cancelButton.innerText = "Back...";
+    cancelButton.innerText = "Volver...";
     cancelButton.onclick = function() {
       this.displayGifts();
     }.bind( this );
