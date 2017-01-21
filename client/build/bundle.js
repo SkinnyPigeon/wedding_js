@@ -4833,7 +4833,7 @@
 	    bigIslandFlightSelectValue.innerText = "Regalar " + bigIslandFlightSelect.value + " Unidades";
 	
 	    var bigIslandText = document.createElement( 'h5' );
-	    bigIslandText.innerText = "Big Island to Maui";
+	    bigIslandText.innerText = "Big Island a Maui";
 	
 	    bigIslandFlightList.appendChild( bigIslandFlight );
 	    bigIslandFlightList.appendChild( bigIslandText );
@@ -4883,7 +4883,7 @@
 	    mauiFlightSelectValue.innerText = "Regalar " + mauiFlightSelect.value + " Unidades";
 	
 	    var mauiText = document.createElement( 'h5' );
-	    mauiText.innerText = "Maui to Kauai\n\n";
+	    mauiText.innerText = "Maui a Kauai\n\n";
 	
 	    mauiFlightList.appendChild( mauiFlight );
 	    mauiFlightList.appendChild( mauiText );
@@ -4928,7 +4928,7 @@
 	    kauaiFlightSelectValue.innerText = "Regalar " + kauaiFlightSelect.value + " Unidades";
 	
 	    var kauaiText = document.createElement( 'h5' );
-	    kauaiText.innerText = "Kauai to Honolulu";
+	    kauaiText.innerText = "Kauai a Honolulu";
 	
 	    kauaiFlightList.appendChild( kauaiFlight );
 	    kauaiFlightList.appendChild( kauaiText );
