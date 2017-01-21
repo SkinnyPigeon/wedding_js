@@ -32,7 +32,7 @@ EnglishVenueView.prototype = {
     slackTitle.innerText = "How To Share Your Photos"
 
     var slackText = document.createElement( 'h5' );
-    slackText.innerText = "We would love for you to share your pictures of the ceremony and party with all of us. \n If you'd like to join in then send us your email address and we'll invite you to join a group in an app called Slack. It's free and private. All you have to do is post \n the photos you take to the channel in Slack and we'll all get to see \n them on the big screen in the venue."
+    slackText.innerText = "We would love for you to share your pictures of the ceremony and party with all of us. If you'd like to join in then send us your email address and we'll invite you to join a group in an app called Slack. It's free and private. All you have to do is post the photos you take to the channel in Slack and we'll all get to see them on the big screen in the venue."
 
     var contact = document.createElement( 'ul' );
 

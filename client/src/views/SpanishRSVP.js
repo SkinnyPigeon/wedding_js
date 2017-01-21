@@ -14,31 +14,31 @@ EnglishRSVP.prototype = {
 
     var rsvp = document.createElement( 'h1' );
     rsvp.className = "circleTitle";
-    rsvp.innerText = "R.S.V.P";
+    rsvp.innerText = "Confirmación de asistencia";
 
     var dotsOne = document.createElement( 'p' );
     dotsOne.innerText = "--------------------------------"
 
     var name = document.createElement( 'input' );
-    name.placeholder = "Name...";
+    name.placeholder = "Nombre...";
 
     var email = document.createElement( 'input' );
     email.placeholder = "Email...";
 
     var comingText = document.createElement( 'h5' );
-    comingText.innerText = "Are you coming?";
+    comingText.innerText = "¿Vienes?";
 
     var comingBox = document.createElement( 'input' );
     comingBox.type = "checkbox";
 
     var plusOneText = document.createElement( 'h5' );
-    plusOneText.innerText = "Plus One?";
+    plusOneText.innerText = "¿Vienes con pareja?";
 
     var plusOneBox = document.createElement( 'input' );
     plusOneBox.type = "checkbox";
 
     var kidsText = document.createElement( 'h5' );
-    kidsText.innerText = "Are you taking any kids?";
+    kidsText.innerText = "¿Vienes con niños?";
 
     var kidsNumber = document.createElement( 'h5' );
     kidsNumber.innerText = 0;
@@ -48,7 +48,7 @@ EnglishRSVP.prototype = {
     kidsSlider.type = "range";
     kidsSlider.step = 1;
     kidsSlider.min = 0;
-    kidsSlider.max = 5;
+    kidsSlider.max = 3;
     kidsSlider.value = 0;
     kidsSlider.list = "steplist";
 
@@ -57,13 +57,13 @@ EnglishRSVP.prototype = {
     }
 
     var busText = document.createElement( 'h5' );
-    busText.innerText = "Will you need the bus?";
+    busText.innerText = "¿Usaras el autobús?";
 
     var busBox = document.createElement( 'input' );
     busBox.type = "checkbox";
 
     var button = document.createElement( 'button' );
-    button.innerText = "Click";
+    button.innerText = "Confirmación de asistencia";
     button.onclick = function() {
 
       this.showGratitude();
@@ -157,7 +157,7 @@ EnglishRSVP.prototype = {
 
     var thankYou = document.createElement( 'h1' );
     thankYou.className = "thankYou";
-    thankYou.innerText = "Thank you very much";
+    thankYou.innerText = "Muchísimas gracias";
     rsvpSpace.style.display = "block";
 
     rsvpSpace.appendChild( thankYou );

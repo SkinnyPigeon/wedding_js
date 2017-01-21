@@ -29,22 +29,17 @@ EnglishHomeView.prototype = {
     us.innerText = "Laura & Euan";
 
     var language = document.createElement( 'h1' );
-    language.innerText = "Change Language";
+    language.innerText = "Cambiar de idioma";
 
     var languageText = document.createElement( 'h5' );
-    languageText.innerText = "Click the flag at any point to change the language."
+    languageText.innerText = "Pulsa en la bandera para cambiar el idioma."
 
     homeSpace.appendChild( welcome );
     homeSpace.appendChild( dotsOne );
     homeSpace.appendChild( text );
-    // homeSpace.appendChild( date );
-    // homeSpace.appendChild( time );
-    // homeSpace.appendChild( venue );
-    // homeSpace.appendChild( dotsTwo );
     homeSpace.appendChild( message );
     homeSpace.appendChild( us );
-    // homeSpace.appendChild( language );
-    // homeSpace.appendChild( languageText );
+    homeSpace.appendChild( languageText );
   },
 
 }

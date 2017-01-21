@@ -99,7 +99,7 @@ EnglishLavaView.prototype = {
     dotsFour.innerText = "--------------------------------"
 
     var text = document.createElement( 'h5' );
-    text.innerText = "One of the sights we are hoping to get to is a tour of the volcanos. \n\n If you'd like to help with this then give this a click."
+    text.innerText = "One of the bits of the trip which we are most excited for is going to the Volcano Park and seeing lava flowing into the ocean. Could you imagine it? \n\n If you'd like to help with this then give this a click."
 
     var goButton = document.createElement( 'button' );
     goButton.innerText = "Lava Tour";
@@ -245,7 +245,7 @@ EnglishLavaView.prototype = {
     var cost = 250;
 
     var lavaUnit = document.createElement( 'h5' );
-    lavaUnit.innerText = "Unit Price: £" + cost;
+    lavaUnit.innerText = "£" + cost + "\nPer Unit";
 
     var lavaAvail = document.createElement( 'h5' );
     lavaAvail.innerText = "Available: " + this.lava + "/1";
@@ -274,11 +274,11 @@ EnglishLavaView.prototype = {
     giftSpace.appendChild( lavaListOne );
 
     lavaList.appendChild( lava );
+    lavaList.appendChild( lavaText );
     lavaList.appendChild( lavaUnit );
     lavaList.appendChild( lavaAvail );
     lavaList.appendChild( lavaSelect );
     lavaList.appendChild( lavaSelectValue );
-    lavaList.appendChild( lavaText );
 
     lavaListOne.appendChild( lavaList );
     giftSpace.appendChild( lavaListOne );

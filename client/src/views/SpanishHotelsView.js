@@ -109,23 +109,23 @@ EnglishHotelsView.prototype = {
     }
 
     var title = document.createElement( 'h1' );
-    title.innerText = "Hotels";
+    title.innerText = "Hoteles";
     title.className = "circleTitle";
 
     var dotsFour = document.createElement( 'p' );
     dotsFour.innerText = "--------------------------------"
 
     var text = document.createElement( 'h5' );
-    text.innerText = "Another big one. We're there for a while so having a bed to sleep on would come in very handy. \n\n We will be in Hawaii for 16 days, 5 days on big Island, 4 days in Maui, 5 days in Kauai and the last 2 in Honolulu.\n\n If you'd like to help with these the give this a click."
+    text.innerText = "Vamos a estar en Hawaii por 16 dias, 5 dias en Big Island, 4 dias en Maui, 5 dias en Kauai y los últimos 2 dias en Honolulu. \n\n Si te apetece contribuir a esta parte de la luna de miel pulsa aquí."
 
     var goButton = document.createElement( 'button' );
-    goButton.innerText = "Hotels";
+    goButton.innerText = "Hoteles";
     goButton.onclick = function() {
       this.displayHotelPick();
     }.bind( this );
 
     var backButton = document.createElement( 'button' );
-    backButton.innerText = "Back";
+    backButton.innerText = "Volver";
     backButton.onclick = function() {
       this.displayGifts() 
     }.bind( this );
@@ -154,22 +154,22 @@ EnglishHotelsView.prototype = {
 
     var title = document.createElement( 'h1' );
     title.className = "circleTitle";
-    title.innerText = "Thank You";
+    title.innerText = "Gracias";
 
     var dotsThree = document.createElement( 'p' );
     dotsThree.innerText = "--------------------------------"
 
     var name = document.createElement( 'input' );
-    name.placeholder = "Name...";
+    name.placeholder = "Nombre...";
 
     var email = document.createElement( 'input' );
     email.placeholder = "Email...";
 
     var message = document.createElement( 'input' );
-    message.placeholder = "Message";
+    message.placeholder = "Mensaje";
 
     var button = document.createElement( 'button' );
-    button.innerText = "Gift";
+    button.innerText = "Regalo";
 
     button.onclick = function() {
       this.updateHotels();
@@ -190,7 +190,7 @@ EnglishHotelsView.prototype = {
           maui: this.buyMaui,
           kauai: this.buyKauai,
           honolulu: this.buyHonolulu,
-          currency: "£"
+          currency: "€"
         }
       }
       request.send( JSON.stringify( data ));
@@ -231,7 +231,7 @@ EnglishHotelsView.prototype = {
 
     var thankYou = document.createElement( 'h1' );
     thankYou.className = "circleTitle";
-    thankYou.innerText = "Thank you very much";
+    thankYou.innerText = "Muchas gracias!";
     giftSpace.style.display = "block";
 
     giftSpace.appendChild( thankYou );
@@ -250,7 +250,7 @@ EnglishHotelsView.prototype = {
     }
 
     var hotelTitle = document.createElement( 'h1' );
-    hotelTitle.innerText = "Hotels";
+    hotelTitle.innerText = "Hoteles";
     hotelTitle.className = "circleTitleRaisedHigher";
 
   // ###################################
@@ -269,10 +269,10 @@ EnglishHotelsView.prototype = {
     var cost = 150;
 
     var konaUnit = document.createElement( 'h5' );
-    konaUnit.innerText = "£" + cost + "\nPer Unit";
+    konaUnit.innerText = "€" + cost + "\nCada Unidad";
 
     var konaAvail = document.createElement( 'h5' );
-    konaAvail.innerText = "Available: " + this.kona + "/2";
+    konaAvail.innerText = "Disponible: " + this.kona + "/2";
 
     var konaSelectValue = document.createElement( 'h5' );
 
@@ -285,15 +285,15 @@ EnglishHotelsView.prototype = {
     konaSelect.list = "steplist";
 
     konaSelect.onchange = function() {
-        konaSelectValue.innerText = "Give " + konaSelect.value + " Units";
+        konaSelectValue.innerText = "Regalar " + konaSelect.value + " Unidades";
         this.buyKona = konaSelect.value;
         this.total = cost * konaSelect.value;
     }.bind( this );
 
-    konaSelectValue.innerText = "Give " + konaSelect.value + " Units";
+    konaSelectValue.innerText = "Regalar " + konaSelect.value + " Unidades";
 
     var konaText = document.createElement( 'h5' );
-    konaText.innerText = "Hotel in Kona \n\n";
+    konaText.innerText = "Hotels en Kona \n\n";
 
     giftSpace.appendChild( hotelListOne );
 
@@ -317,10 +317,10 @@ EnglishHotelsView.prototype = {
 
     var cost = 120
     var volcanoUnit = document.createElement( 'h5' );
-    volcanoUnit.innerText = "£" + cost + "\nPer Unit";
+    volcanoUnit.innerText = "€" + cost + "\nCada Unidad";
 
     var volcanoAvail = document.createElement( 'h5' );
-    volcanoAvail.innerText = "Available: " + this.volcano + "/3";
+    volcanoAvail.innerText = "Disponible: " + this.volcano + "/3";
 
     var volcanoSelectValue = document.createElement( 'h5' );
 
@@ -333,15 +333,15 @@ EnglishHotelsView.prototype = {
     volcanoSelect.list = "steplist";
 
     volcanoSelect.onchange = function() {
-        volcanoSelectValue.innerText = "Give " + volcanoSelect.value + " Units";
+        volcanoSelectValue.innerText = "Regalar " + volcanoSelect.value + " Unidades";
         this.buyVolcano = volcanoSelect.value;
         this.total = cost * volcanoSelect.value;
     }.bind( this );
 
-    volcanoSelectValue.innerText = "Give " + volcanoSelect.value + " Units";
+    volcanoSelectValue.innerText = "Regalar " + volcanoSelect.value + " Unidades";
 
     var returnText = document.createElement( 'h5' );
-    returnText.innerText = "Hotel in Volcano Park";
+    returnText.innerText = "Hotels en Volcano Park";
 
     giftSpace.appendChild( hotelListOne );
 
@@ -366,10 +366,10 @@ EnglishHotelsView.prototype = {
     var cost = 145;
 
     var mauiFlightUnit = document.createElement( 'h5' );
-    mauiFlightUnit.innerText = "£" + cost + "\nPer Unit";
+    mauiFlightUnit.innerText = "€" + cost + "\nCada Unidad";
 
     var mauiFlightAvail = document.createElement( 'h5' );
-    mauiFlightAvail.innerText = "Available: " + this.maui + "/4";
+    mauiFlightAvail.innerText = "Disponible: " + this.maui + "/4";
 
     var mauiFlightSelectValue = document.createElement( 'h5' );
 
@@ -382,15 +382,15 @@ EnglishHotelsView.prototype = {
     mauiFlightSelect.list = "steplist";
 
     mauiFlightSelect.onchange = function() {
-        mauiFlightSelectValue.innerText = "Give " + mauiFlightSelect.value + " Units";
+        mauiFlightSelectValue.innerText = "Regalar " + mauiFlightSelect.value + " Unidades";
         this.buyMaui = mauiFlightSelect.value;
         this.total = cost * mauiFlightSelect.value;
     }.bind( this );
 
-    mauiFlightSelectValue.innerText = "Give " + mauiFlightSelect.value + " Units";
+    mauiFlightSelectValue.innerText = "Regalar " + mauiFlightSelect.value + " Unidades";
 
     var mauiText = document.createElement( 'h5' );
-    mauiText.innerText = "Hotel in Maui\n\n";
+    mauiText.innerText = "Hotels en Maui\n\n";
 
     mauiFlightList.appendChild( mauiFlight );
     mauiFlightList.appendChild( mauiText );
@@ -418,10 +418,10 @@ EnglishHotelsView.prototype = {
     var cost = 150;
 
     var kauaiFlightUnit = document.createElement( 'h5' );
-    kauaiFlightUnit.innerText = "£" + cost + "\nPer Unit";
+    kauaiFlightUnit.innerText = "€" + cost + "\nCada Unidad";
 
     var kauaiFlightAvail = document.createElement( 'h5' );
-    kauaiFlightAvail.innerText = "Available: " + this.kauai + "/5";
+    kauaiFlightAvail.innerText = "Disponible: " + this.kauai + "/5";
 
     var kauaiFlightSelectValue = document.createElement( 'h5' );
 
@@ -434,15 +434,15 @@ EnglishHotelsView.prototype = {
     kauaiFlightSelect.list = "steplist";
 
     kauaiFlightSelect.onchange = function() {
-        kauaiFlightSelectValue.innerText = "Give " + kauaiFlightSelect.value + " Units";
+        kauaiFlightSelectValue.innerText = "Regalar " + kauaiFlightSelect.value + " Unidades";
         this.buyKauai = kauaiFlightSelect.value;
         this.total = cost * kauaiFlightSelect.value;
     }.bind( this );
 
-    kauaiFlightSelectValue.innerText = "Give " + kauaiFlightSelect.value + " Units";
+    kauaiFlightSelectValue.innerText = "Regalar " + kauaiFlightSelect.value + " Unidades";
 
     var kauaiText = document.createElement( 'h5' );
-    kauaiText.innerText = "Hotel in Kauai\n\n";
+    kauaiText.innerText = "Hotels en Kauai\n\n";
 
     kauaiFlightList.appendChild( kauaiFlight );
     kauaiFlightList.appendChild( kauaiText );
@@ -466,10 +466,10 @@ EnglishHotelsView.prototype = {
     var cost = 70;
 
     var honoluluFlightUnit = document.createElement( 'h5' );
-    honoluluFlightUnit.innerText = "£" + cost + "\nPer Unit";
+    honoluluFlightUnit.innerText = "€" + cost + "\nCada Unidad";
 
     var honoluluFlightAvail = document.createElement( 'h5' );
-    honoluluFlightAvail.innerText = "Available: " + this.honolulu + "/2";
+    honoluluFlightAvail.innerText = "Disponible: " + this.honolulu + "/2";
 
     var honoluluFlightSelectValue = document.createElement( 'h5' );
 
@@ -482,15 +482,15 @@ EnglishHotelsView.prototype = {
     honoluluFlightSelect.list = "steplist";
 
     honoluluFlightSelect.onchange = function() {
-        honoluluFlightSelectValue.innerText = "Give " + honoluluFlightSelect.value + " Units";
+        honoluluFlightSelectValue.innerText = "Regalar " + honoluluFlightSelect.value + " Unidades";
         this.buyHonolulu = honoluluFlightSelect.value;
         this.total = cost * honoluluFlightSelect.value;
     }.bind( this );
 
-    honoluluFlightSelectValue.innerText = "Give " + honoluluFlightSelect.value + " Units";
+    honoluluFlightSelectValue.innerText = "Regalar " + honoluluFlightSelect.value + " Unidades";
 
     var honoluluText = document.createElement( 'h5' );
-    honoluluText.innerText = "Hotel in Honolulu";
+    honoluluText.innerText = "Hotels en Honolulu";
 
     honoluluFlightList.appendChild( honoluluFlight );
     honoluluFlightList.appendChild( honoluluText );
@@ -507,12 +507,12 @@ EnglishHotelsView.prototype = {
     var giveButton = document.createElement( 'button' );
     var cancelButton = document.createElement( 'button' );
 
-    giveButton.innerText = "Gift...";
+    giveButton.innerText = "Regalo...";
     giveButton.onclick = function() {
       this.displayForm();
     }.bind( this );
 
-    cancelButton.innerText = "Back...";
+    cancelButton.innerText = "Volver...";
     cancelButton.onclick = function() {
       this.displayGifts();
     }.bind( this );

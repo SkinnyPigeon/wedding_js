@@ -1,41 +1,41 @@
-var EnglishBoatView = function() {
+var EnglishFoodView = function() {
 
-  this.boatUrl = "http://localhost:1235/boats";
+  this.foodUrl = "http://localhost:1235/foods";
 
-  this.boatObject = [];
-  this.boat = 0;
+  this.foodObject = [];
+  this.food = 0;
 
-  this.buyBoats = 0;
+  this.buyFoods = 0;
 
   this.total = 0;
 
-  this.getBoats();
+  this.getFoods();
 }
 
-EnglishBoatView.prototype = {
+EnglishFoodView.prototype = {
 
-  getBoats: function() {
+  getFoods: function() {
     setInterval( function() {
-      if( this.boatObject.length === 0 ) {
+      if( this.foodObject.length === 0 ) {
         this.displayLoading()
       }
     }.bind( this ), 10 );
 
     var request = new XMLHttpRequest();
-    request.open( 'GET', this.boatUrl );
+    request.open( 'GET', this.foodUrl );
     request.setRequestHeader("Content-Type", "application/json")
 
     request.onload = () => {
       if( request.status === 200 ) {
-        var boatObject = JSON.parse( request.responseText );
-        this.boatObject = boatObject;
-        for( var i = 0; i < boatObject.length; i++ ) {
-            if( this.boatObject[i].id === 1 ) {
-                this.boat = boatObject[i].boat;
+        var foodObject = JSON.parse( request.responseText );
+        this.foodObject = foodObject;
+        for( var i = 0; i < foodObject.length; i++ ) {
+            if( this.foodObject[i].id === 1 ) {
+                this.food = foodObject[i].food;
             }
         }
         this.hideLoading();
-        this.displayBoats();
+        this.displayFoods();
       }
     }
     request.send( null );
@@ -60,11 +60,10 @@ EnglishBoatView.prototype = {
     giftList.innerText = "";
   },
 
-  updateBoats: function() {
-    // var newBoat = 1;
-    var newBoat = this.boat -= this.buyBoats;
+  updateFoods: function() {
+    var newFood = this.food + this.buyFoods;
 
-    var url = this.boatUrl + "/1";
+    var url = this.foodUrl + "/1";
     var request = new XMLHttpRequest();
     request.open( 'PUT', url );
     request.setRequestHeader( "Content-type", "application/json" );
@@ -72,15 +71,15 @@ EnglishBoatView.prototype = {
         // console.log( "Loaded" );
     }
     var data = {
-      boat : {
-        boat: newBoat
+      food : {
+        food: newFood
       }
     }
     request.send( JSON.stringify( data ));
     console.log( data );
   },
 
-  displayBoats: function() {
+  displayFoods: function() {
     var giftSpace = document.getElementById( 'gift-space' );
     giftSpace.style.display = "none";
 
@@ -91,23 +90,23 @@ EnglishBoatView.prototype = {
     }
 
     var title = document.createElement( 'h1' );
-    title.innerText = "Boat Tour";
+    title.innerText = "Comidas";
     title.className = "circleTitle";
 
     var dotsFour = document.createElement( 'p' );
     dotsFour.innerText = "--------------------------------"
 
     var text = document.createElement( 'h5' );
-    text.innerText = "We have read that the Nā Pali Coast is amazing and we woud like to spend a morning on a boat to experience it from the sea. We will send photos! \n\n If you'd like to help with this then give this a click."
+    text.innerText = "Cuál sería el sentido de viajar tan lejos y si no se disfruta de la comida, esperemos deliciosa, de allí. \n\n Si te apetece contribuir a esta parte de la luna de miel pulsa aquí."
 
     var goButton = document.createElement( 'button' );
-    goButton.innerText = "Boat Tour";
+    goButton.innerText = "Comidas";
     goButton.onclick = function() {
-      this.displayBoatPick();
+      this.displayFoodPick();
     }.bind( this );
 
     var backButton = document.createElement( 'button' );
-    backButton.innerText = "Back";
+    backButton.innerText = "Volver";
     backButton.onclick = function() {
       this.displayGifts() 
     }.bind( this );
@@ -136,48 +135,48 @@ EnglishBoatView.prototype = {
 
     var title = document.createElement( 'h1' );
     title.className = "circleTitle";
-    title.innerText = "Thank You";
+    title.innerText = "Gracias!";
 
     var dotsThree = document.createElement( 'p' );
     dotsThree.innerText = "--------------------------------"
 
     var name = document.createElement( 'input' );
-    name.placeholder = "Name...";
+    name.placeholder = "Nombre...";
 
     var email = document.createElement( 'input' );
     email.placeholder = "Email...";
 
     var message = document.createElement( 'input' );
-    message.placeholder = "Message";
+    message.placeholder = "Mensaje...";
 
     var button = document.createElement( 'button' );
-    button.innerText = "Click";
+    button.innerText = "Regalo";
 
     button.onclick = function() {
-      this.updateBoats();
+      this.updateFoods();
       var request = new XMLHttpRequest();
-      request.open( 'POST', this.boatUrl );
+      request.open( 'POST', this.foodUrl );
       request.setRequestHeader("Content-Type", "application/json");
       request.onload = () => {
         this.displayThankYou();
       }
       var data = {
-        boat: {
+        food: {
           name: name.value,
           email: email.value,
           total: this.total,
           comment: message.value,
-          boat: this.buyBoats,
-          currency: "£"
+          food: this.buyFoods,
+          currency: "€"
         }
       }
       request.send( JSON.stringify( data ));
     }.bind( this )
 
     var backButton = document.createElement( 'button' );
-    backButton.innerText = "Back";
+    backButton.innerText = "Volver";
     backButton.onclick = function() {
-      this.displayBoatPick();
+      this.displayFoodPick();
     }.bind( this );
 
     var brOne = document.createElement( 'br' );
@@ -209,13 +208,13 @@ EnglishBoatView.prototype = {
 
     var thankYou = document.createElement( 'h1' );
     thankYou.className = "circleTitle";
-    thankYou.innerText = "Thank you very much";
+    thankYou.innerText = "Muchas gracias!";
     giftSpace.style.display = "block";
 
     giftSpace.appendChild( thankYou );
   },
 
-  displayBoatPick: function() {
+  displayFoodPick: function() {
 
     var giftSpaced = document.getElementById( 'gift-space' );
     giftSpaced.style.display = "none";
@@ -227,72 +226,121 @@ EnglishBoatView.prototype = {
       giftSpace.removeChild( giftSpace.lastChild );
     }
 
-    var boatTitle = document.createElement( 'h1' );
-    boatTitle.innerText = "Boats";
-    boatTitle.className = "circleTitleRaisedHigher";
+    var foodTitle = document.createElement( 'h1' );
+    foodTitle.innerText = "Foods";
+    foodTitle.className = "circleTitleRaisedHigher";
 
-    var boatListOne = document.createElement( 'ul' );
-    boatListOne.id = "boatListOne";
+    var foodListOne = document.createElement( 'ul' );
+    foodListOne.id = "foodListOne";
 
-    var boatList = document.createElement( 'li' );
+    var foodList = document.createElement( 'li' );
 
-    var boat = document.createElement( 'img' );
-    boat.src = "../css/image/boat.png";
-    boat.id = "boatImg";
-    boat.className = "giftImage";
+    var food = document.createElement( 'img' );
+    food.src = "../css/image/pineapple.png";
+    food.id = "foodImg";
+    food.className = "giftImage";
 
-    var cost = 100;
+    var cost = 50;
 
-    var boatUnit = document.createElement( 'h5' );
-    boatUnit.innerText = "£" + cost + "\nPer Unit";
+    var foodUnit = document.createElement( 'h5' );
+    foodUnit.innerText = "€" + cost + "\nCada Unidad";
 
-    var boatAvail = document.createElement( 'h5' );
-    boatAvail.innerText = "Available: " + this.boat + "/1";
+    var foodAvail = document.createElement( 'h5' );
+    foodAvail.innerText = "Disponible: \n" + String.fromCharCode( 8734 ) + "/" + String.fromCharCode( 8734 );
 
-    var boatSelectValue = document.createElement( 'h5' );
+    var foodSelectValue = document.createElement( 'h5' );
 
-    var boatSelect = document.createElement( 'input' );
-    boatSelect.type = "range";
-    boatSelect.step = 1;
-    boatSelect.min = 0;
-    boatSelect.max = this.boat;
-    boatSelect.value = 0;
-    boatSelect.list = "steplist";
+    var foodSelect = document.createElement( 'input' );
+    foodSelect.type = "range";
+    foodSelect.step = 1;
+    foodSelect.min = 0;
+    foodSelect.max = 10;
+    foodSelect.value = 0;
+    foodSelect.list = "steplist";
 
-    boatSelect.onchange = function() {
-        boatSelectValue.innerText = "Give " + boatSelect.value + " Units";
-        this.buyBoats = boatSelect.value;
-        this.total = cost * boatSelect.value;
+    foodSelect.onchange = function() {
+        foodSelectValue.innerText = "Regalar " + foodSelect.value + " Unidades";
+        this.buyFoods = foodSelect.value;
+        this.total = cost * foodSelect.value;
     }.bind( this );
 
-    boatSelectValue.innerText = "Give " + boatSelect.value + " Units";
+    foodSelectValue.innerText = "Regalar " + foodSelect.value + " Unidades";
 
-    var boatText = document.createElement( 'h5' );
-    boatText.innerText = "Boat tour of Na Pali Coast";
+    var foodText = document.createElement( 'h5' );
+    foodText.innerText = "Comida en la playa";
 
-    giftSpace.appendChild( boatListOne );
+    giftSpace.appendChild( foodListOne );
 
-    boatList.appendChild( boat );
-    boatList.appendChild( boatText );
-    boatList.appendChild( boatUnit );
-    boatList.appendChild( boatAvail );
-    boatList.appendChild( boatSelect );
-    boatList.appendChild( boatSelectValue );
+    foodList.appendChild( food );
+    foodList.appendChild( foodText );
+    foodList.appendChild( foodUnit );
+    foodList.appendChild( foodAvail );
+    foodList.appendChild( foodSelect );
+    foodList.appendChild( foodSelectValue );
 
-    boatListOne.appendChild( boatList );
-    giftSpace.appendChild( boatListOne );
+    // #######################################################
+
+    var romanticList = document.createElement( 'li' );
+
+    var romantic = document.createElement( 'img' );
+    romantic.src = "../css/image/pineapple.png";
+    romantic.id = "foodImg";
+    romantic.className = "giftImage";
+
+    var cost = 60;
+
+    var romanticUnit = document.createElement( 'h5' );
+    romanticUnit.innerText = "€" + cost + "\nCada Unidad";
+
+    var romanticAvail = document.createElement( 'h5' );
+    romanticAvail.innerText = "Disponible: \n" + String.fromCharCode( 8734 ) + "/" + String.fromCharCode( 8734 );
+
+    var romanticSelectValue = document.createElement( 'h5' );
+
+    var romanticSelect = document.createElement( 'input' );
+    romanticSelect.type = "range";
+    romanticSelect.step = 1;
+    romanticSelect.min = 0;
+    romanticSelect.max = 10;
+    romanticSelect.value = 0;
+    romanticSelect.list = "steplist";
+
+    romanticSelect.onchange = function() {
+        romanticSelectValue.innerText = "Regalar " + romanticSelect.value + " Unidades";
+        this.buyFoods = romanticSelect.value;
+        this.total = cost * romanticSelect.value;
+    }.bind( this );
+
+    romanticSelectValue.innerText = "Regalar " + romanticSelect.value + " Unidades";
+
+    var romanticText = document.createElement( 'h5' );
+    romanticText.innerText = "Cena romántica\n\n";
+
+    giftSpace.appendChild( foodListOne );
+
+    romanticList.appendChild( romantic );
+    romanticList.appendChild( romanticText );
+    romanticList.appendChild( romanticUnit );
+    romanticList.appendChild( romanticAvail );
+    romanticList.appendChild( romanticSelect );
+    romanticList.appendChild( romanticSelectValue );
+
+    foodListOne.appendChild( romanticList );
+
+    foodListOne.appendChild( foodList );
+    giftSpace.appendChild( foodListOne );
 
     giftSpace.style.display = "block";
 
     var giveButton = document.createElement( 'button' );
     var cancelButton = document.createElement( 'button' );
 
-    giveButton.innerText = "Give...";
+    giveButton.innerText = "Regalo...";
     giveButton.onclick = function() {
       this.displayForm();
     }.bind( this );
 
-    cancelButton.innerText = "Back...";
+    cancelButton.innerText = "Volver...";
     cancelButton.onclick = function() {
       this.displayGifts();
     }.bind( this );
@@ -310,4 +358,4 @@ EnglishBoatView.prototype = {
   }  
 }
 
-module.exports = EnglishBoatView;
+module.exports = EnglishFoodView;

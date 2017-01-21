@@ -21,20 +21,20 @@ EnglishContactView.prototype = {
 
     var welcome = document.createElement( 'h1' );
     welcome.className = "circleTitle";
-    welcome.innerText = "General Information";
+    welcome.innerText = "Información general";
 
     primary.appendChild( welcome );
     primary.appendChild( dotsOne );
 
     var info = document.createElement( 'h5' );
-    info.innerText = "We really hope you can join us on the 1st of April 2017 for a day of good weather, good food and of course helping us celebrate our love. If you have any questions please drop us a shout."
+    info.innerText = "Los momentos importes en la vida se hacen más especiales si se comparten con la gente que se quiere, por ello esperamos que nos podáis acompañar en nuestra boda el Sabado 1 de Abril. \n\n No dudéis en escribidnos si tenéis alguna pregunta."
     primary.appendChild( info );
 
     var contact = document.createElement( 'ul' );
     secondary.appendChild( contact );
 
     var getInTouch = document.createElement( 'h1' );
-    getInTouch.innerText = "Contact Information";
+    getInTouch.innerText = "Información de contacto";
 
     var email = document.createElement( 'li' );
     email.innerHTML = "<img src='./css/image/email.png' >";

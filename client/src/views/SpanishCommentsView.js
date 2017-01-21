@@ -53,24 +53,24 @@ EnglishCommentsView.prototype = {
 
     var title = document.createElement( 'h1' );
     title.className = "circleTitle";
-    title.innerText = "Come and say hi";
+    title.innerText = "Ven y saluda";
 
     var dotsOne = document.createElement( 'p' );
     dotsOne.innerText = "--------------------------------"
 
     var name = document.createElement( 'input' );
     name.type = 'text';
-    name.placeholder = 'Name...';
+    name.placeholder = 'Nombre...';
     name.id = 'name';
 
     var comment = document.createElement( 'input' );
     comment.type = 'input';
-    comment.placeholder = 'Please add your comment...';
+    comment.placeholder = 'Escribe aquí tu mensaje...';
     comment.setAttribute('size',comment.getAttribute('placeholder').length);
     comment.id = 'comment';
 
     var button = document.createElement( 'button' );
-    button.innerText = 'Add Comment';
+    button.innerText = 'Saluda';
 
     var br = document.createElement( 'br' );
 
