@@ -103,49 +103,49 @@ EnglishNavView.prototype = {
     var navSpace = document.getElementById( 'nav-space' );
 
     var title = document.createElement( 'h1' );
-    title.innerText = "Our Wedding";
+    title.innerText = "Nuestra Boda";
 
     var navList = document.createElement( 'ul' );
     navList.id = 'nav';
 
     var home = document.createElement( 'li' );
-    home.innerText = "Casa";
+    home.innerText = "Home";
     home.onclick = function() {
       this.displaySpanishHome();
     }.bind( this );
 
     var venue = document.createElement( 'li' );
-    venue.innerText = "Venue";
+    venue.innerText = "Salón";
     venue.onclick = function() {
       this.displaySpanishVenue();
     }.bind( this );
 
     var bus = document.createElement( 'li' );
-    bus.innerText = "Buses";
+    bus.innerText = "Autobús";
     bus.onclick = function() {
       this.displaySpanishBus();
     }.bind( this );
 
     var hotels = document.createElement( 'li' );
-    hotels.innerText = "Hotels";
+    hotels.innerText = "Hoteles";
     hotels.onclick = function() {
       this.displaySpanishMap();
     }.bind( this );
 
     var rsvp = document.createElement( 'li' );
-    rsvp.innerText = "RSVP";
+    rsvp.innerText = "Confirmar asistencia";
     rsvp.onclick = function() {
       this.displaySpanishRSVP();
     }.bind( this );
 
     var gifts = document.createElement( 'li' );
-    gifts.innerText = "Gifts"
+    gifts.innerText = "Lista de bodas"
     gifts.onclick = function() {
       this.displaySpanishGift();
     }.bind( this );
 
     var comments = document.createElement( 'li' );
-    comments.innerText = "Guest Book";
+    comments.innerText = "Libro de invitados";
     comments.onclick = function() {
       this.displaySpanishComments();
     }.bind( this );
@@ -157,7 +157,7 @@ EnglishNavView.prototype = {
     }.bind( this );
 
     var contact = document.createElement( 'li' );
-    contact.innerText = "Contact";
+    contact.innerText = "Contacto";
     contact.onclick = function() {
       this.displaySpanishContact();
     }.bind( this );
