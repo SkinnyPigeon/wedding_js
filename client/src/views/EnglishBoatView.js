@@ -101,7 +101,7 @@ EnglishBoatView.prototype = {
     text.innerText = "Another of the main attractions we would love to get to is a boat tour of the Napali Coast. \n\n If you'd like to help with this then give this a click."
 
     var goButton = document.createElement( 'button' );
-    goButton.innerText = "Click";
+    goButton.innerText = "Boat Tour";
     goButton.onclick = function() {
       this.displayBoatPick();
     }.bind( this );

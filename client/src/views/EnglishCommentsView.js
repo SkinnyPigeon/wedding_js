@@ -65,12 +65,12 @@ EnglishCommentsView.prototype = {
 
     var comment = document.createElement( 'input' );
     comment.type = 'input';
-    comment.placeholder = 'Please add your comment...';
+    comment.placeholder = 'Please add your message...';
     comment.setAttribute('size',comment.getAttribute('placeholder').length);
     comment.id = 'comment';
 
     var button = document.createElement( 'button' );
-    button.innerText = 'Add Comment';
+    button.innerText = 'Say Hello';
 
     var br = document.createElement( 'br' );
 

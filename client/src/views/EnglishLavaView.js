@@ -69,8 +69,8 @@ EnglishLavaView.prototype = {
     request.open( 'PUT', url );
     request.setRequestHeader( "Content-type", "application/json" );
     request.onload = () => {
-        console.log( "Loaded" );
-        console.log( newLava );
+        // console.log( "Loaded" );
+        // console.log( newLava );
     }
     var data = {
       lava : {
@@ -99,10 +99,10 @@ EnglishLavaView.prototype = {
     dotsFour.innerText = "--------------------------------"
 
     var text = document.createElement( 'h5' );
-    text.innerText = "One of the sights we are really hoping to get to is a tour of the volcanos. \n\n If you'd like to help with this then give this a click."
+    text.innerText = "One of the sights we are hoping to get to is a tour of the volcanos. \n\n If you'd like to help with this then give this a click."
 
     var goButton = document.createElement( 'button' );
-    goButton.innerText = "Click";
+    goButton.innerText = "Lava Tour";
     goButton.onclick = function() {
       this.displayLavaPick();
     }.bind( this );
@@ -269,7 +269,7 @@ EnglishLavaView.prototype = {
     lavaSelectValue.innerText = "Give " + lavaSelect.value + " Units";
 
     var lavaText = document.createElement( 'h5' );
-    lavaText.innerText = "Lava tour of Napali Bay";
+    lavaText.innerText = "Lava tour in Volcano Park";
 
     giftSpace.appendChild( lavaListOne );
 
@@ -288,7 +288,7 @@ EnglishLavaView.prototype = {
     var giveButton = document.createElement( 'button' );
     var cancelButton = document.createElement( 'button' );
 
-    giveButton.innerText = "Give...";
+    giveButton.innerText = "Gift...";
     giveButton.onclick = function() {
       this.displayForm();
     }.bind( this );

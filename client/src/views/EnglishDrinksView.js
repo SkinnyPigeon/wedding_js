@@ -68,7 +68,7 @@ EnglishDrinksView.prototype = {
     request.open( 'PUT', url );
     request.setRequestHeader( "Content-type", "application/json" );
     request.onload = () => {
-        console.log( "Loaded" );
+        // console.log( "Loaded" );
     }
     var data = {
       drink : {
@@ -100,7 +100,7 @@ EnglishDrinksView.prototype = {
     text.innerText = "For those of you who know Laura you'll be aware that relaxing on the beach is pretty important to her so any help to do it in style would be amazing. \n\n If you'd like to help with this then give this a click."
 
     var goButton = document.createElement( 'button' );
-    goButton.innerText = "Click";
+    goButton.innerText = "Drinks";
     goButton.onclick = function() {
       this.displayDrinkPick();
     }.bind( this );
@@ -286,7 +286,7 @@ EnglishDrinksView.prototype = {
     var giveButton = document.createElement( 'button' );
     var cancelButton = document.createElement( 'button' );
 
-    giveButton.innerText = "Give...";
+    giveButton.innerText = "Gift...";
     giveButton.onclick = function() {
       this.displayForm();
     }.bind( this );

@@ -97,10 +97,10 @@ EnglishFoodView.prototype = {
     dotsFour.innerText = "--------------------------------"
 
     var text = document.createElement( 'h5' );
-    text.innerText = "What would be the point in travelling half way round the world without sampling as much delicious food as possible? \n\n If you'd like to help with this then give this a click."
+    text.innerText = "What would be the point in travelling half way around the world without sampling as much delicious food as possible? \n\n If you'd like to help with this then give this a click."
 
     var goButton = document.createElement( 'button' );
-    goButton.innerText = "Click";
+    goButton.innerText = "Food";
     goButton.onclick = function() {
       this.displayFoodPick();
     }.bind( this );
@@ -147,7 +147,7 @@ EnglishFoodView.prototype = {
     email.placeholder = "Email...";
 
     var message = document.createElement( 'input' );
-    message.placeholder = "Message";
+    message.placeholder = "Message...";
 
     var button = document.createElement( 'button' );
     button.innerText = "Click";
@@ -286,7 +286,7 @@ EnglishFoodView.prototype = {
     var giveButton = document.createElement( 'button' );
     var cancelButton = document.createElement( 'button' );
 
-    giveButton.innerText = "Give...";
+    giveButton.innerText = "Gift...";
     giveButton.onclick = function() {
       this.displayForm();
     }.bind( this );

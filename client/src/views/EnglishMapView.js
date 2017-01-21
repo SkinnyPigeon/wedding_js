@@ -16,8 +16,6 @@ EnglishMapView.prototype = {
     dotsOne.innerText = "--------------------------------"
 
     var text = document.createElement( 'h5' );
-    // text.innerText = "For those of you who are travelling in from out of town or just looking for somewhere a bit closer to the venue we have picked a couple places that you might be interested in. \n\n Orihuela is a large and lovely town that's home to Laura's family and has got a great selection of places to eat, drink and enjoy. It's also got the Hotel Palacio de Tudemir that's happy to give us a discount if we block book 10 rooms so let us know if you fancy booking there and we'll get it all set up. \n\n For those looking for an even easier life on the day of the wedding there are a couple that are very close to the venue. The venue is marked as green on the map below";
-
     text.innerText = "For those of you who are travelling in from out of town or just looking for somewhere a bit closer to the venue we have picked a couple places that you might be interested in. \n\n Orihuela is a large and lovely town that's home to Laura's family and has got a selection of places to eat, drink and enjoy. The Hotel Palacio de Tudemir are happy to give us a discount if we block book 10 rooms so let us know if you fancy booking there and we'll get it all set up. \n\n To see where these are just give the map or websites below a click.";
 
     var palacioDeTudemir = document.createElement( 'h5' );

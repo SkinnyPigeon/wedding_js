@@ -119,7 +119,7 @@ EnglishHotelsView.prototype = {
     text.innerText = "Another big one. We're there for a while so having a bed to sleep on would come in very handy. \n\n If you'd like to help with these the give this a click."
 
     var goButton = document.createElement( 'button' );
-    goButton.innerText = "Click";
+    goButton.innerText = "Hotels";
     goButton.onclick = function() {
       this.displayHotelPick();
     }.bind( this );
@@ -507,7 +507,7 @@ EnglishHotelsView.prototype = {
     var giveButton = document.createElement( 'button' );
     var cancelButton = document.createElement( 'button' );
 
-    giveButton.innerText = "Give...";
+    giveButton.innerText = "Gift...";
     giveButton.onclick = function() {
       this.displayForm();
     }.bind( this );

@@ -123,7 +123,7 @@ EnglishFlightsView.prototype = {
     text.innerText = "These are the big ones. We've got a couple flights to get to Hawaii then another few internal flights. \n\n If you'd like to help with these the give this a click."
 
     var goButton = document.createElement( 'button' );
-    goButton.innerText = "Click";
+    goButton.innerText = "Flights";
     goButton.onclick = function() {
       this.displayFlightPick();
     }.bind( this );
@@ -508,7 +508,7 @@ EnglishFlightsView.prototype = {
     var giveButton = document.createElement( 'button' );
     var cancelButton = document.createElement( 'button' );
 
-    giveButton.innerText = "Give...";
+    giveButton.innerText = "Gift...";
     giveButton.onclick = function() {
       this.displayForm();
     }.bind( this );

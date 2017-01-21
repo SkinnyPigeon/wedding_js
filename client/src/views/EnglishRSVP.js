@@ -63,7 +63,7 @@ EnglishRSVP.prototype = {
     busBox.type = "checkbox";
 
     var button = document.createElement( 'button' );
-    button.innerText = "Click";
+    button.innerText = "R.S.V.P";
     button.onclick = function() {
 
       this.showGratitude();
