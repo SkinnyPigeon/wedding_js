@@ -90,7 +90,7 @@ EnglishDrinksView.prototype = {
     }
 
     var title = document.createElement( 'h1' );
-    title.innerText = "Drinks";
+    title.innerText = "Bebidas";
     title.className = "circleTitle";
 
     var dotsFour = document.createElement( 'p' );
@@ -100,7 +100,7 @@ EnglishDrinksView.prototype = {
     text.innerText = "For those of you who know Laura you'll be aware that relaxing on the beach is pretty important to her so any help to do it in style would be amazing. \n\n If you'd like to help with this then give this a click."
 
     var goButton = document.createElement( 'button' );
-    goButton.innerText = "Drinks";
+    goButton.innerText = "Bebidas";
     goButton.onclick = function() {
       this.displayDrinkPick();
     }.bind( this );
@@ -135,22 +135,22 @@ EnglishDrinksView.prototype = {
 
     var title = document.createElement( 'h1' );
     title.className = "circleTitle";
-    title.innerText = "Thank You";
+    title.innerText = "Gracias!";
 
     var dotsThree = document.createElement( 'p' );
     dotsThree.innerText = "--------------------------------"
 
     var name = document.createElement( 'input' );
-    name.placeholder = "Name...";
+    name.placeholder = "Nombre...";
 
     var email = document.createElement( 'input' );
     email.placeholder = "Email...";
 
     var message = document.createElement( 'input' );
-    message.placeholder = "Message";
+    message.placeholder = "Mensaje";
 
     var button = document.createElement( 'button' );
-    button.innerText = "Click";
+    button.innerText = "Regalo";
 
     button.onclick = function() {
       this.updateDrinks();
@@ -174,7 +174,7 @@ EnglishDrinksView.prototype = {
     }.bind( this )
 
     var backButton = document.createElement( 'button' );
-    backButton.innerText = "Back";
+    backButton.innerText = "Volver";
     backButton.onclick = function() {
       this.displayDrinkPick();
     }.bind( this );
@@ -208,7 +208,7 @@ EnglishDrinksView.prototype = {
 
     var thankYou = document.createElement( 'h1' );
     thankYou.className = "circleTitle";
-    thankYou.innerText = "Thank you very much";
+    thankYou.innerText = "Muchas gracias!";
     giftSpace.style.display = "block";
 
     giftSpace.appendChild( thankYou );
@@ -227,7 +227,7 @@ EnglishDrinksView.prototype = {
     }
 
     var drinkTitle = document.createElement( 'h1' );
-    drinkTitle.innerText = "Drinks";
+    drinkTitle.innerText = "Bebidas";
     drinkTitle.className = "circleTitleRaisedHigher";
 
     var drinkListOne = document.createElement( 'ul' );
@@ -243,10 +243,10 @@ EnglishDrinksView.prototype = {
     var cost = 20;
 
     var drinkUnit = document.createElement( 'h5' );
-    drinkUnit.innerText = "£" + cost + "\nCada Unidad";
+    drinkUnit.innerText = "€" + cost + "\nCada Unidad";
 
     var drinkAvail = document.createElement( 'h5' );
-    drinkAvail.innerText = "Available: " + String.fromCharCode( 8734 ) + "/" + String.fromCharCode( 8734 );
+    drinkAvail.innerText = "Disponible: " + String.fromCharCode( 8734 ) + "/" + String.fromCharCode( 8734 );
 
     var drinkSelectValue = document.createElement( 'h5' );
 
@@ -259,15 +259,15 @@ EnglishDrinksView.prototype = {
     drinkSelect.list = "steplist";
 
     drinkSelect.onchange = function() {
-        drinkSelectValue.innerText = "Give " + drinkSelect.value + " Units";
+        drinkSelectValue.innerText = "Regalar " + drinkSelect.value + " Unidades";
         this.buyDrinks = drinkSelect.value;
         this.total = cost * drinkSelect.value;
     }.bind( this );
 
-    drinkSelectValue.innerText = "Give " + drinkSelect.value + " Units";
+    drinkSelectValue.innerText = "Regalar " + drinkSelect.value + " Unidades";
 
     var drinkText = document.createElement( 'h5' );
-    drinkText.innerText = "Drinks on the Beach";
+    drinkText.innerText = "Bebidas en la playa";
 
     giftSpace.appendChild( drinkListOne );
 
@@ -286,12 +286,12 @@ EnglishDrinksView.prototype = {
     var giveButton = document.createElement( 'button' );
     var cancelButton = document.createElement( 'button' );
 
-    giveButton.innerText = "Gift...";
+    giveButton.innerText = "Regalo...";
     giveButton.onclick = function() {
       this.displayForm();
     }.bind( this );
 
-    cancelButton.innerText = "Back...";
+    cancelButton.innerText = "Volver...";
     cancelButton.onclick = function() {
       this.displayGifts();
     }.bind( this );
