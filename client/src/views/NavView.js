@@ -13,7 +13,7 @@ var SpanishBusView = require( './SpanishBusView' );
 var SpanishMapView = require( './SpanishMapView' );
 var SpanishGiftView = require( './SpanishGiftView' );
 var SpanishCommentsView = require( './SpanishCommentsView' );
-// var SpanishContactView = require( './SpanishContactView' );
+var SpanishContactView = require( './SpanishContactView' );
 var SpanishRSPV = require( './SpanishRSVP' );
 
 function EnglishNavView() {
