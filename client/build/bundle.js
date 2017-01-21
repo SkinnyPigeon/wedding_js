@@ -2545,6 +2545,8 @@
 	    var foodListOne = document.createElement( 'ul' );
 	    foodListOne.id = "foodListOne";
 	
+	    // ####################################################
+	
 	    var foodList = document.createElement( 'li' );
 	
 	    var food = document.createElement( 'img' );
@@ -2552,7 +2554,7 @@
 	    food.id = "foodImg";
 	    food.className = "giftImage";
 	
-	    var cost = 50;
+	    var cost = 40;
 	
 	    var foodUnit = document.createElement( 'h5' );
 	    foodUnit.innerText = "Unit Price: £" + cost;
@@ -2590,7 +2592,55 @@
 	    foodList.appendChild( foodSelectValue );
 	    foodList.appendChild( foodText );
 	
+	    // #######################################################
+	
+	    var romanticList = document.createElement( 'li' );
+	
+	    var romantic = document.createElement( 'img' );
+	    romantic.src = "../css/image/pineapple.png";
+	    romantic.id = "foodImg";
+	    romantic.className = "giftImage";
+	
+	    var cost = 60;
+	
+	    var romanticUnit = document.createElement( 'h5' );
+	    romanticUnit.innerText = "Unit Price: £" + cost;
+	
+	    var romanticAvail = document.createElement( 'h5' );
+	    romanticAvail.innerText = "Available: " + String.fromCharCode( 8734 ) + "/" + String.fromCharCode( 8734 );
+	
+	    var romanticSelectValue = document.createElement( 'h5' );
+	
+	    var romanticSelect = document.createElement( 'input' );
+	    romanticSelect.type = "range";
+	    romanticSelect.step = 1;
+	    romanticSelect.min = 0;
+	    romanticSelect.max = 10;
+	    romanticSelect.value = 0;
+	    romanticSelect.list = "steplist";
+	
+	    romanticSelect.onchange = function() {
+	        romanticSelectValue.innerText = "Give " + romanticSelect.value + " Units";
+	        this.buyFoods = romanticSelect.value;
+	        this.total = cost * romanticSelect.value;
+	    }.bind( this );
+	
+	    romanticSelectValue.innerText = "Give " + romanticSelect.value + " Units";
+	
+	    var romanticText = document.createElement( 'h5' );
+	    romanticText.innerText = "Romantic Dinner";
+	
+	    giftSpace.appendChild( foodListOne );
+	
+	    romanticList.appendChild( romantic );
+	    romanticList.appendChild( romanticUnit );
+	    romanticList.appendChild( romanticAvail );
+	    romanticList.appendChild( romanticSelect );
+	    romanticList.appendChild( romanticSelectValue );
+	    romanticList.appendChild( romanticText );
+	
 	    foodListOne.appendChild( foodList );
+	    foodListOne.appendChild( romanticList );
 	    giftSpace.appendChild( foodListOne );
 	
 	    giftSpace.style.display = "block";
@@ -5765,7 +5815,7 @@
 	    drinkUnit.innerText = "€" + cost + "\nCada Unidad";
 	
 	    var drinkAvail = document.createElement( 'h5' );
-	    drinkAvail.innerText = "Disponible: " + String.fromCharCode( 8734 ) + "/" + String.fromCharCode( 8734 );
+	    drinkAvail.innerText = "Disponible: \n" + String.fromCharCode( 8734 ) + "/" + String.fromCharCode( 8734 );
 	
 	    var drinkSelectValue = document.createElement( 'h5' );
 	
@@ -6079,10 +6129,10 @@
 	    var cost = 50;
 	
 	    var foodUnit = document.createElement( 'h5' );
-	    foodUnit.innerText = "Unit Price: £" + cost;
+	    foodUnit.innerText = "€" + cost + "\nCada Unidad";
 	
 	    var foodAvail = document.createElement( 'h5' );
-	    foodAvail.innerText = "Available: " + String.fromCharCode( 8734 ) + "/" + String.fromCharCode( 8734 );
+	    foodAvail.innerText = "Disponible: \n" + String.fromCharCode( 8734 ) + "/" + String.fromCharCode( 8734 );
 	
 	    var foodSelectValue = document.createElement( 'h5' );
 	
@@ -6113,6 +6163,55 @@
 	    foodList.appendChild( foodSelect );
 	    foodList.appendChild( foodSelectValue );
 	    foodList.appendChild( foodText );
+	
+	    // #######################################################
+	
+	    var romanticList = document.createElement( 'li' );
+	
+	    var romantic = document.createElement( 'img' );
+	    romantic.src = "../css/image/pineapple.png";
+	    romantic.id = "foodImg";
+	    romantic.className = "giftImage";
+	
+	    var cost = 60;
+	
+	    var romanticUnit = document.createElement( 'h5' );
+	    romanticUnit.innerText = "€" + cost + "\nCada Unidad";
+	
+	    var romanticAvail = document.createElement( 'h5' );
+	    romanticAvail.innerText = "Disponible: \n" + String.fromCharCode( 8734 ) + "/" + String.fromCharCode( 8734 );
+	
+	    var romanticSelectValue = document.createElement( 'h5' );
+	
+	    var romanticSelect = document.createElement( 'input' );
+	    romanticSelect.type = "range";
+	    romanticSelect.step = 1;
+	    romanticSelect.min = 0;
+	    romanticSelect.max = 10;
+	    romanticSelect.value = 0;
+	    romanticSelect.list = "steplist";
+	
+	    romanticSelect.onchange = function() {
+	        romanticSelectValue.innerText = "Regalar " + romanticSelect.value + " Unidades";
+	        this.buyFoods = romanticSelect.value;
+	        this.total = cost * romanticSelect.value;
+	    }.bind( this );
+	
+	    romanticSelectValue.innerText = "Regalar " + romanticSelect.value + " Unidades";
+	
+	    var romanticText = document.createElement( 'h5' );
+	    romanticText.innerText = "Cena romántica";
+	
+	    giftSpace.appendChild( foodListOne );
+	
+	    romanticList.appendChild( romantic );
+	    romanticList.appendChild( romanticUnit );
+	    romanticList.appendChild( romanticAvail );
+	    romanticList.appendChild( romanticSelect );
+	    romanticList.appendChild( romanticSelectValue );
+	    romanticList.appendChild( romanticText );
+	
+	    foodListOne.appendChild( romanticList );
 	
 	    foodListOne.appendChild( foodList );
 	    giftSpace.appendChild( foodListOne );

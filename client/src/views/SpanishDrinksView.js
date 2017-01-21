@@ -246,7 +246,7 @@ EnglishDrinksView.prototype = {
     drinkUnit.innerText = "€" + cost + "\nCada Unidad";
 
     var drinkAvail = document.createElement( 'h5' );
-    drinkAvail.innerText = "Disponible: " + String.fromCharCode( 8734 ) + "/" + String.fromCharCode( 8734 );
+    drinkAvail.innerText = "Disponible: \n" + String.fromCharCode( 8734 ) + "/" + String.fromCharCode( 8734 );
 
     var drinkSelectValue = document.createElement( 'h5' );
 
