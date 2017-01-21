@@ -288,12 +288,12 @@ EnglishFlightsView.prototype = {
     leaveSelect.list = "steplist";
 
     leaveSelect.onchange = function() {
-        leaveSelectValue.innerText = "Regalar " + leaveSelect.value + " Units";
+        leaveSelectValue.innerText = "Regalar " + leaveSelect.value + " Unidades";
         this.buyLeave = leaveSelect.value;
         this.total = cost * leaveSelect.value;
     }.bind( this );
 
-    leaveSelectValue.innerText = "Regalar " + leaveSelect.value + " Units";
+    leaveSelectValue.innerText = "Regalar " + leaveSelect.value + " Unidades";
 
     var leaveText = document.createElement( 'h5' );
     leaveText.innerText = "Vuelo de ida a Hawaii\n";
@@ -320,10 +320,10 @@ EnglishFlightsView.prototype = {
 
     var cost = 100
     var returnFlightUnit = document.createElement( 'h5' );
-    returnFlightUnit.innerText = "£" + cost + "\n Per Unit";
+    returnFlightUnit.innerText = "€" + cost + "\nCada Unidad";
 
     var returnFlightAvail = document.createElement( 'h5' );
-    returnFlightAvail.innerText = "Available: " + this.returnFlight + "/8";
+    returnFlightAvail.innerText = "Disponible: " + this.returnFlight + "/8";
 
     var returnFlightSelectValue = document.createElement( 'h5' );
 
@@ -336,12 +336,12 @@ EnglishFlightsView.prototype = {
     returnFlightSelect.list = "steplist";
 
     returnFlightSelect.onchange = function() {
-        returnFlightSelectValue.innerText = "Give " + returnFlightSelect.value + " Units";
+        returnFlightSelectValue.innerText = "Regalar " + returnFlightSelect.value + " Unidades";
         this.buyReturnFlight = returnFlightSelect.value;
         this.total = cost * returnFlightSelect.value;
     }.bind( this );
 
-    returnFlightSelectValue.innerText = "Give " + returnFlightSelect.value + " Units";
+    returnFlightSelectValue.innerText = "Regalar " + returnFlightSelect.value + " Unidades";
 
     var returnText = document.createElement( 'h5' );
     returnText.innerText = "Vuelo de vuela\n\n";
@@ -367,10 +367,10 @@ EnglishFlightsView.prototype = {
     var cost = 100;
 
     var bigIslandFlightUnit = document.createElement( 'h5' );
-    bigIslandFlightUnit.innerText = "£" + cost + "\n Per Unit";
+    bigIslandFlightUnit.innerText = "€" + cost + "\nCada Unidad";
 
     var bigIslandFlightAvail = document.createElement( 'h5' );
-    bigIslandFlightAvail.innerText = "Available: " + this.bigIsland + "/2";
+    bigIslandFlightAvail.innerText = "Disponible: " + this.bigIsland + "/2";
 
     var bigIslandFlightSelectValue = document.createElement( 'h5' );
 
@@ -383,12 +383,12 @@ EnglishFlightsView.prototype = {
     bigIslandFlightSelect.list = "steplist";
 
     bigIslandFlightSelect.onchange = function() {
-        bigIslandFlightSelectValue.innerText = "Give " + bigIslandFlightSelect.value + " Units";
+        bigIslandFlightSelectValue.innerText = "Regalar " + bigIslandFlightSelect.value + " Unidades";
         this.buyBigIsland = bigIslandFlightSelect.value;
         this.total = cost * bigIslandFlightSelect.value;
     }.bind( this );
 
-    bigIslandFlightSelectValue.innerText = "Give " + bigIslandFlightSelect.value + " Units";
+    bigIslandFlightSelectValue.innerText = "Regalar " + bigIslandFlightSelect.value + " Unidades";
 
     var bigIslandText = document.createElement( 'h5' );
     bigIslandText.innerText = "Big Island to Maui";
@@ -417,10 +417,10 @@ EnglishFlightsView.prototype = {
     var cost = 100;
 
     var mauiFlightUnit = document.createElement( 'h5' );
-    mauiFlightUnit.innerText = "£" + cost + "\nPer Unit";
+    mauiFlightUnit.innerText = "€" + cost + "\nCada Unidad";
 
     var mauiFlightAvail = document.createElement( 'h5' );
-    mauiFlightAvail.innerText = "Available: " + this.maui + "/2";
+    mauiFlightAvail.innerText = "Disponible: " + this.maui + "/2";
 
     var mauiFlightSelectValue = document.createElement( 'h5' );
 
@@ -433,12 +433,12 @@ EnglishFlightsView.prototype = {
     mauiFlightSelect.list = "steplist";
 
     mauiFlightSelect.onchange = function() {
-        mauiFlightSelectValue.innerText = "Give " + mauiFlightSelect.value + " Units";
+        mauiFlightSelectValue.innerText = "Regalar " + mauiFlightSelect.value + " Unidades";
         this.buyMaui = mauiFlightSelect.value;
         this.total = cost * mauiFlightSelect.value;
     }.bind( this );
 
-    mauiFlightSelectValue.innerText = "Give " + mauiFlightSelect.value + " Units";
+    mauiFlightSelectValue.innerText = "Regalar " + mauiFlightSelect.value + " Unidades";
 
     var mauiText = document.createElement( 'h5' );
     mauiText.innerText = "Maui to Kauai\n\n";
@@ -462,10 +462,10 @@ EnglishFlightsView.prototype = {
     var cost = 100;
 
     var kauaiFlightUnit = document.createElement( 'h5' );
-    kauaiFlightUnit.innerText = "£" + cost + "\n Per Unit";
+    kauaiFlightUnit.innerText = "€" + cost + "\nCada Unidad";
 
     var kauaiFlightAvail = document.createElement( 'h5' );
-    kauaiFlightAvail.innerText = "Available: " + this.kauai + "/1";
+    kauaiFlightAvail.innerText = "Disponible: " + this.kauai + "/1";
 
     var kauaiFlightSelectValue = document.createElement( 'h5' );
 
@@ -478,12 +478,12 @@ EnglishFlightsView.prototype = {
     kauaiFlightSelect.list = "steplist";
 
     kauaiFlightSelect.onchange = function() {
-        kauaiFlightSelectValue.innerText = "Give " + kauaiFlightSelect.value + " Units";
+        kauaiFlightSelectValue.innerText = "Regalar " + kauaiFlightSelect.value + " Unidades";
         this.buyKauai = kauaiFlightSelect.value;
         this.total = cost * kauaiFlightSelect.value;
     }.bind( this );
 
-    kauaiFlightSelectValue.innerText = "Give " + kauaiFlightSelect.value + " Units";
+    kauaiFlightSelectValue.innerText = "Regalar " + kauaiFlightSelect.value + " Unidades";
 
     var kauaiText = document.createElement( 'h5' );
     kauaiText.innerText = "Kauai to Honolulu";
@@ -508,12 +508,12 @@ EnglishFlightsView.prototype = {
     var giveButton = document.createElement( 'button' );
     var cancelButton = document.createElement( 'button' );
 
-    giveButton.innerText = "Gift...";
+    giveButton.innerText = "Regalo...";
     giveButton.onclick = function() {
       this.displayForm();
     }.bind( this );
 
-    cancelButton.innerText = "Back...";
+    cancelButton.innerText = "Volver...";
     cancelButton.onclick = function() {
       this.displayGifts();
     }.bind( this );
