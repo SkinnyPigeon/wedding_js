@@ -18,7 +18,7 @@ EnglishBusView.prototype = {
 
     var title = document.createElement( 'h1' );
     title.className = "circleTitle";
-    title.innerText = "Buses";
+    title.innerText = "Autobús";
 
     var dotsOne = document.createElement( 'p' );
     dotsOne.innerText = "--------------------------------"
