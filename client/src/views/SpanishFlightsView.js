@@ -194,7 +194,7 @@ EnglishFlightsView.prototype = {
           bigisland: this.buyBigIsland,
           maui: this.buyMaui,
           kauai: this.buyKauai,
-          currency: "£"
+          currency: "€"
         }
       }
       request.send( JSON.stringify( data ));

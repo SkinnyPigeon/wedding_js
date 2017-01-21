@@ -1,7 +1,7 @@
 var SpanishFlightsView = require( './SpanishFlightsView.js' );
 var SpanishHotelsView = require( './SpanishHotelsView.js' );
 var SpanishDrinksView = require( './SpanishDrinksView.js' );
-var EnglishFoodView = require( './EnglishFoodView.js' );
+var SpanishFoodView = require( './SpanishFoodView.js' );
 var EnglishBoatView = require( './EnglishBoatView.js' );
 var EnglishLavaView = require( './EnglishLavaView.js' );
 
@@ -129,7 +129,7 @@ EnglishGiftView.prototype = {
   },
 
   displayFood: function() {
-    var view = new EnglishFoodView();
+    var view = new SpanishFoodView();
   },
 
   displayBoatTour: function() {

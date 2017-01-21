@@ -1,41 +1,41 @@
-var EnglishDrinksView = function() {
+var EnglishFoodView = function() {
 
-  this.drinkUrl = "http://localhost:1235/drinks";
+  this.foodUrl = "http://localhost:1235/foods";
 
-  this.drinkObject = [];
-  this.drink = 0;
+  this.foodObject = [];
+  this.food = 0;
 
-  this.buyDrinks = 0;
+  this.buyFoods = 0;
 
   this.total = 0;
 
-  this.getDrinks();
+  this.getFoods();
 }
 
-EnglishDrinksView.prototype = {
+EnglishFoodView.prototype = {
 
-  getDrinks: function() {
+  getFoods: function() {
     setInterval( function() {
-      if( this.drinkObject.length === 0 ) {
+      if( this.foodObject.length === 0 ) {
         this.displayLoading()
       }
     }.bind( this ), 10 );
 
     var request = new XMLHttpRequest();
-    request.open( 'GET', this.drinkUrl );
+    request.open( 'GET', this.foodUrl );
     request.setRequestHeader("Content-Type", "application/json")
 
     request.onload = () => {
       if( request.status === 200 ) {
-        var drinkObject = JSON.parse( request.responseText );
-        this.drinkObject = drinkObject;
-        for( var i = 0; i < drinkObject.length; i++ ) {
-            if( this.drinkObject[i].id === 1 ) {
-                this.drink = drinkObject[i].drink;
+        var foodObject = JSON.parse( request.responseText );
+        this.foodObject = foodObject;
+        for( var i = 0; i < foodObject.length; i++ ) {
+            if( this.foodObject[i].id === 1 ) {
+                this.food = foodObject[i].food;
             }
         }
         this.hideLoading();
-        this.displayDrinks();
+        this.displayFoods();
       }
     }
     request.send( null );
@@ -60,10 +60,10 @@ EnglishDrinksView.prototype = {
     giftList.innerText = "";
   },
 
-  updateDrinks: function() {
-    var newDrink = this.drink + this.buyDrinks;
+  updateFoods: function() {
+    var newFood = this.food + this.buyFoods;
 
-    var url = this.drinkUrl + "/1";
+    var url = this.foodUrl + "/1";
     var request = new XMLHttpRequest();
     request.open( 'PUT', url );
     request.setRequestHeader( "Content-type", "application/json" );
@@ -71,15 +71,15 @@ EnglishDrinksView.prototype = {
         // console.log( "Loaded" );
     }
     var data = {
-      drink : {
-        drink: newDrink
+      food : {
+        food: newFood
       }
     }
     request.send( JSON.stringify( data ));
     console.log( data );
   },
 
-  displayDrinks: function() {
+  displayFoods: function() {
     var giftSpace = document.getElementById( 'gift-space' );
     giftSpace.style.display = "none";
 
@@ -90,23 +90,23 @@ EnglishDrinksView.prototype = {
     }
 
     var title = document.createElement( 'h1' );
-    title.innerText = "Bebidas";
+    title.innerText = "Comidas";
     title.className = "circleTitle";
 
     var dotsFour = document.createElement( 'p' );
     dotsFour.innerText = "--------------------------------"
 
     var text = document.createElement( 'h5' );
-    text.innerText = "Todos sabéis lo que la playa es muy importante para Laura, si queréis contribuir a que Euan sobreviva los días de playa con un poco de estilo seguro que os gusta esta idea. \n\n Si te apetece contribuir a esta parte de la luna de miel pulsa aquí."
+    text.innerText = "Cuál sería el sentido de viajar tan lejos y si no se disfruta de la comida, esperemos deliciosa, de allí. \n\n Si te apetece contribuir a esta parte de la luna de miel pulsa aquí."
 
     var goButton = document.createElement( 'button' );
-    goButton.innerText = "Bebidas";
+    goButton.innerText = "Comidas";
     goButton.onclick = function() {
-      this.displayDrinkPick();
+      this.displayFoodPick();
     }.bind( this );
 
     var backButton = document.createElement( 'button' );
-    backButton.innerText = "Back";
+    backButton.innerText = "Volver";
     backButton.onclick = function() {
       this.displayGifts() 
     }.bind( this );
@@ -147,26 +147,26 @@ EnglishDrinksView.prototype = {
     email.placeholder = "Email...";
 
     var message = document.createElement( 'input' );
-    message.placeholder = "Mensaje";
+    message.placeholder = "Mensaje...";
 
     var button = document.createElement( 'button' );
     button.innerText = "Regalo";
 
     button.onclick = function() {
-      this.updateDrinks();
+      this.updateFoods();
       var request = new XMLHttpRequest();
-      request.open( 'POST', this.drinkUrl );
+      request.open( 'POST', this.foodUrl );
       request.setRequestHeader("Content-Type", "application/json");
       request.onload = () => {
         this.displayThankYou();
       }
       var data = {
-        drink: {
+        food: {
           name: name.value,
           email: email.value,
           total: this.total,
           comment: message.value,
-          drink: this.buyDrinks,
+          food: this.buyFoods,
           currency: "€"
         }
       }
@@ -176,7 +176,7 @@ EnglishDrinksView.prototype = {
     var backButton = document.createElement( 'button' );
     backButton.innerText = "Volver";
     backButton.onclick = function() {
-      this.displayDrinkPick();
+      this.displayFoodPick();
     }.bind( this );
 
     var brOne = document.createElement( 'br' );
@@ -214,7 +214,7 @@ EnglishDrinksView.prototype = {
     giftSpace.appendChild( thankYou );
   },
 
-  displayDrinkPick: function() {
+  displayFoodPick: function() {
 
     var giftSpaced = document.getElementById( 'gift-space' );
     giftSpaced.style.display = "none";
@@ -226,60 +226,60 @@ EnglishDrinksView.prototype = {
       giftSpace.removeChild( giftSpace.lastChild );
     }
 
-    var drinkTitle = document.createElement( 'h1' );
-    drinkTitle.innerText = "Bebidas";
-    drinkTitle.className = "circleTitleRaisedHigher";
+    var foodTitle = document.createElement( 'h1' );
+    foodTitle.innerText = "Foods";
+    foodTitle.className = "circleTitleRaisedHigher";
 
-    var drinkListOne = document.createElement( 'ul' );
-    drinkListOne.id = "drinkListOne";
+    var foodListOne = document.createElement( 'ul' );
+    foodListOne.id = "foodListOne";
 
-    var drinkList = document.createElement( 'li' );
+    var foodList = document.createElement( 'li' );
 
-    var drink = document.createElement( 'img' );
-    drink.src = "../css/image/drink.png";
-    drink.id = "drinkImg";
-    drink.className = "giftImage";
+    var food = document.createElement( 'img' );
+    food.src = "../css/image/pineapple.png";
+    food.id = "foodImg";
+    food.className = "giftImage";
 
-    var cost = 20;
+    var cost = 50;
 
-    var drinkUnit = document.createElement( 'h5' );
-    drinkUnit.innerText = "€" + cost + "\nCada Unidad";
+    var foodUnit = document.createElement( 'h5' );
+    foodUnit.innerText = "Unit Price: £" + cost;
 
-    var drinkAvail = document.createElement( 'h5' );
-    drinkAvail.innerText = "Disponible: " + String.fromCharCode( 8734 ) + "/" + String.fromCharCode( 8734 );
+    var foodAvail = document.createElement( 'h5' );
+    foodAvail.innerText = "Available: " + String.fromCharCode( 8734 ) + "/" + String.fromCharCode( 8734 );
 
-    var drinkSelectValue = document.createElement( 'h5' );
+    var foodSelectValue = document.createElement( 'h5' );
 
-    var drinkSelect = document.createElement( 'input' );
-    drinkSelect.type = "range";
-    drinkSelect.step = 1;
-    drinkSelect.min = 0;
-    drinkSelect.max = 10;
-    drinkSelect.value = 0;
-    drinkSelect.list = "steplist";
+    var foodSelect = document.createElement( 'input' );
+    foodSelect.type = "range";
+    foodSelect.step = 1;
+    foodSelect.min = 0;
+    foodSelect.max = 10;
+    foodSelect.value = 0;
+    foodSelect.list = "steplist";
 
-    drinkSelect.onchange = function() {
-        drinkSelectValue.innerText = "Regalar " + drinkSelect.value + " Unidades";
-        this.buyDrinks = drinkSelect.value;
-        this.total = cost * drinkSelect.value;
+    foodSelect.onchange = function() {
+        foodSelectValue.innerText = "Regalar " + foodSelect.value + " Unidades";
+        this.buyFoods = foodSelect.value;
+        this.total = cost * foodSelect.value;
     }.bind( this );
 
-    drinkSelectValue.innerText = "Regalar " + drinkSelect.value + " Unidades";
+    foodSelectValue.innerText = "Regalar " + foodSelect.value + " Unidades";
 
-    var drinkText = document.createElement( 'h5' );
-    drinkText.innerText = "Bebidas en la playa";
+    var foodText = document.createElement( 'h5' );
+    foodText.innerText = "Comida en la playa";
 
-    giftSpace.appendChild( drinkListOne );
+    giftSpace.appendChild( foodListOne );
 
-    drinkList.appendChild( drink );
-    drinkList.appendChild( drinkUnit );
-    drinkList.appendChild( drinkAvail );
-    drinkList.appendChild( drinkSelect );
-    drinkList.appendChild( drinkSelectValue );
-    drinkList.appendChild( drinkText );
+    foodList.appendChild( food );
+    foodList.appendChild( foodUnit );
+    foodList.appendChild( foodAvail );
+    foodList.appendChild( foodSelect );
+    foodList.appendChild( foodSelectValue );
+    foodList.appendChild( foodText );
 
-    drinkListOne.appendChild( drinkList );
-    giftSpace.appendChild( drinkListOne );
+    foodListOne.appendChild( foodList );
+    giftSpace.appendChild( foodListOne );
 
     giftSpace.style.display = "block";
 
@@ -309,4 +309,4 @@ EnglishDrinksView.prototype = {
   }  
 }
 
-module.exports = EnglishDrinksView;
+module.exports = EnglishFoodView;
