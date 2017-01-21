@@ -37,13 +37,8 @@ EnglishHomeView.prototype = {
     homeSpace.appendChild( welcome );
     homeSpace.appendChild( dotsOne );
     homeSpace.appendChild( text );
-    // homeSpace.appendChild( date );
-    // homeSpace.appendChild( time );
-    // homeSpace.appendChild( venue );
-    // homeSpace.appendChild( dotsTwo );
     homeSpace.appendChild( message );
     homeSpace.appendChild( us );
-    // homeSpace.appendChild( language );
     homeSpace.appendChild( languageText );
   },
 

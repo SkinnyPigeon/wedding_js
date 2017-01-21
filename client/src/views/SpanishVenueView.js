@@ -20,19 +20,19 @@ EnglishVenueView.prototype = {
 
     var text = document.createElement( 'h5' );
     text.id = "venueText";
-    text.innerText = "We hope to see you all there for the ceremony at 12.30 which will be held in the garden. Afterwards there will be drinks and nibbles. Following that will be a sit down meal inside the venue before the day finishes with a DJ and open bar."
+    text.innerText = "Esperamos veros a todos en la ceremonia que tendrá lugar a las 12:30 en los jardines del salón. Cuando la ceremonia acabe empezara un coctel y después entraremos a la sala para la comida. Al acabar el banquete habrá barra libre y DJ para continuar con la fiesta."
 
     var address = document.createElement( 'a' );
-    address.innerText = "Salones Canarios, Calle Constitución, 03170 Rojales, Alicante, Spain \n (click me)";
+    address.innerText = "Salones Canarios, Calle Constitución, 03170 Rojales, Alicante, Spain \n (pulsame)";
     address.href = "https://www.google.co.uk/maps/place/Salones+Canario/@38.085104,-0.7316289,17z/data=!3m1!4b1!4m5!3m4!1s0xd63af14268fcecf:0xe8048d44d8dd442f!8m2!3d38.085104!4d-0.7294402";
     address.target = "_blank";
     address.id = "address";
 
     var slackTitle = document.createElement( 'h1' );
-    slackTitle.innerText = "How To Share Your Photos"
+    slackTitle.innerText = "Cómo compartir tus fotos"
 
     var slackText = document.createElement( 'h5' );
-    slackText.innerText = "We would love for you to share your pictures of the ceremony and party with all of us. If you'd like to join in then send us your email address and we'll invite you to join a group in an app called Slack. It's free and private. All you have to do is post the photos you take to the channel in Slack and we'll all get to see them on the big screen in the venue."
+    slackText.innerText = "Nos encantaría que compartierais las fotos que toméis durante el día con todos. Por favor mandadnos vuestro email y os invitaremos a uniros a un grupo en una app que se llama Slack. Es gratis y privada y lo único que tenéis que hacer durante el día es subir las fotos a el grupo e irán apareciendo en la pantalla del salón."
 
     var contact = document.createElement( 'ul' );
 
