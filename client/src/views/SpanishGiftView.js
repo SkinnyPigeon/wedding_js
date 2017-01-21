@@ -1,5 +1,5 @@
 var SpanishFlightsView = require( './SpanishFlightsView.js' );
-var EnglishHotelsView = require( './EnglishHotelsView.js' );
+// var SpanishHotelsView = require( './SpanishHotelsView.js' );
 var EnglishDrinksView = require( './EnglishDrinksView.js' );
 var EnglishFoodView = require( './EnglishFoodView.js' );
 var EnglishBoatView = require( './EnglishBoatView.js' );
@@ -121,7 +121,7 @@ EnglishGiftView.prototype = {
   },
 
   displayHotels: function() {
-    var view = new EnglishHotelsView();
+    var view = new SpanishHotelsView();
   },
 
   displayDrinks: function() {

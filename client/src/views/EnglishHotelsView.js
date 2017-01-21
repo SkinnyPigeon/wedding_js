@@ -269,7 +269,7 @@ EnglishHotelsView.prototype = {
     var cost = 150;
 
     var konaUnit = document.createElement( 'h5' );
-    konaUnit.innerText = "Unit Price: £" + cost;
+    konaUnit.innerText = "£" + cost + "\nPer Unit";
 
     var konaAvail = document.createElement( 'h5' );
     konaAvail.innerText = "Available: " + this.kona + "/2";
@@ -293,16 +293,16 @@ EnglishHotelsView.prototype = {
     konaSelectValue.innerText = "Give " + konaSelect.value + " Units";
 
     var konaText = document.createElement( 'h5' );
-    konaText.innerText = "Hotels in Kona";
+    konaText.innerText = "Hotels in Kona \n\n";
 
     giftSpace.appendChild( hotelListOne );
 
     konaList.appendChild( kona );
+    konaList.appendChild( konaText );
     konaList.appendChild( konaUnit );
     konaList.appendChild( konaAvail );
     konaList.appendChild( konaSelect );
     konaList.appendChild( konaSelectValue );
-    konaList.appendChild( konaText );
 
     hotelListOne.appendChild( konaList );
 
@@ -317,7 +317,7 @@ EnglishHotelsView.prototype = {
 
     var cost = 120
     var volcanoUnit = document.createElement( 'h5' );
-    volcanoUnit.innerText = "Unit Price: £" + cost;
+    volcanoUnit.innerText = "£" + cost + "\nPer Unit";
 
     var volcanoAvail = document.createElement( 'h5' );
     volcanoAvail.innerText = "Available: " + this.volcano + "/3";
@@ -346,11 +346,11 @@ EnglishHotelsView.prototype = {
     giftSpace.appendChild( hotelListOne );
 
     volcanoList.appendChild( volcano );
+    volcanoList.appendChild( returnText );
     volcanoList.appendChild( volcanoUnit );
     volcanoList.appendChild( volcanoAvail );
     volcanoList.appendChild( volcanoSelect );
     volcanoList.appendChild( volcanoSelectValue );
-    volcanoList.appendChild( returnText );
 
     hotelListOne.appendChild( volcanoList );
 
@@ -366,7 +366,7 @@ EnglishHotelsView.prototype = {
     var cost = 145;
 
     var mauiFlightUnit = document.createElement( 'h5' );
-    mauiFlightUnit.innerText = "Unit Price: £" + cost;
+    mauiFlightUnit.innerText = "£" + cost + "\nPer Unit";
 
     var mauiFlightAvail = document.createElement( 'h5' );
     mauiFlightAvail.innerText = "Available: " + this.maui + "/4";
@@ -390,14 +390,14 @@ EnglishHotelsView.prototype = {
     mauiFlightSelectValue.innerText = "Give " + mauiFlightSelect.value + " Units";
 
     var mauiText = document.createElement( 'h5' );
-    mauiText.innerText = "Hotels in Maui";
+    mauiText.innerText = "Hotels in Maui\n\n";
 
     mauiFlightList.appendChild( mauiFlight );
+    mauiFlightList.appendChild( mauiText );
     mauiFlightList.appendChild( mauiFlightUnit );
     mauiFlightList.appendChild( mauiFlightAvail );
     mauiFlightList.appendChild( mauiFlightSelect );
     mauiFlightList.appendChild( mauiFlightSelectValue );
-    mauiFlightList.appendChild( mauiText );
 
     hotelListOne.appendChild( mauiFlightList );
 
@@ -418,7 +418,7 @@ EnglishHotelsView.prototype = {
     var cost = 150;
 
     var kauaiFlightUnit = document.createElement( 'h5' );
-    kauaiFlightUnit.innerText = "Unit Price: £" + cost;
+    kauaiFlightUnit.innerText = "£" + cost + "\nPer Unit";
 
     var kauaiFlightAvail = document.createElement( 'h5' );
     kauaiFlightAvail.innerText = "Available: " + this.kauai + "/5";
@@ -442,14 +442,14 @@ EnglishHotelsView.prototype = {
     kauaiFlightSelectValue.innerText = "Give " + kauaiFlightSelect.value + " Units";
 
     var kauaiText = document.createElement( 'h5' );
-    kauaiText.innerText = "Hotels in Kauai";
+    kauaiText.innerText = "Hotels in Kauai\n\n";
 
     kauaiFlightList.appendChild( kauaiFlight );
+    kauaiFlightList.appendChild( kauaiText );
     kauaiFlightList.appendChild( kauaiFlightUnit );
     kauaiFlightList.appendChild( kauaiFlightAvail );
     kauaiFlightList.appendChild( kauaiFlightSelect );
     kauaiFlightList.appendChild( kauaiFlightSelectValue );
-    kauaiFlightList.appendChild( kauaiText );
 
     hotelListTwo.appendChild( kauaiFlightList );
 
@@ -466,7 +466,7 @@ EnglishHotelsView.prototype = {
     var cost = 70;
 
     var honoluluFlightUnit = document.createElement( 'h5' );
-    honoluluFlightUnit.innerText = "Unit Price: £" + cost;
+    honoluluFlightUnit.innerText = "£" + cost + "\nPer Unit";
 
     var honoluluFlightAvail = document.createElement( 'h5' );
     honoluluFlightAvail.innerText = "Available: " + this.honolulu + "/2";
@@ -493,11 +493,11 @@ EnglishHotelsView.prototype = {
     honoluluText.innerText = "Hotels in Honolulu";
 
     honoluluFlightList.appendChild( honoluluFlight );
+    honoluluFlightList.appendChild( honoluluText );
     honoluluFlightList.appendChild( honoluluFlightUnit );
     honoluluFlightList.appendChild( honoluluFlightAvail );
     honoluluFlightList.appendChild( honoluluFlightSelect );
     honoluluFlightList.appendChild( honoluluFlightSelectValue );
-    honoluluFlightList.appendChild( honoluluText );
 
     hotelListTwo.appendChild( honoluluFlightList );
     giftSpace.appendChild( hotelListTwo );
