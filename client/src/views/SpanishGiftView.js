@@ -1,5 +1,5 @@
 var SpanishFlightsView = require( './SpanishFlightsView.js' );
-// var SpanishHotelsView = require( './SpanishHotelsView.js' );
+var SpanishHotelsView = require( './SpanishHotelsView.js' );
 var EnglishDrinksView = require( './EnglishDrinksView.js' );
 var EnglishFoodView = require( './EnglishFoodView.js' );
 var EnglishBoatView = require( './EnglishBoatView.js' );
