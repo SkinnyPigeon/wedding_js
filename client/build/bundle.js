@@ -1190,7 +1190,7 @@
 	    var cost = 100;
 	
 	    var leaveUnit = document.createElement( 'h5' );
-	    leaveUnit.innerText = "Unit Price: £" + cost;
+	    leaveUnit.innerText = "£" + cost + "\nPer Unit";
 	
 	    var leaveAvail = document.createElement( 'h5' );
 	    leaveAvail.innerText = "Available: " + this.leave + "/8";
@@ -1214,16 +1214,16 @@
 	    leaveSelectValue.innerText = "Give " + leaveSelect.value + " Units";
 	
 	    var leaveText = document.createElement( 'h5' );
-	    leaveText.innerText = "Flights to Hawaii";
+	    leaveText.innerText = "Flight to Hawaii \n\n";
 	
 	    giftSpace.appendChild( flightListOne );
 	
 	    leaveList.appendChild( leave );
+	    leaveList.appendChild( leaveText );
 	    leaveList.appendChild( leaveUnit );
 	    leaveList.appendChild( leaveAvail );
 	    leaveList.appendChild( leaveSelect );
 	    leaveList.appendChild( leaveSelectValue );
-	    leaveList.appendChild( leaveText );
 	
 	    flightListOne.appendChild( leaveList );
 	
@@ -1238,7 +1238,7 @@
 	
 	    var cost = 100
 	    var returnFlightUnit = document.createElement( 'h5' );
-	    returnFlightUnit.innerText = "Unit Price: £" + cost;
+	    returnFlightUnit.innerText = "£" + cost + "\n Per Unit";
 	
 	    var returnFlightAvail = document.createElement( 'h5' );
 	    returnFlightAvail.innerText = "Available: " + this.returnFlight + "/8";
@@ -1262,16 +1262,16 @@
 	    returnFlightSelectValue.innerText = "Give " + returnFlightSelect.value + " Units";
 	
 	    var returnText = document.createElement( 'h5' );
-	    returnText.innerText = "Flights back home";
+	    returnText.innerText = "Flight back home";
 	
 	    giftSpace.appendChild( flightListOne );
 	
 	    returnFlightList.appendChild( returnFlight );
+	    returnFlightList.appendChild( returnText );
 	    returnFlightList.appendChild( returnFlightUnit );
 	    returnFlightList.appendChild( returnFlightAvail );
 	    returnFlightList.appendChild( returnFlightSelect );
 	    returnFlightList.appendChild( returnFlightSelectValue );
-	    returnFlightList.appendChild( returnText );
 	
 	    // ##################################################
 	
@@ -1285,7 +1285,7 @@
 	    var cost = 100;
 	
 	    var bigIslandFlightUnit = document.createElement( 'h5' );
-	    bigIslandFlightUnit.innerText = "Unit Price: £" + cost;
+	    bigIslandFlightUnit.innerText = "£" + cost + "\n Per Unit";
 	
 	    var bigIslandFlightAvail = document.createElement( 'h5' );
 	    bigIslandFlightAvail.innerText = "Available: " + this.bigIsland + "/2";
@@ -1312,11 +1312,11 @@
 	    bigIslandText.innerText = "Big Island to Maui";
 	
 	    bigIslandFlightList.appendChild( bigIslandFlight );
+	    bigIslandFlightList.appendChild( bigIslandText );
 	    bigIslandFlightList.appendChild( bigIslandFlightUnit );
 	    bigIslandFlightList.appendChild( bigIslandFlightAvail );
 	    bigIslandFlightList.appendChild( bigIslandFlightSelect );
 	    bigIslandFlightList.appendChild( bigIslandFlightSelectValue );
-	    bigIslandFlightList.appendChild( bigIslandText );
 	
 	    flightListOne.appendChild( bigIslandFlightList );
 	
@@ -1335,7 +1335,7 @@
 	    var cost = 100;
 	
 	    var mauiFlightUnit = document.createElement( 'h5' );
-	    mauiFlightUnit.innerText = "Unit Price: £" + cost;
+	    mauiFlightUnit.innerText = "£" + cost + "\nPer Unit";
 	
 	    var mauiFlightAvail = document.createElement( 'h5' );
 	    mauiFlightAvail.innerText = "Available: " + this.maui + "/2";
@@ -1359,14 +1359,14 @@
 	    mauiFlightSelectValue.innerText = "Give " + mauiFlightSelect.value + " Units";
 	
 	    var mauiText = document.createElement( 'h5' );
-	    mauiText.innerText = "Maui to Kauai";
+	    mauiText.innerText = "Maui to Kauai\n\n";
 	
 	    mauiFlightList.appendChild( mauiFlight );
+	    mauiFlightList.appendChild( mauiText );
 	    mauiFlightList.appendChild( mauiFlightUnit );
 	    mauiFlightList.appendChild( mauiFlightAvail );
 	    mauiFlightList.appendChild( mauiFlightSelect );
 	    mauiFlightList.appendChild( mauiFlightSelectValue );
-	    mauiFlightList.appendChild( mauiText );
 	
 	    // ###################################################
 	
@@ -1380,7 +1380,7 @@
 	    var cost = 100;
 	
 	    var kauaiFlightUnit = document.createElement( 'h5' );
-	    kauaiFlightUnit.innerText = "Unit Price: £" + cost;
+	    kauaiFlightUnit.innerText = "£" + cost + "\n Per Unit";
 	
 	    var kauaiFlightAvail = document.createElement( 'h5' );
 	    kauaiFlightAvail.innerText = "Available: " + this.kauai + "/1";
@@ -1407,11 +1407,11 @@
 	    kauaiText.innerText = "Kauai to Honolulu";
 	
 	    kauaiFlightList.appendChild( kauaiFlight );
+	    kauaiFlightList.appendChild( kauaiText );
 	    kauaiFlightList.appendChild( kauaiFlightUnit );
 	    kauaiFlightList.appendChild( kauaiFlightAvail );
 	    kauaiFlightList.appendChild( kauaiFlightSelect );
 	    kauaiFlightList.appendChild( kauaiFlightSelectValue );
-	    kauaiFlightList.appendChild( kauaiText );
 	
 	    flightListOne.appendChild( kauaiFlightList );
 	    flightListTwo.appendChild( mauiFlightList );
