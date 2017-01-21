@@ -12,7 +12,7 @@ var SpanishVenueView = require( './SpanishVenueView' );
 var SpanishBusView = require( './SpanishBusView' );
 var SpanishMapView = require( './SpanishMapView' );
 var SpanishGiftView = require( './SpanishGiftView' );
-// var SpanishCommentsView = require( './SpanishCommentsView' );
+var SpanishCommentsView = require( './SpanishCommentsView' );
 // var SpanishContactView = require( './SpanishContactView' );
 var SpanishRSPV = require( './SpanishRSVP' );
 
