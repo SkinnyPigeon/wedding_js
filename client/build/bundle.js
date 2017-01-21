@@ -3987,7 +3987,7 @@
 	    dotsTwo.innerText = "--------------------------------"
 	
 	    var text = document.createElement( 'h5' );
-	    text.innerText = "Click on one of the items below to see a bit more about it and to contribute should you wish."
+	    text.innerText = "Selecciona uno de los iconos de debajo para descubrir que son y para elegirlo si te gustaría que ese fuera tu regalo."
 	
 	    var listOne = document.createElement( 'ul' );
 	    var listTwo = document.createElement( 'ul' );
@@ -5097,7 +5097,7 @@
 	    dotsFour.innerText = "--------------------------------"
 	
 	    var text = document.createElement( 'h5' );
-	    text.innerText = "Another big one. We're there for a while so having a bed to sleep on would come in very handy. \n\nVamos a estar en Hawaii por 16 dias, 5 dias en Big Island, 4 dias en Maui, 5 dias en Kauai y los últimos 2 dias en Honolulu. \n\n Si te apetece contribuir a esta parte de la luna de miel pulsa aquí."
+	    text.innerText = "Vamos a estar en Hawaii por 16 dias, 5 dias en Big Island, 4 dias en Maui, 5 dias en Kauai y los últimos 2 dias en Honolulu. \n\n Si te apetece contribuir a esta parte de la luna de miel pulsa aquí."
 	
 	    var goButton = document.createElement( 'button' );
 	    goButton.innerText = "Hoteles";
@@ -5616,7 +5616,7 @@
 	    dotsFour.innerText = "--------------------------------"
 	
 	    var text = document.createElement( 'h5' );
-	    text.innerText = "For those of you who know Laura you'll be aware that relaxing on the beach is pretty important to her so any help to do it in style would be amazing. \n\n If you'd like to help with this then give this a click."
+	    text.innerText = "Todos sabéis lo que la playa es muy importante para Laura, si queréis contribuir a que Euan sobreviva los días de playa con un poco de estilo seguro que os gusta esta idea. \n\n Si te apetece contribuir a esta parte de la luna de miel pulsa aquí."
 	
 	    var goButton = document.createElement( 'button' );
 	    goButton.innerText = "Bebidas";

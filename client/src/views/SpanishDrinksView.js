@@ -97,7 +97,7 @@ EnglishDrinksView.prototype = {
     dotsFour.innerText = "--------------------------------"
 
     var text = document.createElement( 'h5' );
-    text.innerText = "For those of you who know Laura you'll be aware that relaxing on the beach is pretty important to her so any help to do it in style would be amazing. \n\n If you'd like to help with this then give this a click."
+    text.innerText = "Todos sabéis lo que la playa es muy importante para Laura, si queréis contribuir a que Euan sobreviva los días de playa con un poco de estilo seguro que os gusta esta idea. \n\n Si te apetece contribuir a esta parte de la luna de miel pulsa aquí."
 
     var goButton = document.createElement( 'button' );
     goButton.innerText = "Bebidas";

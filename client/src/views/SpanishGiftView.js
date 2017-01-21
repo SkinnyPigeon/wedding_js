@@ -52,7 +52,7 @@ EnglishGiftView.prototype = {
     dotsTwo.innerText = "--------------------------------"
 
     var text = document.createElement( 'h5' );
-    text.innerText = "Click on one of the items below to see a bit more about it and to contribute should you wish."
+    text.innerText = "Selecciona uno de los iconos de debajo para descubrir que son y para elegirlo si te gustaría que ese fuera tu regalo."
 
     var listOne = document.createElement( 'ul' );
     var listTwo = document.createElement( 'ul' );

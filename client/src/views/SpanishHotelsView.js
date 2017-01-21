@@ -116,7 +116,7 @@ EnglishHotelsView.prototype = {
     dotsFour.innerText = "--------------------------------"
 
     var text = document.createElement( 'h5' );
-    text.innerText = "Another big one. We're there for a while so having a bed to sleep on would come in very handy. \n\nVamos a estar en Hawaii por 16 dias, 5 dias en Big Island, 4 dias en Maui, 5 dias en Kauai y los últimos 2 dias en Honolulu. \n\n Si te apetece contribuir a esta parte de la luna de miel pulsa aquí."
+    text.innerText = "Vamos a estar en Hawaii por 16 dias, 5 dias en Big Island, 4 dias en Maui, 5 dias en Kauai y los últimos 2 dias en Honolulu. \n\n Si te apetece contribuir a esta parte de la luna de miel pulsa aquí."
 
     var goButton = document.createElement( 'button' );
     goButton.innerText = "Hoteles";
