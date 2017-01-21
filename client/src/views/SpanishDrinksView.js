@@ -272,11 +272,11 @@ EnglishDrinksView.prototype = {
     giftSpace.appendChild( drinkListOne );
 
     drinkList.appendChild( drink );
+    drinkList.appendChild( drinkText );
     drinkList.appendChild( drinkUnit );
     drinkList.appendChild( drinkAvail );
     drinkList.appendChild( drinkSelect );
     drinkList.appendChild( drinkSelectValue );
-    drinkList.appendChild( drinkText );
 
     drinkListOne.appendChild( drinkList );
     giftSpace.appendChild( drinkListOne );

@@ -243,7 +243,7 @@ EnglishDrinksView.prototype = {
     var cost = 20;
 
     var drinkUnit = document.createElement( 'h5' );
-    drinkUnit.innerText = "£" + cost + "\nCada Unidad";
+    drinkUnit.innerText = "£" + cost + "\nPer Unit";
 
     var drinkAvail = document.createElement( 'h5' );
     drinkAvail.innerText = "Available: " + String.fromCharCode( 8734 ) + "/" + String.fromCharCode( 8734 );
@@ -272,11 +272,11 @@ EnglishDrinksView.prototype = {
     giftSpace.appendChild( drinkListOne );
 
     drinkList.appendChild( drink );
+    drinkList.appendChild( drinkText );
     drinkList.appendChild( drinkUnit );
     drinkList.appendChild( drinkAvail );
     drinkList.appendChild( drinkSelect );
     drinkList.appendChild( drinkSelectValue );
-    drinkList.appendChild( drinkText );
 
     drinkListOne.appendChild( drinkList );
     giftSpace.appendChild( drinkListOne );

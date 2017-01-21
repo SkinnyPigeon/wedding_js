@@ -272,11 +272,11 @@ EnglishFoodView.prototype = {
     giftSpace.appendChild( foodListOne );
 
     foodList.appendChild( food );
+    foodList.appendChild( foodText );
     foodList.appendChild( foodUnit );
     foodList.appendChild( foodAvail );
     foodList.appendChild( foodSelect );
     foodList.appendChild( foodSelectValue );
-    foodList.appendChild( foodText );
 
     // #######################################################
 
@@ -314,16 +314,16 @@ EnglishFoodView.prototype = {
     romanticSelectValue.innerText = "Regalar " + romanticSelect.value + " Unidades";
 
     var romanticText = document.createElement( 'h5' );
-    romanticText.innerText = "Cena romántica";
+    romanticText.innerText = "Cena romántica\n\n";
 
     giftSpace.appendChild( foodListOne );
 
     romanticList.appendChild( romantic );
+    romanticList.appendChild( romanticText );
     romanticList.appendChild( romanticUnit );
     romanticList.appendChild( romanticAvail );
     romanticList.appendChild( romanticSelect );
     romanticList.appendChild( romanticSelectValue );
-    romanticList.appendChild( romanticText );
 
     foodListOne.appendChild( romanticList );
 

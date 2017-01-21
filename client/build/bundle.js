@@ -2238,7 +2238,7 @@
 	    var cost = 20;
 	
 	    var drinkUnit = document.createElement( 'h5' );
-	    drinkUnit.innerText = "£" + cost + "\nCada Unidad";
+	    drinkUnit.innerText = "£" + cost + "\nPer Unit";
 	
 	    var drinkAvail = document.createElement( 'h5' );
 	    drinkAvail.innerText = "Available: " + String.fromCharCode( 8734 ) + "/" + String.fromCharCode( 8734 );
@@ -2267,11 +2267,11 @@
 	    giftSpace.appendChild( drinkListOne );
 	
 	    drinkList.appendChild( drink );
+	    drinkList.appendChild( drinkText );
 	    drinkList.appendChild( drinkUnit );
 	    drinkList.appendChild( drinkAvail );
 	    drinkList.appendChild( drinkSelect );
 	    drinkList.appendChild( drinkSelectValue );
-	    drinkList.appendChild( drinkText );
 	
 	    drinkListOne.appendChild( drinkList );
 	    giftSpace.appendChild( drinkListOne );
@@ -2557,7 +2557,7 @@
 	    var cost = 40;
 	
 	    var foodUnit = document.createElement( 'h5' );
-	    foodUnit.innerText = "Unit Price: £" + cost;
+	    foodUnit.innerText = "£" + cost + "\nPer Unit";
 	
 	    var foodAvail = document.createElement( 'h5' );
 	    foodAvail.innerText = "Available: " + String.fromCharCode( 8734 ) + "/" + String.fromCharCode( 8734 );
@@ -2586,11 +2586,11 @@
 	    giftSpace.appendChild( foodListOne );
 	
 	    foodList.appendChild( food );
+	    foodList.appendChild( foodText );
 	    foodList.appendChild( foodUnit );
 	    foodList.appendChild( foodAvail );
 	    foodList.appendChild( foodSelect );
 	    foodList.appendChild( foodSelectValue );
-	    foodList.appendChild( foodText );
 	
 	    // #######################################################
 	
@@ -2604,7 +2604,7 @@
 	    var cost = 60;
 	
 	    var romanticUnit = document.createElement( 'h5' );
-	    romanticUnit.innerText = "Unit Price: £" + cost;
+	    romanticUnit.innerText = "£" + cost + "\nPer Unit";
 	
 	    var romanticAvail = document.createElement( 'h5' );
 	    romanticAvail.innerText = "Available: " + String.fromCharCode( 8734 ) + "/" + String.fromCharCode( 8734 );
@@ -2633,11 +2633,11 @@
 	    giftSpace.appendChild( foodListOne );
 	
 	    romanticList.appendChild( romantic );
+	    romanticList.appendChild( romanticText );
 	    romanticList.appendChild( romanticUnit );
 	    romanticList.appendChild( romanticAvail );
 	    romanticList.appendChild( romanticSelect );
 	    romanticList.appendChild( romanticSelectValue );
-	    romanticList.appendChild( romanticText );
 	
 	    foodListOne.appendChild( foodList );
 	    foodListOne.appendChild( romanticList );
@@ -5841,11 +5841,11 @@
 	    giftSpace.appendChild( drinkListOne );
 	
 	    drinkList.appendChild( drink );
+	    drinkList.appendChild( drinkText );
 	    drinkList.appendChild( drinkUnit );
 	    drinkList.appendChild( drinkAvail );
 	    drinkList.appendChild( drinkSelect );
 	    drinkList.appendChild( drinkSelectValue );
-	    drinkList.appendChild( drinkText );
 	
 	    drinkListOne.appendChild( drinkList );
 	    giftSpace.appendChild( drinkListOne );
@@ -6158,11 +6158,11 @@
 	    giftSpace.appendChild( foodListOne );
 	
 	    foodList.appendChild( food );
+	    foodList.appendChild( foodText );
 	    foodList.appendChild( foodUnit );
 	    foodList.appendChild( foodAvail );
 	    foodList.appendChild( foodSelect );
 	    foodList.appendChild( foodSelectValue );
-	    foodList.appendChild( foodText );
 	
 	    // #######################################################
 	
@@ -6200,16 +6200,16 @@
 	    romanticSelectValue.innerText = "Regalar " + romanticSelect.value + " Unidades";
 	
 	    var romanticText = document.createElement( 'h5' );
-	    romanticText.innerText = "Cena romántica";
+	    romanticText.innerText = "Cena romántica\n\n";
 	
 	    giftSpace.appendChild( foodListOne );
 	
 	    romanticList.appendChild( romantic );
+	    romanticList.appendChild( romanticText );
 	    romanticList.appendChild( romanticUnit );
 	    romanticList.appendChild( romanticAvail );
 	    romanticList.appendChild( romanticSelect );
 	    romanticList.appendChild( romanticSelectValue );
-	    romanticList.appendChild( romanticText );
 	
 	    foodListOne.appendChild( romanticList );
 	

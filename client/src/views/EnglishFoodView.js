@@ -245,7 +245,7 @@ EnglishFoodView.prototype = {
     var cost = 40;
 
     var foodUnit = document.createElement( 'h5' );
-    foodUnit.innerText = "Unit Price: £" + cost;
+    foodUnit.innerText = "£" + cost + "\nPer Unit";
 
     var foodAvail = document.createElement( 'h5' );
     foodAvail.innerText = "Available: " + String.fromCharCode( 8734 ) + "/" + String.fromCharCode( 8734 );
@@ -274,11 +274,11 @@ EnglishFoodView.prototype = {
     giftSpace.appendChild( foodListOne );
 
     foodList.appendChild( food );
+    foodList.appendChild( foodText );
     foodList.appendChild( foodUnit );
     foodList.appendChild( foodAvail );
     foodList.appendChild( foodSelect );
     foodList.appendChild( foodSelectValue );
-    foodList.appendChild( foodText );
 
     // #######################################################
 
@@ -292,7 +292,7 @@ EnglishFoodView.prototype = {
     var cost = 60;
 
     var romanticUnit = document.createElement( 'h5' );
-    romanticUnit.innerText = "Unit Price: £" + cost;
+    romanticUnit.innerText = "£" + cost + "\nPer Unit";
 
     var romanticAvail = document.createElement( 'h5' );
     romanticAvail.innerText = "Available: " + String.fromCharCode( 8734 ) + "/" + String.fromCharCode( 8734 );
@@ -321,11 +321,11 @@ EnglishFoodView.prototype = {
     giftSpace.appendChild( foodListOne );
 
     romanticList.appendChild( romantic );
+    romanticList.appendChild( romanticText );
     romanticList.appendChild( romanticUnit );
     romanticList.appendChild( romanticAvail );
     romanticList.appendChild( romanticSelect );
     romanticList.appendChild( romanticSelectValue );
-    romanticList.appendChild( romanticText );
 
     foodListOne.appendChild( foodList );
     foodListOne.appendChild( romanticList );
