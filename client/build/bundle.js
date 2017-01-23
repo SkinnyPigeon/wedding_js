@@ -1262,7 +1262,7 @@
 	    returnFlightSelectValue.innerText = "Give " + returnFlightSelect.value + " Units";
 	
 	    var returnText = document.createElement( 'h5' );
-	    returnText.innerText = "Flight back home";
+	    returnText.innerText = "Flight back home\n\n";
 	
 	    giftSpace.appendChild( flightListOne );
 	
@@ -1309,7 +1309,7 @@
 	    bigIslandFlightSelectValue.innerText = "Give " + bigIslandFlightSelect.value + " Units";
 	
 	    var bigIslandText = document.createElement( 'h5' );
-	    bigIslandText.innerText = "Big Island to Maui";
+	    bigIslandText.innerText = "Big Island to Maui\n\n";
 	
 	    bigIslandFlightList.appendChild( bigIslandFlight );
 	    bigIslandFlightList.appendChild( bigIslandText );
@@ -1404,7 +1404,7 @@
 	    kauaiFlightSelectValue.innerText = "Give " + kauaiFlightSelect.value + " Units";
 	
 	    var kauaiText = document.createElement( 'h5' );
-	    kauaiText.innerText = "Kauai to Honolulu";
+	    kauaiText.innerText = "Kauai to Honolulu\n\n";
 	
 	    kauaiFlightList.appendChild( kauaiFlight );
 	    kauaiFlightList.appendChild( kauaiText );
@@ -1947,7 +1947,7 @@
 	    honoluluFlightSelectValue.innerText = "Give " + honoluluFlightSelect.value + " Units";
 	
 	    var honoluluText = document.createElement( 'h5' );
-	    honoluluText.innerText = "Hotel in Honolulu";
+	    honoluluText.innerText = "Hotel in Honolulu\n\n";
 	
 	    honoluluFlightList.appendChild( honoluluFlight );
 	    honoluluFlightList.appendChild( honoluluText );
@@ -4526,7 +4526,7 @@
 	    bigIslandFlightSelectValue.innerText = "Regalar " + bigIslandFlightSelect.value + " Unidades";
 	
 	    var bigIslandText = document.createElement( 'h5' );
-	    bigIslandText.innerText = "Big Island a Maui";
+	    bigIslandText.innerText = "Big Island a Maui\n\n";
 	
 	    bigIslandFlightList.appendChild( bigIslandFlight );
 	    bigIslandFlightList.appendChild( bigIslandText );
@@ -4621,7 +4621,7 @@
 	    kauaiFlightSelectValue.innerText = "Regalar " + kauaiFlightSelect.value + " Unidades";
 	
 	    var kauaiText = document.createElement( 'h5' );
-	    kauaiText.innerText = "Kauai a Honolulu";
+	    kauaiText.innerText = "Kauai a Honolulu\n\n";
 	
 	    kauaiFlightList.appendChild( kauaiFlight );
 	    kauaiFlightList.appendChild( kauaiText );

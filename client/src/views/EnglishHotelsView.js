@@ -490,7 +490,7 @@ EnglishHotelsView.prototype = {
     honoluluFlightSelectValue.innerText = "Give " + honoluluFlightSelect.value + " Units";
 
     var honoluluText = document.createElement( 'h5' );
-    honoluluText.innerText = "Hotel in Honolulu";
+    honoluluText.innerText = "Hotel in Honolulu\n\n";
 
     honoluluFlightList.appendChild( honoluluFlight );
     honoluluFlightList.appendChild( honoluluText );

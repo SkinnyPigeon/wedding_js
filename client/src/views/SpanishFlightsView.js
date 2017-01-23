@@ -391,7 +391,7 @@ EnglishFlightsView.prototype = {
     bigIslandFlightSelectValue.innerText = "Regalar " + bigIslandFlightSelect.value + " Unidades";
 
     var bigIslandText = document.createElement( 'h5' );
-    bigIslandText.innerText = "Big Island a Maui";
+    bigIslandText.innerText = "Big Island a Maui\n\n";
 
     bigIslandFlightList.appendChild( bigIslandFlight );
     bigIslandFlightList.appendChild( bigIslandText );
@@ -486,7 +486,7 @@ EnglishFlightsView.prototype = {
     kauaiFlightSelectValue.innerText = "Regalar " + kauaiFlightSelect.value + " Unidades";
 
     var kauaiText = document.createElement( 'h5' );
-    kauaiText.innerText = "Kauai a Honolulu";
+    kauaiText.innerText = "Kauai a Honolulu\n\n";
 
     kauaiFlightList.appendChild( kauaiFlight );
     kauaiFlightList.appendChild( kauaiText );

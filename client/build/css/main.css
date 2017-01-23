@@ -279,6 +279,14 @@ h5.hotels {
   margin: 0;
   color: #F5EBAE;
   font-family: 'Gudea', sans-serif;
+  font-size: 0.7em;
+  text-align: center;
+  max-width: 40%;
+  margin: auto;
+}
+
+#gift-list li h5 {
+  max-width: 100%;
 }
 
 #gift-list input {
