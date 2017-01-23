@@ -272,16 +272,16 @@ h5.hotels {
 }
 
 #gift-list img {
-  max-width: 100%;
+  max-width: 85%;
 }
 
 #gift-list h5 {
   margin: 0;
   color: #F5EBAE;
   font-family: 'Gudea', sans-serif;
-  font-size: 0.7em;
+  font-size: 0.34em;
   text-align: center;
-  max-width: 40%;
+  max-width: 100%;
   margin: auto;
 }
 
@@ -293,44 +293,32 @@ h5.hotels {
   max-width: 100%;
 }
 
+#gift-list button {
+  padding-top: 0;
+}
+
 ul#flightListOne {
-  margin-top: 8.5vh;
+  margin-top: 3.5vh;
 }
 
 ul#flightListTwo {
   display: block;
-  margin-bottom: 1em;
+  margin-bottom: 0;
 }
 
 ul#hotelListOne {
-  margin-top: 8.5vh;
+  margin-top: 3.5vh;
 }
 
 ul#hotelListTwo {
   display: block;
-  margin-bottom: 1em;
+  margin-bottom: 0;
 }
 
-ul#drinkListOne {
-  margin-top: 8.5vh;
-  display: block;
+#gift-list ul {
+  max-width: 100%;
 }
 
-ul#foodListOne {
-  margin-top: 8.5vh;
-  display: block;
+#gift-list li {
+  max-width: 12.5%;
 }
-
-ul#boatListOne {
-  margin-top: 8.5vh;
-  display: block;
-}
-
-ul#lavaListOne {
-  margin-top: 8.5vh;
-  display: block;
-}
-
-
-
-

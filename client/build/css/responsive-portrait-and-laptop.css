@@ -22,6 +22,32 @@
   #loading {
     padding-top: 18vh;
   }
+
+  #gift-list h5 {
+    margin: 0;
+    color: #F5EBAE;
+    font-family: 'Gudea', sans-serif;
+    font-size: 0.34em;
+    text-align: center;
+    max-width: 40%;
+    margin: auto;
+  }
+
+  ul#flightListOne {
+    margin-top: 9.5vh;
+  }
+
+  ul#flightListTwo {
+    margin-bottom: 0;
+  }
+
+  ul#hotelListOne {
+    margin-top: 9.5vh;
+  }
+
+  #gift-list img {
+    max-width: 75%;
+  }
 }
 
 @media screen and ( min-width: 400px ) {
