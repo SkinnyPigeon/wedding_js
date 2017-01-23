@@ -177,6 +177,25 @@
     padding-top: 0em;
   }
 
+  #gift-list h5 {
+    font-size: 0.6em;
+  }
+
+  ul#flightListOne {
+    margin-top: 6.5vh;
+  }
+
+  ul#flightListTwo {
+    padding-bottom: 2.5vh;
+  }
+
+  ul#hotelListOne {
+    margin-top: 6.5vh;
+  }
+
+  ul#hotelListTwo {
+    padding-bottom: 2.5vh;
+  }
 }
 
 @media screen and ( min-width: 720px ) {
