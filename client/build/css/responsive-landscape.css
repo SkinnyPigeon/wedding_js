@@ -131,6 +131,14 @@
     font-size: 0.34em;
   }
 
+  #gift-list img {
+    max-width: 65%
+  }
+
+  #gift-list li {
+    margin-right: 0;
+  }
+
 }
 
 @media screen and ( min-width: 720px ) and ( orientation: landscape ) and ( max-height: 450px ) and ( min-height: 410 ) {
@@ -151,6 +159,7 @@
     float: right;
     padding-top: 1.1em;
   }
+
 
   #nav-space ul:last-child {
     padding-right: 1em;
@@ -223,6 +232,12 @@
   #nav-space ul:last-child {
     padding-right: 1em;
   }
+
+  #nav-space ul#nav {
+    font-size: 0.7em;
+    padding-top: 1.5em;
+  }
+
 
   #nav-space img {
     max-width: 15px;
