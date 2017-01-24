@@ -319,6 +319,42 @@ ul#hotelListTwo {
   max-width: 100%;
 }
 
+ul#drinkListOne {
+  display: block;
+  margin-top: 10.5vh;
+}
+
+ul#drinkListOne img {
+  max-width: 100%;
+}
+
+ul#foodListOne {
+  display: block;
+  margin-top: 10.5vh;
+}
+
+ul#foodListOne img {
+  max-width: 100%;
+}
+
+ul#lavaListOne {
+  display: block;
+  margin-top: 10.5vh;
+}
+
+ul#lavaListOne img {
+  max-width: 100%;
+}
+
+ul#boatListOne {
+  display: block;
+  margin-top: 10.5vh;
+}
+
+ul#boatListOne img {
+  max-width: 100%;
+}
+
 #gift-list li {
   max-width: 12.5%;
 }
