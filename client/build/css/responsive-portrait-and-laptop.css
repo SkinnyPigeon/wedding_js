@@ -442,6 +442,7 @@
 
   h1.circleTitleRaisedMore {
     padding-top: 10vh;
+    margin-top: 0;
   }
 
 }
