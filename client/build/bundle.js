@@ -656,7 +656,7 @@
 	    hotelSpace.innerText = "";
 	
 	    var title = document.createElement( 'h1' );
-	    title.className = "circleTitleRaised";
+	    title.className = "circleTitleRaisedMore";
 	    title.innerText = "Hotels";
 	
 	    var dotsOne = document.createElement( 'p' );
@@ -3873,7 +3873,7 @@
 	    hotelSpace.innerText = "";
 	
 	    var title = document.createElement( 'h1' );
-	    title.className = "circleTitleRaised";
+	    title.className = "circleTitleRaisedMore";
 	    title.innerText = "Hoteles";
 	
 	    var dotsOne = document.createElement( 'p' );
