@@ -360,8 +360,8 @@ EnglishFlightsView.prototype = {
     var bigIslandFlightList = document.createElement( 'li' );
 
     var bigIslandFlight = document.createElement( 'img' );
-    bigIslandFlight.src = "../css/image/plane.png";
-    bigIslandFlight.id = "returnFlightImg";
+    bigIslandFlight.src = "../css/image/plane-up-left.png";
+    bigIslandFlight.id = "bigFlightImg";
     bigIslandFlight.className = "giftImage";
 
     var cost = 100;
@@ -410,7 +410,7 @@ EnglishFlightsView.prototype = {
     var mauiFlightList = document.createElement( 'li' );
 
     var mauiFlight = document.createElement( 'img' );
-    mauiFlight.src = "../css/image/plane.png";
+    mauiFlight.src = "../css/image/plane-up-left.png";
     mauiFlight.id = "returnFlightImg";
     mauiFlight.className = "giftImage";
 

@@ -311,7 +311,7 @@ EnglishHotelsView.prototype = {
     var volcanoList = document.createElement( 'li' );
 
     var volcano = document.createElement( 'img' );
-    volcano.src = "../css/image/hotel.png";
+    volcano.src = "../css/image/hotel2.png";
     volcano.id = "volcanoImg";
     volcano.className = "giftImage";
 
@@ -359,7 +359,7 @@ EnglishHotelsView.prototype = {
     var mauiFlightList = document.createElement( 'li' );
 
     var mauiFlight = document.createElement( 'img' );
-    mauiFlight.src = "../css/image/hotel.png";
+    mauiFlight.src = "../css/image/hotel3.png";
     mauiFlight.id = "returnFlightImg";
     mauiFlight.className = "giftImage";
 
@@ -411,7 +411,7 @@ EnglishHotelsView.prototype = {
     var kauaiFlightList = document.createElement( 'li' );
 
     var kauaiFlight = document.createElement( 'img' );
-    kauaiFlight.src = "../css/image/plane.png";
+    kauaiFlight.src = "../css/image/hotel4.png";
     kauaiFlight.id = "returnFlightImg";
     kauaiFlight.className = "giftImage";
 
@@ -459,7 +459,7 @@ EnglishHotelsView.prototype = {
     var honoluluFlightList = document.createElement( 'li' );
 
     var honoluluFlight = document.createElement( 'img' );
-    honoluluFlight.src = "../css/image/plane.png";
+    honoluluFlight.src = "../css/image/hotel5.png";
     honoluluFlight.id = "returnFlightImg";
     honoluluFlight.className = "giftImage";
 

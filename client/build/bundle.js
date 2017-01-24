@@ -1768,7 +1768,7 @@
 	    var volcanoList = document.createElement( 'li' );
 	
 	    var volcano = document.createElement( 'img' );
-	    volcano.src = "../css/image/hotel.png";
+	    volcano.src = "../css/image/hotel2.png";
 	    volcano.id = "volcanoImg";
 	    volcano.className = "giftImage";
 	
@@ -1816,7 +1816,7 @@
 	    var mauiFlightList = document.createElement( 'li' );
 	
 	    var mauiFlight = document.createElement( 'img' );
-	    mauiFlight.src = "../css/image/hotel.png";
+	    mauiFlight.src = "../css/image/hotel3.png";
 	    mauiFlight.id = "returnFlightImg";
 	    mauiFlight.className = "giftImage";
 	
@@ -1868,7 +1868,7 @@
 	    var kauaiFlightList = document.createElement( 'li' );
 	
 	    var kauaiFlight = document.createElement( 'img' );
-	    kauaiFlight.src = "../css/image/plane.png";
+	    kauaiFlight.src = "../css/image/hotel4.png";
 	    kauaiFlight.id = "returnFlightImg";
 	    kauaiFlight.className = "giftImage";
 	
@@ -1916,7 +1916,7 @@
 	    var honoluluFlightList = document.createElement( 'li' );
 	
 	    var honoluluFlight = document.createElement( 'img' );
-	    honoluluFlight.src = "../css/image/plane.png";
+	    honoluluFlight.src = "../css/image/hotel5.png";
 	    honoluluFlight.id = "returnFlightImg";
 	    honoluluFlight.className = "giftImage";
 	
@@ -4495,8 +4495,8 @@
 	    var bigIslandFlightList = document.createElement( 'li' );
 	
 	    var bigIslandFlight = document.createElement( 'img' );
-	    bigIslandFlight.src = "../css/image/plane.png";
-	    bigIslandFlight.id = "returnFlightImg";
+	    bigIslandFlight.src = "../css/image/plane-up-left.png";
+	    bigIslandFlight.id = "bigFlightImg";
 	    bigIslandFlight.className = "giftImage";
 	
 	    var cost = 100;
@@ -4545,7 +4545,7 @@
 	    var mauiFlightList = document.createElement( 'li' );
 	
 	    var mauiFlight = document.createElement( 'img' );
-	    mauiFlight.src = "../css/image/plane.png";
+	    mauiFlight.src = "../css/image/plane-up-left.png";
 	    mauiFlight.id = "returnFlightImg";
 	    mauiFlight.className = "giftImage";
 	
