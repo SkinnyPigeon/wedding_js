@@ -285,7 +285,7 @@ EnglishFoodView.prototype = {
     var romanticList = document.createElement( 'li' );
 
     var romantic = document.createElement( 'img' );
-    romantic.src = "../css/image/pineapple.png";
+    romantic.src = "../css/image/romantic.png";
     romantic.id = "foodImg";
     romantic.className = "giftImage";
 

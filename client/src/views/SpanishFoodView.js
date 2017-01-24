@@ -240,7 +240,7 @@ EnglishFoodView.prototype = {
     food.id = "foodImg";
     food.className = "giftImage";
 
-    var cost = 50;
+    var cost = 40;
 
     var foodUnit = document.createElement( 'h5' );
     foodUnit.innerText = "€" + cost + "\nCada Unidad";
@@ -267,7 +267,7 @@ EnglishFoodView.prototype = {
     foodSelectValue.innerText = "Regalar " + foodSelect.value + " Unidades";
 
     var foodText = document.createElement( 'h5' );
-    foodText.innerText = "Comida en la playa";
+    foodText.innerText = "Comida en la playa\n\n";
 
     giftSpace.appendChild( foodListOne );
 
@@ -283,7 +283,7 @@ EnglishFoodView.prototype = {
     var romanticList = document.createElement( 'li' );
 
     var romantic = document.createElement( 'img' );
-    romantic.src = "../css/image/pineapple.png";
+    romantic.src = "../css/image/romantic.png";
     romantic.id = "foodImg";
     romantic.className = "giftImage";
 

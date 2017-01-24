@@ -2597,7 +2597,7 @@
 	    var romanticList = document.createElement( 'li' );
 	
 	    var romantic = document.createElement( 'img' );
-	    romantic.src = "../css/image/pineapple.png";
+	    romantic.src = "../css/image/romantic.png";
 	    romantic.id = "foodImg";
 	    romantic.className = "giftImage";
 	
@@ -4985,7 +4985,7 @@
 	    var volcanoList = document.createElement( 'li' );
 	
 	    var volcano = document.createElement( 'img' );
-	    volcano.src = "../css/image/hotel.png";
+	    volcano.src = "../css/image/hotel2.png";
 	    volcano.id = "volcanoImg";
 	    volcano.className = "giftImage";
 	
@@ -5033,7 +5033,7 @@
 	    var mauiFlightList = document.createElement( 'li' );
 	
 	    var mauiFlight = document.createElement( 'img' );
-	    mauiFlight.src = "../css/image/hotel.png";
+	    mauiFlight.src = "../css/image/hotel3.png";
 	    mauiFlight.id = "returnFlightImg";
 	    mauiFlight.className = "giftImage";
 	
@@ -5085,7 +5085,7 @@
 	    var kauaiFlightList = document.createElement( 'li' );
 	
 	    var kauaiFlight = document.createElement( 'img' );
-	    kauaiFlight.src = "../css/image/plane.png";
+	    kauaiFlight.src = "../css/image/hotel4.png";
 	    kauaiFlight.id = "returnFlightImg";
 	    kauaiFlight.className = "giftImage";
 	
@@ -5133,7 +5133,7 @@
 	    var honoluluFlightList = document.createElement( 'li' );
 	
 	    var honoluluFlight = document.createElement( 'img' );
-	    honoluluFlight.src = "../css/image/plane.png";
+	    honoluluFlight.src = "../css/image/hotel5.png";
 	    honoluluFlight.id = "returnFlightImg";
 	    honoluluFlight.className = "giftImage";
 	
@@ -5769,7 +5769,7 @@
 	    food.id = "foodImg";
 	    food.className = "giftImage";
 	
-	    var cost = 50;
+	    var cost = 40;
 	
 	    var foodUnit = document.createElement( 'h5' );
 	    foodUnit.innerText = "€" + cost + "\nCada Unidad";
@@ -5796,7 +5796,7 @@
 	    foodSelectValue.innerText = "Regalar " + foodSelect.value + " Unidades";
 	
 	    var foodText = document.createElement( 'h5' );
-	    foodText.innerText = "Comida en la playa";
+	    foodText.innerText = "Comida en la playa\n\n";
 	
 	    giftSpace.appendChild( foodListOne );
 	
@@ -5812,7 +5812,7 @@
 	    var romanticList = document.createElement( 'li' );
 	
 	    var romantic = document.createElement( 'img' );
-	    romantic.src = "../css/image/pineapple.png";
+	    romantic.src = "../css/image/romantic.png";
 	    romantic.id = "foodImg";
 	    romantic.className = "giftImage";
 	
