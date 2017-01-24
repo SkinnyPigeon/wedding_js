@@ -208,6 +208,10 @@
     font-size: 0.34em;
   }
 
+  ul#hotelListOne {
+    max-width: 10%;
+  }
+
 }
 
 @media screen and ( min-width: 660px ) and ( orientation: landscape ) and ( max-height: 450px ) {
