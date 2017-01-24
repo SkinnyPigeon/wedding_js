@@ -63,6 +63,22 @@
   #circle-space a {
     font-size: 0.34em;
   }
+
+  #gift-list li {
+    margin-right: 0;
+  }
+
+  #gift-list img {
+    max-width: 65%;
+  }
+
+  ul#flightListOne {
+    margin-top: 3vh;
+  }
+
+  ul#hotelListOne {
+    margin-top: 3vh;
+  }
 }
 
 @media screen and ( min-width: 635px ) and ( orientation: landscape ) and ( max-height: 390px ) {
@@ -208,8 +224,16 @@
     font-size: 0.34em;
   }
 
+  #gift-list img {
+    max-width: 65%;
+  }
+
+  ul#flightListOne {
+    margin-top: 3vh;
+  }
+
   ul#hotelListOne {
-    max-width: 10%;
+    margin-top: 3vh;
   }
 
 }
@@ -284,6 +308,26 @@
 
   #circle-space a {
     font-size: 0.34em;
+  }
+
+  #gift-list li {
+    margin-right: 0;
+  }
+
+  #gift-list img {
+    max-width: 65%;
+  }
+
+  ul#flightListOne {
+    margin-top: 6vh;
+  }
+
+  ul#hotelListOne {
+    margin-top: 6vh;
+  }
+
+  #gift-list h5 {
+    font-size: 0.45em;
   }
 
 }
