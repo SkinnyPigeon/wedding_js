@@ -1,6 +1,7 @@
 var EnglishFoodView = function() {
 
-  this.foodUrl = "http://localhost:1235/foods";
+  // this.foodUrl = "http://localhost:1235/foods";
+  this.foodUrl = "https://gift-list-database.herokuapp.com/foods";
 
   this.foodObject = [];
   this.food = 0;

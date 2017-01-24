@@ -1,6 +1,7 @@
 var EnglishLavaView = function() {
 
-  this.lavaUrl = "http://localhost:1235/lavas";
+  this.lavaUrl = "https://gift-list-database.herokuapp.com/lavas";
+  // this.lavaUrl = "http://localhost:1235/lavas";
 
   this.lavaObject = [];
   this.lava = 0;

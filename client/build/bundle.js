@@ -918,8 +918,9 @@
 
 	var EnglishFlightsView = function() {
 	  // this.url = "https://gift-database.herokuapp.com/gifts";
+	  this.flightUrl = "https://gift-list-database.herokuapp.com/flights"
 	  // this.url = "http://localhost:8080/gifts";
-	  this.flightUrl = "http://localhost:1235/flights";
+	  // this.flightUrl = "http://localhost:1235/flights";
 	
 	  this.flightObject = [];
 	  this.leave = 0;
@@ -1456,7 +1457,8 @@
 /***/ function(module, exports) {
 
 	var EnglishHotelsView = function() {
-	  this.hotelUrl = "http://localhost:1235/hotels";
+	  this.hotelUrl = "https://gift-list-database.herokuapp.com/hotels";
+	  // this.hotelUrl = "http://localhost:1235/hotels";
 	
 	  this.hotelObject = [];
 	  this.kona = 0;
@@ -1995,7 +1997,8 @@
 
 	var EnglishDrinksView = function() {
 	
-	  this.drinkUrl = "http://localhost:1235/drinks";
+	  // this.drinkUrl = "http://localhost:1235/drinks";
+	  this.drinkUrl = "https://gift-list-database.herokuapp.com/drinks";
 	
 	  this.drinkObject = [];
 	  this.drink = 0;
@@ -2312,7 +2315,8 @@
 
 	var EnglishFoodView = function() {
 	
-	  this.foodUrl = "http://localhost:1235/foods";
+	  // this.foodUrl = "http://localhost:1235/foods";
+	  this.foodUrl = "https://gift-list-database.herokuapp.com/foods";
 	
 	  this.foodObject = [];
 	  this.food = 0;
@@ -2679,7 +2683,8 @@
 
 	var EnglishBoatView = function() {
 	
-	  this.boatUrl = "http://localhost:1235/boats";
+	  // this.boatUrl = "http://localhost:1235/boats";
+	  this.boatUrl = "https://gift-list-database.herokuapp.com/boats";
 	
 	  this.boatObject = [];
 	  this.boat = 0;
@@ -2997,7 +3002,8 @@
 
 	var EnglishLavaView = function() {
 	
-	  this.lavaUrl = "http://localhost:1235/lavas";
+	  this.lavaUrl = "https://gift-list-database.herokuapp.com/lavas";
+	  // this.lavaUrl = "http://localhost:1235/lavas";
 	
 	  this.lavaObject = [];
 	  this.lava = 0;
@@ -4136,7 +4142,8 @@
 	var EnglishFlightsView = function() {
 	  // this.url = "https://gift-database.herokuapp.com/gifts";
 	  // this.url = "http://localhost:8080/gifts";
-	  this.flightUrl = "http://localhost:1235/flights";
+	  // this.flightUrl = "http://localhost:1235/flights";
+	  this.flightUrl = "https://gift-list-database.herokuapp.com/flights"
 	
 	  this.flightObject = [];
 	  this.leave = 0;
@@ -4673,7 +4680,8 @@
 /***/ function(module, exports) {
 
 	var EnglishHotelsView = function() {
-	  this.hotelUrl = "http://localhost:1235/hotels";
+	  this.hotelUrl = "https://gift-list-database.herokuapp.com/hotels";
+	  // this.hotelUrl = "http://localhost:1235/hotels";
 	
 	  this.hotelObject = [];
 	  this.kona = 0;
@@ -5212,7 +5220,8 @@
 
 	var EnglishDrinksView = function() {
 	
-	  this.drinkUrl = "http://localhost:1235/drinks";
+	  // this.drinkUrl = "http://localhost:1235/drinks";
+	  this.drinkUrl = "https://gift-list-database.herokuapp.com/drinks";
 	
 	  this.drinkObject = [];
 	  this.drink = 0;
@@ -5529,7 +5538,8 @@
 
 	var EnglishFoodView = function() {
 	
-	  this.foodUrl = "http://localhost:1235/foods";
+	  // this.foodUrl = "http://localhost:1235/foods";
+	  this.foodUrl = "https://gift-list-database.herokuapp.com/foods";
 	
 	  this.foodObject = [];
 	  this.food = 0;
@@ -5895,7 +5905,8 @@
 
 	var EnglishBoatView = function() {
 	
-	  this.boatUrl = "http://localhost:1235/boats";
+	  // this.boatUrl = "http://localhost:1235/boats";
+	  this.boatUrl = "https://gift-list-database.herokuapp.com/boats";
 	
 	  this.boatObject = [];
 	  this.boat = 0;
@@ -6213,7 +6224,8 @@
 
 	var EnglishLavaView = function() {
 	
-	  this.lavaUrl = "http://localhost:1235/lavas";
+	  this.lavaUrl = "https://gift-list-database.herokuapp.com/lavas";
+	  // this.lavaUrl = "http://localhost:1235/lavas";
 	
 	  this.lavaObject = [];
 	  this.lava = 0;

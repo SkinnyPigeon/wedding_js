@@ -1,6 +1,7 @@
 var EnglishBoatView = function() {
 
-  this.boatUrl = "http://localhost:1235/boats";
+  // this.boatUrl = "http://localhost:1235/boats";
+  this.boatUrl = "https://gift-list-database.herokuapp.com/boats";
 
   this.boatObject = [];
   this.boat = 0;

@@ -1,5 +1,6 @@
 var EnglishHotelsView = function() {
-  this.hotelUrl = "http://localhost:1235/hotels";
+  this.hotelUrl = "https://gift-list-database.herokuapp.com/hotels";
+  // this.hotelUrl = "http://localhost:1235/hotels";
 
   this.hotelObject = [];
   this.kona = 0;

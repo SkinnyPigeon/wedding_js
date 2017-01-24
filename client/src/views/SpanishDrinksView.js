@@ -1,6 +1,7 @@
 var EnglishDrinksView = function() {
 
-  this.drinkUrl = "http://localhost:1235/drinks";
+  // this.drinkUrl = "http://localhost:1235/drinks";
+  this.drinkUrl = "https://gift-list-database.herokuapp.com/drinks";
 
   this.drinkObject = [];
   this.drink = 0;
