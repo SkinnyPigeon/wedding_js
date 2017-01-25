@@ -381,3 +381,7 @@ h1.circleTitleRaisedMore {
 #hotel-space h5 {
   max-width: 65%;
 }
+
+#circle-space h5 {
+  margin-bottom: 0;
+}
