@@ -145,7 +145,7 @@ EnglishNavView.prototype = {
     }.bind( this );
 
     var comments = document.createElement( 'li' );
-    comments.innerText = "Libro de invitados";
+    comments.innerText = "Libro de visitas";
     comments.onclick = function() {
       this.displaySpanishComments();
     }.bind( this );

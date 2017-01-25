@@ -267,7 +267,7 @@
 	    }.bind( this );
 	
 	    var comments = document.createElement( 'li' );
-	    comments.innerText = "Libro de invitados";
+	    comments.innerText = "Libro de visitas";
 	    comments.onclick = function() {
 	      this.displaySpanishComments();
 	    }.bind( this );
@@ -1384,7 +1384,7 @@
 	    kauaiFlightUnit.innerText = "£" + cost + "\n Per Flight";
 	
 	    var kauaiFlightAvail = document.createElement( 'h5' );
-	    kauaiFlightAvail.innerText = "Available: " + this.kauai + "/1";
+	    kauaiFlightAvail.innerText = "Available: " + this.kauai + "/2";
 	
 	    var kauaiFlightSelectValue = document.createElement( 'h5' );
 	
@@ -4438,7 +4438,7 @@
 	    leaveSelectValue.innerText = "Regalar " + leaveSelect.value + " Vuelos";
 	
 	    var leaveText = document.createElement( 'h5' );
-	    leaveText.innerText = "Vuelo de ida a Hawaii\n";
+	    leaveText.innerText = "Vuelo de ida a\n Hawaii";
 	
 	    giftSpace.appendChild( flightListOne );
 	
@@ -4607,7 +4607,7 @@
 	    kauaiFlightUnit.innerText = "€" + cost + "\nCada Vuelo";
 	
 	    var kauaiFlightAvail = document.createElement( 'h5' );
-	    kauaiFlightAvail.innerText = "Disponible: " + this.kauai + "/1";
+	    kauaiFlightAvail.innerText = "Disponible: " + this.kauai + "/2";
 	
 	    var kauaiFlightSelectValue = document.createElement( 'h5' );
 	

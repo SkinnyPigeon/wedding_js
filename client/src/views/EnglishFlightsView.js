@@ -466,7 +466,7 @@ EnglishFlightsView.prototype = {
     kauaiFlightUnit.innerText = "£" + cost + "\n Per Flight";
 
     var kauaiFlightAvail = document.createElement( 'h5' );
-    kauaiFlightAvail.innerText = "Available: " + this.kauai + "/1";
+    kauaiFlightAvail.innerText = "Available: " + this.kauai + "/2";
 
     var kauaiFlightSelectValue = document.createElement( 'h5' );
 

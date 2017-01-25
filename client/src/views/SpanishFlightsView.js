@@ -297,7 +297,7 @@ EnglishFlightsView.prototype = {
     leaveSelectValue.innerText = "Regalar " + leaveSelect.value + " Vuelos";
 
     var leaveText = document.createElement( 'h5' );
-    leaveText.innerText = "Vuelo de ida a Hawaii\n";
+    leaveText.innerText = "Vuelo de ida a\n Hawaii";
 
     giftSpace.appendChild( flightListOne );
 
@@ -466,7 +466,7 @@ EnglishFlightsView.prototype = {
     kauaiFlightUnit.innerText = "€" + cost + "\nCada Vuelo";
 
     var kauaiFlightAvail = document.createElement( 'h5' );
-    kauaiFlightAvail.innerText = "Disponible: " + this.kauai + "/1";
+    kauaiFlightAvail.innerText = "Disponible: " + this.kauai + "/2";
 
     var kauaiFlightSelectValue = document.createElement( 'h5' );
 
