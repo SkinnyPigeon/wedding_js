@@ -62,7 +62,7 @@ EnglishBoatView.prototype = {
   },
 
   updateBoats: function() {
-    // var newBoat = 1;
+    // var newBoat = 2;
     var newBoat = this.boat -= this.buyBoats;
 
     var url = this.boatUrl + "/1";
@@ -242,13 +242,13 @@ EnglishBoatView.prototype = {
     boat.id = "boatImg";
     boat.className = "giftImage";
 
-    var cost = 100;
+    var cost = 175;
 
     var boatUnit = document.createElement( 'h5' );
-    boatUnit.innerText = "£" + cost + "\nPer Unit";
+    boatUnit.innerText = "£" + cost + "\nPer Ticket";
 
     var boatAvail = document.createElement( 'h5' );
-    boatAvail.innerText = "Available: " + this.boat + "/1";
+    boatAvail.innerText = "Available: " + this.boat + "/2";
 
     var boatSelectValue = document.createElement( 'h5' );
 
@@ -261,12 +261,12 @@ EnglishBoatView.prototype = {
     boatSelect.list = "steplist";
 
     boatSelect.onchange = function() {
-        boatSelectValue.innerText = "Give " + boatSelect.value + " Units";
+        boatSelectValue.innerText = "Give " + boatSelect.value + " Tickets";
         this.buyBoats = boatSelect.value;
         this.total = cost * boatSelect.value;
     }.bind( this );
 
-    boatSelectValue.innerText = "Give " + boatSelect.value + " Units";
+    boatSelectValue.innerText = "Give " + boatSelect.value + " Tickets";
 
     var boatText = document.createElement( 'h5' );
     boatText.innerText = "Boat tour of Na Pali Coast";

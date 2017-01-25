@@ -151,7 +151,7 @@ EnglishDrinksView.prototype = {
     message.placeholder = "Mensaje";
 
     var button = document.createElement( 'button' );
-    button.innerText = "Regalo";
+    button.innerText = "Regalar";
 
     button.onclick = function() {
       this.updateDrinks();
@@ -244,7 +244,7 @@ EnglishDrinksView.prototype = {
     var cost = 20;
 
     var drinkUnit = document.createElement( 'h5' );
-    drinkUnit.innerText = "€" + cost + "\nCada Unidad";
+    drinkUnit.innerText = "€" + cost + "\nBebida Para Los Dos";
 
     var drinkAvail = document.createElement( 'h5' );
     drinkAvail.innerText = "Disponible: \n" + String.fromCharCode( 8734 ) + "/" + String.fromCharCode( 8734 );
@@ -260,12 +260,12 @@ EnglishDrinksView.prototype = {
     drinkSelect.list = "steplist";
 
     drinkSelect.onchange = function() {
-        drinkSelectValue.innerText = "Regalar " + drinkSelect.value + " Unidades";
+        drinkSelectValue.innerText = "Regalar " + drinkSelect.value + " Bebidas";
         this.buyDrinks = drinkSelect.value;
         this.total = cost * drinkSelect.value;
     }.bind( this );
 
-    drinkSelectValue.innerText = "Regalar " + drinkSelect.value + " Unidades";
+    drinkSelectValue.innerText = "Regalar " + drinkSelect.value + " Bebidas";
 
     var drinkText = document.createElement( 'h5' );
     drinkText.innerText = "Bebidas en la playa";
@@ -287,7 +287,7 @@ EnglishDrinksView.prototype = {
     var giveButton = document.createElement( 'button' );
     var cancelButton = document.createElement( 'button' );
 
-    giveButton.innerText = "Regalo...";
+    giveButton.innerText = "Regalar...";
     giveButton.onclick = function() {
       this.displayForm();
     }.bind( this );

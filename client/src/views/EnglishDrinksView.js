@@ -244,7 +244,7 @@ EnglishDrinksView.prototype = {
     var cost = 20;
 
     var drinkUnit = document.createElement( 'h5' );
-    drinkUnit.innerText = "£" + cost + "\nPer Unit";
+    drinkUnit.innerText = "£" + cost + "\nFor Both Our Drinks ";
 
     var drinkAvail = document.createElement( 'h5' );
     drinkAvail.innerText = "Available: " + String.fromCharCode( 8734 ) + "/" + String.fromCharCode( 8734 );
@@ -260,12 +260,12 @@ EnglishDrinksView.prototype = {
     drinkSelect.list = "steplist";
 
     drinkSelect.onchange = function() {
-        drinkSelectValue.innerText = "Give " + drinkSelect.value + " Units";
+        drinkSelectValue.innerText = "Give " + drinkSelect.value + " Drinks";
         this.buyDrinks = drinkSelect.value;
         this.total = cost * drinkSelect.value;
     }.bind( this );
 
-    drinkSelectValue.innerText = "Give " + drinkSelect.value + " Units";
+    drinkSelectValue.innerText = "Give " + drinkSelect.value + " Drinks";
 
     var drinkText = document.createElement( 'h5' );
     drinkText.innerText = "Drinks on the Beach";

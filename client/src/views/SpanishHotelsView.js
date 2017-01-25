@@ -170,7 +170,7 @@ EnglishHotelsView.prototype = {
     message.placeholder = "Mensaje";
 
     var button = document.createElement( 'button' );
-    button.innerText = "Regalo";
+    button.innerText = "Regalar";
 
     button.onclick = function() {
       this.updateHotels();
@@ -270,7 +270,7 @@ EnglishHotelsView.prototype = {
     var cost = 150;
 
     var konaUnit = document.createElement( 'h5' );
-    konaUnit.innerText = "€" + cost + "\nCada Unidad";
+    konaUnit.innerText = "€" + cost + "\nCada Noche";
 
     var konaAvail = document.createElement( 'h5' );
     konaAvail.innerText = "Disponible: " + this.kona + "/2";
@@ -286,12 +286,12 @@ EnglishHotelsView.prototype = {
     konaSelect.list = "steplist";
 
     konaSelect.onchange = function() {
-        konaSelectValue.innerText = "Regalar " + konaSelect.value + " Unidades";
+        konaSelectValue.innerText = "Regalar " + konaSelect.value + " Noches";
         this.buyKona = konaSelect.value;
         this.total = cost * konaSelect.value;
     }.bind( this );
 
-    konaSelectValue.innerText = "Regalar " + konaSelect.value + " Unidades";
+    konaSelectValue.innerText = "Regalar " + konaSelect.value + " Noches";
 
     var konaText = document.createElement( 'h5' );
     konaText.innerText = "Hotels en Kona \n\n";
@@ -318,7 +318,7 @@ EnglishHotelsView.prototype = {
 
     var cost = 120
     var volcanoUnit = document.createElement( 'h5' );
-    volcanoUnit.innerText = "€" + cost + "\nCada Unidad";
+    volcanoUnit.innerText = "€" + cost + "\nCada Noche";
 
     var volcanoAvail = document.createElement( 'h5' );
     volcanoAvail.innerText = "Disponible: " + this.volcano + "/3";
@@ -334,12 +334,12 @@ EnglishHotelsView.prototype = {
     volcanoSelect.list = "steplist";
 
     volcanoSelect.onchange = function() {
-        volcanoSelectValue.innerText = "Regalar " + volcanoSelect.value + " Unidades";
+        volcanoSelectValue.innerText = "Regalar " + volcanoSelect.value + " Noches";
         this.buyVolcano = volcanoSelect.value;
         this.total = cost * volcanoSelect.value;
     }.bind( this );
 
-    volcanoSelectValue.innerText = "Regalar " + volcanoSelect.value + " Unidades";
+    volcanoSelectValue.innerText = "Regalar " + volcanoSelect.value + " Noches";
 
     var returnText = document.createElement( 'h5' );
     returnText.innerText = "Hotels en Volcano Park";
@@ -367,7 +367,7 @@ EnglishHotelsView.prototype = {
     var cost = 145;
 
     var mauiFlightUnit = document.createElement( 'h5' );
-    mauiFlightUnit.innerText = "€" + cost + "\nCada Unidad";
+    mauiFlightUnit.innerText = "€" + cost + "\nCada Noche";
 
     var mauiFlightAvail = document.createElement( 'h5' );
     mauiFlightAvail.innerText = "Disponible: " + this.maui + "/4";
@@ -383,12 +383,12 @@ EnglishHotelsView.prototype = {
     mauiFlightSelect.list = "steplist";
 
     mauiFlightSelect.onchange = function() {
-        mauiFlightSelectValue.innerText = "Regalar " + mauiFlightSelect.value + " Unidades";
+        mauiFlightSelectValue.innerText = "Regalar " + mauiFlightSelect.value + " Noches";
         this.buyMaui = mauiFlightSelect.value;
         this.total = cost * mauiFlightSelect.value;
     }.bind( this );
 
-    mauiFlightSelectValue.innerText = "Regalar " + mauiFlightSelect.value + " Unidades";
+    mauiFlightSelectValue.innerText = "Regalar " + mauiFlightSelect.value + " Noches";
 
     var mauiText = document.createElement( 'h5' );
     mauiText.innerText = "Hotels en Maui\n\n";
@@ -419,7 +419,7 @@ EnglishHotelsView.prototype = {
     var cost = 150;
 
     var kauaiFlightUnit = document.createElement( 'h5' );
-    kauaiFlightUnit.innerText = "€" + cost + "\nCada Unidad";
+    kauaiFlightUnit.innerText = "€" + cost + "\nCada Noche";
 
     var kauaiFlightAvail = document.createElement( 'h5' );
     kauaiFlightAvail.innerText = "Disponible: " + this.kauai + "/5";
@@ -435,12 +435,12 @@ EnglishHotelsView.prototype = {
     kauaiFlightSelect.list = "steplist";
 
     kauaiFlightSelect.onchange = function() {
-        kauaiFlightSelectValue.innerText = "Regalar " + kauaiFlightSelect.value + " Unidades";
+        kauaiFlightSelectValue.innerText = "Regalar " + kauaiFlightSelect.value + " Noches";
         this.buyKauai = kauaiFlightSelect.value;
         this.total = cost * kauaiFlightSelect.value;
     }.bind( this );
 
-    kauaiFlightSelectValue.innerText = "Regalar " + kauaiFlightSelect.value + " Unidades";
+    kauaiFlightSelectValue.innerText = "Regalar " + kauaiFlightSelect.value + " Noches";
 
     var kauaiText = document.createElement( 'h5' );
     kauaiText.innerText = "Hotels en Kauai\n\n";
@@ -467,7 +467,7 @@ EnglishHotelsView.prototype = {
     var cost = 70;
 
     var honoluluFlightUnit = document.createElement( 'h5' );
-    honoluluFlightUnit.innerText = "€" + cost + "\nCada Unidad";
+    honoluluFlightUnit.innerText = "€" + cost + "\nCada Noche";
 
     var honoluluFlightAvail = document.createElement( 'h5' );
     honoluluFlightAvail.innerText = "Disponible: " + this.honolulu + "/2";
@@ -483,12 +483,12 @@ EnglishHotelsView.prototype = {
     honoluluFlightSelect.list = "steplist";
 
     honoluluFlightSelect.onchange = function() {
-        honoluluFlightSelectValue.innerText = "Regalar " + honoluluFlightSelect.value + " Unidades";
+        honoluluFlightSelectValue.innerText = "Regalar " + honoluluFlightSelect.value + " Noches";
         this.buyHonolulu = honoluluFlightSelect.value;
         this.total = cost * honoluluFlightSelect.value;
     }.bind( this );
 
-    honoluluFlightSelectValue.innerText = "Regalar " + honoluluFlightSelect.value + " Unidades";
+    honoluluFlightSelectValue.innerText = "Regalar " + honoluluFlightSelect.value + " Noches";
 
     var honoluluText = document.createElement( 'h5' );
     honoluluText.innerText = "Hotels en Honolulu";
@@ -508,7 +508,7 @@ EnglishHotelsView.prototype = {
     var giveButton = document.createElement( 'button' );
     var cancelButton = document.createElement( 'button' );
 
-    giveButton.innerText = "Regalo...";
+    giveButton.innerText = "Regalar...";
     giveButton.onclick = function() {
       this.displayForm();
     }.bind( this );

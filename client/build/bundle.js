@@ -1728,7 +1728,7 @@
 	    var cost = 150;
 	
 	    var konaUnit = document.createElement( 'h5' );
-	    konaUnit.innerText = "£" + cost + "\nPer Unit";
+	    konaUnit.innerText = "£" + cost + "\nPer Night";
 	
 	    var konaAvail = document.createElement( 'h5' );
 	    konaAvail.innerText = "Available: " + this.kona + "/2";
@@ -1744,12 +1744,12 @@
 	    konaSelect.list = "steplist";
 	
 	    konaSelect.onchange = function() {
-	        konaSelectValue.innerText = "Give " + konaSelect.value + " Units";
+	        konaSelectValue.innerText = "Give " + konaSelect.value + " Nights";
 	        this.buyKona = konaSelect.value;
 	        this.total = cost * konaSelect.value;
 	    }.bind( this );
 	
-	    konaSelectValue.innerText = "Give " + konaSelect.value + " Units";
+	    konaSelectValue.innerText = "Give " + konaSelect.value + " Nights";
 	
 	    var konaText = document.createElement( 'h5' );
 	    konaText.innerText = "Hotel in Kona \n\n";
@@ -1776,7 +1776,7 @@
 	
 	    var cost = 120
 	    var volcanoUnit = document.createElement( 'h5' );
-	    volcanoUnit.innerText = "£" + cost + "\nPer Unit";
+	    volcanoUnit.innerText = "£" + cost + "\nPer Night";
 	
 	    var volcanoAvail = document.createElement( 'h5' );
 	    volcanoAvail.innerText = "Available: " + this.volcano + "/3";
@@ -1792,12 +1792,12 @@
 	    volcanoSelect.list = "steplist";
 	
 	    volcanoSelect.onchange = function() {
-	        volcanoSelectValue.innerText = "Give " + volcanoSelect.value + " Units";
+	        volcanoSelectValue.innerText = "Give " + volcanoSelect.value + " Nights";
 	        this.buyVolcano = volcanoSelect.value;
 	        this.total = cost * volcanoSelect.value;
 	    }.bind( this );
 	
-	    volcanoSelectValue.innerText = "Give " + volcanoSelect.value + " Units";
+	    volcanoSelectValue.innerText = "Give " + volcanoSelect.value + " Nights";
 	
 	    var returnText = document.createElement( 'h5' );
 	    returnText.innerText = "Hotel in Volcano Park";
@@ -1825,7 +1825,7 @@
 	    var cost = 145;
 	
 	    var mauiFlightUnit = document.createElement( 'h5' );
-	    mauiFlightUnit.innerText = "£" + cost + "\nPer Unit";
+	    mauiFlightUnit.innerText = "£" + cost + "\nPer Night";
 	
 	    var mauiFlightAvail = document.createElement( 'h5' );
 	    mauiFlightAvail.innerText = "Available: " + this.maui + "/4";
@@ -1841,12 +1841,12 @@
 	    mauiFlightSelect.list = "steplist";
 	
 	    mauiFlightSelect.onchange = function() {
-	        mauiFlightSelectValue.innerText = "Give " + mauiFlightSelect.value + " Units";
+	        mauiFlightSelectValue.innerText = "Give " + mauiFlightSelect.value + " Nights";
 	        this.buyMaui = mauiFlightSelect.value;
 	        this.total = cost * mauiFlightSelect.value;
 	    }.bind( this );
 	
-	    mauiFlightSelectValue.innerText = "Give " + mauiFlightSelect.value + " Units";
+	    mauiFlightSelectValue.innerText = "Give " + mauiFlightSelect.value + " Nights";
 	
 	    var mauiText = document.createElement( 'h5' );
 	    mauiText.innerText = "Hotel in Maui\n\n";
@@ -1877,7 +1877,7 @@
 	    var cost = 150;
 	
 	    var kauaiFlightUnit = document.createElement( 'h5' );
-	    kauaiFlightUnit.innerText = "£" + cost + "\nPer Unit";
+	    kauaiFlightUnit.innerText = "£" + cost + "\nPer Night";
 	
 	    var kauaiFlightAvail = document.createElement( 'h5' );
 	    kauaiFlightAvail.innerText = "Available: " + this.kauai + "/5";
@@ -1893,12 +1893,12 @@
 	    kauaiFlightSelect.list = "steplist";
 	
 	    kauaiFlightSelect.onchange = function() {
-	        kauaiFlightSelectValue.innerText = "Give " + kauaiFlightSelect.value + " Units";
+	        kauaiFlightSelectValue.innerText = "Give " + kauaiFlightSelect.value + " Nights";
 	        this.buyKauai = kauaiFlightSelect.value;
 	        this.total = cost * kauaiFlightSelect.value;
 	    }.bind( this );
 	
-	    kauaiFlightSelectValue.innerText = "Give " + kauaiFlightSelect.value + " Units";
+	    kauaiFlightSelectValue.innerText = "Give " + kauaiFlightSelect.value + " Nights";
 	
 	    var kauaiText = document.createElement( 'h5' );
 	    kauaiText.innerText = "Hotel in Kauai\n\n";
@@ -1925,7 +1925,7 @@
 	    var cost = 70;
 	
 	    var honoluluFlightUnit = document.createElement( 'h5' );
-	    honoluluFlightUnit.innerText = "£" + cost + "\nPer Unit";
+	    honoluluFlightUnit.innerText = "£" + cost + "\nPer Night";
 	
 	    var honoluluFlightAvail = document.createElement( 'h5' );
 	    honoluluFlightAvail.innerText = "Available: " + this.honolulu + "/2";
@@ -1941,12 +1941,12 @@
 	    honoluluFlightSelect.list = "steplist";
 	
 	    honoluluFlightSelect.onchange = function() {
-	        honoluluFlightSelectValue.innerText = "Give " + honoluluFlightSelect.value + " Units";
+	        honoluluFlightSelectValue.innerText = "Give " + honoluluFlightSelect.value + " Nights";
 	        this.buyHonolulu = honoluluFlightSelect.value;
 	        this.total = cost * honoluluFlightSelect.value;
 	    }.bind( this );
 	
-	    honoluluFlightSelectValue.innerText = "Give " + honoluluFlightSelect.value + " Units";
+	    honoluluFlightSelectValue.innerText = "Give " + honoluluFlightSelect.value + " Nights";
 	
 	    var honoluluText = document.createElement( 'h5' );
 	    honoluluText.innerText = "Hotel in Honolulu\n\n";
@@ -2241,7 +2241,7 @@
 	    var cost = 20;
 	
 	    var drinkUnit = document.createElement( 'h5' );
-	    drinkUnit.innerText = "£" + cost + "\nPer Unit";
+	    drinkUnit.innerText = "£" + cost + "\nFor Both Our Drinks ";
 	
 	    var drinkAvail = document.createElement( 'h5' );
 	    drinkAvail.innerText = "Available: " + String.fromCharCode( 8734 ) + "/" + String.fromCharCode( 8734 );
@@ -2257,12 +2257,12 @@
 	    drinkSelect.list = "steplist";
 	
 	    drinkSelect.onchange = function() {
-	        drinkSelectValue.innerText = "Give " + drinkSelect.value + " Units";
+	        drinkSelectValue.innerText = "Give " + drinkSelect.value + " Drinks";
 	        this.buyDrinks = drinkSelect.value;
 	        this.total = cost * drinkSelect.value;
 	    }.bind( this );
 	
-	    drinkSelectValue.innerText = "Give " + drinkSelect.value + " Units";
+	    drinkSelectValue.innerText = "Give " + drinkSelect.value + " Drinks";
 	
 	    var drinkText = document.createElement( 'h5' );
 	    drinkText.innerText = "Drinks on the Beach";
@@ -2561,7 +2561,7 @@
 	    var cost = 40;
 	
 	    var foodUnit = document.createElement( 'h5' );
-	    foodUnit.innerText = "£" + cost + "\nPer Unit";
+	    foodUnit.innerText = "£" + cost + "\nPer Meal";
 	
 	    var foodAvail = document.createElement( 'h5' );
 	    foodAvail.innerText = "Available: " + String.fromCharCode( 8734 ) + "/" + String.fromCharCode( 8734 );
@@ -2577,12 +2577,12 @@
 	    foodSelect.list = "steplist";
 	
 	    foodSelect.onchange = function() {
-	        foodSelectValue.innerText = "Give " + foodSelect.value + " Units";
+	        foodSelectValue.innerText = "Give " + foodSelect.value + " Meals";
 	        this.buyFoods = foodSelect.value;
 	        this.total = cost * foodSelect.value;
 	    }.bind( this );
 	
-	    foodSelectValue.innerText = "Give " + foodSelect.value + " Units";
+	    foodSelectValue.innerText = "Give " + foodSelect.value + " Meals";
 	
 	    var foodText = document.createElement( 'h5' );
 	    foodText.innerText = "Food on the Beach";
@@ -2608,7 +2608,7 @@
 	    var cost = 60;
 	
 	    var romanticUnit = document.createElement( 'h5' );
-	    romanticUnit.innerText = "£" + cost + "\nPer Unit";
+	    romanticUnit.innerText = "£" + cost + "\nPer Dinner";
 	
 	    var romanticAvail = document.createElement( 'h5' );
 	    romanticAvail.innerText = "Available: " + String.fromCharCode( 8734 ) + "/" + String.fromCharCode( 8734 );
@@ -2624,12 +2624,12 @@
 	    romanticSelect.list = "steplist";
 	
 	    romanticSelect.onchange = function() {
-	        romanticSelectValue.innerText = "Give " + romanticSelect.value + " Units";
+	        romanticSelectValue.innerText = "Give " + romanticSelect.value + " Dinners";
 	        this.buyFoods = romanticSelect.value;
 	        this.total = cost * romanticSelect.value;
 	    }.bind( this );
 	
-	    romanticSelectValue.innerText = "Give " + romanticSelect.value + " Units";
+	    romanticSelectValue.innerText = "Give " + romanticSelect.value + " Dinners";
 	
 	    var romanticText = document.createElement( 'h5' );
 	    romanticText.innerText = "Romantic Dinner";
@@ -2745,7 +2745,7 @@
 	  },
 	
 	  updateBoats: function() {
-	    // var newBoat = 1;
+	    // var newBoat = 2;
 	    var newBoat = this.boat -= this.buyBoats;
 	
 	    var url = this.boatUrl + "/1";
@@ -2925,13 +2925,13 @@
 	    boat.id = "boatImg";
 	    boat.className = "giftImage";
 	
-	    var cost = 100;
+	    var cost = 175;
 	
 	    var boatUnit = document.createElement( 'h5' );
-	    boatUnit.innerText = "£" + cost + "\nPer Unit";
+	    boatUnit.innerText = "£" + cost + "\nPer Ticket";
 	
 	    var boatAvail = document.createElement( 'h5' );
-	    boatAvail.innerText = "Available: " + this.boat + "/1";
+	    boatAvail.innerText = "Available: " + this.boat + "/2";
 	
 	    var boatSelectValue = document.createElement( 'h5' );
 	
@@ -2944,12 +2944,12 @@
 	    boatSelect.list = "steplist";
 	
 	    boatSelect.onchange = function() {
-	        boatSelectValue.innerText = "Give " + boatSelect.value + " Units";
+	        boatSelectValue.innerText = "Give " + boatSelect.value + " Tickets";
 	        this.buyBoats = boatSelect.value;
 	        this.total = cost * boatSelect.value;
 	    }.bind( this );
 	
-	    boatSelectValue.innerText = "Give " + boatSelect.value + " Units";
+	    boatSelectValue.innerText = "Give " + boatSelect.value + " Tickets";
 	
 	    var boatText = document.createElement( 'h5' );
 	    boatText.innerText = "Boat tour of Na Pali Coast";
@@ -3033,7 +3033,7 @@
 	        var lavaObject = JSON.parse( request.responseText );
 	        this.lavaObject = lavaObject;
 	        for( var i = 0; i < lavaObject.length; i++ ) {
-	            if( this.lavaObject[i].id === 1 ) {
+	            if( this.lavaObject[i].id === 2 ) {
 	                this.lava = lavaObject[i].lava;
 	            }
 	        }
@@ -3064,10 +3064,10 @@
 	  },
 	
 	  updateLavas: function() {
-	    // var newLava = 1;
+	    // var newLava = 2;
 	    var newLava = this.lava -= this.buyLavas;
 	
-	    var url = this.lavaUrl + "/1";
+	    var url = this.lavaUrl + "/2";
 	    var request = new XMLHttpRequest();
 	    request.open( 'PUT', url );
 	    request.setRequestHeader( "Content-type", "application/json" );
@@ -3245,13 +3245,13 @@
 	    lava.id = "lavaImg";
 	    lava.className = "giftImage";
 	
-	    var cost = 250;
+	    var cost = 110;
 	
 	    var lavaUnit = document.createElement( 'h5' );
-	    lavaUnit.innerText = "£" + cost + "\nPer Unit";
+	    lavaUnit.innerText = "£" + cost + "\nPer Ticket";
 	
 	    var lavaAvail = document.createElement( 'h5' );
-	    lavaAvail.innerText = "Available: " + this.lava + "/1";
+	    lavaAvail.innerText = "Available: " + this.lava + "/2";
 	
 	    var lavaSelectValue = document.createElement( 'h5' );
 	
@@ -3264,12 +3264,12 @@
 	    lavaSelect.list = "steplist";
 	
 	    lavaSelect.onchange = function() {
-	        lavaSelectValue.innerText = "Give " + lavaSelect.value + " Units";
+	        lavaSelectValue.innerText = "Give " + lavaSelect.value + " Tickets";
 	        this.buyLavas = lavaSelect.value;
 	        this.total = cost * lavaSelect.value;
 	    }.bind( this );
 	
-	    lavaSelectValue.innerText = "Give " + lavaSelect.value + " Units";
+	    lavaSelectValue.innerText = "Give " + lavaSelect.value + " Tickets";
 	
 	    var lavaText = document.createElement( 'h5' );
 	    lavaText.innerText = "Lava tour in Volcano Park";
@@ -4851,7 +4851,7 @@
 	    message.placeholder = "Mensaje";
 	
 	    var button = document.createElement( 'button' );
-	    button.innerText = "Regalo";
+	    button.innerText = "Regalar";
 	
 	    button.onclick = function() {
 	      this.updateHotels();
@@ -4951,7 +4951,7 @@
 	    var cost = 150;
 	
 	    var konaUnit = document.createElement( 'h5' );
-	    konaUnit.innerText = "€" + cost + "\nCada Unidad";
+	    konaUnit.innerText = "€" + cost + "\nCada Noche";
 	
 	    var konaAvail = document.createElement( 'h5' );
 	    konaAvail.innerText = "Disponible: " + this.kona + "/2";
@@ -4967,12 +4967,12 @@
 	    konaSelect.list = "steplist";
 	
 	    konaSelect.onchange = function() {
-	        konaSelectValue.innerText = "Regalar " + konaSelect.value + " Unidades";
+	        konaSelectValue.innerText = "Regalar " + konaSelect.value + " Noches";
 	        this.buyKona = konaSelect.value;
 	        this.total = cost * konaSelect.value;
 	    }.bind( this );
 	
-	    konaSelectValue.innerText = "Regalar " + konaSelect.value + " Unidades";
+	    konaSelectValue.innerText = "Regalar " + konaSelect.value + " Noches";
 	
 	    var konaText = document.createElement( 'h5' );
 	    konaText.innerText = "Hotels en Kona \n\n";
@@ -4999,7 +4999,7 @@
 	
 	    var cost = 120
 	    var volcanoUnit = document.createElement( 'h5' );
-	    volcanoUnit.innerText = "€" + cost + "\nCada Unidad";
+	    volcanoUnit.innerText = "€" + cost + "\nCada Noche";
 	
 	    var volcanoAvail = document.createElement( 'h5' );
 	    volcanoAvail.innerText = "Disponible: " + this.volcano + "/3";
@@ -5015,12 +5015,12 @@
 	    volcanoSelect.list = "steplist";
 	
 	    volcanoSelect.onchange = function() {
-	        volcanoSelectValue.innerText = "Regalar " + volcanoSelect.value + " Unidades";
+	        volcanoSelectValue.innerText = "Regalar " + volcanoSelect.value + " Noches";
 	        this.buyVolcano = volcanoSelect.value;
 	        this.total = cost * volcanoSelect.value;
 	    }.bind( this );
 	
-	    volcanoSelectValue.innerText = "Regalar " + volcanoSelect.value + " Unidades";
+	    volcanoSelectValue.innerText = "Regalar " + volcanoSelect.value + " Noches";
 	
 	    var returnText = document.createElement( 'h5' );
 	    returnText.innerText = "Hotels en Volcano Park";
@@ -5048,7 +5048,7 @@
 	    var cost = 145;
 	
 	    var mauiFlightUnit = document.createElement( 'h5' );
-	    mauiFlightUnit.innerText = "€" + cost + "\nCada Unidad";
+	    mauiFlightUnit.innerText = "€" + cost + "\nCada Noche";
 	
 	    var mauiFlightAvail = document.createElement( 'h5' );
 	    mauiFlightAvail.innerText = "Disponible: " + this.maui + "/4";
@@ -5064,12 +5064,12 @@
 	    mauiFlightSelect.list = "steplist";
 	
 	    mauiFlightSelect.onchange = function() {
-	        mauiFlightSelectValue.innerText = "Regalar " + mauiFlightSelect.value + " Unidades";
+	        mauiFlightSelectValue.innerText = "Regalar " + mauiFlightSelect.value + " Noches";
 	        this.buyMaui = mauiFlightSelect.value;
 	        this.total = cost * mauiFlightSelect.value;
 	    }.bind( this );
 	
-	    mauiFlightSelectValue.innerText = "Regalar " + mauiFlightSelect.value + " Unidades";
+	    mauiFlightSelectValue.innerText = "Regalar " + mauiFlightSelect.value + " Noches";
 	
 	    var mauiText = document.createElement( 'h5' );
 	    mauiText.innerText = "Hotels en Maui\n\n";
@@ -5100,7 +5100,7 @@
 	    var cost = 150;
 	
 	    var kauaiFlightUnit = document.createElement( 'h5' );
-	    kauaiFlightUnit.innerText = "€" + cost + "\nCada Unidad";
+	    kauaiFlightUnit.innerText = "€" + cost + "\nCada Noche";
 	
 	    var kauaiFlightAvail = document.createElement( 'h5' );
 	    kauaiFlightAvail.innerText = "Disponible: " + this.kauai + "/5";
@@ -5116,12 +5116,12 @@
 	    kauaiFlightSelect.list = "steplist";
 	
 	    kauaiFlightSelect.onchange = function() {
-	        kauaiFlightSelectValue.innerText = "Regalar " + kauaiFlightSelect.value + " Unidades";
+	        kauaiFlightSelectValue.innerText = "Regalar " + kauaiFlightSelect.value + " Noches";
 	        this.buyKauai = kauaiFlightSelect.value;
 	        this.total = cost * kauaiFlightSelect.value;
 	    }.bind( this );
 	
-	    kauaiFlightSelectValue.innerText = "Regalar " + kauaiFlightSelect.value + " Unidades";
+	    kauaiFlightSelectValue.innerText = "Regalar " + kauaiFlightSelect.value + " Noches";
 	
 	    var kauaiText = document.createElement( 'h5' );
 	    kauaiText.innerText = "Hotels en Kauai\n\n";
@@ -5148,7 +5148,7 @@
 	    var cost = 70;
 	
 	    var honoluluFlightUnit = document.createElement( 'h5' );
-	    honoluluFlightUnit.innerText = "€" + cost + "\nCada Unidad";
+	    honoluluFlightUnit.innerText = "€" + cost + "\nCada Noche";
 	
 	    var honoluluFlightAvail = document.createElement( 'h5' );
 	    honoluluFlightAvail.innerText = "Disponible: " + this.honolulu + "/2";
@@ -5164,12 +5164,12 @@
 	    honoluluFlightSelect.list = "steplist";
 	
 	    honoluluFlightSelect.onchange = function() {
-	        honoluluFlightSelectValue.innerText = "Regalar " + honoluluFlightSelect.value + " Unidades";
+	        honoluluFlightSelectValue.innerText = "Regalar " + honoluluFlightSelect.value + " Noches";
 	        this.buyHonolulu = honoluluFlightSelect.value;
 	        this.total = cost * honoluluFlightSelect.value;
 	    }.bind( this );
 	
-	    honoluluFlightSelectValue.innerText = "Regalar " + honoluluFlightSelect.value + " Unidades";
+	    honoluluFlightSelectValue.innerText = "Regalar " + honoluluFlightSelect.value + " Noches";
 	
 	    var honoluluText = document.createElement( 'h5' );
 	    honoluluText.innerText = "Hotels en Honolulu";
@@ -5189,7 +5189,7 @@
 	    var giveButton = document.createElement( 'button' );
 	    var cancelButton = document.createElement( 'button' );
 	
-	    giveButton.innerText = "Regalo...";
+	    giveButton.innerText = "Regalar...";
 	    giveButton.onclick = function() {
 	      this.displayForm();
 	    }.bind( this );
@@ -5371,7 +5371,7 @@
 	    message.placeholder = "Mensaje";
 	
 	    var button = document.createElement( 'button' );
-	    button.innerText = "Regalo";
+	    button.innerText = "Regalar";
 	
 	    button.onclick = function() {
 	      this.updateDrinks();
@@ -5464,7 +5464,7 @@
 	    var cost = 20;
 	
 	    var drinkUnit = document.createElement( 'h5' );
-	    drinkUnit.innerText = "€" + cost + "\nCada Unidad";
+	    drinkUnit.innerText = "€" + cost + "\nBebida Para Los Dos";
 	
 	    var drinkAvail = document.createElement( 'h5' );
 	    drinkAvail.innerText = "Disponible: \n" + String.fromCharCode( 8734 ) + "/" + String.fromCharCode( 8734 );
@@ -5480,12 +5480,12 @@
 	    drinkSelect.list = "steplist";
 	
 	    drinkSelect.onchange = function() {
-	        drinkSelectValue.innerText = "Regalar " + drinkSelect.value + " Unidades";
+	        drinkSelectValue.innerText = "Regalar " + drinkSelect.value + " Bebidas";
 	        this.buyDrinks = drinkSelect.value;
 	        this.total = cost * drinkSelect.value;
 	    }.bind( this );
 	
-	    drinkSelectValue.innerText = "Regalar " + drinkSelect.value + " Unidades";
+	    drinkSelectValue.innerText = "Regalar " + drinkSelect.value + " Bebidas";
 	
 	    var drinkText = document.createElement( 'h5' );
 	    drinkText.innerText = "Bebidas en la playa";
@@ -5507,7 +5507,7 @@
 	    var giveButton = document.createElement( 'button' );
 	    var cancelButton = document.createElement( 'button' );
 	
-	    giveButton.innerText = "Regalo...";
+	    giveButton.innerText = "Regalar...";
 	    giveButton.onclick = function() {
 	      this.displayForm();
 	    }.bind( this );
@@ -5689,7 +5689,7 @@
 	    message.placeholder = "Mensaje...";
 	
 	    var button = document.createElement( 'button' );
-	    button.innerText = "Regalo";
+	    button.innerText = "Regalar";
 	
 	    button.onclick = function() {
 	      this.updateFoods();
@@ -5782,7 +5782,7 @@
 	    var cost = 40;
 	
 	    var foodUnit = document.createElement( 'h5' );
-	    foodUnit.innerText = "€" + cost + "\nCada Unidad";
+	    foodUnit.innerText = "€" + cost + "\nCada Comida";
 	
 	    var foodAvail = document.createElement( 'h5' );
 	    foodAvail.innerText = "Disponible: \n" + String.fromCharCode( 8734 ) + "/" + String.fromCharCode( 8734 );
@@ -5798,12 +5798,12 @@
 	    foodSelect.list = "steplist";
 	
 	    foodSelect.onchange = function() {
-	        foodSelectValue.innerText = "Regalar " + foodSelect.value + " Unidades";
+	        foodSelectValue.innerText = "Regalar " + foodSelect.value + " Comidas";
 	        this.buyFoods = foodSelect.value;
 	        this.total = cost * foodSelect.value;
 	    }.bind( this );
 	
-	    foodSelectValue.innerText = "Regalar " + foodSelect.value + " Unidades";
+	    foodSelectValue.innerText = "Regalar " + foodSelect.value + " Comidas";
 	
 	    var foodText = document.createElement( 'h5' );
 	    foodText.innerText = "Comida en la playa\n\n";
@@ -5829,7 +5829,7 @@
 	    var cost = 60;
 	
 	    var romanticUnit = document.createElement( 'h5' );
-	    romanticUnit.innerText = "€" + cost + "\nCada Unidad";
+	    romanticUnit.innerText = "€" + cost + "\nCada Cena";
 	
 	    var romanticAvail = document.createElement( 'h5' );
 	    romanticAvail.innerText = "Disponible: \n" + String.fromCharCode( 8734 ) + "/" + String.fromCharCode( 8734 );
@@ -5845,12 +5845,12 @@
 	    romanticSelect.list = "steplist";
 	
 	    romanticSelect.onchange = function() {
-	        romanticSelectValue.innerText = "Regalar " + romanticSelect.value + " Unidades";
+	        romanticSelectValue.innerText = "Regalar " + romanticSelect.value + " Cenas";
 	        this.buyFoods = romanticSelect.value;
 	        this.total = cost * romanticSelect.value;
 	    }.bind( this );
 	
-	    romanticSelectValue.innerText = "Regalar " + romanticSelect.value + " Unidades";
+	    romanticSelectValue.innerText = "Regalar " + romanticSelect.value + " Cenas";
 	
 	    var romanticText = document.createElement( 'h5' );
 	    romanticText.innerText = "Cena romántica\n\n";
@@ -5874,7 +5874,7 @@
 	    var giveButton = document.createElement( 'button' );
 	    var cancelButton = document.createElement( 'button' );
 	
-	    giveButton.innerText = "Regalo...";
+	    giveButton.innerText = "Regalar...";
 	    giveButton.onclick = function() {
 	      this.displayForm();
 	    }.bind( this );
@@ -6147,13 +6147,13 @@
 	    boat.id = "boatImg";
 	    boat.className = "giftImage";
 	
-	    var cost = 100;
+	    var cost = 175;
 	
 	    var boatUnit = document.createElement( 'h5' );
-	    boatUnit.innerText = "€" + cost + "\nPer Unit";
+	    boatUnit.innerText = "€" + cost + "\nCada Entrada";
 	
 	    var boatAvail = document.createElement( 'h5' );
-	    boatAvail.innerText = "Disponible: " + this.boat + "/1";
+	    boatAvail.innerText = "Disponible: " + this.boat + "/2";
 	
 	    var boatSelectValue = document.createElement( 'h5' );
 	
@@ -6166,12 +6166,12 @@
 	    boatSelect.list = "steplist";
 	
 	    boatSelect.onchange = function() {
-	        boatSelectValue.innerText = "Regalar " + boatSelect.value + " Unidades";
+	        boatSelectValue.innerText = "Regalar " + boatSelect.value + " Entradas";
 	        this.buyBoats = boatSelect.value;
 	        this.total = cost * boatSelect.value;
 	    }.bind( this );
 	
-	    boatSelectValue.innerText = "Regalar " + boatSelect.value + " Unidades";
+	    boatSelectValue.innerText = "Regalar " + boatSelect.value + " Entradas";
 	
 	    var boatText = document.createElement( 'h5' );
 	    boatText.innerText = "Tour en bote por la costa Nā Pali";
@@ -6255,7 +6255,7 @@
 	        var lavaObject = JSON.parse( request.responseText );
 	        this.lavaObject = lavaObject;
 	        for( var i = 0; i < lavaObject.length; i++ ) {
-	            if( this.lavaObject[i].id === 1 ) {
+	            if( this.lavaObject[i].id === 2 ) {
 	                this.lava = lavaObject[i].lava;
 	            }
 	        }
@@ -6289,7 +6289,7 @@
 	    // var newLava = 1;
 	    var newLava = this.lava -= this.buyLavas;
 	
-	    var url = this.lavaUrl + "/1";
+	    var url = this.lavaUrl + "/2";
 	    var request = new XMLHttpRequest();
 	    request.open( 'PUT', url );
 	    request.setRequestHeader( "Content-type", "application/json" );
@@ -6467,13 +6467,13 @@
 	    lava.id = "lavaImg";
 	    lava.className = "giftImage";
 	
-	    var cost = 250;
+	    var cost = 110;
 	
 	    var lavaUnit = document.createElement( 'h5' );
-	    lavaUnit.innerText = "€" + cost + "\nPer Unit";
+	    lavaUnit.innerText = "€" + cost + "\nCada Entrada";
 	
 	    var lavaAvail = document.createElement( 'h5' );
-	    lavaAvail.innerText = "Disponible: " + this.lava + "/1";
+	    lavaAvail.innerText = "Disponible: " + this.lava + "/2";
 	
 	    var lavaSelectValue = document.createElement( 'h5' );
 	
@@ -6486,12 +6486,12 @@
 	    lavaSelect.list = "steplist";
 	
 	    lavaSelect.onchange = function() {
-	        lavaSelectValue.innerText = "Regalar " + lavaSelect.value + " Unidades";
+	        lavaSelectValue.innerText = "Regalar " + lavaSelect.value + " Entradas";
 	        this.buyLavas = lavaSelect.value;
 	        this.total = cost * lavaSelect.value;
 	    }.bind( this );
 	
-	    lavaSelectValue.innerText = "Regalar " + lavaSelect.value + " Unidades";
+	    lavaSelectValue.innerText = "Regalar " + lavaSelect.value + " Entradas";
 	
 	    var lavaText = document.createElement( 'h5' );
 	    lavaText.innerText = "Tour para ver lava en el parque de los volcanes.";

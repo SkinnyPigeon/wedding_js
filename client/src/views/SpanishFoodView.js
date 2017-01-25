@@ -151,7 +151,7 @@ EnglishFoodView.prototype = {
     message.placeholder = "Mensaje...";
 
     var button = document.createElement( 'button' );
-    button.innerText = "Regalo";
+    button.innerText = "Regalar";
 
     button.onclick = function() {
       this.updateFoods();
@@ -244,7 +244,7 @@ EnglishFoodView.prototype = {
     var cost = 40;
 
     var foodUnit = document.createElement( 'h5' );
-    foodUnit.innerText = "€" + cost + "\nCada Unidad";
+    foodUnit.innerText = "€" + cost + "\nCada Comida";
 
     var foodAvail = document.createElement( 'h5' );
     foodAvail.innerText = "Disponible: \n" + String.fromCharCode( 8734 ) + "/" + String.fromCharCode( 8734 );
@@ -260,12 +260,12 @@ EnglishFoodView.prototype = {
     foodSelect.list = "steplist";
 
     foodSelect.onchange = function() {
-        foodSelectValue.innerText = "Regalar " + foodSelect.value + " Unidades";
+        foodSelectValue.innerText = "Regalar " + foodSelect.value + " Comidas";
         this.buyFoods = foodSelect.value;
         this.total = cost * foodSelect.value;
     }.bind( this );
 
-    foodSelectValue.innerText = "Regalar " + foodSelect.value + " Unidades";
+    foodSelectValue.innerText = "Regalar " + foodSelect.value + " Comidas";
 
     var foodText = document.createElement( 'h5' );
     foodText.innerText = "Comida en la playa\n\n";
@@ -291,7 +291,7 @@ EnglishFoodView.prototype = {
     var cost = 60;
 
     var romanticUnit = document.createElement( 'h5' );
-    romanticUnit.innerText = "€" + cost + "\nCada Unidad";
+    romanticUnit.innerText = "€" + cost + "\nCada Cena";
 
     var romanticAvail = document.createElement( 'h5' );
     romanticAvail.innerText = "Disponible: \n" + String.fromCharCode( 8734 ) + "/" + String.fromCharCode( 8734 );
@@ -307,12 +307,12 @@ EnglishFoodView.prototype = {
     romanticSelect.list = "steplist";
 
     romanticSelect.onchange = function() {
-        romanticSelectValue.innerText = "Regalar " + romanticSelect.value + " Unidades";
+        romanticSelectValue.innerText = "Regalar " + romanticSelect.value + " Cenas";
         this.buyFoods = romanticSelect.value;
         this.total = cost * romanticSelect.value;
     }.bind( this );
 
-    romanticSelectValue.innerText = "Regalar " + romanticSelect.value + " Unidades";
+    romanticSelectValue.innerText = "Regalar " + romanticSelect.value + " Cenas";
 
     var romanticText = document.createElement( 'h5' );
     romanticText.innerText = "Cena romántica\n\n";
@@ -336,7 +336,7 @@ EnglishFoodView.prototype = {
     var giveButton = document.createElement( 'button' );
     var cancelButton = document.createElement( 'button' );
 
-    giveButton.innerText = "Regalo...";
+    giveButton.innerText = "Regalar...";
     giveButton.onclick = function() {
       this.displayForm();
     }.bind( this );

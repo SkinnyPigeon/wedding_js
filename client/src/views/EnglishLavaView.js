@@ -31,7 +31,7 @@ EnglishLavaView.prototype = {
         var lavaObject = JSON.parse( request.responseText );
         this.lavaObject = lavaObject;
         for( var i = 0; i < lavaObject.length; i++ ) {
-            if( this.lavaObject[i].id === 1 ) {
+            if( this.lavaObject[i].id === 2 ) {
                 this.lava = lavaObject[i].lava;
             }
         }
@@ -62,10 +62,10 @@ EnglishLavaView.prototype = {
   },
 
   updateLavas: function() {
-    // var newLava = 1;
+    // var newLava = 2;
     var newLava = this.lava -= this.buyLavas;
 
-    var url = this.lavaUrl + "/1";
+    var url = this.lavaUrl + "/2";
     var request = new XMLHttpRequest();
     request.open( 'PUT', url );
     request.setRequestHeader( "Content-type", "application/json" );
@@ -243,13 +243,13 @@ EnglishLavaView.prototype = {
     lava.id = "lavaImg";
     lava.className = "giftImage";
 
-    var cost = 250;
+    var cost = 110;
 
     var lavaUnit = document.createElement( 'h5' );
-    lavaUnit.innerText = "£" + cost + "\nPer Unit";
+    lavaUnit.innerText = "£" + cost + "\nPer Ticket";
 
     var lavaAvail = document.createElement( 'h5' );
-    lavaAvail.innerText = "Available: " + this.lava + "/1";
+    lavaAvail.innerText = "Available: " + this.lava + "/2";
 
     var lavaSelectValue = document.createElement( 'h5' );
 
@@ -262,12 +262,12 @@ EnglishLavaView.prototype = {
     lavaSelect.list = "steplist";
 
     lavaSelect.onchange = function() {
-        lavaSelectValue.innerText = "Give " + lavaSelect.value + " Units";
+        lavaSelectValue.innerText = "Give " + lavaSelect.value + " Tickets";
         this.buyLavas = lavaSelect.value;
         this.total = cost * lavaSelect.value;
     }.bind( this );
 
-    lavaSelectValue.innerText = "Give " + lavaSelect.value + " Units";
+    lavaSelectValue.innerText = "Give " + lavaSelect.value + " Tickets";
 
     var lavaText = document.createElement( 'h5' );
     lavaText.innerText = "Lava tour in Volcano Park";

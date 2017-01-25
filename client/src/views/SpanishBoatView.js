@@ -242,13 +242,13 @@ EnglishBoatView.prototype = {
     boat.id = "boatImg";
     boat.className = "giftImage";
 
-    var cost = 100;
+    var cost = 175;
 
     var boatUnit = document.createElement( 'h5' );
-    boatUnit.innerText = "€" + cost + "\nPer Unit";
+    boatUnit.innerText = "€" + cost + "\nCada Entrada";
 
     var boatAvail = document.createElement( 'h5' );
-    boatAvail.innerText = "Disponible: " + this.boat + "/1";
+    boatAvail.innerText = "Disponible: " + this.boat + "/2";
 
     var boatSelectValue = document.createElement( 'h5' );
 
@@ -261,12 +261,12 @@ EnglishBoatView.prototype = {
     boatSelect.list = "steplist";
 
     boatSelect.onchange = function() {
-        boatSelectValue.innerText = "Regalar " + boatSelect.value + " Unidades";
+        boatSelectValue.innerText = "Regalar " + boatSelect.value + " Entradas";
         this.buyBoats = boatSelect.value;
         this.total = cost * boatSelect.value;
     }.bind( this );
 
-    boatSelectValue.innerText = "Regalar " + boatSelect.value + " Unidades";
+    boatSelectValue.innerText = "Regalar " + boatSelect.value + " Entradas";
 
     var boatText = document.createElement( 'h5' );
     boatText.innerText = "Tour en bote por la costa Nā Pali";

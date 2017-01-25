@@ -246,7 +246,7 @@ EnglishFoodView.prototype = {
     var cost = 40;
 
     var foodUnit = document.createElement( 'h5' );
-    foodUnit.innerText = "£" + cost + "\nPer Unit";
+    foodUnit.innerText = "£" + cost + "\nPer Meal";
 
     var foodAvail = document.createElement( 'h5' );
     foodAvail.innerText = "Available: " + String.fromCharCode( 8734 ) + "/" + String.fromCharCode( 8734 );
@@ -262,12 +262,12 @@ EnglishFoodView.prototype = {
     foodSelect.list = "steplist";
 
     foodSelect.onchange = function() {
-        foodSelectValue.innerText = "Give " + foodSelect.value + " Units";
+        foodSelectValue.innerText = "Give " + foodSelect.value + " Meals";
         this.buyFoods = foodSelect.value;
         this.total = cost * foodSelect.value;
     }.bind( this );
 
-    foodSelectValue.innerText = "Give " + foodSelect.value + " Units";
+    foodSelectValue.innerText = "Give " + foodSelect.value + " Meals";
 
     var foodText = document.createElement( 'h5' );
     foodText.innerText = "Food on the Beach";
@@ -293,7 +293,7 @@ EnglishFoodView.prototype = {
     var cost = 60;
 
     var romanticUnit = document.createElement( 'h5' );
-    romanticUnit.innerText = "£" + cost + "\nPer Unit";
+    romanticUnit.innerText = "£" + cost + "\nPer Dinner";
 
     var romanticAvail = document.createElement( 'h5' );
     romanticAvail.innerText = "Available: " + String.fromCharCode( 8734 ) + "/" + String.fromCharCode( 8734 );
@@ -309,12 +309,12 @@ EnglishFoodView.prototype = {
     romanticSelect.list = "steplist";
 
     romanticSelect.onchange = function() {
-        romanticSelectValue.innerText = "Give " + romanticSelect.value + " Units";
+        romanticSelectValue.innerText = "Give " + romanticSelect.value + " Dinners";
         this.buyFoods = romanticSelect.value;
         this.total = cost * romanticSelect.value;
     }.bind( this );
 
-    romanticSelectValue.innerText = "Give " + romanticSelect.value + " Units";
+    romanticSelectValue.innerText = "Give " + romanticSelect.value + " Dinners";
 
     var romanticText = document.createElement( 'h5' );
     romanticText.innerText = "Romantic Dinner";
