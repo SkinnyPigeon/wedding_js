@@ -87,6 +87,8 @@ h1.circleTitleRaisedHigher {
   margin-bottom: 0;
 }
 
+
+
 h1.thankYou {
   padding-top: 20vh;
   font-size: 2em;
@@ -281,7 +283,7 @@ h5.hotels {
   font-family: 'Gudea', sans-serif;
   font-size: 0.34em;
   text-align: center;
-  max-width: 100%;
+  max-width: 75%;
   margin: auto;
 }
 
@@ -366,4 +368,12 @@ ul#boatListOne img {
   transform: scaleX(-1);
   filter: FlipH;
   -ms-filter: "FlipH";
+}
+
+h1.circleTitleRaisedMore {
+  padding-top: 3vh;
+  font-size: 1em;
+  font-family: 'Clicker Script', cursive;
+  color: #E2AEBD;
+  margin-bottom: 0;
 }

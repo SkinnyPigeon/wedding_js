@@ -14,6 +14,10 @@
     font-size: 1.5em;
   }
 
+  h1.circleTitleRaisedMore {
+    padding-top: 8vh;
+  }
+
   #circle-space h5 {
     font-size: 0.32em;
     max-width: 58%;
@@ -64,6 +68,10 @@
   h1.circleTitleRaised {
     padding-top: 12vh;
     font-size: 1.5em;
+  }
+
+  h1.circleTitleRaisedMore {
+    padding-top: 8vh;
   }
 
   #circle-space h5 {
@@ -215,6 +223,11 @@
     font-size: 3em;
   }
 
+  h1.circleTitleRaisedMore {
+    padding-top: 4.5vh;
+    font-size: 3em;
+  }
+
   #circle-space h5 {
     font-size: 0.8em;
     max-width: 50%;
@@ -299,6 +312,11 @@
 
   h1.circleTitleRaised {
     padding-top: 13vh;
+    font-size: 2.5em;
+  }
+
+  h1.circleTitleRaisedMore {
+    padding-top: 10vh;
     font-size: 2.5em;
   }
 
@@ -443,6 +461,7 @@
   h1.circleTitleRaisedMore {
     padding-top: 10vh;
     margin-top: 0;
+    font-size: 3.5em;
   }
 
 }
@@ -485,6 +504,12 @@
 
   h1.circleTitleRaised {
     padding-top: 15vh;
+    font-size: 4em;
+  }
+
+  h1.circleTitleRaisedMore {
+    padding-top: 10vh;
+    /*margin-top: 0;*/
     font-size: 4em;
   }
 
@@ -572,6 +597,11 @@
   h1.circleTitleRaised {
     padding-top: 13vh;
     font-size: 8em;
+  }
+
+  h1.circleTitleRaisedMore {
+    padding-top: 10vh;
+    font-size: 6em;
   }
 
   #circle-space h5 {
