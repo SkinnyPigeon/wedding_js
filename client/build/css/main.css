@@ -377,3 +377,7 @@ h1.circleTitleRaisedMore {
   color: #E2AEBD;
   margin-bottom: 0;
 }
+
+#hotel-space h5 {
+  max-width: 65%;
+}
