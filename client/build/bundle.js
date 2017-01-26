@@ -1378,7 +1378,7 @@
 	    kauaiFlight.id = "returnFlightImg";
 	    kauaiFlight.className = "giftImage";
 	
-	    var cost = 65;
+	    var cost = 176;
 	
 	    var kauaiFlightUnit = document.createElement( 'h5' );
 	    kauaiFlightUnit.innerText = "£" + cost + "\n Per Flight";
@@ -4601,7 +4601,7 @@
 	    kauaiFlight.id = "returnFlightImg";
 	    kauaiFlight.className = "giftImage";
 	
-	    var cost = 65;
+	    var cost = 176;
 	
 	    var kauaiFlightUnit = document.createElement( 'h5' );
 	    kauaiFlightUnit.innerText = "€" + cost + "\nCada Vuelo";
@@ -4975,7 +4975,7 @@
 	    konaSelectValue.innerText = "Regalar " + konaSelect.value + " Noches";
 	
 	    var konaText = document.createElement( 'h5' );
-	    konaText.innerText = "Hotels en Kona \n\n";
+	    konaText.innerText = "Hotel en Kona \n\n";
 	
 	    giftSpace.appendChild( hotelListOne );
 	
@@ -5023,7 +5023,7 @@
 	    volcanoSelectValue.innerText = "Regalar " + volcanoSelect.value + " Noches";
 	
 	    var returnText = document.createElement( 'h5' );
-	    returnText.innerText = "Hotels en Volcano Park";
+	    returnText.innerText = "Hotel en Volcano Park";
 	
 	    giftSpace.appendChild( hotelListOne );
 	
@@ -5072,7 +5072,7 @@
 	    mauiFlightSelectValue.innerText = "Regalar " + mauiFlightSelect.value + " Noches";
 	
 	    var mauiText = document.createElement( 'h5' );
-	    mauiText.innerText = "Hotels en Maui\n\n";
+	    mauiText.innerText = "Hotel en Maui\n\n";
 	
 	    mauiFlightList.appendChild( mauiFlight );
 	    mauiFlightList.appendChild( mauiText );
@@ -5124,7 +5124,7 @@
 	    kauaiFlightSelectValue.innerText = "Regalar " + kauaiFlightSelect.value + " Noches";
 	
 	    var kauaiText = document.createElement( 'h5' );
-	    kauaiText.innerText = "Hotels en Kauai\n\n";
+	    kauaiText.innerText = "Hotel en Kauai\n\n";
 	
 	    kauaiFlightList.appendChild( kauaiFlight );
 	    kauaiFlightList.appendChild( kauaiText );
@@ -5172,7 +5172,7 @@
 	    honoluluFlightSelectValue.innerText = "Regalar " + honoluluFlightSelect.value + " Noches";
 	
 	    var honoluluText = document.createElement( 'h5' );
-	    honoluluText.innerText = "Hotels en Honolulu";
+	    honoluluText.innerText = "Hotel en Honolulu";
 	
 	    honoluluFlightList.appendChild( honoluluFlight );
 	    honoluluFlightList.appendChild( honoluluText );
@@ -5636,7 +5636,7 @@
 	    dotsFour.innerText = "--------------------------------"
 	
 	    var text = document.createElement( 'h5' );
-	    text.innerText = "Cuál sería el sentido de viajar tan lejos y si no se disfruta de la comida, esperemos deliciosa, de allí. \n\n Si te apetece contribuir a esta parte de la luna de miel pulsa aquí."
+	    text.innerText = "Cuál sería el sentido de viajar tan lejos si no se disfruta de la comida, esperemos deliciosa, de allí. \n\n Si te apetece contribuir a esta parte de la luna de miel pulsa aquí."
 	
 	    var goButton = document.createElement( 'button' );
 	    goButton.innerText = "Comidas";
