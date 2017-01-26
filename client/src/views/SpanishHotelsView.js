@@ -464,7 +464,7 @@ EnglishHotelsView.prototype = {
     honoluluFlight.id = "returnFlightImg";
     honoluluFlight.className = "giftImage";
 
-    var cost = 70;
+    var cost = 176;
 
     var honoluluFlightUnit = document.createElement( 'h5' );
     honoluluFlightUnit.innerText = "€" + cost + "\nCada Noche";

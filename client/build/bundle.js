@@ -1378,7 +1378,7 @@
 	    kauaiFlight.id = "returnFlightImg";
 	    kauaiFlight.className = "giftImage";
 	
-	    var cost = 176;
+	    var cost = 65;
 	
 	    var kauaiFlightUnit = document.createElement( 'h5' );
 	    kauaiFlightUnit.innerText = "£" + cost + "\n Per Flight";
@@ -1922,7 +1922,7 @@
 	    honoluluFlight.id = "returnFlightImg";
 	    honoluluFlight.className = "giftImage";
 	
-	    var cost = 70;
+	    var cost = 176;
 	
 	    var honoluluFlightUnit = document.createElement( 'h5' );
 	    honoluluFlightUnit.innerText = "£" + cost + "\nPer Night";
@@ -4601,7 +4601,7 @@
 	    kauaiFlight.id = "returnFlightImg";
 	    kauaiFlight.className = "giftImage";
 	
-	    var cost = 176;
+	    var cost = 65;
 	
 	    var kauaiFlightUnit = document.createElement( 'h5' );
 	    kauaiFlightUnit.innerText = "€" + cost + "\nCada Vuelo";
@@ -5145,7 +5145,7 @@
 	    honoluluFlight.id = "returnFlightImg";
 	    honoluluFlight.className = "giftImage";
 	
-	    var cost = 70;
+	    var cost = 176;
 	
 	    var honoluluFlightUnit = document.createElement( 'h5' );
 	    honoluluFlightUnit.innerText = "€" + cost + "\nCada Noche";

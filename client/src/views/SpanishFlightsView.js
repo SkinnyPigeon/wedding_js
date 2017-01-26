@@ -460,7 +460,7 @@ EnglishFlightsView.prototype = {
     kauaiFlight.id = "returnFlightImg";
     kauaiFlight.className = "giftImage";
 
-    var cost = 176;
+    var cost = 65;
 
     var kauaiFlightUnit = document.createElement( 'h5' );
     kauaiFlightUnit.innerText = "€" + cost + "\nCada Vuelo";
