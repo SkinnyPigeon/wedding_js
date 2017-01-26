@@ -98,7 +98,7 @@ EnglishFoodView.prototype = {
     dotsFour.innerText = "--------------------------------"
 
     var text = document.createElement( 'h5' );
-    text.innerText = "Cuál sería el sentido de viajar tan lejos y si no se disfruta de la comida, esperemos deliciosa, de allí. \n\n Si te apetece contribuir a esta parte de la luna de miel pulsa aquí."
+    text.innerText = "Cuál sería el sentido de viajar tan lejos si no se disfruta de la comida, esperemos deliciosa, de allí. \n\n Si te apetece contribuir a esta parte de la luna de miel pulsa aquí."
 
     var goButton = document.createElement( 'button' );
     goButton.innerText = "Comidas";

@@ -294,7 +294,7 @@ EnglishHotelsView.prototype = {
     konaSelectValue.innerText = "Regalar " + konaSelect.value + " Noches";
 
     var konaText = document.createElement( 'h5' );
-    konaText.innerText = "Hotels en Kona \n\n";
+    konaText.innerText = "Hotel en Kona \n\n";
 
     giftSpace.appendChild( hotelListOne );
 
@@ -342,7 +342,7 @@ EnglishHotelsView.prototype = {
     volcanoSelectValue.innerText = "Regalar " + volcanoSelect.value + " Noches";
 
     var returnText = document.createElement( 'h5' );
-    returnText.innerText = "Hotels en Volcano Park";
+    returnText.innerText = "Hotel en Volcano Park";
 
     giftSpace.appendChild( hotelListOne );
 
@@ -391,7 +391,7 @@ EnglishHotelsView.prototype = {
     mauiFlightSelectValue.innerText = "Regalar " + mauiFlightSelect.value + " Noches";
 
     var mauiText = document.createElement( 'h5' );
-    mauiText.innerText = "Hotels en Maui\n\n";
+    mauiText.innerText = "Hotel en Maui\n\n";
 
     mauiFlightList.appendChild( mauiFlight );
     mauiFlightList.appendChild( mauiText );
@@ -443,7 +443,7 @@ EnglishHotelsView.prototype = {
     kauaiFlightSelectValue.innerText = "Regalar " + kauaiFlightSelect.value + " Noches";
 
     var kauaiText = document.createElement( 'h5' );
-    kauaiText.innerText = "Hotels en Kauai\n\n";
+    kauaiText.innerText = "Hotel en Kauai\n\n";
 
     kauaiFlightList.appendChild( kauaiFlight );
     kauaiFlightList.appendChild( kauaiText );
@@ -491,7 +491,7 @@ EnglishHotelsView.prototype = {
     honoluluFlightSelectValue.innerText = "Regalar " + honoluluFlightSelect.value + " Noches";
 
     var honoluluText = document.createElement( 'h5' );
-    honoluluText.innerText = "Hotels en Honolulu";
+    honoluluText.innerText = "Hotel en Honolulu";
 
     honoluluFlightList.appendChild( honoluluFlight );
     honoluluFlightList.appendChild( honoluluText );
