@@ -157,6 +157,9 @@ EnglishHotelsView.prototype = {
     title.className = "circleTitle";
     title.innerText = "Gracias";
 
+    var thankYouText = document.createElement( 'h5' );
+    thankYouText.innerText = "Por favor déjanos tus datos y recibirás un email con los detalles."
+
     var dotsThree = document.createElement( 'p' );
     dotsThree.innerText = "--------------------------------"
 
@@ -206,9 +209,12 @@ EnglishHotelsView.prototype = {
     var brOne = document.createElement( 'br' );
     var brTwo = document.createElement( 'br' );
     var brThree = document.createElement( 'br' );
+    var brFour = document.createElement( 'br' );
 
     giftList.appendChild( title );
     giftList.appendChild( dotsThree );
+    giftList.appendChild( thankYouText );
+    giftList.appendChild( brFour );
     giftList.appendChild( name );
     giftList.appendChild( email );
     giftList.appendChild( brOne );

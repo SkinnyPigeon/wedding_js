@@ -140,6 +140,9 @@ EnglishLavaView.prototype = {
     title.className = "circleTitle";
     title.innerText = "Thank You";
 
+    var thankYouText = document.createElement( 'h5' );
+    thankYouText.innerText = "Please give us you email address and we will send you details."
+
     var dotsThree = document.createElement( 'p' );
     dotsThree.innerText = "--------------------------------"
 
@@ -185,9 +188,12 @@ EnglishLavaView.prototype = {
     var brOne = document.createElement( 'br' );
     var brTwo = document.createElement( 'br' );
     var brThree = document.createElement( 'br' );
+    var brFour = document.createElement( 'br' );
 
     giftList.appendChild( title );
     giftList.appendChild( dotsThree );
+    giftList.appendChild( thankYouText );
+    giftList.appendChild( brFour );
     giftList.appendChild( name );
     giftList.appendChild( email );
     giftList.appendChild( brOne );

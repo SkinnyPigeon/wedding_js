@@ -1079,6 +1079,9 @@
 	    title.className = "circleTitle";
 	    title.innerText = "Thank You";
 	
+	    var thankYouText = document.createElement( 'h5' );
+	    thankYouText.innerText = "Please give us you email address and we will send you details."
+	
 	    var dotsThree = document.createElement( 'p' );
 	    dotsThree.innerText = "--------------------------------"
 	
@@ -1128,9 +1131,12 @@
 	    var brOne = document.createElement( 'br' );
 	    var brTwo = document.createElement( 'br' );
 	    var brThree = document.createElement( 'br' );
+	    var brFour = document.createElement( 'br' );
 	
 	    giftList.appendChild( title );
 	    giftList.appendChild( dotsThree );
+	    giftList.appendChild( thankYouText );
+	    giftList.appendChild( brFour );
 	    giftList.appendChild( name );
 	    giftList.appendChild( email );
 	    giftList.appendChild( brOne );
@@ -1615,6 +1621,9 @@
 	    title.className = "circleTitle";
 	    title.innerText = "Thank You";
 	
+	    var thankYouText = document.createElement( 'h5' );
+	    thankYouText.innerText = "Please give us you email address and we will send you details."
+	
 	    var dotsThree = document.createElement( 'p' );
 	    dotsThree.innerText = "--------------------------------"
 	
@@ -1626,6 +1635,15 @@
 	
 	    var message = document.createElement( 'input' );
 	    message.placeholder = "Message";
+	
+	    // var thankYouMessage = document.createElement( 'h5' );
+	    // thankYouMessage.innerText = "Thanks a million. We promise that we will enjoy the honeymoon both for ourselves and on your behalf.";
+	
+	    // var bank = document.createElement( 'h5' );
+	    // bank.innerText = "";
+	
+	    // var leaveMessage = document.createElement( 'h5' );
+	    // leaveMessage.innerText = "Please feel free to leave a message";
 	
 	    var button = document.createElement( 'button' );
 	    button.innerText = "Gift";
@@ -1664,15 +1682,23 @@
 	    var brOne = document.createElement( 'br' );
 	    var brTwo = document.createElement( 'br' );
 	    var brThree = document.createElement( 'br' );
+	    var brFour = document.createElement( 'br' );
+	    var brFive = document.createElement( 'br' );
 	
 	    giftList.appendChild( title );
 	    giftList.appendChild( dotsThree );
+	    giftList.appendChild( thankYouText );
+	    giftList.appendChild( brThree );
 	    giftList.appendChild( name );
 	    giftList.appendChild( email );
 	    giftList.appendChild( brOne );
 	    giftList.appendChild( brTwo );
 	    giftList.appendChild( message );
-	    giftList.appendChild( brThree );
+	    // giftList.appendChild( brThree );
+	    // giftList.appendChild( thankYouMessage );
+	    // giftList.appendChild( bank );
+	    // giftList.appendChild( leaveMessage );
+	    giftList.appendChild( brFour );
 	    giftList.appendChild( button );
 	    giftList.appendChild( backButton );
 	  },
@@ -2135,6 +2161,10 @@
 	    title.className = "circleTitle";
 	    title.innerText = "Thank You";
 	
+	    var thankYouText = document.createElement( 'h5' );
+	    thankYouText.innerText = "Please give us you email address and we will send you details."
+	    thankYouText.innerText = "Please give us you email address and we will send you details."
+	
 	    var dotsThree = document.createElement( 'p' );
 	    dotsThree.innerText = "--------------------------------"
 	
@@ -2180,9 +2210,12 @@
 	    var brOne = document.createElement( 'br' );
 	    var brTwo = document.createElement( 'br' );
 	    var brThree = document.createElement( 'br' );
+	    var brFour = document.createElement( 'br' );
 	
 	    giftList.appendChild( title );
 	    giftList.appendChild( dotsThree );
+	    giftList.appendChild( thankYouText );
+	    giftList.appendChild( brFour );
 	    giftList.appendChild( name );
 	    giftList.appendChild( email );
 	    giftList.appendChild( brOne );
@@ -2453,6 +2486,9 @@
 	    title.className = "circleTitle";
 	    title.innerText = "Thank You";
 	
+	    var thankYouText = document.createElement( 'h5' );
+	    thankYouText.innerText = "Please give us you email address and we will send you details."
+	
 	    var dotsThree = document.createElement( 'p' );
 	    dotsThree.innerText = "--------------------------------"
 	
@@ -2498,9 +2534,12 @@
 	    var brOne = document.createElement( 'br' );
 	    var brTwo = document.createElement( 'br' );
 	    var brThree = document.createElement( 'br' );
+	    var brFour = document.createElement( 'br' );
 	
 	    giftList.appendChild( title );
 	    giftList.appendChild( dotsThree );
+	    giftList.appendChild( thankYouText );
+	    giftList.appendChild( brFour );
 	    giftList.appendChild( name );
 	    giftList.appendChild( email );
 	    giftList.appendChild( brOne );
@@ -2822,6 +2861,9 @@
 	    title.className = "circleTitle";
 	    title.innerText = "Thank You";
 	
+	    var thankYouText = document.createElement( 'h5' );
+	    thankYouText.innerText = "Please give us you email address and we will send you details."
+	
 	    var dotsThree = document.createElement( 'p' );
 	    dotsThree.innerText = "--------------------------------"
 	
@@ -2867,9 +2909,12 @@
 	    var brOne = document.createElement( 'br' );
 	    var brTwo = document.createElement( 'br' );
 	    var brThree = document.createElement( 'br' );
+	    var brFour = document.createElement( 'br' );
 	
 	    giftList.appendChild( title );
 	    giftList.appendChild( dotsThree );
+	    giftList.appendChild( thankYouText );
+	    giftList.appendChild( brFour );
 	    giftList.appendChild( name );
 	    giftList.appendChild( email );
 	    giftList.appendChild( brOne );
@@ -3142,6 +3187,9 @@
 	    title.className = "circleTitle";
 	    title.innerText = "Thank You";
 	
+	    var thankYouText = document.createElement( 'h5' );
+	    thankYouText.innerText = "Please give us you email address and we will send you details."
+	
 	    var dotsThree = document.createElement( 'p' );
 	    dotsThree.innerText = "--------------------------------"
 	
@@ -3187,9 +3235,12 @@
 	    var brOne = document.createElement( 'br' );
 	    var brTwo = document.createElement( 'br' );
 	    var brThree = document.createElement( 'br' );
+	    var brFour = document.createElement( 'br' );
 	
 	    giftList.appendChild( title );
 	    giftList.appendChild( dotsThree );
+	    giftList.appendChild( thankYouText );
+	    giftList.appendChild( brFour );
 	    giftList.appendChild( name );
 	    giftList.appendChild( email );
 	    giftList.appendChild( brOne );
@@ -4302,6 +4353,9 @@
 	    title.className = "circleTitle";
 	    title.innerText = "Gracias";
 	
+	    var thankYouText = document.createElement( 'h5' );
+	    thankYouText.innerText = "Por favor déjanos tus datos y recibirás un email con los detalles."
+	
 	    var dotsThree = document.createElement( 'p' );
 	    dotsThree.innerText = "--------------------------------"
 	
@@ -4351,9 +4405,12 @@
 	    var brOne = document.createElement( 'br' );
 	    var brTwo = document.createElement( 'br' );
 	    var brThree = document.createElement( 'br' );
+	    var brFour = document.createElement( 'br' );
 	
 	    giftList.appendChild( title );
 	    giftList.appendChild( dotsThree );
+	    giftList.appendChild( thankYouText );
+	    giftList.appendChild( brFour );
 	    giftList.appendChild( name );
 	    giftList.appendChild( email );
 	    giftList.appendChild( brOne );
@@ -4838,6 +4895,9 @@
 	    title.className = "circleTitle";
 	    title.innerText = "Gracias";
 	
+	    var thankYouText = document.createElement( 'h5' );
+	    thankYouText.innerText = "Por favor déjanos tus datos y recibirás un email con los detalles."
+	
 	    var dotsThree = document.createElement( 'p' );
 	    dotsThree.innerText = "--------------------------------"
 	
@@ -4887,9 +4947,12 @@
 	    var brOne = document.createElement( 'br' );
 	    var brTwo = document.createElement( 'br' );
 	    var brThree = document.createElement( 'br' );
+	    var brFour = document.createElement( 'br' );
 	
 	    giftList.appendChild( title );
 	    giftList.appendChild( dotsThree );
+	    giftList.appendChild( thankYouText );
+	    giftList.appendChild( brFour );
 	    giftList.appendChild( name );
 	    giftList.appendChild( email );
 	    giftList.appendChild( brOne );
@@ -5358,6 +5421,9 @@
 	    title.className = "circleTitle";
 	    title.innerText = "Gracias!";
 	
+	    var thankYouText = document.createElement( 'h5' );
+	    thankYouText.innerText = "Por favor déjanos tus datos y recibirás un email con los detalles."
+	
 	    var dotsThree = document.createElement( 'p' );
 	    dotsThree.innerText = "--------------------------------"
 	
@@ -5403,9 +5469,12 @@
 	    var brOne = document.createElement( 'br' );
 	    var brTwo = document.createElement( 'br' );
 	    var brThree = document.createElement( 'br' );
+	    var brFour = document.createElement( 'br' );
 	
 	    giftList.appendChild( title );
 	    giftList.appendChild( dotsThree );
+	    giftList.appendChild( thankYouText );
+	    giftList.appendChild( brFour );
 	    giftList.appendChild( name );
 	    giftList.appendChild( email );
 	    giftList.appendChild( brOne );
@@ -5676,6 +5745,9 @@
 	    title.className = "circleTitle";
 	    title.innerText = "Gracias!";
 	
+	    var thankYouText = document.createElement( 'h5' );
+	    thankYouText.innerText = "Por favor déjanos tus datos y recibirás un email con los detalles."
+	
 	    var dotsThree = document.createElement( 'p' );
 	    dotsThree.innerText = "--------------------------------"
 	
@@ -5721,9 +5793,12 @@
 	    var brOne = document.createElement( 'br' );
 	    var brTwo = document.createElement( 'br' );
 	    var brThree = document.createElement( 'br' );
+	    var brFour = document.createElement( 'br' );
 	
 	    giftList.appendChild( title );
 	    giftList.appendChild( dotsThree );
+	    giftList.appendChild( thankYouText );
+	    giftList.appendChild( brFour );
 	    giftList.appendChild( name );
 	    giftList.appendChild( email );
 	    giftList.appendChild( brOne );
@@ -6044,6 +6119,9 @@
 	    title.className = "circleTitle";
 	    title.innerText = "Gracias!";
 	
+	    var thankYouText = document.createElement( 'h5' );
+	    thankYouText.innerText = "Por favor déjanos tus datos y recibirás un email con los detalles."
+	
 	    var dotsThree = document.createElement( 'p' );
 	    dotsThree.innerText = "--------------------------------"
 	
@@ -6089,9 +6167,12 @@
 	    var brOne = document.createElement( 'br' );
 	    var brTwo = document.createElement( 'br' );
 	    var brThree = document.createElement( 'br' );
+	    var brFour = document.createElement( 'br' );
 	
 	    giftList.appendChild( title );
 	    giftList.appendChild( dotsThree );
+	    giftList.appendChild( thankYouText );
+	    giftList.appendChild( brFour );
 	    giftList.appendChild( name );
 	    giftList.appendChild( email );
 	    giftList.appendChild( brOne );
@@ -6364,6 +6445,9 @@
 	    title.className = "circleTitle";
 	    title.innerText = "Gracias!";
 	
+	    var thankYouText = document.createElement( 'h5' );
+	    thankYouText.innerText = "Por favor déjanos tus datos y recibirás un email con los detalles."
+	
 	    var dotsThree = document.createElement( 'p' );
 	    dotsThree.innerText = "--------------------------------"
 	
@@ -6409,9 +6493,12 @@
 	    var brOne = document.createElement( 'br' );
 	    var brTwo = document.createElement( 'br' );
 	    var brThree = document.createElement( 'br' );
+	    var brFour = document.createElement( 'br' );
 	
 	    giftList.appendChild( title );
 	    giftList.appendChild( dotsThree );
+	    giftList.appendChild( thankYouText );
+	    giftList.appendChild( brFour );
 	    giftList.appendChild( name );
 	    giftList.appendChild( email );
 	    giftList.appendChild( brOne );
